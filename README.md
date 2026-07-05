@@ -40,15 +40,15 @@
 
 | الشعار الرسمي | نماذج من أعمالنا |
 | :---: | :---: |
-| ![الشعار](logo-fakhr-almamlaka-sawater-mizalat-jeddah_2.webp) | ![نموذج 1](mizalats-decorative-islamic-style-car-parking-shades-jeddah.webp) |
+| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-mizalat-jeddah_2.webp) | ![نموذج 1](mizalats-decorative-islamic-style-images/mizalats/car-parking-shades-jeddah.webp) |
 
 ### استعراض إضافي للمشاريع:
-![نموذج 2](ads-fakhr-almamlaka-sawater-mizalat-jeddah.webp)
-![نموذج 3](fakhr-almamlaka-website-mobile-interface-jeddah.webp)
-![نموذج 4](pergola-curved-wooden-and-metal-screen-jeddah.webp)
-![نموذج 5](pergola-modern-wood-rooftop-seating-jeddah.webp)
-![نموذج 6](pergola-rnate-entrance-canopy-design-jeddah.webp)
-![نموذج 7](pergola-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
+![نموذج 2](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah.webp)
+![نموذج 3](images/assets/fakhr-almamlaka-website-mobile-interface-jeddah.webp)
+![نموذج 4](images/pergolas/pergola-curved-wooden-and-metal-screen-jeddah.webp)
+![نموذج 5](images/pergolas/pergola-modern-wood-rooftop-seating-jeddah.webp)
+![نموذج 6](images/pergolas/pergola-rnate-entrance-canopy-design-jeddah.webp)
+![نموذج 7](images/pergolas/pergola-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
 
 ---
 
