@@ -40,7 +40,7 @@
 
 | الشعار الرسمي | نماذج من أعمالنا |
 | :---: | :---: |
-| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-mizalat-jeddah_2.webp) | ![نموذج 1](images/mizalats/mizalats-decorative-islamic-style-car-parking-shades-jeddah.webp) |
+| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-mizalat-jeddah.webp) | ![نموذج 1](images/mizalats/mizalats-decorative-islamic-style-car-parking-shades-jeddah.webp) |
 
 ### استعراض إضافي للمشاريع:
 ![نموذج 2](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah.webp)
