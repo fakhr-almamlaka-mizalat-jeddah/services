@@ -38,17 +38,11 @@
 
 # 📸 معرض أعمالنا المميز
 
-| الشعار الرسمي | نماذج من أعمالنا |
+| الخدمة | نماذج من أعمالنا |
 | :---: | :---: |
-| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-mizalat-jeddah.webp) | ![نموذج 1](images/mizalats/mizalats-decorative-islamic-style-car-parking-shades-jeddah.webp) |
-
-### استعراض إضافي للمشاريع:
-![نموذج 2](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah1.webp)
-![نموذج 3](images/assets/fakhr-almamlaka-website-mobile-interface-jeddah.webp)
-![نموذج 4](images/pergolas/pergola-curved-wooden-and-metal-screen-jeddah.webp)
-![نموذج 5](images/pergolas/pergola-modern-wood-rooftop-seating-jeddah.webp)
-![نموذج 6](images/pergolas/pergola-rnate-entrance-canopy-design-jeddah.webp)
-![نموذج 7](images/pergolas/pergola-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
+| **البرجولات** | ![برجولة](images/pergolas/pergolas-modern-pool-shade-jeddah40.webp) |
+| **المظلات** | ![مظلة](images/mizalats/mizalat-shadd-resort-jeddah63.webp) |
+| **الهناجر** | ![هنجر](images/hangars/hangars-industrial-warehouse-jeddah11.webp) |
 
 ---
 
@@ -71,12 +65,6 @@
 
 ### 💎 ألواح اللكسان
 - لكسان شفاف | لكسان ملون | لكسان للأسطح | لكسان للمسابح | لكسان للبرجولات
-
----
-
-# فيديو لأعمالنا
-📹 سيتم إضافة الفيديو قريباً.
-[اضغط هنا لمشاهدة الفيديو](https://youtube.com/.....)
 
 ---
 
