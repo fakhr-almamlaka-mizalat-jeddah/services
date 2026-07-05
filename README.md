@@ -40,7 +40,7 @@
 
 | الشعار الرسمي | نماذج من أعمالنا |
 | :---: | :---: |
-| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-mizalat-jeddah_2.webp) | ![نموذج 1](mizalats-decorative-islamic-style-images/mizalats/car-parking-shades-jeddah.webp) |
+| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-mizalat-jeddah_2.webp) | ![نموذج 1](images/mizalats/mizalats-decorative-islamic-style-car-parking-shades-jeddah.webp) |
 
 ### استعراض إضافي للمشاريع:
 ![نموذج 2](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah.webp)
@@ -48,7 +48,7 @@
 ![نموذج 4](images/pergolas/pergola-curved-wooden-and-metal-screen-jeddah.webp)
 ![نموذج 5](images/pergolas/pergola-modern-wood-rooftop-seating-jeddah.webp)
 ![نموذج 6](images/pergolas/pergola-rnate-entrance-canopy-design-jeddah.webp)
-![نموذج 7](images/pergolas/pergola-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
+![نموذج 7](images/sawaters/pergola-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
 
 ---
 
