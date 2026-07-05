@@ -32,7 +32,7 @@
 ![نموذج 5](images/pergolas/pergola-modern-wood-rooftop-seating-jeddah.webp)
 ![نموذج 6](images/pergolas/pergola-rnate-entrance-canopy-design-jeddah.webp)
 ![نموذج 7](images/pergolas/pergola-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
-![هنجر](images/hangars/hangars-industrial-warehouse-jeddah11.webp)
+![هنجر](images/others/hangars-industrial-warehouse-jeddah11.webp)
 
 ---
 
