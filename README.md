@@ -10,55 +10,44 @@
 
 ### الجودة ليست خياراً... بل هي معيارنا في كل مشروع.
 
-[📲 تواصل عبر واتساب](https://wa.me/966553511013?text=مرحباً%20مؤسسة%20فخر%20المملكة،%20أرغب%20في%20الحصول%20على%20عرض%20سعر.) | [🌐 الموقع الإلكتروني](ضع_رابط_الموقع_هنا)
+[📲 تواصل عبر واتساب](https://wa.me/966553511013?text=مرحباً%20مؤسسة%20فخر%20المملكة،%20أرغب%20في%20الحصول%20على%20عرض%20سعر.)
 
 ---
 
 # من نحن؟
 
-مرحباً بكم في **مؤسسة فخر المملكة للمظلات والسواتر بجدة**.
+مرحباً بكم في **مؤسسة فخر المملكة للمظلات والسواتر بجدة**. 
 نقدم حلولاً هندسية متكاملة تجمع بين **قوة التصنيع، جودة المواد، ودقة التنفيذ** لنمنح عملاءنا مشاريع تدوم لسنوات وتقاوم الظروف المناخية في المملكة، مع المحافظة على المظهر الجمالي العصري.
 
 ---
 
 # 📸 معرض أعمالنا المميز
 
-| الخدمة | نماذج من أعمالنا |
+| الشعار الرسمي | أبرز المشاريع المنفذة |
 | :---: | :---: |
-| **البرجولات** | ![نموذج](images/pergolas/pergola-curved-wooden-and-metal-screen-jeddah.webp) <br> ![جديد](images/pergolas/pergolas-modern-pool-shade-jeddah40.webp) |
-| **المظلات** | ![نموذج](images/mizalats/mizalats-decorative-islamic-style-car-parking-shades-jeddah.webp) <br> ![جديد](images/mizalats/mizalat-shadd-resort-jeddah63.webp) |
-| **الهناجر** | ![هنجر](images/hangars/hangars-industrial-warehouse-jeddah11.webp) |
+| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-mizalat-jeddah.webp) | **البرجولات:** ![برجولة](images/pergolas/pergola-curved-wooden-and-metal-screen-jeddah.webp) <br> ![جديد](images/pergolas/pergolas-modern-pool-shade-jeddah40.webp) <br> **المظلات:** ![مظلة](images/mizalats/mizalat-shadd-resort-jeddah63.webp) |
 
 ### استعراض إضافي للمشاريع:
-![نموذج 2](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah.webp)
-![نموذج 3](images/assets/fakhr-almamlaka-
+![نموذج 2](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah1.webp)
 ![نموذج 5](images/pergolas/pergola-modern-wood-rooftop-seating-jeddah.webp)
 ![نموذج 6](images/pergolas/pergola-rnate-entrance-canopy-design-jeddah.webp)
-![نموذج 7](images/sawaters/pergola-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
+![نموذج 7](images/pergolas/pergola-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
+![هنجر](images/hangars/hangars-industrial-warehouse-jeddah11.webp)
 
 ---
 
-# 🏗️ خدماتنا
+# 🏗️ خدماتنا المتميزة
 
-### 🚗 المظلات
-- مظلات سيارات | مظلات حدائق | مظلات مدارس | مظلات مسابح | مظلات أسطح | مظلات مداخل | مظلات شد إنشائي | مظلات PVC | مظلات BDF الكوري
-
-### 🏡 السواتر
-- سواتر قماش | سواتر حديد | سواتر شرائح | سواتر خشب بلاستيكي | سواتر لكسان | سواتر عاشق ومعشوق
-
-### 🌿 البرجولات
-- برجولات حديد | برجولات PVC | برجولات لكسان | برجولات ليزر | جلسات خارجية | جلسات حدائق
-
-### 🏕 بيوت الشعر والخيام
-- بيوت شعر ملكية | خيام | مجالس خارجية | مجالس تراثية
-
-### 🏢 الهناجر والساندوتش بانل
-- هناجر | مستودعات | غرف ساندوتش بانل | ملاحق | مباني جاهزة
+*   **🚗 المظلات:** مظلات سيارات، حدائق، مدارس، مسابح، أسطح، مداخل، شد إنشائي، PVC، و BDF الكوري.
+*   **🏡 السواتر:** سواتر قماش، حديد، شرائح، خشب بلاستيكي، لكسان، وعاشق ومعشوق.
+*   **🌿 البرجولات:** برجولات حديد، PVC، لكسان، ليزر، وجلسات خارجية وحدائق.
+*   **🏕 بيوت الشعر:** بيوت شعر ملكية، خيام، ومجالس تراثية.
+*   **🏢 الهناجر:** مستودعات، غرف ساندوتش بانل، ملاحق، ومباني جاهزة.
 
 ---
 
 # 📲 تواصل معنا الآن
-لطلب عرض سعر أو استشارة فنية:
+لطلب عرض سعر أو استشارة فنية، يسعدنا تواصلكم المباشر:
 [➡️ اضغط هنا للتواصل عبر واتساب](https://wa.me/966553511013?text=مرحباً%20مؤسسة%20فخر%20المملكة،%20أرغب%20في%20الحصول%20على%20عرض%20سعر.)
 
 ---
