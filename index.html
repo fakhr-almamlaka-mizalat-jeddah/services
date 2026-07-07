@@ -3,72 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة فخر المملكة | أفضل مؤسسة مظلات وسواتر بجدة والمملكة</title>
-    <meta name="description" content="مؤسسة فخر المملكة بجدة المتخصصة في تركيب مظلات سيارات وسواتر أحواش، برجولات حدائق مودرن، بناء هناجر ومستودعات، وساندويتش بانل في جدة ومكة وكافة مناطق السعودية بأعلى جودة وأفضل أسعار.">
+    <title>مؤسسة فخر المملكة | أفضل مظلات وسواتر بجدة</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        :root { --primary-gold: #c5a880; --gold-hover: #b3956b; --dark-bg: #11141a; --light-gray: #f8f9fa; --white: #ffffff; --navy-blue: #0f2c59; --teal-bg: #122c34; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--light-gray); color: #333; overflow-x: hidden; }
+        :root { --primary-gold: #c5a880; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
+        body { background-color: #f8f9fa; }
         
         /* الهيدر */
-        header { background-color: rgba(17, 20, 26, 0.95); position: fixed; top: 0; width: 100%; z-index: 1000; border-bottom: 2px solid var(--primary-gold); padding: 10px 20px; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-        .logo img { height: 60px; width: auto; display: block; }
+        header { background: #111; padding: 15px; text-align: center; border-bottom: 3px solid var(--primary-gold); }
+        .logo img { height: 80px; }
         
-        /* الأقسام الأساسية */
-        .hero-section { background: linear-gradient(rgba(17, 20, 26, 0.65), rgba(17, 20, 26, 0.85)), url('/images/mizalats/mizalat-tensile-membrane-structure-jeddah114.webp') no-repeat center center; background-size: cover; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; }
-        .service-img { width: 100%; height: 220px; object-fit: cover; }
-        
-        /* الأزرار العائمة */
-        .floating-actions-container { position: fixed; bottom: 25px; left: 20px; display: flex; flex-direction: row-reverse; gap: 12px; z-index: 9999; }
-        .floating-btn { width: 54px; height: 54px; border-radius: 12px; display: flex; justify-content: center; align-items: center; color: #ffffff; font-size: 26px; text-decoration: none; box-shadow: 0 6px 16px rgba(0,0,0,0.25); }
-        .float-whatsapp { background-color: #00e676; }
-        .float-call { background-color: #1e88e5; }
-        
-        @media (max-width: 768px) { .nav-menu { display: none; } }
+        /* القسم الرئيسي - لاحظ مسار الصورة بدون / */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/mizalats/mizalat-tensile-membrane-structure-jeddah114.webp') no-repeat center center;
+            background-size: cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* الأزرار العائمة - رقم المؤسسة الرسمي */
+        .floating-actions-container { position: fixed; bottom: 20px; left: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; }
+        .btn-float { width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .wa-btn { background-color: #25d366; }
+        .call-btn { background-color: #007bff; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="/images/assets-logo-ads/assets-logo-ads-background-mizalat-jeddah.webp" alt="شعار فخر المملكة">
-            </div>
+        <div class="logo">
+            <!-- مسار الشعار بدون / -->
+            <img src="images/assets-logo-ads/assets-logo-ads-background-mizalat-jeddah.webp" alt="شعار">
         </div>
     </header>
 
-    <section class="hero-section" id="home">
+    <section class="hero-section">
         <h1>مؤسسة فخر المملكة</h1>
         <p>الخيار الأول في المملكة لتركيب المظلات والسواتر</p>
-        <a href="https://wa.me/966553511013" class="btn-main" style="background: var(--primary-gold); padding: 15px; color: #fff; text-decoration: none; border-radius: 30px;">تواصل معنا الآن</a>
+        <a href="https://wa.me/966553511013" style="background: var(--primary-gold); color: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; margin-top: 20px;">تواصل معنا الآن</a>
     </section>
 
-    <section id="services" style="padding: 50px 20px;">
-        <img src="/images/sawaters/sawaters-wooden-plastic-jeddah09.webp" alt="خدمة" class="service-img">
+    <!-- مثال لعرض صورة خدمة (تأكد أن المجلدات مطابقة) -->
+    <section style="padding: 40px; text-align: center;">
+        <h2>خدماتنا</h2>
+        <img src="images/sawaters/sawaters-wooden-plastic-jeddah09.webp" alt="خدمة" style="max-width: 100%; border-radius: 10px;">
     </section>
 
+    <!-- الأزرار العائمة (رقم المؤسسة 0553511013) -->
     <div class="floating-actions-container">
-        <a href="https://wa.me/966553511013" class="floating-btn float-whatsapp" target="_blank">
+        <a href="https://wa.me/966553511013" class="btn-float wa-btn" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="tel:00966553511013" class="floating-btn float-call">
-            <i class="fa-solid fa-phone-volume"></i>
+        <a href="tel:+966553511013" class="btn-float call-btn">
+            <i class="fa-solid fa-phone"></i>
         </a>
     </div>
 
-    <footer>
-        <p>رقم المؤسسة الرسمي: 0553511013</p>
-        <div class="marketing-credit">
-            تطوير وإشراف هندسي/ <a href="https://wa.me/966552263681" target="_blank">المهندس وجدي الحالمي</a>
-        </div>
+    <footer style="background: #111; color: #fff; text-align: center; padding: 20px;">
+        <p>مؤسسة فخر المملكة للمظلات والسواتر</p>
+        <p>تطوير وإشراف هندسي: <a href="https://wa.me/966552263681" style="color: var(--primary-gold);">المهندس وجدي الحالمي</a></p>
     </footer>
 
-    <script>
-        // كود الجافا سكربت الخاص بك هنا
-    </script>
 </body>
 </html>
