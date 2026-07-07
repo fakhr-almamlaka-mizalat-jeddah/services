@@ -41,8 +41,8 @@
 
 ### استعراض إضافي للمشاريع:
 ![نموذج](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah1.webp)
-![نموذج](images/pergolas/pergolas-sawater-mizalat-hanger-jeddah.webp)
-![نموذج](images/pergolas/pergolas-wooden-metal-screen-jeddah.webp)
+![نموذج](images/pergolas/pergolas-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
+![نموذج](images/pergolas/pergolas-modern-backyard-designs-jeddah.webp)
 ![نموذج](images/pergolas/pergolas-modern-wood-seating-jeddah.webp)
 ![نموذج](images/sawaters/sawaters-building-wall-jeddah.webp)
 ![نموذج](images/others/hangars-industrial-warehouse-jeddah11.webp)
