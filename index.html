@@ -3,67 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة فخر المملكة | أفضل مؤسسة مظلات وسواتر بجدة والمملكة</title>
+    <title>مؤسسة فخر المملكة | مظلات وسواتر وهناجر بجدة</title>
+    <meta name="description" content="مؤسسة فخر المملكة بجدة متخصصة في تركيب المظلات، السواتر، البرجولات، وتشييد الهناجر والمستودعات بأعلى جودة وضمان.">
+    
+    <!-- الخطوط والأيقونات -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* (أبقِ على نفس الـ CSS الخاص بك كما هو) */
+        :root { --primary-gold: #c5a880; --dark-bg: #11141a; --text-color: #333; --white: #ffffff; }
+        body { font-family: 'Cairo', sans-serif; margin: 0; padding: 0; direction: rtl; }
+        .logo img { width: 150px; }
+        .hero-section { background: linear-gradient(rgba(17, 20, 26, 0.7), rgba(17, 20, 26, 0.7)), url('/images/mizalats/mizalat-tensile-membrane-structure-jeddah114.webp'); background-size: cover; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px; }
+        .btn-main { padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 10px; }
+        .btn-gold { background-color: var(--primary-gold); color: white; }
+        .floating-actions-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
+        .floating-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .float-whatsapp { background-color: #25d366; }
+        .float-call { background-color: #007bff; }
     </style>
 </head>
 <body>
 
+    <!-- الهيدر -->
     <header>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="/images/assets-logo-ads/assets-logo-ads-background-mizalat-jeddah.webp" alt="شعار فخر المملكة بجدة" loading="lazy">
-            </div>
-            </div>
+        <div class="logo">
+            <img src="/images/assets-logo-ads/assets-logo-ads-background-mizalat-jeddah.webp" alt="شعار فخر المملكة">
+        </div>
     </header>
 
-    <section class="hero-section" id="home" style="background: linear-gradient(rgba(17, 20, 26, 0.65), rgba(17, 20, 26, 0.85)), url('/images/mizalats/mizalat-tensile-membrane-structure-jeddah114.webp') no-repeat center center;">
-        </section>
-
-    <section id="services">
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="/images/sawaters/sawaters-wooden-plastic-jeddah09.webp" class="service-img" alt="سواتر حديدية" loading="lazy">
-                </div>
-            <div class="service-card">
-                <img src="/images/pergolas/pergolas-modern-wood-jeddah22.webp" class="service-img" alt="برجولات" loading="lazy">
-                </div>
+    <!-- القسم الرئيسي -->
+    <section class="hero-section" id="home">
+        <h1>مؤسسة <span>فخر المملكة</span> للمظلات والسواتر</h1>
+        <p>الخيار الأول في جدة لتركيب المظلات والسواتر والهناجر بأعلى معايير الجودة.</p>
+        <div class="cta-buttons">
+            <a href="#services" class="btn-main btn-gold">شاهد أعمالنا</a>
+            <a href="https://wa.me/966553511013" class="btn-main" style="border: 1px solid white;">طلب استشارة</a>
         </div>
     </section>
 
-    <section id="gallery" class="gallery-tabs-section">
-        <div class="gallery-grid">
-            <div class="gallery-item mizalat">
-                <img src="/images/mizalats/mizalat-tensile-membrane-structure-jeddah114.webp" alt="مظلات" loading="lazy">
-            </div>
-            <div class="gallery-item pergola">
-                <img src="/images/pergolas/pergolas-modern-wood-jeddah22.webp" alt="برجولات" loading="lazy">
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-info-section">
-                <li><i class="fa-solid fa-phone"></i> <strong>رقم المؤسسة:</strong> 0553511013</li>
-                <li><i class="fa-brands fa-whatsapp"></i> <strong>واتساب المؤسسة:</strong> 0553511013</li>
-            </div>
-            <div class="footer-logo-area">
-                <img src="/images/assets-logo-ads/assets-logo-ads-background-mizalat-jeddah.webp" alt="شعار">
-                <div class="footer-logo-phone">0553511013</div>
-            </div>
-        </div>
-
-        <div class="marketing-credit">
-            تطوير وإشراف هندسي/ <a href="https://wa.me/966552263681" target="_blank">المهندس وجدي الحالمي (للتواصل المباشر) <i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-    </footer>
-
+    <!-- الأزرار العائمة للتواصل (تم تحديث الرقم إلى 0553511013) -->
     <div class="floating-actions-container">
-        <a href="https://wa.me/966553511013" class="floating-btn float-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="tel:0553511013" class="floating-btn float-call"><i class="fa-solid fa-phone-volume"></i></a>
+        <a href="https://wa.me/966553511013" class="floating-btn float-whatsapp" target="_blank" title="واتساب المؤسسة">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:0553511013" class="floating-btn float-call" title="اتصل بنا">
+            <i class="fa-solid fa-phone-volume"></i>
+        </a>
     </div>
 
+    <script>
+        // كود JavaScript إضافي إذا لزم الأمر
+    </script>
 </body>
 </html>
