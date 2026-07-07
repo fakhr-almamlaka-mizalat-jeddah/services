@@ -21,18 +21,32 @@
 
 ---
 
+# لماذا يثق بنا العملاء؟
+
+✅ خامات عالية الجودة.
+✅ تنفيذ هندسي احترافي.
+✅ مقاومة للحرارة والرطوبة والأمطار.
+✅ تصاميم حديثة تناسب جميع المشاريع.
+✅ التزام كامل بالمواعيد.
+✅ أسعار منافسة.
+✅ ضمان على التنفيذ والخامات.
+✅ خدمة ما قبل البيع وما بعد التنفيذ.
+
+---
+
 # 📸 معرض أعمالنا المميز
 
 | الشعار الرسمي | أبرز المشاريع المنفذة |
 | :---: | :---: |
-| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-mizalat-jeddah.webp) | **البرجولات:** ![برجولة](images/pergolas/pergola-curved-wooden-and-metal-screen-jeddah.webp) <br> ![جديد](images/pergolas/pergolas-modern-pool-shade-jeddah40.webp) <br> **المظلات:** ![مظلة](images/mizalats/mizalat-shadd-resort-jeddah63.webp) |
+| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp) | ![نموذج](images/pergolas/pergola-modern-pool-shade-jeddah40.webp) <br> ![نموذج](images/pergolas/pergola-modern-wood-jeddah.webp) <br> ![نموذج](images/mizalats/mizalats-modern-jeddah.webp) |
 
 ### استعراض إضافي للمشاريع:
-![نموذج 2](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah1.webp)
-![نموذج 5](images/pergolas/pergola-modern-wood-rooftop-seating-jeddah.webp)
-![نموذج 6](images/pergolas/pergola-rnate-entrance-canopy-design-jeddah.webp)
-![نموذج 7](images/pergolas/pergola-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
-![هنجر](images/others/hangars-industrial-warehouse-jeddah11.webp)
+![نموذج](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah1.webp)
+![نموذج](images/pergolas/pergolas-sawater-mizalat-hanger-jeddah.webp)
+![نموذج](images/pergolas/pergola-curved-wooden-metal-screen-jeddah.webp)
+![نموذج](images/pergolas/pergola-modern-wood-seating-jeddah.webp)
+![نموذج](images/sawaters/sawaters-building-wall-jeddah.webp)
+![نموذج](images/hangars/hangars-industrial-warehouse-jeddah11.webp)
 
 ---
 
