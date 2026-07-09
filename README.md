@@ -37,7 +37,7 @@
 
 | الشعار الرسمي | أبرز المشاريع المنفذة |
 | :---: | :---: |
-| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp) | ![نموذج](images/pergolas/pergolas-modern-pool-shade-jeddah40.webp) <br> ![نموذج](images/pergolas/pergolas-modern-wood-jeddah.webp) <br> ![نموذج](images/mizalats/mizalats-modern-jeddah.webp) |
+| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp) | ![نموذج](images/pergolas/pergola-modern-pool-shade-jeddah40.webp) <br> ![نموذج](images/pergolas/pergolas-modern-wood-jeddah.webp) <br> ![نموذج](images/mizalats/mizalats-modern-jeddah.webp) |
 
 ### استعراض إضافي للمشاريع:
 ![نموذج](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah1.webp)
@@ -49,9 +49,7 @@
 
 ---
 
-# 🏗️ خدماتنا المتميزة
-
-*   **🚗 المظلات:** مظلات سيارات، حدائق، مدارس، مسابح، أسطح، مداخل، شد إنشائي، PVC، و BDF الكوري.
+# 🏗️ خدماتنا *🚗 المظلات:** مظلات سيارات، حدائق، مدارس، مسابح، أسطح، مداخل، شد إنشائي، PVC، و BDF الكوري.
 *   **🏡 السواتر:** سواتر قماش، حديد، شرائح، خشب بلاستيكي، لكسان، وعاشق ومعشوق.
 *   **🌿 البرجولات:** برجولات حديد، PVC، لكسان، ليزر، وجلسات خارجية وحدائق.
 *   **🏕 بيوت الشعر:** بيوت شعر ملكية، خيام، ومجالس تراثية.
