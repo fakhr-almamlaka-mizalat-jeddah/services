@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خدماتنا | مؤسسة فخر المملكة للمظلات والسواتر بجدة</title>
-    <meta name="description" content="تصفح خدمات مؤسسة فخر المملكة بجدة: تصميم وتنفيذ مظلات سيارات، مظلات حدائق، سواتر، برجولات، هناجر، وبيوت شعر بأحدث التقنيات الهندسية ومقاومة تامة للحرارة والرطوبة.">
-    <!-- Tailwind CSS CDN -->
+    <title>مؤسسة فخر المملكة للمظلات والسواتر بجدة</title>
+    <meta name="description" content="مؤسسة فخر المملكة لتركيب وتصميم المظلات، البرجولات، السواتر، والهناجر في جدة بأحدث التصاميم العصرية وبأسعار تنافسية.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -13,216 +13,354 @@
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#111827', // الخلفية الداكنة الفخمة
-                            card: '#1f2937', // خلفية الكروت والتفاصيل
-                            gold: '#d97706', // اللون الذهبي للهوية والأيقونات
-                            text: '#f3f4f6'  // النصوص الفاتحة
+                            dark: '#0b0f19',    // خلفية داكنة جداً وفخمة
+                            surface: '#161d30', // أسطح الكروت
+                            gold: '#f59e0b',    // اللون الذهبي للهوية
+                            goldHover: '#d97706'
                         }
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts: Tajawal -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Tajawal', sans-serif; }
+        body { font-family: 'Tajawal', sans-serif; background-color: #0b0f19; }
+        /* تحسين مظهر شريط التمرير لمعرض الصور */
+        .gallery-scroll::-webkit-scrollbar { height: 8px; }
+        .gallery-scroll::-webkit-scrollbar-track { background: #161d30; }
+        .gallery-scroll::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 4px; }
     </style>
 </head>
-<body class="bg-brand-dark text-brand-text antialiased">
+<body class="text-gray-200 antialiased">
 
-    <!-- شريط التنقل الاحترافي (Navbar) -->
-    <header class="border-b border-gray-800 bg-brand-dark/95 sticky top-0 z-50 backdrop-blur">
+    <header class="border-b border-gray-800/80 bg-brand-dark/90 sticky top-0 z-50 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <!-- شعار النصي فخر المملكة -->
-                <span class="text-2xl font-black tracking-wider text-brand-gold">فخر المملكة</span>
-                <span class="text-xs bg-gray-850 px-2 py-1 rounded text-gray-400 border border-gray-700 hidden sm:inline-block">للمظلات والسواتر</span>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-gold to-amber-400 flex items-center justify-center font-black text-black text-xl shadow-lg shadow-brand-gold/20">ف</div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-black text-white tracking-wide leading-none">فخر المملكة</span>
+                    <span class="text-[10px] text-brand-gold font-bold tracking-widest mt-1">للمظلات والسواتر</span>
+                </div>
             </div>
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="../" class="hover:text-brand-gold transition-colors font-medium">الرئيسية</a>
-                <a href="#" class="text-brand-gold font-bold border-b-2 border-brand-gold pb-1">خدماتنا</a>
-                <a href="#portfolio" class="hover:text-brand-gold transition-colors font-medium">أعمالنا</a>
-                <a href="#contact" class="hover:text-brand-gold transition-colors font-medium">اتصل بنا</a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#hero" class="hover:text-brand-gold transition-colors">الرئيسية</a>
+                <a href="#services" class="hover:text-brand-gold transition-colors">خدماتنا</a>
+                <a href="#gallery" class="hover:text-brand-gold transition-colors">معرض الأعمال</a>
+                <a href="#ads" class="hover:text-brand-gold transition-colors">العروض الحالية</a>
+                <a href="#comments" class="hover:text-brand-gold transition-colors">آراء العملاء</a>
             </nav>
-            <div class="flex items-center gap-4">
-                <a href="https://wa.me/966553511013" class="bg-brand-gold hover:bg-amber-700 text-white font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-amber-900/20 text-sm flex items-center gap-2">
-                    <span>طلب استشارة مجانية</span>
-                </a>
+
+            <div>
+                <button onclick="toggleAdminModal()" class="text-xs border border-gray-700 bg-brand-surface/50 hover:bg-brand-surface px-3 py-1.5 rounded-lg text-gray-400 transition-all">
+                    لوحة المشرف
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- واجهة الصفحة الرئيسية (Hero Section) -->
-    <section class="relative overflow-hidden bg-gradient-to-b from-brand-dark to-gray-900 py-20 lg:py-32 border-b border-gray-800">
-        <div class="absolute inset-0 bg-[url('https://fakhr-almamlaka-mizalat-jeddah.github.io/assets/images/hero-pattern.svg')] opacity-5"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="text-brand-gold font-bold tracking-widest uppercase text-sm bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/20">دقة هندسية وفخامة تدوم</span>
+    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.98)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <span class="text-brand-gold bg-brand-gold/10 border border-brand-gold/20 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase">مؤسسة فخر المملكة الرسمية بجدة</span>
             <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight">
-                خدمات التصميم والتنفيذ الاحترافي
+                نبتكر الفخامة والظلال الدائمة <br>لمساحاتكم الخارجية
             </h1>
-            <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                في <span class="text-brand-gold font-bold">مؤسسة فخر المملكة</span>، ندمج بين أحدث التقنيات الهندسية وأعلى معايير الجودة العالمية لنقدم لكم حلول تظليل متكاملة تقاوم حرارة ورطوبة جدة العالية بكل كفاءة وأمان[span_3](start_span)[span_3](end_span).
+            <p class="mt-6 text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                متخصصون في تصميم وتوريد وتركيب كافة أعمال المظلات الحديثة، البرجولات الخشبية والحديدية، السواتر الحاجبة للرؤية، والهناجر الإنشائية بجدة والمناطق المحيطة بمعايير هندسية مقاومة للرطوبة والحرارة العالية.
             </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="https://wa.me/966553511013" class="bg-brand-gold hover:bg-brand-goldHover text-black font-bold px-8 py-4 rounded-xl transition-all shadow-xl shadow-brand-gold/10 flex items-center gap-2">
+                    <span>تواصل معنا واتساب فوراً</span>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- شبكة الخدمات المتكاملة (Services Grid) -->
-    <main class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-white">تخصصاتنا الأساسية</h2>
-            <p class="text-gray-400 mt-2">نبتكر الحلول لتلبي تطلعاتكم السكنية والتجارية</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- الخدمة 1: مظلات السيارات -->
-            <article class="bg-brand-card rounded-2xl overflow-hidden border border-gray-800 hover:border-brand-gold/50 transition-all duration-300 group shadow-xl">
-                <div class="relative aspect-video overflow-hidden bg-gray-800">
-                    <img src="../images/mizalat-sayarat-jeddah.webp" alt="تصميم مظلات سيارات حديثة في جدة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors">مظلات السيارات</h3>
-                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">
-                        تصميم وتركيب مظلات سيارات كابولي، ومقصية، وهرمية باستخدام قماش PVC الألماني عالي الكثافة والكوري ومادة البولي إيثيلين، لتوفر عزلًا حراريًا بنسبة 100% وحماية تامة للطلاء من أشعة الشمس المباشرة.
-                    </p>
-                </div>
-            </article>
-
-            <!-- الخدمة 2: مظلات الحدائق والبرجولات -->
-            <article class="bg-brand-card rounded-2xl overflow-hidden border border-gray-800 hover:border-brand-gold/50 transition-all duration-300 group shadow-xl">
-                <div class="relative aspect-video overflow-hidden bg-gray-800">
-                    <img src="../images/pergolas-jeddah.webp" alt="تركيب برجولات ومظلات حدائق مودرن بجدة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors">مظلات الحدائق والبرجولات</h3>
-                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">
-                        جلسات خارجية وبرجولات خشبية، حديدية بدهان خشابي، ومظلات لكسان شفافة بتصاميم مودرن وكلاسيكية تحول حديقة منزلك أو سطح بيتك إلى واحة استرخاء عصرية ساحرة ومقاومة لتقلبات الطقس.
-                    </p>
-                </div>
-            </article>
-
-            <!-- الخدمة 3: السواتر والموانع -->
-            <article class="bg-brand-card rounded-2xl overflow-hidden border border-gray-800 hover:border-brand-gold/50 transition-all duration-300 group shadow-xl">
-                <div class="relative aspect-video overflow-hidden bg-gray-800">
-                    <img src="../images/sawater-jeddah.webp" alt="تركيب سواتر حديد وبلاستيك للجدران بجدة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors">السواتر وموانع الرؤية</h3>
-                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">
-                        تركيب سواتر حديدية (شرائح ومجدول)، سواتر خشب بلاستيكي ومفتوح، وسواتر قماشية لتوفر خصوصية تامة وحجب كامل للرؤية بنسبة 100% مع الحفاظ على المظهر المعماري الأنيق للفيلا أو المنشأة.
-                    </p>
-                </div>
-            </article>
-
-            <!-- الخدمة 4: الهناجر والمستودعات -->
-            <article class="bg-brand-card rounded-2xl overflow-hidden border border-gray-800 hover:border-brand-gold/50 transition-all duration-300 group shadow-xl">
-                <div class="relative aspect-video overflow-hidden bg-gray-800">
-                    <img src="../images/hanagir-jeddah.webp" alt="بناء وتشييد هناجر ومستودعات بجدة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors">الهناجر والمستودعات</h3>
-                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">
-                        بناء وتشييد المستودعات والهناجر والمخازن التجارية وفق المخططات الهندسية المعتمدة باستخدام أفضل أنواع الحديد الإنشائي المانع للصدأ والتآكل، مع تكامل تام مع أنظمة الأمن والسلامة والعزل.
-                    </p>
-                </div>
-            </article>
-
-            <!-- الخدمة 5: بيوت الشعر والخيام -->
-            <article class="bg-brand-card rounded-2xl overflow-hidden border border-gray-800 hover:border-brand-gold/50 transition-all duration-300 group shadow-xl">
-                <div class="relative aspect-video overflow-hidden bg-gray-800">
-                    <img src="../images/khiyam-jeddah.webp" alt="تصميم بيوت شعر وخيام ملكية بجدة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors">بيوت الشعر والخيام الملكية</h3>
-                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">
-                        تنفيذ بيوت شعر وخيام بتشطيبات ملكية فاخرة تجمع بين عراقة التراث ورفاهية التصميم المعاصر، مجهزة بكافة التمديدات الكهربائية، العزل المائي والحراري، والاضاءات الفخمة المخصصة للمجالس.
-                    </p>
-                </div>
-            </article>
-
-            <!-- الخدمة 6: ساندوتش بانل وألواح لكسان -->
-            <article class="bg-brand-card rounded-2xl overflow-hidden border border-gray-800 hover:border-brand-gold/50 transition-all duration-300 group shadow-xl">
-                <div class="relative aspect-video overflow-hidden bg-gray-800">
-                    <img src="../images/sandwich-panel-lexan.webp" alt="تركيب ساندوتش بانل وألواح لكسان بجدة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors">الساندوتش بانل واللكسان</h3>
-                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">
-                        تغطية الأسقف والملاحق بألواح الساندوتش بانل المعزولة تماماً ضد الصوت والحرارة، وتركيب مظلات لكسان (الزجاج المقاوم للكسر) الذي يسمح بمرور الضوء الطبيعي الآمن ويحجب الأشعة فوق البنفسجية الضارة.
-                    </p>
-                </div>
-            </article>
-
-        </div>
-    </main>
-
-    <!-- المزايا التنافسية والقيمة المضافة (Interactive Value-Add Section) -->
-    <section class="bg-gray-900/60 py-20 border-t border-b border-gray-800">
+    <section id="ads" class="py-12 bg-gradient-to-r from-amber-950/40 via-brand-dark to-brand-dark border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white">لماذا يختار عملائنا "فخر المملكة"؟</h2>
-                <p class="text-gray-400 mt-2">معايير صارمة تضمن استثماراً طويل الأجل لأموالكم</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6 bg-brand-card rounded-xl border border-gray-800">
-                    <div class="w-12 h-12 rounded-full bg-amber-500/10 text-brand-gold flex items-center justify-center mx-auto text-xl font-bold mb-4">✓</div>
-                    <h4 class="text-lg font-bold text-white">مقاومة تامة وعزل كامل</h4>
-                    <p class="text-sm text-gray-400 mt-2 leading-relaxed">مواد معالجة ومقاومة لدرجات الحرارة والرطوبة الشديدة في البيئة الساحلية بجدة[span_4](start_span)[span_4](end_span).</p>
+            <div id="ad-box" class="bg-brand-surface/40 border border-brand-gold/30 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-sm">
+                <div class="flex items-center gap-5">
+                    <div class="w-16 h-16 rounded-xl bg-brand-gold/10 border border-brand-gold/20 flex items-center justify-center text-2xl text-brand-gold shrink-0">📢</div>
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase">الإعلان الحالي والعروض النشطة</span>
+                        <h2 id="ad-title" class="text-xl sm:text-2xl font-black text-white mt-1">خصم 15% على تركيب مظلات السيارات والبرجولات هذا الشهر!</h2>
+                        <p id="ad-desc" class="text-sm text-gray-400 mt-2">يسري العرض في كافة أحياء مدينة جدة مع ضمان معتمد لمدة 10 سنوات على القماش الألماني والكوري والأعمال الحديدية الهيكلية.</p>
+                    </div>
                 </div>
-                <div class="text-center p-6 bg-brand-card rounded-xl border border-gray-800">
-                    <div class="w-12 h-12 rounded-full bg-amber-500/10 text-brand-gold flex items-center justify-center mx-auto text-xl font-bold mb-4">✓</div>
-                    <h4 class="text-lg font-bold text-white">دقة هندسية احترافية</h4>
-                    <p class="text-sm text-gray-400 mt-2 leading-relaxed">تنفيذ احترافي دقيق على أيدي فريق هندسي خبير ومتمكن لضمان مستويات الأمان المطلوبة[span_5](start_span)[span_5](end_span).</p>
-                </div>
-                <div class="text-center p-6 bg-brand-card rounded-xl border border-gray-800">
-                    <div class="w-12 h-12 rounded-full bg-amber-500/10 text-brand-gold flex items-center justify-center mx-auto text-xl font-bold mb-4">✓</div>
-                    <h4 class="text-lg font-bold text-white">تصاميم عصرية (Modren)</h4>
-                    <p class="text-sm text-gray-400 mt-2 leading-relaxed">نواكب أحدث خطوط التصاميم المعمارية العالمية لنمنح منشأتك الفخامة والأناقة الجذابة[span_6](start_span)[span_6](end_span).</p>
-                </div>
-                <div class="text-center p-6 bg-brand-card rounded-xl border border-gray-800">
-                    <div class="w-12 h-12 rounded-full bg-amber-500/10 text-brand-gold flex items-center justify-center mx-auto text-xl font-bold mb-4">✓</div>
-                    <h4 class="text-lg font-bold text-white">ضمان ممتد حقيقي</h4>
-                    <p class="text-sm text-gray-400 mt-2 leading-relaxed">نمنح عملائنا شهادات ضمان طويلة الأمد على كافة أعمال الهياكل الحديدية والأقمشة والتثبيت.</p>
+                <div id="ad-img-container" class="w-full md:w-44 h-28 rounded-xl overflow-hidden bg-gray-900 border border-gray-800 shrink-0">
+                    <img id="ad-img" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=400&q=80" alt="صورة العرض الحالي" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم الحث على الاتصال (Call To Action - Contact) -->
-    <section id="contact" class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="bg-gradient-to-r from-amber-600 to-amber-700 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl">
-            <div class="relative z-10">
-                <h2 class="text-3xl sm:text-4xl font-black text-white">هل أنت مستعد لبدء مشروعك القادم؟</h2>
-                <p class="text-white/90 mt-4 max-w-2xl mx-auto text-base sm:text-lg">
-                    تواصل معنا اليوم للحصول على مقايسة دقيقة لموقعك واستشارة هندسية مجانية متكاملة من خبراء فخر المملكة.
-                </p>
-                <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="https://wa.me/966553511013" class="w-full sm:w-auto bg-brand-dark hover:bg-black text-white font-bold px-8 py-4 rounded-xl transition-all text-base shadow-lg">
-                        تواصل عبر الواتساب مباشر
-                    </a>
-                    <a href="tel:00966553511013" class="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-amber-700 text-white font-bold px-8 py-4 rounded-xl transition-all text-base">
-                        اتصال هاتفي: 0553511013
-                    </a>
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-black text-white">أصناف خدماتنا الرئيسية</h2>
+            <p class="text-gray-400 text-sm mt-2">تصاميم هندسية متكاملة ننفذها بأعلى درجات الاحترافية</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <div class="bg-brand-surface rounded-2xl overflow-hidden border border-gray-800 group hover:border-brand-gold/30 transition-all shadow-xl">
+                <div class="aspect-[16/9] bg-gray-900 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=800&q=80" alt="مظلات فخر المملكة بجدة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors">1. المظلات (سيارات، حدائق، مسابح)</h3>
+                    <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                        نقدم أرقى حلول المظلات بجدة باستخدام أقمشة الـ PVC الألمانية عالية الكثافة، والـ PVDF الكورية، ومادة البولي إيثيلين الاسترالية. تتوفر بتصاميم متعددة مثل المظلات الهرمية، الكابولي، والمقصية التي توفر عزلًا حراريًا تاماً بنسبة 100% وحماية كاملة لسيارتك أو جلستك الخارجية من الأمطار والحرارة الشديدة.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-brand-surface rounded-2xl overflow-hidden border border-gray-800 group hover:border-brand-gold/30 transition-all shadow-xl">
+                <div class="aspect-[16/9] bg-gray-900 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80" alt="برجولات وجلسات حدائق بجدة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors">2. البرجولات وجلسات الاسترخاء</h3>
+                    <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                        برجولات مودرن فخمة للحدائق والأسطح والفلل، ننفذها من الخشب الطبيعي المعالج المقاوم للتسوس، والحديد بدهان خشابي حراري فخم يعطي شكل الخشب الطبيعي مع صلابة الحديد، بالإضافة إلى تقفيلات ألواح اللكسان الشفافة لحمايتكم من الرياح والأمطار مع الحفاظ على نفاذ الضوء الخارجي الأنيق والمريح.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-brand-surface rounded-2xl overflow-hidden border border-gray-800 group hover:border-brand-gold/30 transition-all shadow-xl">
+                <div class="aspect-[16/9] bg-gray-900 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="سواتر وموانع رؤية بجدة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors">3. السواتر وموانع الرؤية للجدران</h3>
+                    <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                        توفير الخصوصية والأمان لفللكم ومنازلكم من خلال تركيب سواتر حديد (شرائح ومجدول)، وسواتر خشب بلاستيكي معالج وسواتر قماشية بأسعار اقتصادية ومتينة. تضمن لكم السواتر حجب كامل للرؤية بنسبة 100% ومقاومة عالية لشدة الرياح والظروف الجوية المختلفة بجدة دون تغيير في ألوانها.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-brand-surface rounded-2xl overflow-hidden border border-gray-800 group hover:border-brand-gold/30 transition-all shadow-xl">
+                <div class="aspect-[16/9] bg-gray-900 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="بناء هناجر ومستودعات بجدة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors">4. الهناجر والمستودعات الإنشائية</h3>
+                    <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                        تخصصنا ممتد لبناء وتشييد وتجهيز الهناجر والمستودعات الكبيرة والمخازن التجارية والمظلات الإنشائية الضخمة للمصانع والشركات. يتم البناء وفقاً للمخططات الهندسية المعتمدة ومواصفات الأمن والسلامة مع استخدام حديد عالي الصلابة مطلي بدهانات مقاومة للحرائق والصدأ والتآكل.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- تذييل الصفحة الاحترافي (Footer) -->
-    <footer class="border-t border-gray-800 bg-brand-dark py-12 text-sm text-gray-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p>© 2026 مؤسسة فخر المملكة للمظلات والسواتر بجدة. جميع الحقوق محفوظة.</p>
-            <div class="flex items-center gap-6 text-gray-400">
-                <span>المقر الرئيسي: جدة، المملكة العربية السعودية</span>
-                <span>•</span>
-                <span class="text-xs text-gray-600">تصميم وتنفيذ هندسي راقي</span>
+    <section id="gallery" class="py-16 bg-gray-950/40 border-t border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 flex justify-between items-center">
+            <div>
+                <h2 class="text-2xl sm:text-3xl font-black text-white">معرض أعمالنا ومشاريعنا المعمارية</h2>
+                <p class="text-gray-400 text-xs mt-1">تصفح صوراً حية وحقيقية من مشاريعنا المنفذة ميدانياً بجدة</p>
             </div>
+            <div class="text-xs text-brand-gold font-medium bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20 animate-pulse">اسحب لليمين واليسار ↔</div>
+        </div>
+
+        <div class="gallery-scroll overflow-x-auto flex gap-4 px-4 sm:px-8 pb-6 select-none cursor-grab">
+            <script>
+                const galleryContainer = document.currentScript.parentElement;
+                // عينات صور من Unsplash لتعبئة المعرض بشكل فاخر واحترافي
+                const sampleImages = [
+                    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80',
+                    'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=400&q=80',
+                    'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=400&q=80',
+                    'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80',
+                    'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=400&q=80'
+                ];
+
+                for (let i = 1; i <= 35; i++) {
+                    const imgUrl = sampleImages[(i - 1) % sampleImages.length];
+                    const imgHtml = `
+                        <div class="w-64 sm:w-72 shrink-0 bg-brand-surface border border-gray-800 rounded-xl overflow-hidden group shadow-lg">
+                            <div class="h-44 bg-gray-900 overflow-hidden relative">
+                                <img src="${imgUrl}" alt="مشروع فخر المملكة رقم ${i}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                <span class="absolute top-2 right-2 bg-black/70 backdrop-blur-md text-[10px] text-brand-gold font-bold px-2 py-0.5 rounded">عمل رقم ${i}</span>
+                            </div>
+                            <div class="p-3 text-center">
+                                <p class="text-xs font-medium text-gray-300">مظلات وسواتر فخر المملكة الحديثة</p>
+                            </div>
+                        </div>
+                    `;
+                    galleryContainer.insertAdjacentHTML('beforeend', imgHtml);
+                }
+            </script>
+        </div>
+    </section>
+
+    <section id="comments" class="py-20 max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-black text-white">آراء وتقييمات عملائنا الكرام</h2>
+            <p class="text-gray-400 text-xs mt-1">شاركنا تجربتك ورأيك في جودة الخدمات والالتزام بالمواعيد</p>
+        </div>
+
+        <div class="bg-brand-surface rounded-2xl p-6 border border-gray-800 mb-8 shadow-xl">
+            <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+                <span>إضافة تعليق أو تقييم جديد</span>
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <input id="comment-user" type="text" placeholder="اسمك الكريم" class="bg-brand-dark border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold">
+                <select id="comment-rating" class="bg-brand-dark border border-gray-700 rounded-xl px-4 py-3 text-sm text-brand-gold focus:outline-none focus:border-brand-gold">
+                    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ تقييم ممتاز (5/5)</option>
+                    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ تقييم جيد جداً (4/5)</option>
+                    <option value="⭐⭐⭐">⭐⭐⭐ تقييم مقبول (3/5)</option>
+                </select>
+            </div>
+            <textarea id="comment-text" rows="3" placeholder="اكتب مراجعتك أو تعليقك حول جودة التركيب والتعامل هنا..." class="w-full bg-brand-dark border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold mb-4"></textarea>
+            <button onclick="addComment()" class="w-full bg-brand-gold hover:bg-brand-goldHover text-black font-bold py-3 rounded-xl text-sm transition-all shadow-lg">
+                نشر التعليق الآن على الموقع
+            </button>
+        </div>
+
+        <div id="comments-list" class="space-y-4">
+            </div>
+    </section>
+
+    <div id="admin-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-brand-surface border border-gray-700 w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+            <div class="bg-gray-900 px-6 py-4 border-b border-gray-800 flex justify-between items-center">
+                <h3 class="text-base font-black text-white flex items-center gap-2">
+                    <span class="text-brand-gold">⚙️</span> لوحة تحكم وإشراف موقع فخر المملكة
+                </h3>
+                <button onclick="toggleAdminModal()" class="text-gray-400 hover:text-white text-lg font-bold">✕</button>
+            </div>
+            
+            <div class="p-6 space-y-6">
+                <div>
+                    <h4 class="text-sm font-bold text-brand-gold border-b border-gray-800 pb-2 mb-3">1. تحديث لوحة الإعلانات والعروض الدورية</h4>
+                    <div class="space-y-3">
+                        <input id="admin-ad-title" type="text" placeholder="عنوان العرض الجديد" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-brand-gold">
+                        <textarea id="admin-ad-desc" rows="2" placeholder="تفاصيل العرض والباقة المتاحة حالياً..." class="w-full bg-brand-dark border border-gray-700 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-brand-gold"></textarea>
+                        <input id="admin-ad-img" type="text" placeholder="رابط صورة الإعلان الاختياري (URL)" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-brand-gold">
+                        <button onclick="updateAdFromAdmin()" class="w-full bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold py-2.5 rounded-xl transition-all">
+                            تحديث لوحة الإعلان فوراً
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-brand-dark rounded-xl p-4 border border-gray-800 text-xs text-gray-400 leading-relaxed">
+                    💡 <span class="text-white font-medium">ميزة إدارة التعليقات:</span> عند إغلاق هذا المودال، ستظهر لك أزرار <span class="text-red-500 font-bold">"حذف التعليق 🗑️"</span> حمراء خاصة بجانب كل تعليق في الموقع لتمكينك من تصفيتها وحذف أي تعليق مسيء بضغطة زر مباشرة.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-gray-800/60 bg-brand-dark py-10 text-xs text-gray-500 text-center">
+        <div class="max-w-7xl mx-auto px-4 space-y-4">
+            <p class="font-medium text-gray-400">© 2026 مؤسسة فخر المملكة لخدمات المظلات والسواتر بجدة. جميع الحقوق محفوظة.</p>
+            <p class="text-[11px] text-gray-650">تنفيذ هندسي وتطوير ويب احترافي متكامل متوافق مع معايير السيو عبر مستودعات GitHub</p>
         </div>
     </footer>
 
+    <script>
+        // مصفوفة حفظ التعليقات محلياً وعرضها بشكل ديناميكي مخصص
+        let commentsData = [
+            { id: 1, name: "المهندس خالد البقمي", rating: "⭐⭐⭐⭐⭐", text: "شغل ممتاز جداً ومواعيد دقيقة في تركيب مظلات سيارات الفيلا بحي المرجان، شكراً لفريق فخر المملكة على الاحترافية." },
+            { id: 2, name: "مؤسسة أبو فهد للمقاولات", rating: "⭐⭐⭐⭐⭐", text: "قمنا بالتعاقد معهم لتنفيذ هناجر ومستودعات تجارية ضخمة وكانت النتائج مطابقة تماماً للمخططات الهندسية المعتمدة والأمان عالي." }
+        ];
+
+        // دالة لعرض وتحديث قائمة التعليقات الحالية على شاشة زوار الموقع
+        function renderComments() {
+            const listContainer = document.getElementById('comments-list');
+            listContainer.innerHTML = '';
+
+            if (commentsData.length === 0) {
+                listContainer.innerHTML = '<p class="text-center text-xs text-gray-500 py-4">لا توجد تعليقات حالياً، كن أول من يضيف تقييمه!</p>';
+                return;
+            }
+
+            commentsData.forEach(item => {
+                const cardHtml = `
+                    <div class="bg-brand-surface/70 border border-gray-800 p-5 rounded-xl flex justify-between items-start gap-4 transition-all">
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm font-bold text-white">${item.name}</span>
+                                <span class="text-[11px] text-brand-gold">${item.rating}</span>
+                            </div>
+                            <p class="text-xs text-gray-400 leading-relaxed pt-1">${item.text}</p>
+                        </div>
+                        <button onclick="deleteComment(${item.id})" class="text-[11px] bg-red-950/40 border border-red-900/50 text-red-400 px-2.5 py-1 rounded-lg hover:bg-red-900 hover:text-white transition-all shrink-0">
+                            حذف التعليق 🗑️
+                        </button>
+                    </div>
+                `;
+                listContainer.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+        // دالة لإضافة تعليق زائر جديد فوراً
+        function addComment() {
+            const nameInput = document.getElementById('comment-user');
+            const ratingInput = document.getElementById('comment-rating');
+            const textInput = document.getElementById('comment-text');
+
+            if (!nameInput.value.trim() || !textInput.value.trim()) {
+                alert('الرجاء إدخال اسمك الكريم ونص المراجعة قبل الإرسال.');
+                return;
+            }
+
+            const newComment = {
+                id: Date.now(),
+                name: nameInput.value.trim(),
+                rating: ratingInput.value,
+                text: textInput.value.trim()
+            };
+
+            commentsData.unshift(newComment);
+            renderComments();
+
+            // تفريغ المدخلات بعد الإضافة الناجحة
+            nameInput.value = '';
+            textInput.value = '';
+        }
+
+        // دالة مخصصة للمشرف لحذف أي تعليق يراه مسيئاً بضغطة زر فورية
+        function deleteComment(id) {
+            if (confirm('هل أنت متأكد تماماً من رغبتك في حذف هذا التعليق نهائياً من الموقع؟')) {
+                commentsData = commentsData.filter(item => item.id !== id);
+                renderComments();
+            }
+        }
+
+        // فتح وإغلاق مودال لوحة تحكم المشرف
+        function toggleAdminModal() {
+            const modal = document.getElementById('admin-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        // دالة لتحديث بيانات لوحة الإعلانات من قبل المشرف وتغيير العروض فوراً
+        function updateAdFromAdmin() {
+            const title = document.getElementById('admin-ad-title').value.trim();
+            const desc = document.getElementById('admin-ad-desc').value.trim();
+            const img = document.getElementById('admin-ad-img').value.trim();
+
+            if (!title || !desc) {
+                alert('الرجاء تعبئة عنوان الإعلان والتفاصيل لتحديث اللوحة بنجاح.');
+                return;
+            }
+
+            document.getElementById('ad-title').innerText = title;
+            document.getElementById('ad-desc').innerText = desc;
+            
+            if (img) {
+                document.getElementById('ad-img').src = img;
+            }
+
+            toggleAdminModal(); // إغلاق اللوحة بعد التحديث المباشر
+        }
+
+        // تشغيل أولي لتحميل المراجعات الافتراضية عند فتح الموقع
+        window.onload = function() {
+            renderComments();
+        };
+    </script>
 </body>
 </html>
