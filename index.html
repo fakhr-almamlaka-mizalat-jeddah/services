@@ -3,91 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة فخر المملكة للمظلات والسواتر بجدة | أفضل خدمات تركيب المظلات</title>
-    <meta name="description" content="مؤسسة فخر المملكة بجدة: أفضل مؤسسة مظلات وسواتر، تركيب برجولات، هناجر، سواتر حديد وخشب. خبرة 20 سنة في جدة بضمان معتمد.">
+    <title>مؤسسة فخر المملكة للمظلات والسواتر بجدة</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Tajawal', sans-serif; background-color: #0b0f19; }
-        .gallery-scroll::-webkit-scrollbar { height: 8px; }
-        .gallery-scroll::-webkit-scrollbar-track { background: #161d30; }
-        .gallery-scroll::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 4px; }
-        .floating-btn { position: fixed; bottom: 20px; z-index: 100; transition: transform 0.3s; }
-        .floating-btn:hover { transform: scale(1.1); }
+        body { font-family: 'Tajawal', sans-serif; background-color: #f8fafc; }
+        .gallery-container { display: flex; gap: 15px; overflow-x: auto; padding: 20px 0; scrollbar-width: thin; }
+        .gallery-img { min-width: 250px; height: 180px; object-fit: cover; border-radius: 12px; transition: transform 0.3s; }
+        .gallery-img:hover { transform: scale(1.05); }
     </style>
 </head>
-<body class="text-gray-200">
+<body>
 
-    <!-- Header -->
-    <header class="border-b border-gray-800 bg-brand-dark/90 sticky top-0 z-50 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 h-24 flex items-center justify-between">
-            <img src="logo-best-fakhr-almamlaka-sawater-gray-mizalat-fakhr-almamlaka-jeddah1.webp" alt="فخر المملكة" class="h-16">
-            <nav class="hidden md:flex gap-6 font-bold">
-                <a href="#about" class="hover:text-amber-500">من نحن</a>
-                <a href="#services" class="hover:text-amber-500">خدماتنا</a>
-                <a href="#gallery" class="hover:text-amber-500">المعرض</a>
-            </nav>
-            <button onclick="toggleAdminModal()" class="text-xs border px-3 py-1 rounded-lg">إدارة المشرف</button>
-        </div>
-    </header>
+    <section class="py-16 px-6 bg-white">
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">معرض مشاريعنا (المسار الأول)</h2>
+        <div id="gallery-row-1" class="gallery-container"></div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="py-20 bg-cover bg-center" style="background-image: url('mizalat-background-structure-fakhr-almamlaka-jeddah114.webp');">
-        <div class="max-w-4xl mx-auto text-center bg-black/60 p-10 rounded-2xl">
-            <h1 class="text-5xl font-black text-white">نبتكر الفخامة والظلال الدائمة بجدة</h1>
-            <p class="mt-6 text-gray-300">نمتلك خبرة واسعة في مجال المظلات والسواتر والمقاولات بجدة، مما يضمن لك الحصول على أفضل الخدمات بضمان رسمي ممتد.</p>
-            <img src="ads-fakhr-almamlaka-sawater-mizalat-fakhr-almamlaka-jeddah1.webp" class="mt-8 rounded-xl shadow-2xl mx-auto" alt="مظلات فخر المملكة">
-        </div>
+        <h2 class="text-3xl font-bold text-center mt-20 mb-10 text-gray-800">معرض مشاريعنا (المسار الثاني)</h2>
+        <div id="gallery-row-2" class="gallery-container"></div>
     </section>
-
-    <!-- Stats -->
-    <section class="py-10 grid grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-5xl mx-auto">
-        <div class="p-4 border-r border-gray-700"><h3 class="text-3xl font-black text-amber-500">+600</h3><p class="text-sm">مشروع مكتمل</p></div>
-        <div class="p-4 border-r border-gray-700"><h3 class="text-3xl font-black text-amber-500">+300</h3><p class="text-sm">عميل دائم</p></div>
-        <div class="p-4 border-r border-gray-700"><h3 class="text-3xl font-black text-amber-500">20+</h3><p class="text-sm">سنة خبرة</p></div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-20 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        <img src="pergola-khashabia-fakhr-almamlaka-jeddah4.webp" class="rounded-2xl w-full md:w-1/2 shadow-xl" alt="نبذة عنا">
-        <div>
-            <h2 class="text-3xl font-black mb-4">نبذة عن مؤسسة فخر المملكة بجدة</h2>
-            <p class="text-gray-400 leading-relaxed">تتميز مؤسسة فخر المملكة لإنشاء المظلات والسواتر بجدة بريادتها الممتدة في تنفيذ كبرى المشاريع الإنشائية. نلتزم بتقديم حلول هندسية متطورة باستخدام أجود الخامات العالمية المعتمدة لضمان أقصى درجات الحماية.</p>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="py-20 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Items 1-4 -->
-            <div class="bg-gray-800 p-6 rounded-xl"><img src="mizalats-best-modern-fakhr-almamlaka-jeddah2.webp" class="mb-4 rounded-lg"><h3>1. المظلات (سيارات، حدائق، مسابح)</h3></div>
-            <div class="bg-gray-800 p-6 rounded-xl"><img src="pergolas-modern-wood-fakhr-almamlaka-jeddah.webp" class="mb-4 rounded-lg"><h3>2. البرجولات وجلسات الاسترخاء</h3></div>
-            <div class="bg-gray-800 p-6 rounded-xl"><img src="sawaters-building-wall-fakhr-almamlaka-jeddah.webp" class="mb-4 rounded-lg"><h3>3. السواتر وموانع الرؤية</h3></div>
-            <div class="bg-gray-800 p-6 rounded-xl"><img src="hangar-mostawdaat-fakhr-almamlaka-jeddah1.webp" class="mb-4 rounded-lg"><h3>4. الهناجر والمستودعات الإنشائية</h3></div>
-        </div>
-    </section>
-
-    <!-- Floating Buttons -->
-    <a href="https://wa.me/966553511013?text=مرحباً، أود الاستفسار عن خدمات المظلات والسواتر" class="floating-btn right-5 bg-green-500 p-4 rounded-full shadow-lg">واتساب</a>
-    <a href="tel:966553511013" class="floating-btn right-20 bg-blue-500 p-4 rounded-full shadow-lg">📞</a>
-
-    <!-- Footer -->
-    <footer class="py-10 text-center border-t border-gray-800">
-        <img src="logo-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah2.webp" class="h-12 mx-auto mb-4" alt="شعار">
-        <p>مواعيد العمل: من السبت للخميس (7ص - 11م) | الجمعة (1م - 11م)</p>
-        <p class="mt-4">تصميم وتسويق/ المهندس وجدي الحالمي <a href="https://wa.me/966552263681?text=مرحباً مهندس وجدي، بخصوص تسويق الموقع" class="text-green-400 font-bold">00966552263681 📱</a></p>
-        <p class="mt-2">جميع الحقوق محفوظة 2026 لمؤسسة فخر المملكة</p>
-    </footer>
 
     <script>
-        function toggleAdminModal() {
-            const pass = prompt("يرجى إدخال كلمة مرور المشرف:");
-            if (pass === "1234") { // استبدلها بكلمة مرور حقيقية
-                document.getElementById('admin-modal').classList.remove('hidden');
-            } else {
-                alert("كلمة مرور خاطئة!");
-            }
+        // هنا تضع أسماء ملفات صورك - المسار الأول (45 صورة)
+        const imagesRow1 = [
+            "ads-fakhr-almamlaka-sawater-mizalat-white-fakhr-almamlaka-jeddah2.webp",
+            "mizalat-galsat-pvc-mamar-fakhr-almamlaka-jeddah107.webp",
+            // ... أضف هنا باقي الـ 45 اسم صورة
+        ];
+
+        // هنا تضع أسماء ملفات صورك - المسار الثاني (45 صورة)
+        const imagesRow2 = [
+            "hangars-industrial-warehouse-fakhr-almamlaka-jeddah11.webp",
+            "mizalat-hadaiq-pvc-makhrouti-fakhr-almamlaka-jeddah110.webp",
+            // ... أضف هنا باقي الـ 45 اسم صورة
+        ];
+
+        // دالة عرض الصور
+        function renderGallery(images, containerId) {
+            const container = document.getElementById(containerId);
+            images.forEach(imgName => {
+                container.innerHTML += `<img src="images/${imgName}" alt="مشروع فخر المملكة" class="gallery-img shadow-lg" onerror="this.src='https://via.placeholder.com/250'">`;
+            });
         }
+
+        renderGallery(imagesRow1, 'gallery-row-1');
+        renderGallery(imagesRow2, 'gallery-row-2');
     </script>
-</body>
+
+    </body>
 </html>
