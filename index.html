@@ -2,78 +2,110 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>مؤسسة فخر المملكة للمظلات والسواتر بجدة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة فخر المملكة | مظلات وسواتر جدة</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Tajawal', sans-serif; background-color: #f8fafc; }
-        .gallery-track { display: flex; gap: 1rem; overflow-x: auto; padding: 1rem; scrollbar-width: thin; }
-        .bg-navy { background-color: #0f172a; }
+        body { font-family: 'Tajawal', sans-serif; background-color: #0b0f19; color: #e5e7eb; }
+        .gallery-track { display: flex; gap: 1rem; overflow-x: auto; padding: 1.5rem; scroll-behavior: smooth; }
+        .gallery-track::-webkit-scrollbar { height: 6px; }
+        .gallery-track::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 10px; }
+        .project-card { min-width: 250px; transition: transform 0.3s; }
+        .project-card:hover { transform: scale(1.05); }
+        .floating-btn { position: fixed; bottom: 20px; z-index: 999; cursor: pointer; transition: 0.3s; }
+        .floating-btn:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
 
-    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <h2 class="text-2xl font-black text-blue-900">فخر المملكة</h2>
-            <nav class="hidden md:flex gap-6 font-bold text-gray-700">
-                <a href="#hero">الرئيسية</a><a href="#services">خدماتنا</a><a href="#gallery">المعرض</a><a href="#comments">الآراء</a>
+    <header class="border-b border-gray-800 bg-gray-900/90 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 h-24 flex items-center justify-between">
+            <img src="images/logo-best-fakhr-almamlaka-sawater-gray-mizalat-fakhr-almamlaka-jeddah1.webp" alt="فخر المملكة" class="h-16">
+            <nav class="hidden md:flex gap-6 font-bold">
+                <a href="#hero" class="hover:text-amber-500">الرئيسية</a>
+                <a href="#about" class="hover:text-amber-500">من نحن</a>
+                <a href="#services" class="hover:text-amber-500">خدماتنا</a>
+                <a href="#gallery" class="hover:text-amber-500">المعرض</a>
             </nav>
+            <button onclick="checkAdmin()" class="text-xs border border-gray-700 px-3 py-1 rounded-lg hover:bg-gray-800">إدارة</button>
         </div>
     </header>
 
-    <section id="hero" class="py-20 px-6 text-center bg-white">
-        <h1 class="text-3xl font-bold text-gray-900 mb-4">مؤسسة فخر المملكة الرسمية بجدة</h1>
-        <p class="text-xl text-blue-600 font-semibold mb-6">نبتكر الفخامة والظلال الدائمة لمساحاتكم الخارجية</p>
-        <p class="max-w-3xl mx-auto text-gray-600 leading-relaxed">متخصصون في تصميم وتوريد وتركيب كافة أعمال المظلات الحديثة البرجولات الخشبية والحديدية، السواتر الحاجبة للرؤية والهناجر الإنشائية بجدة والمناطق المحيطة بمعايير هندسية مقاومة للرطوبة والحرارة العالية.</p>
-    </section>
-
-    <section class="py-16 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl font-bold mb-6 border-r-4 border-blue-600 pr-4">نبذة عن مؤسسة فخر المملكة بجدة</h2>
-            <p class="text-gray-700 leading-relaxed">تتميز مؤسسة فخر المملكة لإنشاء المظلات والسواتر بجدة بريادتها الممتدة في تنفيذ كبرى المشاريع الإنشائية. ساندويتش بانل، المظلات السكنية والتجارية، الهناجر، والبرجولات في السعودية. تلتزم بتقديم حلول هندسية متطورة باستخدام أجود الخامات العالمية المعتمدة لضمان أقصى درجات الحماية ومقاومة تقلبات الطقس والمناخ بأطول فترات الضمان وبأعلى معايير الدقة الفنية.</p>
+    <section id="hero" class="py-20 bg-cover bg-center" style="background-image: url('images/mizalat-background-structure-fakhr-almamlaka-jeddah114.webp');">
+        <div class="max-w-4xl mx-auto text-center bg-black/70 p-10 rounded-2xl border border-gray-800">
+            <h1 class="text-5xl font-black text-white">نبتكر الفخامة والظلال الدائمة بجدة</h1>
+            <p class="mt-6 text-gray-300">نمتلك خبرة واسعة في مجال المظلات والسواتر والمقاولات بجدة، مما يضمن لك الحصول على أفضل الخدمات.</p>
+            <img src="images/ads-fakhr-almamlaka-sawater-mizalat-fakhr-almamlaka-jeddah1.webp" class="mt-8 rounded-xl shadow-2xl mx-auto max-h-60" alt="عرض فخر المملكة">
         </div>
     </section>
 
-    <section id="gallery" class="py-10 bg-white">
-        <h3 class="text-center text-xl font-bold mb-4">المسار الأول (35 صورة)</h3>
-        <div class="gallery-track" id="track1"></div>
-        <h3 class="text-center text-xl font-bold mt-10 mb-4">المسار الثاني (35 صورة)</h3>
-        <div class="gallery-track" id="track2"></div>
-    </section>
-
-    <section class="bg-navy py-16 px-6 text-white text-center">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div><h3 class="text-4xl font-bold text-blue-400">+20</h3><p>سنة خبرة عمل معتمدة</p></div>
-            <div><h3 class="text-4xl font-bold text-blue-400">+600</h3><p>مشروع مكتمل بالسعودية</p></div>
-            <div><h3 class="text-4xl font-bold text-blue-400">+300</h3><p>عميل دائم في جدة ومكة</p></div>
+    <section id="about" class="py-16 max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+        <img src="images/pergola-khashabia-fakhr-almamlaka-jeddah4.webp" class="w-full md:w-1/2 rounded-2xl shadow-xl" alt="نبذة">
+        <div>
+            <h2 class="text-3xl font-black mb-4">من نحن؟</h2>
+            <p class="text-gray-400">مؤسسة فخر المملكة رائدة في مجال المظلات والسواتر بجدة، نلتزم بالجودة والسرعة في التنفيذ لضمان رضا عملائنا الدائم.</p>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
-            <div><p>البريد: fakhralmamlakamizalatservicesj@gmail.com</p></div>
-            <div class="flex flex-col gap-2">
-                <a href="#">الرئيسية</a><a href="#">خدماتنا</a><a href="#">المعرض الشامل</a>
-            </div>
-            <div><h4 class="text-white font-bold">المواعيد</h4><p>السبت-الخميس: 7ص-11م<br>الجمعة: 1م-11م</p></div>
-            <div><p>تطوير: م/ وجدي الحالمي<br>00966552263681</p></div>
+    <section id="services" class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-gray-800 p-6 rounded-xl"><img src="images/mizalats-best-modern-fakhr-almamlaka-jeddah2.webp" class="mb-4 rounded-lg"><h3 class="font-bold">المظلات</h3></div>
+            <div class="bg-gray-800 p-6 rounded-xl"><img src="images/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp" class="mb-4 rounded-lg"><h3 class="font-bold">البرجولات</h3></div>
+            <div class="bg-gray-800 p-6 rounded-xl"><img src="images/sawaters-building-wall-fakhr-almamlaka-jeddah.webp" class="mb-4 rounded-lg"><h3 class="font-bold">السواتر</h3></div>
+            <div class="bg-gray-800 p-6 rounded-xl"><img src="images/hangar-mostawdaat-fakhr-almamlaka-jeddah1.webp" class="mb-4 rounded-lg"><h3 class="font-bold">الهناجر</h3></div>
         </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-gray-950">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl font-black mb-8 border-r-4 border-amber-500 pr-4 text-white">المسار الأول (45 مشروع)</h2>
+            <div id="track-1" class="gallery-track"></div>
+            <h2 class="text-2xl font-black mt-16 mb-8 border-r-4 border-amber-500 pr-4 text-white">المسار الثاني (45 مشروع)</h2>
+            <div id="track-2" class="gallery-track"></div>
+        </div>
+    </section>
+
+    <section id="comments" class="py-16 max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl font-black mb-8">آراء العملاء</h2>
+        <div id="comments-list" class="space-y-4"></div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-gray-800 bg-gray-900">
+        <img src="images/logo-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah2.webp" class="h-12 mx-auto mb-4" alt="شعار">
+        <img src="images/ads-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah3.webp" class="h-20 mx-auto mb-4 rounded-lg" alt="اعلان اسفل">
+        <p class="text-sm">مواعيد العمل: السبت-الخميس: 7ص-11م | الجمعة: 1م-11م</p>
+        <p class="mt-4 text-xs text-gray-500">تصميم وتسويق/ المهندس وجدي الحالمي | 0552263681</p>
     </footer>
 
-    <div class="fixed bottom-6 left-6 flex flex-col gap-4 z-50">
-        <a href="https://wa.me/966553511013" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg"><i class="fab fa-whatsapp"></i></a>
-        <a href="tel:0553511013" class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg"><i class="fas fa-phone"></i></a>
-    </div>
+    <a href="https://wa.me/966553511013?text=مرحباً، أود الاستفسار عن خدمات المظلات" class="floating-btn left-5 bg-green-500 p-4 rounded-full shadow-2xl">
+        <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
+    </a>
+    <a href="tel:966553511013" class="floating-btn left-20 bg-blue-600 p-4 rounded-full shadow-2xl">
+        <i class="fa-solid fa-phone text-2xl text-white"></i>
+    </a>
 
     <script>
-        // توليد الصور للمسارين
-        const track1 = document.getElementById('track1');
-        const track2 = document.getElementById('track2');
-        for(let i=1; i<=35; i++) {
-            track1.innerHTML += `<img src="images/path1-${i}.jpg" class="w-64 h-40 object-cover rounded-lg" onerror="this.src='https://via.placeholder.com/400'">`;
-            track2.innerHTML += `<img src="images/path2-${i}.jpg" class="w-64 h-40 object-cover rounded-lg" onerror="this.src='https://via.placeholder.com/400'">`;
+        // إعدادات المعرض
+        const track1 = document.getElementById('track-1');
+        const track2 = document.getElementById('track-2');
+        
+        // هنا يتم إنشاء 45 كرت (يمكنك استبدال الأسماء)
+        function renderGallery() {
+            for(let i=1; i<=45; i++) {
+                track1.innerHTML += `<div class="project-card"><img src="images/placeholder.jpg" class="w-full h-40 object-cover rounded-xl border border-gray-700"><p class="text-xs text-center mt-2 text-amber-500 font-bold">عمل رقم ${i}</p></div>`;
+                track2.innerHTML += `<div class="project-card"><img src="images/placeholder.jpg" class="w-full h-40 object-cover rounded-xl border border-gray-700"><p class="text-xs text-center mt-2 text-amber-500 font-bold">عمل رقم ${i+45}</p></div>`;
+            }
         }
+
+        function checkAdmin() {
+            const pass = prompt("كلمة مرور المشرف:");
+            if(pass === "1234") { alert("تم الدخول للوحة التحكم"); } 
+            else { alert("كلمة مرور خاطئة"); }
+        }
+
+        window.onload = renderGallery;
     </script>
 </body>
 </html>
