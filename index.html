@@ -10,8 +10,12 @@
     <style>
         body { font-family: 'Tajawal', sans-serif; background-color: #0b0f19; color: #e5e7eb; }
         .hero-bg { background-image: url('images/mizalat-background-structure-fakhr-almamlaka-jeddah114.webp'); background-size: cover; background-position: center; }
+        .gallery-track { display: flex; gap: 1rem; overflow-x: auto; padding: 1.5rem; scroll-behavior: smooth; }
+        .gallery-track::-webkit-scrollbar { height: 6px; }
+        .gallery-track::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 10px; }
         .service-img { height: 200px; width: 100%; object-fit: cover; border-radius: 0.75rem; transition: 0.3s; }
-        .service-card:hover img { transform: scale(1.05); }
+        .project-card { min-width: 250px; }
+        .project-card img { height: 160px; object-fit: cover; border-radius: 0.75rem; border: 1px solid #374151; }
     </style>
 </head>
 <body>
@@ -19,21 +23,21 @@
     <!-- الهيدر -->
     <header class="border-b border-gray-800 bg-gray-900 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 h-24 flex items-center justify-between">
-            <img src="images/logo-best-fakhr-almamlaka-sawater-gray-mizalat-fakhr-almamlaka-jeddah1.webp" alt="فخر المملكة" class="h-16">
+            <img src="images/logo-best-fakhr-almamlaka-sawater-gray-mizalat-fakhr-almamlaka-jeddah1.webp" alt="شعار" class="h-16">
             <nav class="hidden md:flex gap-6 font-bold">
                 <a href="#hero" class="hover:text-amber-500">الرئيسية</a>
                 <a href="#services" class="hover:text-amber-500">خدماتنا</a>
-                <a href="#about" class="hover:text-amber-500">من نحن</a>
+                <a href="#gallery" class="hover:text-amber-500">المعرض</a>
             </nav>
         </div>
     </header>
 
-    <!-- المقدمة (الهيرو) -->
+    <!-- المقدمة -->
     <section id="hero" class="py-20 hero-bg relative">
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
-            <h1 class="text-4xl md:text-5xl font-black text-white mb-6">نبتكر الفخامة والظلال الدائمة بجدة</h1>
-            <img src="images/ads-fakhr-almamlaka-sawater-mizalat-fakhr-almamlaka-jeddah1.webp" class="rounded-2xl shadow-2xl mx-auto border border-gray-700 max-h-80" alt="عرض فخر المملكة">
+            <h1 class="text-4xl font-black text-white mb-6">نبتكر الفخامة والظلال الدائمة بجدة</h1>
+            <img src="images/ads-fakhr-almamlaka-sawater-mizalat-fakhr-almamlaka-jeddah1.webp" class="rounded-2xl shadow-2xl mx-auto max-h-80" alt="اعلان">
         </div>
     </section>
 
@@ -42,55 +46,43 @@
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-3xl font-black mb-10 text-center">خدماتنا الرئيسية</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- 1 -->
-                <div class="service-card bg-gray-900 p-4 rounded-xl border border-gray-800">
-                    <img src="images/mizalats-best-modern-fakhr-almamlaka-jeddah2.webp" class="service-img" alt="مظلات">
-                    <h3 class="font-bold mt-4 text-center">المظلات (سيارات، حدائق، مسابح)</h3>
-                </div>
-                <!-- 2 -->
-                <div class="service-card bg-gray-900 p-4 rounded-xl border border-gray-800">
-                    <img src="images/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp" class="service-img" alt="برجولات">
-                    <h3 class="font-bold mt-4 text-center">البرجولات وجلسات الاسترخاء</h3>
-                </div>
-                <!-- 3 -->
-                <div class="service-card bg-gray-900 p-4 rounded-xl border border-gray-800">
-                    <img src="images/sawaters-building-wall-fakhr-almamlaka-jeddah.webp" class="service-img" alt="سواتر">
-                    <h3 class="font-bold mt-4 text-center">السواتر وموانع الرؤية للجدران</h3>
-                </div>
-                <!-- 4 -->
-                <div class="service-card bg-gray-900 p-4 rounded-xl border border-gray-800">
-                    <img src="images/hangar-mostawdaat-fakhr-almamlaka-jeddah1.webp" class="service-img" alt="هناجر">
-                    <h3 class="font-bold mt-4 text-center">الهناجر والمستودعات الإنشائية</h3>
-                </div>
+                <div class="bg-gray-900 p-4 rounded-xl"><img src="images/mizalats-best-modern-fakhr-almamlaka-jeddah2.webp" class="service-img" alt="مظلات"><h3 class="font-bold mt-4 text-center">المظلات (سيارات، حدائق، مسابح)</h3></div>
+                <div class="bg-gray-900 p-4 rounded-xl"><img src="images/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp" class="service-img" alt="برجولات"><h3 class="font-bold mt-4 text-center">البرجولات وجلسات الاسترخاء</h3></div>
+                <div class="bg-gray-900 p-4 rounded-xl"><img src="images/sawaters-building-wall-fakhr-almamlaka-jeddah.webp" class="service-img" alt="سواتر"><h3 class="font-bold mt-4 text-center">السواتر وموانع الرؤية للجدران</h3></div>
+                <div class="bg-gray-900 p-4 rounded-xl"><img src="images/hangar-mostawdaat-fakhr-almamlaka-jeddah1.webp" class="service-img" alt="هناجر"><h3 class="font-bold mt-4 text-center">الهناجر والمستودعات الإنشائية</h3></div>
             </div>
+        </div>
+    </section>
+
+    <!-- المعرض المتراص (90 صورة) -->
+    <section id="gallery" class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl font-black mb-8 border-r-4 border-amber-500 pr-4">أعمالنا الميدانية (90 مشروع)</h2>
+            <div id="track-1" class="gallery-track"></div>
+            <div id="track-2" class="gallery-track mt-4"></div>
         </div>
     </section>
 
     <!-- نبذة -->
     <section id="about" class="py-16 max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-        <div class="w-full md:w-1/2">
-            <img src="images/pergola-khashabia-fakhr-almamlaka-jeddah4.webp" class="rounded-2xl shadow-xl w-full" alt="نبذة">
-        </div>
-        <div class="w-full md:w-1/2">
-            <h2 class="text-3xl font-black mb-4">من نحن؟</h2>
-            <p class="text-gray-400 text-lg leading-relaxed">مؤسسة فخر المملكة رائدة في مجال المظلات والسواتر والمقاولات بجدة. نعتمد على أفضل الخامات ونقدم حلولاً مبتكرة تناسب ذوقك الرفيع، مع ضمان السرعة والجودة في التنفيذ.</p>
-        </div>
+        <img src="images/pergola-khashabia-fakhr-almamlaka-jeddah4.webp" class="w-full md:w-1/2 rounded-2xl shadow-xl" alt="نبذة">
+        <div><h2 class="text-3xl font-black mb-4">من نحن؟</h2><p class="text-gray-400">مؤسسة فخر المملكة رائدة في مجال المظلات والسواتر والمقاولات بجدة.</p></div>
     </section>
 
-    <!-- الفوتر مع الاعلانات -->
+    <!-- الفوتر -->
     <footer class="py-16 border-t border-gray-800 bg-gray-900 text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <img src="images/logo-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah2.webp" class="h-20 mx-auto mb-8" alt="شعار المؤسسة">
-            <h3 class="text-xl font-bold mb-4">آراء وتقييمات عملائنا الكرام</h3>
-            
-            <!-- صورة الإعلان أسفل الصفحة -->
-            <div class="mt-10">
-                <img src="images/ads-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah3.webp" class="mx-auto rounded-lg shadow-lg max-h-40" alt="إعلان">
-            </div>
-            
-            <p class="mt-10 text-gray-500">مواعيد العمل: السبت-الخميس: 7ص-11م | الجمعة: 1م-11م</p>
-        </div>
+        <img src="images/logo-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah2.webp" class="h-16 mx-auto mb-4" alt="شعار">
+        <img src="images/ads-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah3.webp" class="mx-auto rounded-lg max-h-40" alt="اعلان">
+        <p class="mt-6 text-sm">مواعيد العمل: السبت-الخميس: 7ص-11م | الجمعة: 1م-11م</p>
     </footer>
 
+    <script>
+        const track1 = document.getElementById('track-1');
+        const track2 = document.getElementById('track-2');
+        for(let i=1; i<=45; i++) {
+            track1.innerHTML += `<div class="project-card"><img src="images/placeholder.jpg" alt="عمل"><p class="text-xs text-center mt-2 text-amber-500">مشروع ${i}</p></div>`;
+            track2.innerHTML += `<div class="project-card"><img src="images/placeholder.jpg" alt="عمل"><p class="text-xs text-center mt-2 text-amber-500">مشروع ${i+45}</p></div>`;
+        }
+    </script>
 </body>
 </html>
