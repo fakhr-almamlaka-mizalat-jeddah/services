@@ -4,112 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مؤسسة فخر المملكة للمظلات والسواتر بجدة</title>
-    <meta name="description" content="مؤسسة فخر المملكة لتركيب وتصميم المظلات، البرجولات، السواتر، والهناجر في جدة بأحدث التصاميم العصرية وبأسعار تنافسية.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: { dark: '#0b0f19', surface: '#161d30', gold: '#f59e0b', goldHover: '#d97706' }
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Tajawal', sans-serif; background-color: #0b0f19; color: #e5e7eb; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .animate-scroll { display: flex; animation: scroll 80s linear infinite; }
-        .animate-scroll-reverse { display: flex; animation: scroll 80s linear infinite reverse; }
+        .animate-scroll { display: flex; animation: scroll 60s linear infinite; }
+        body { font-family: 'Tajawal', sans-serif; background-color: #0b0f19; color: #e5e7eb; }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Header -->
-    <header class="border-b border-gray-800 bg-brand-dark/90 sticky top-0 z-50 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-gold flex items-center justify-center font-black text-black text-xl">ف</div>
-                <span class="text-xl font-black text-white">فخر المملكة</span>
-            </div>
-            <button onclick="toggleAdminModal()" class="text-xs border border-gray-700 px-3 py-1.5 rounded-lg hover:bg-brand-surface">لوحة المشرف</button>
-        </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="py-20 text-center bg-gradient-to-b from-gray-900 to-brand-dark border-b border-gray-800">
-        <h1 class="text-4xl md:text-6xl font-black text-white mb-6">نبتكر الفخامة والظلال الدائمة</h1>
-        <p class="max-w-2xl mx-auto text-gray-400 px-4">متخصصون في تصميم وتركيب المظلات، البرجولات، السواتر، والهناجر في جدة بأعلى المعايير.</p>
-        <a href="https://wa.me/966553511013" class="mt-8 inline-block bg-brand-gold text-black font-bold px-8 py-4 rounded-xl hover:bg-brand-goldHover transition">تواصل معنا واتساب</a>
-    </section>
-
-    <!-- Gallery Section (90 Images in 2 Infinite Sliders) -->
+    <!-- الجزء الخاص بمعرض الصور الـ 90 -->
     <section class="py-20 overflow-hidden">
-        <h2 class="text-3xl font-black text-white text-center mb-16">معرض مشاريعنا الميدانية</h2>
-        <div class="flex overflow-hidden mb-8"><div id="scroll-1" class="animate-scroll gap-6"></div></div>
-        <div class="flex overflow-hidden"><div id="scroll-2" class="animate-scroll-reverse gap-6"></div></div>
-    </section>
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-white">معرض مشاريعنا الميدانية</h2>
+        </div>
 
-    <!-- Comments Section -->
-    <section id="comments" class="py-20 max-w-4xl mx-auto px-4">
-        <h2 class="text-2xl font-black text-center mb-12">آراء عملائنا</h2>
-        <div id="comments-list" class="space-y-4"></div>
-        <div class="mt-8 bg-brand-surface p-6 rounded-2xl border border-gray-800">
-            <input id="comment-user" type="text" placeholder="اسمك" class="w-full bg-brand-dark border border-gray-700 p-3 rounded-xl mb-3">
-            <textarea id="comment-text" placeholder="تعليقك..." class="w-full bg-brand-dark border border-gray-700 p-3 rounded-xl mb-3"></textarea>
-            <button onclick="addComment()" class="w-full bg-brand-gold text-black font-bold py-3 rounded-xl">نشر التعليق</button>
+        <!-- الشريط الأول (أول 45 صورة) -->
+        <div class="flex overflow-hidden mb-8">
+            <div id="scroll-1" class="animate-scroll gap-6"></div>
+        </div>
+
+        <!-- الشريط الثاني (الـ 45 صورة الثانية) -->
+        <div class="flex overflow-hidden">
+            <div id="scroll-2" class="animate-scroll gap-6" style="animation-direction: reverse;"></div>
         </div>
     </section>
-
-    <!-- Admin Modal -->
-    <div id="admin-modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50">
-        <div class="bg-brand-surface p-6 rounded-2xl w-full max-w-md border border-gray-700">
-            <h3 class="text-xl font-bold mb-4">لوحة المشرف</h3>
-            <button onclick="toggleAdminModal()" class="w-full bg-gray-700 p-3 rounded-xl">إغلاق</button>
-        </div>
-    </div>
 
     <script>
         const images = [
-            "ads-fakhr-almamlaka-sawater-mizalat-white-fakhr-almamlaka-jeddah2.webp", "hangars-industrial-warehouse-fakhr-almamlaka-jeddah11.webp", "mizalat-galsat-pvc-mamar-fakhr-almamlaka-jeddah107.webp", "mizalat-hadaiq-pvc-makhrouti-fakhr-almamlaka-jeddah110.webp", "mizalat-hosh-qmaish-fakhr-almamlaka-jeddah70.webp", "mizalat-hush-pvc-fakhr-almamlaka-jeddah3.webp", "mizalat-kaboli-mawaqif-fakhr-almamlaka-jeddah95.webp", "mizalat-khazanat-meyah-fakhr-almamlaka-jeddah101.webp", "mizalat-madkhal-villa-laser-fakhr-almamlaka-jeddah56.webp", "mizalat-makhrotia-pvc-fakhr-almamlaka-jeddah98.webp", "mizalat-mamar-hush-fakhr-almamlaka-jeddah5.webp", "mizalat-masabih-shirai-fakhr-almamlaka-jeddah96.webp", "mizalat-masajed-qmash-pvc-fakhr-almamlaka-jeddah104.webp", "mizalat-masharie-haramiah-fakhr-almamlaka-jeddah12.webp", "mizalat-mawaqif-sayarat-fakhr-almamlaka-jeddah-78.webp", "mizalat-mawaqif-sayarat-projects-fakhr-almamlaka-jeddah111.webp", "mizalat-mawaqif-sayarat-pvc-fakhr-almamlaka-jeddah11.webp", "mizalat-mawaqif-sharikate-fakhr-almamlaka-jeddah86.webp", "mizalat-mawaqif-tayer-laser-fakhr-almamlaka-jeddah58.webp", "mizalat-modern-luxury-tent-glass-fakhr-almamlaka-jeddah115.webp", "mizalat-parking-shades-fakhr-almamlaka-jeddah102.webp", "mizalat-pvc-garage-shutter-fakhr-almamlaka-jeddah108.webp", "mizalat-sayarat-arc-fakhr-almamlaka-jeddah50.webp", "mizalat-sayarat-arc-pvc-fakhr-almamlaka-jeddah30.webp", "mizalat-sayarat-kabooli-arc-fakhr-almamlaka-jeddah19.webp", "mizalat-sayarat-kabooli-laser-fakhr-almamlaka-jeddah10.webp", "mizalat-sayarat-kabooli-laser-fakhr-almamlaka-jeddah2.webp", "mizalat-sayarat-makhrouti-pvc-fakhr-almamlaka-jeddah109.webp", "mizalat-sayarat-manzilia-fakhr-almamlaka-jeddah81.webp", "mizalat-sayarat-masjid-pvc-fakhr-almamlaka-jeddah36.webp", "mizalat-sayarat-modern-khashab-fakhr-almamlaka-jeddah22.webp", "mizalat-sayarat-pvc-hemaya-fakhr-almamlaka-jeddah77.webp", "mizalat-sayarat-qmash-fakhr-almamlaka-jeddah89.webp", "mizalat-sayarat-shari-laser-fakhr-almamlaka-jeddah54.webp", "mizalat-sayarht-fakhr-almamlaka-jeddah112.webp", "mizalat-shad-inshai-fakhr-almamlaka-jeddah82.webp", "mizalat-shad-inshai-sahat-fakhr-almamlaka-jeddah100.webp", "mizalat-shadd-inshai-muthalathat-fakhr-almamlaka-jeddah21.webp", "mizalats-best-modern-fakhr-almamlaka-jeddah.webp", "mizalats-modern-fakhr-almamlaka-jeddah1.webp", "pergola-backyard-string-lights-fakhr-almamlaka-jeddah54.webp", "pergola-corrugated-lexan-carport-shade-fakhr-almamlaka-jeddah52.webp", "pergola-decor-fakhr-almamlaka-jeddah57.webp", "pergola-galsat-hadaiq-tents-fakhr-almamlaka-jeddah14.webp", "pergola-galsat-roof-fakhr-almamlaka-jeddah55.webp", "pergola-galsat-satah-fakhr-almamlaka-jeddah19.webp", "pergola-glass-room-aluminum-fakhr-almamlaka-jeddah45.webp", "pergola-hadaeq-fakhr-almamlaka-jeddah18.webp", "pergola-hadid-garden-fakhr-almamlaka-jeddah34.webp", "pergola-hadid-laser-fakhr-almamlaka-jeddah32.webp", "pergola-hadid-lexan-mamar-fakhr-almamlaka-jeddah33.webp", "pergola-hadid-lexan-roof-fakhr-almamlaka-jeddah35.webp", "pergola-hadid-satayer-fakhr-almamlaka-jeddah12.webp", "pergola-jalsat-hadaeq-fakhr-almamlaka-jeddah8.webp", "pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp", "pergola-khashabia-fakhr-almamlaka-jeddah6.webp", "pergola-khashabia-shalal-fakhr-almamlaka-jeddah28.webp", "pergola-luxury-garden-fakhr-almamlaka-jeddah27.webp", "pergola-luxury-villa-fakhr-almamlaka-jeddah39.webp", "pergola-modern-fakhr-almamlaka-jeddah10.webp", "pergola-modern-fakhr-almamlaka-jeddah5.webp", "pergola-modern-fakhr-almamlaka-jeddah59.webp", "pergola-modern-led-lighting-fakhr-almamlaka-jeddah20.webp", "pergola-modern-louvered-led-fakhr-almamlaka-jeddah38.webp", "pergola-modern-pool-shade-fakhr-almamlaka-jeddah40.webp", "pergola-tasmim-asateh-fakhr-almamlaka-jeddah11.webp", "pergola-tasmim-jalsat-fakhr-almamlaka-jeddah7.webp", "pergola-traditional-seating-fakhr-almamlaka-jeddah23.webp", "pergola-white-sofa-fakhr-almamlaka-jeddah31.webp", "pergola-with-sail-shade-fakhr-almamlaka-jeddah37.webp", "pergola-wpc-wooden-roof-fakhr-almamlaka-jeddah16.webp", "pergola-wpc-wooden-wall-cladding-fakhr-almamlaka-jeddah50.webp", "pergolas-modern-backyard-designs-fakhr-almamlaka-jeddah.webp", "pergolas-modern-fakhr-almamlaka-jeddah1.webp", "pergolas-modern-wood-seating-fakhr-almamlaka-jeddah.webp", "pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah.webp", "qarmid-tarkib-asateh-fakhr-almamlaka-jeddah16.webp", "sandwich-qarmid-tarkib-asateh-modern-fakhr-almamlaka-jeddah.webp", "sawater-fabric-fakhr-almamlaka-jeddah18.webp", "sawater-fabric-fakhr-almaka-jeddah20.webp", "sawater-fabric-wall-fakhr-almamlaka-jeddah40.webp", "sawater-hadid-laser-modern-fakhr-almamlaka-jeddah7.webp", "sawater-hadid-majdool-fakhr-almamlaka-jeddah5.webp", "sawater-iron-wall-fakhr-almamlaka-jeddah21.webp", "sawater-louvered-iron--fakhr-almamlaka-jeddah33.webp", "sawater-louvre-plastic-fakhr-almamlaka-jeddah17.webp", "sawater-luxury-villa-fakhr-almamlaka-jeddah23.webp", "sawater-majdoul-khashab-fakhr-almamlaka-jeddah9.webp", "sawater-modern-iron-fakhr-almamlaka-jeddah37.webp", "sawater-shutter-gate-iron-fakhr-almamlaka-jeddah43.webp"
+            "ads-fakhr-almamlaka-sawater-mizalat-white-fakhr-almamlaka-jeddah2.webp",
+            "hangars-industrial-warehouse-fakhr-almamlaka-jeddah11.webp",
+            "mizalat-galsat-pvc-mamar-fakhr-almamlaka-jeddah107.webp",
+            "mizalat-hadaiq-pvc-makhrouti-fakhr-almamlaka-jeddah110.webp",
+            "mizalat-hosh-qmaish-fakhr-almamlaka-jeddah70.webp",
+            "mizalat-hush-pvc-fakhr-almamlaka-jeddah3.webp",
+            "mizalat-kaboli-mawaqif-fakhr-almamlaka-jeddah95.webp",
+            "mizalat-khazanat-meyah-fakhr-almamlaka-jeddah101.webp",
+            "mizalat-madkhal-villa-laser-fakhr-almamlaka-jeddah56.webp",
+            "mizalat-makhrotia-pvc-fakhr-almamlaka-jeddah98.webp",
+            "mizalat-mamar-hush-fakhr-almamlaka-jeddah5.webp",
+            "mizalat-masabih-shirai-fakhr-almamlaka-jeddah96.webp",
+            "mizalat-masajed-qmash-pvc-fakhr-almamlaka-jeddah104.webp",
+            "mizalat-masharie-haramiah-fakhr-almamlaka-jeddah12.webp",
+            "mizalat-mawaqif-sayarat-fakhr-almamlaka-jeddah-78.webp",
+            "mizalat-mawaqif-sayarat-projects-fakhr-almamlaka-jeddah111.webp",
+            "mizalat-mawaqif-sayarat-pvc-fakhr-almamlaka-jeddah11.webp",
+            "mizalat-mawaqif-sharikate-fakhr-almamlaka-jeddah86.webp",
+            "mizalat-mawaqif-tayer-laser-fakhr-almamlaka-jeddah58.webp",
+            "mizalat-modern-luxury-tent-glass-fakhr-almamlaka-jeddah115.webp",
+            "mizalat-parking-shades-fakhr-almamlaka-jeddah102.webp",
+            "mizalat-pvc-garage-shutter-fakhr-almamlaka-jeddah108.webp",
+            "mizalat-sayarat-arc-fakhr-almamlaka-jeddah50.webp",
+            "mizalat-sayarat-arc-pvc-fakhr-almamlaka-jeddah30.webp",
+            "mizalat-sayarat-kabooli-arc-fakhr-almamlaka-jeddah19.webp",
+            "mizalat-sayarat-kabooli-laser-fakhr-almamlaka-jeddah10.webp",
+            "mizalat-sayarat-kabooli-laser-fakhr-almamlaka-jeddah2.webp",
+            "mizalat-sayarat-makhrouti-pvc-fakhr-almamlaka-jeddah109.webp",
+            "mizalat-sayarat-manzilia-fakhr-almamlaka-jeddah81.webp",
+            "mizalat-sayarat-masjid-pvc-fakhr-almamlaka-jeddah36.webp",
+            "mizalat-sayarat-modern-khashab-fakhr-almamlaka-jeddah22.webp",
+            "mizalat-sayarat-pvc-hemaya-fakhr-almamlaka-jeddah77.webp",
+            "mizalat-sayarat-qmash-fakhr-almamlaka-jeddah89.webp",
+            "mizalat-sayarat-shari-laser-fakhr-almamlaka-jeddah54.webp",
+            "mizalat-sayarht-fakhr-almamlaka-jeddah112.webp",
+            "mizalat-shad-inshai-fakhr-almamlaka-jeddah82.webp",
+            "mizalat-shad-inshai-sahat-fakhr-almamlaka-jeddah100.webp",
+            "mizalat-shadd-inshai-muthalathat-fakhr-almamlaka-jeddah21.webp",
+            "mizalats-best-modern-fakhr-almamlaka-jeddah.webp",
+            "mizalats-modern-fakhr-almamlaka-jeddah1.webp",
+            "pergola-backyard-string-lights-fakhr-almamlaka-jeddah54.webp",
+            "pergola-corrugated-lexan-carport-shade-fakhr-almamlaka-jeddah52.webp",
+            "pergola-decor-fakhr-almamlaka-jeddah57.webp",
+            "pergola-galsat-hadaiq-tents-fakhr-almamlaka-jeddah14.webp",
+            "pergola-galsat-roof-fakhr-almamlaka-jeddah55.webp",
+            "pergola-galsat-satah-fakhr-almamlaka-jeddah19.webp",
+            "pergola-glass-room-aluminum-fakhr-almamlaka-jeddah45.webp",
+            "pergola-hadaeq-fakhr-almamlaka-jeddah18.webp",
+            "pergola-hadid-garden-fakhr-almamlaka-jeddah34.webp",
+            "pergola-hadid-laser-fakhr-almamlaka-jeddah32.webp",
+            "pergola-hadid-lexan-mamar-fakhr-almamlaka-jeddah33.webp",
+            "pergola-hadid-lexan-roof-fakhr-almamlaka-jeddah35.webp",
+            "pergola-hadid-satayer-fakhr-almamlaka-jeddah12.webp",
+            "pergola-jalsat-hadaeq-fakhr-almamlaka-jeddah8.webp",
+            "pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp",
+            "pergola-khashabia-fakhr-almamlaka-jeddah6.webp",
+            "pergola-khashabia-shalal-fakhr-almamlaka-jeddah28.webp",
+            "pergola-luxury-garden-fakhr-almamlaka-jeddah27.webp",
+            "pergola-luxury-villa-fakhr-almamlaka-jeddah39.webp",
+            "pergola-modern-fakhr-almamlaka-jeddah10.webp",
+            "pergola-modern-fakhr-almamlaka-jeddah5.webp",
+            "pergola-modern-fakhr-almamlaka-jeddah59.webp",
+            "pergola-modern-led-lighting-fakhr-almamlaka-jeddah20.webp",
+            "pergola-modern-louvered-led-fakhr-almamlaka-jeddah38.webp",
+            "pergola-modern-pool-shade-fakhr-almamlaka-jeddah40.webp",
+            "pergola-tasmim-asateh-fakhr-almamlaka-jeddah11.webp",
+            "pergola-tasmim-jalsat-fakhr-almamlaka-jeddah7.webp",
+            "pergola-traditional-seating-fakhr-almamlaka-jeddah23.webp",
+            "pergola-white-sofa-fakhr-almamlaka-jeddah31.webp",
+            "pergola-with-sail-shade-fakhr-almamlaka-jeddah37.webp",
+            "pergola-wpc-wooden-roof-fakhr-almamlaka-jeddah16.webp",
+            "pergola-wpc-wooden-wall-cladding-fakhr-almamlaka-jeddah50.webp",
+            "pergolas-modern-backyard-designs-fakhr-almamlaka-jeddah.webp",
+            "pergolas-modern-fakhr-almamlaka-jeddah1.webp",
+            "pergolas-modern-wood-seating-fakhr-almamlaka-jeddah.webp",
+            "pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah.webp",
+            "qarmid-tarkib-asateh-fakhr-almamlaka-jeddah16.webp",
+            "sandwich-qarmid-tarkib-asateh-modern-fakhr-almamlaka-jeddah.webp",
+            "sawater-fabric-fakhr-almamlaka-jeddah18.webp",
+            "sawater-fabric-fakhr-almamlaka-jeddah20.webp",
+            "sawater-fabric-wall-fakhr-almamlaka-jeddah40.webp",
+            "sawater-hadid-laser-modern-fakhr-almamlaka-jeddah7.webp",
+            "sawater-hadid-majdool-fakhr-almamlaka-jeddah5.webp",
+            "sawater-iron-wall-fakhr-almamlaka-jeddah21.webp",
+            "sawater-louvered-iron--fakhr-almamlaka-jeddah33.webp",
+            "sawater-louvre-plastic-fakhr-almamlaka-jeddah17.webp",
+            "sawater-luxury-villa-fakhr-almamlaka-jeddah23.webp",
+            "sawater-majdoul-khashab-fakhr-almamlaka-jeddah9.webp",
+            "sawater-modern-iron-fakhr-almamlaka-jeddah37.webp",
+            "sawater-shutter-gate-iron-fakhr-almamlaka-jeddah43.webp"
         ];
 
-        function createSlides(id, start, end) {
-            const container = document.getElementById(id);
-            const slice = images.slice(start, end);
-            [...slice, ...slice].forEach((img, i) => {
+        function createSlides(containerId, startIdx, endIdx) {
+            const container = document.getElementById(containerId);
+            const slice = images.slice(startIdx, endIdx);
+            // تكرار الصور لضمان سلاسة العرض الدائري
+            [...slice, ...slice].forEach((imgName, index) => {
                 container.innerHTML += `
-                    <div class="w-64 shrink-0 bg-brand-surface rounded-xl overflow-hidden border border-gray-800">
-                        <img src="https://raw.githubusercontent.com/fakhr-almamlaka-mizalat-jeddah/services/main/images/${img}" class="w-full h-40 object-cover">
-                        <div class="p-2 text-center text-xs font-bold text-brand-gold">مشروع رقم ${i + 1}</div>
+                    <div class="w-64 shrink-0 bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                        <img src="https://raw.githubusercontent.com/fakhr-almamlaka-mizalat-jeddah/services/main/images/${imgName}" 
+                             class="w-full h-40 object-cover" alt="مشروع ${index}">
+                        <div class="p-3 text-center text-xs font-bold text-yellow-500">عمل فخر المملكة</div>
                     </div>
                 `;
             });
         }
+
         createSlides('scroll-1', 0, 45);
         createSlides('scroll-2', 45, 90);
-
-        let comments = JSON.parse(localStorage.getItem('fakhralmamlakah_comments')) || [{id: 1, name: "محمد", rating: "⭐⭐⭐⭐⭐", text: "شغل ممتاز"}];
-        function renderComments() {
-            document.getElementById('comments-list').innerHTML = comments.map(c => `
-                <div class="bg-brand-surface p-4 rounded-xl">
-                    <p class="font-bold">${c.name} ${c.rating}</p>
-                    <p class="text-sm">${c.text}</p>
-                    <button onclick="del(${c.id})" class="text-red-400 text-xs mt-2">حذف</button>
-                </div>
-            `).join('');
-            localStorage.setItem('fakhralmamlakah_comments', JSON.stringify(comments));
-        }
-        function addComment() {
-            const n = document.getElementById('comment-user').value;
-            const t = document.getElementById('comment-text').value;
-            if(n && t) { comments.unshift({id: Date.now(), name: n, rating: "⭐⭐⭐⭐⭐", text: t}); renderComments(); }
-        }
-        function del(id) { comments = comments.filter(c => c.id !== id); renderComments(); }
-        function toggleAdminModal() { document.getElementById('admin-modal').classList.toggle('hidden'); }
-        window.onload = renderComments;
     </script>
 </body>
 </html>
