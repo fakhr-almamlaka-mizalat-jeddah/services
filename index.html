@@ -63,7 +63,7 @@
         </div>
     </section>
 
-    <!-- Ads Section -->
+    <!-- Ads Section (الذي سيتم التحكم به عبر لوحة المشرف) -->
     <section id="ads" class="py-12 bg-gradient-to-r from-amber-950/40 via-brand-dark to-brand-dark border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4">
             <div class="bg-brand-surface/40 border border-brand-gold/30 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6">
@@ -72,7 +72,7 @@
                     <h2 id="ad-title" class="text-xl font-black text-white">خصم 15% على تركيب مظلات السيارات!</h2>
                     <p id="ad-desc" class="text-sm text-gray-400 mt-2">يسري العرض في كافة أحياء جدة.</p>
                 </div>
-                <img id="ad-img" src="https://images.unsplash.com/photo-1513694203232-719a280e022f" class="hidden">
+                <img id="ad-img" src="https://images.unsplash.com/photo-1513694203232-719a280e022f" class="w-24 h-24 rounded-lg object-cover ml-auto">
             </div>
         </div>
     </section>
@@ -94,20 +94,20 @@
 
     <!-- Admin Modal -->
     <div id="admin-modal" class="fixed inset-0 bg-black/80 flex items-center justify-center p-4 hidden z-50">
-        <div class="bg-brand-surface w-full max-w-lg p-6 rounded-2xl">
+        <div class="bg-brand-surface w-full max-w-lg p-6 rounded-2xl border border-gray-700">
             <h3 class="text-brand-gold font-bold mb-4">لوحة تحكم المشرف</h3>
             <input id="admin-ad-title" placeholder="عنوان العرض" class="w-full bg-brand-dark p-2 mb-2 rounded border border-gray-700">
             <textarea id="admin-ad-desc" placeholder="وصف العرض" class="w-full bg-brand-dark p-2 mb-2 rounded border border-gray-700"></textarea>
+            <input id="admin-ad-img" placeholder="رابط صورة جديد" class="w-full bg-brand-dark p-2 mb-2 rounded border border-gray-700">
             <button onclick="updateAdFromAdmin()" class="w-full bg-brand-gold py-2 rounded font-bold">تحديث العرض</button>
             <button onclick="toggleAdminModal()" class="w-full mt-2 text-gray-400">إغلاق</button>
         </div>
     </div>
 
+    <!-- Script for Functionality -->
     <script>
-        // --- إدارة البيانات ---
-        let commentsData = JSON.parse(localStorage.getItem('savedComments')) || [
-            { id: 1, name: "المهندس خالد", rating: "⭐⭐⭐⭐⭐", text: "شغل ممتاز جداً!" }
-        ];
+        // نظام استرجاع وحفظ البيانات
+        let commentsData = JSON.parse(localStorage.getItem('savedComments')) || [];
 
         function renderComments() {
             const list = document.getElementById('comments-list');
@@ -142,9 +142,11 @@
         function updateAdFromAdmin() {
             const t = document.getElementById('admin-ad-title').value;
             const d = document.getElementById('admin-ad-desc').value;
-            document.getElementById('ad-title').innerText = t;
-            document.getElementById('ad-desc').innerText = d;
-            localStorage.setItem('savedAd', JSON.stringify({t, d}));
+            const img = document.getElementById('admin-ad-img').value;
+            if(t) document.getElementById('ad-title').innerText = t;
+            if(d) document.getElementById('ad-desc').innerText = d;
+            if(img) document.getElementById('ad-img').src = img;
+            localStorage.setItem('savedAd', JSON.stringify({t, d, img}));
             toggleAdminModal();
         }
 
@@ -153,8 +155,9 @@
         window.onload = () => {
             const savedAd = JSON.parse(localStorage.getItem('savedAd'));
             if(savedAd) {
-                document.getElementById('ad-title').innerText = savedAd.t;
-                document.getElementById('ad-desc').innerText = savedAd.d;
+                if(savedAd.t) document.getElementById('ad-title').innerText = savedAd.t;
+                if(savedAd.d) document.getElementById('ad-desc').innerText = savedAd.d;
+                if(savedAd.img) document.getElementById('ad-img').src = savedAd.img;
             }
             renderComments();
         };
