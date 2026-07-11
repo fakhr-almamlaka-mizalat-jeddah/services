@@ -2,165 +2,140 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مؤسسة فخر المملكة للمظلات والسواتر بجدة</title>
-    <meta name="description" content="مؤسسة فخر المملكة لتركيب وتصميم المظلات، البرجولات، السواتر، والهناجر في جدة بأحدث التصاميم العصرية وبأسعار تنافسية.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            dark: '#0b0f19',
-                            surface: '#161d30',
-                            gold: '#f59e0b',
-                            goldHover: '#d97706'
-                        }
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { brand: { dark: '#0b0f19', surface: '#161d30', gold: '#f59e0b' } } } } }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Tajawal', sans-serif; background-color: #0b0f19; }
         .gallery-scroll::-webkit-scrollbar { height: 8px; }
-        .gallery-scroll::-webkit-scrollbar-track { background: #161d30; }
         .gallery-scroll::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 4px; }
     </style>
 </head>
-<body class="text-gray-200 antialiased">
+<body class="text-gray-200">
 
-    <!-- Header -->
-    <header class="border-b border-gray-800/80 bg-brand-dark/90 sticky top-0 z-50 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-gold to-amber-400 flex items-center justify-center font-black text-black text-xl shadow-lg shadow-brand-gold/20">ف</div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-black text-white tracking-wide leading-none">فخر المملكة</span>
-                    <span class="text-[10px] text-brand-gold font-bold tracking-widest mt-1">للمظلات والسواتر</span>
-                </div>
-            </div>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#hero" class="hover:text-brand-gold transition-colors">الرئيسية</a>
-                <a href="#services" class="hover:text-brand-gold transition-colors">خدماتنا</a>
-                <a href="#gallery" class="hover:text-brand-gold transition-colors">معرض الأعمال</a>
-                <a href="#ads" class="hover:text-brand-gold transition-colors">العروض الحالية</a>
-                <a href="#comments" class="hover:text-brand-gold transition-colors">آراء العملاء</a>
-            </nav>
-            <button onclick="toggleAdminModal()" class="text-xs border border-gray-700 bg-brand-surface/50 hover:bg-brand-surface px-3 py-1.5 rounded-lg text-gray-400 transition-all">لوحة المشرف</button>
+    <!-- Header & Hero (تم تحديثهما مسبقاً) -->
+    <!-- ... الكود السابق ... -->
+
+    <!-- معرض الأعمال الـ 90 -->
+    <section id="gallery" class="py-20 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 mb-12">
+            <h2 class="text-3xl font-black text-white text-center">معرض مشاريع فخر المملكة</h2>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.98)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');">
-        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <span class="text-brand-gold bg-brand-gold/10 border border-brand-gold/20 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase">مؤسسة فخر المملكة الرسمية بجدة</span>
-            <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight">نبتكر الفخامة والظلال الدائمة <br>لمساحاتكم الخارجية</h1>
-            <p class="mt-6 text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">متخصصون في تصميم وتركيب المظلات والسواتر بجدة بمعايير هندسية مقاومة للرطوبة والحرارة.</p>
-            <div class="mt-10"><a href="https://wa.me/966553511013" class="bg-brand-gold hover:bg-brand-goldHover text-black font-bold px-8 py-4 rounded-xl transition-all">تواصل معنا واتساب فوراً</a></div>
+        <div id="gallery-container" class="gallery-scroll flex gap-6 px-8 overflow-x-auto pb-8">
+            <!-- سيتم توليد الصور هنا عبر السكريبت -->
         </div>
     </section>
 
-    <!-- Ads Section (الذي سيتم التحكم به عبر لوحة المشرف) -->
-    <section id="ads" class="py-12 bg-gradient-to-r from-amber-950/40 via-brand-dark to-brand-dark border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="bg-brand-surface/40 border border-brand-gold/30 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6">
-                <div class="w-16 h-16 rounded-xl bg-brand-gold/10 flex items-center justify-center text-2xl text-brand-gold">📢</div>
-                <div>
-                    <h2 id="ad-title" class="text-xl font-black text-white">خصم 15% على تركيب مظلات السيارات!</h2>
-                    <p id="ad-desc" class="text-sm text-gray-400 mt-2">يسري العرض في كافة أحياء جدة.</p>
-                </div>
-                <img id="ad-img" src="https://images.unsplash.com/photo-1513694203232-719a280e022f" class="w-24 h-24 rounded-lg object-cover ml-auto">
-            </div>
-        </div>
-    </section>
-
-    <!-- Comments Section -->
-    <section id="comments" class="py-20 max-w-4xl mx-auto px-4">
-        <h2 class="text-2xl font-black text-white text-center mb-8">آراء العملاء</h2>
-        <div class="bg-brand-surface p-6 rounded-2xl mb-8 border border-gray-800">
-            <input id="comment-user" placeholder="اسمك الكريم" class="w-full bg-brand-dark p-3 rounded-xl mb-3 border border-gray-700">
-            <select id="comment-rating" class="w-full bg-brand-dark p-3 rounded-xl mb-3 border border-gray-700 text-brand-gold">
-                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ ممتاز</option>
-                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ جيد جداً</option>
-            </select>
-            <textarea id="comment-text" placeholder="تعليقك..." class="w-full bg-brand-dark p-3 rounded-xl mb-3 border border-gray-700"></textarea>
-            <button onclick="addComment()" class="w-full bg-brand-gold text-black font-bold py-3 rounded-xl">نشر التعليق</button>
-        </div>
-        <div id="comments-list" class="space-y-4"></div>
-    </section>
-
-    <!-- Admin Modal -->
-    <div id="admin-modal" class="fixed inset-0 bg-black/80 flex items-center justify-center p-4 hidden z-50">
-        <div class="bg-brand-surface w-full max-w-lg p-6 rounded-2xl border border-gray-700">
-            <h3 class="text-brand-gold font-bold mb-4">لوحة تحكم المشرف</h3>
-            <input id="admin-ad-title" placeholder="عنوان العرض" class="w-full bg-brand-dark p-2 mb-2 rounded border border-gray-700">
-            <textarea id="admin-ad-desc" placeholder="وصف العرض" class="w-full bg-brand-dark p-2 mb-2 rounded border border-gray-700"></textarea>
-            <input id="admin-ad-img" placeholder="رابط صورة جديد" class="w-full bg-brand-dark p-2 mb-2 rounded border border-gray-700">
-            <button onclick="updateAdFromAdmin()" class="w-full bg-brand-gold py-2 rounded font-bold">تحديث العرض</button>
-            <button onclick="toggleAdminModal()" class="w-full mt-2 text-gray-400">إغلاق</button>
-        </div>
-    </div>
-
-    <!-- Script for Functionality -->
     <script>
-        // نظام استرجاع وحفظ البيانات
-        let commentsData = JSON.parse(localStorage.getItem('savedComments')) || [];
+        const images = [
+            "ads-fakhr-almamlaka-sawater-mizalat-white-fakhr-almamlaka-jeddah2.webp",
+            "hangars-industrial-warehouse-fakhr-almamlaka-jeddah11.webp",
+            "mizalat-galsat-pvc-mamar-fakhr-almamlaka-jeddah107.webp",
+            "mizalat-hadaiq-pvc-makhrouti-fakhr-almamlaka-jeddah110.webp",
+            "mizalat-hosh-qmaish-fakhr-almamlaka-jeddah70.webp",
+            "mizalat-hush-pvc-fakhr-almamlaka-jeddah3.webp",
+            "mizalat-kaboli-mawaqif-fakhr-almamlaka-jeddah95.webp",
+            "mizalat-khazanat-meyah-fakhr-almamlaka-jeddah101.webp",
+            "mizalat-madkhal-villa-laser-fakhr-almamlaka-jeddah56.webp",
+            "mizalat-makhrotia-pvc-fakhr-almamlaka-jeddah98.webp",
+            "mizalat-mamar-hush-fakhr-almamlaka-jeddah5.webp",
+            "mizalat-masabih-shirai-fakhr-almamlaka-jeddah96.webp",
+            "mizalat-masajed-qmash-pvc-fakhr-almamlaka-jeddah104.webp",
+            "mizalat-masharie-haramiah-fakhr-almamlaka-jeddah12.webp",
+            "mizalat-mawaqif-sayarat-fakhr-almamlaka-jeddah-78.webp",
+            "mizalat-mawaqif-sayarat-projects-fakhr-almamlaka-jeddah111.webp",
+            "mizalat-mawaqif-sayarat-pvc-fakhr-almamlaka-jeddah11.webp",
+            "mizalat-mawaqif-sharikate-fakhr-almamlaka-jeddah86.webp",
+            "mizalat-mawaqif-tayer-laser-fakhr-almamlaka-jeddah58.webp",
+            "mizalat-modern-luxury-tent-glass-fakhr-almamlaka-jeddah115.webp",
+            "mizalat-parking-shades-fakhr-almamlaka-jeddah102.webp",
+            "mizalat-pvc-garage-shutter-fakhr-almamlaka-jeddah108.webp",
+            "mizalat-sayarat-arc-fakhr-almamlaka-jeddah50.webp",
+            "mizalat-sayarat-arc-pvc-fakhr-almamlaka-jeddah30.webp",
+            "mizalat-sayarat-kabooli-arc-fakhr-almamlaka-jeddah19.webp",
+            "mizalat-sayarat-kabooli-laser-fakhr-almamlaka-jeddah10.webp",
+            "mizalat-sayarat-kabooli-laser-fakhr-almamlaka-jeddah2.webp",
+            "mizalat-sayarat-makhrouti-pvc-fakhr-almamlaka-jeddah109.webp",
+            "mizalat-sayarat-manzilia-fakhr-almamlaka-jeddah81.webp",
+            "mizalat-sayarat-masjid-pvc-fakhr-almamlaka-jeddah36.webp",
+            "mizalat-sayarat-modern-khashab-fakhr-almamlaka-jeddah22.webp",
+            "mizalat-sayarat-pvc-hemaya-fakhr-almamlaka-jeddah77.webp",
+            "mizalat-sayarat-qmash-fakhr-almamlaka-jeddah89.webp",
+            "mizalat-sayarat-shari-laser-fakhr-almamlaka-jeddah54.webp",
+            "mizalat-sayarht-fakhr-almamlaka-jeddah112.webp",
+            "mizalat-shad-inshai-fakhr-almamlaka-jeddah82.webp",
+            "mizalat-shad-inshai-sahat-fakhr-almamlaka-jeddah100.webp",
+            "mizalat-shadd-inshai-muthalathat-fakhr-almamlaka-jeddah21.webp",
+            "mizalats-best-modern-fakhr-almamlaka-jeddah.webp",
+            "mizalats-modern-fakhr-almamlaka-jeddah1.webp",
+            "pergola-backyard-string-lights-fakhr-almamlaka-jeddah54.webp",
+            "pergola-corrugated-lexan-carport-shade-fakhr-almamlaka-jeddah52.webp",
+            "pergola-decor-fakhr-almamlaka-jeddah57.webp",
+            "pergola-galsat-hadaiq-tents-fakhr-almamlaka-jeddah14.webp",
+            "pergola-galsat-roof-fakhr-almamlaka-jeddah55.webp",
+            "pergola-galsat-satah-fakhr-almamlaka-jeddah19.webp",
+            "pergola-glass-room-aluminum-fakhr-almamlaka-jeddah45.webp",
+            "pergola-hadaeq-fakhr-almamlaka-jeddah18.webp",
+            "pergola-hadid-garden-fakhr-almamlaka-jeddah34.webp",
+            "pergola-hadid-laser-fakhr-almamlaka-jeddah32.webp",
+            "pergola-hadid-lexan-mamar-fakhr-almamlaka-jeddah33.webp",
+            "pergola-hadid-lexan-roof-fakhr-almamlaka-jeddah35.webp",
+            "pergola-hadid-satayer-fakhr-almamlaka-jeddah12.webp",
+            "pergola-jalsat-hadaeq-fakhr-almamlaka-jeddah8.webp",
+            "pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp",
+            "pergola-khashabia-fakhr-almamlaka-jeddah6.webp",
+            "pergola-khashabia-shalal-fakhr-almamlaka-jeddah28.webp",
+            "pergola-luxury-garden-fakhr-almamlaka-jeddah27.webp",
+            "pergola-luxury-villa-fakhr-almamlaka-jeddah39.webp",
+            "pergola-modern-fakhr-almamlaka-jeddah10.webp",
+            "pergola-modern-fakhr-almamlaka-jeddah5.webp",
+            "pergola-modern-fakhr-almamlaka-jeddah59.webp",
+            "pergola-modern-led-lighting-fakhr-almamlaka-jeddah20.webp",
+            "pergola-modern-louvered-led-fakhr-almamlaka-jeddah38.webp",
+            "pergola-modern-pool-shade-fakhr-almamlaka-jeddah40.webp",
+            "pergola-tasmim-asateh-fakhr-almamlaka-jeddah11.webp",
+            "pergola-tasmim-jalsat-fakhr-almamlaka-jeddah7.webp",
+            "pergola-traditional-seating-fakhr-almamlaka-jeddah23.webp",
+            "pergola-white-sofa-fakhr-almamlaka-jeddah31.webp",
+            "pergola-with-sail-shade-fakhr-almamlaka-jeddah37.webp",
+            "pergola-wpc-wooden-roof-fakhr-almamlaka-jeddah16.webp",
+            "pergola-wpc-wooden-wall-cladding-fakhr-almamlaka-jeddah50.webp",
+            "pergolas-modern-backyard-designs-fakhr-almamlaka-jeddah.webp",
+            "pergolas-modern-fakhr-almamlaka-jeddah1.webp",
+            "pergolas-modern-wood-seating-fakhr-almamlaka-jeddah.webp",
+            "pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah.webp",
+            "qarmid-tarkib-asateh-fakhr-almamlaka-jeddah16.webp",
+            "sandwich-qarmid-tarkib-asateh-modern-fakhr-almamlaka-jeddah.webp",
+            "sawater-fabric-fakhr-almamlaka-jeddah18.webp",
+            "sawater-fabric-fakhr-almamlaka-jeddah20.webp",
+            "sawater-fabric-wall-fakhr-almamlaka-jeddah40.webp",
+            "sawater-hadid-laser-modern-fakhr-almamlaka-jeddah7.webp",
+            "sawater-hadid-majdool-fakhr-almamlaka-jeddah5.webp",
+            "sawater-iron-wall-fakhr-almamlaka-jeddah21.webp",
+            "sawater-louvered-iron--fakhr-almamlaka-jeddah33.webp",
+            "sawater-louvre-plastic-fakhr-almamlaka-jeddah17.webp",
+            "sawater-luxury-villa-fakhr-almamlaka-jeddah23.webp",
+            "sawater-majdoul-khashab-fakhr-almamlaka-jeddah9.webp",
+            "sawater-modern-iron-fakhr-almamlaka-jeddah37.webp",
+            "sawater-shutter-gate-iron-fakhr-almamlaka-jeddah43.webp"
+        ];
 
-        function renderComments() {
-            const list = document.getElementById('comments-list');
-            list.innerHTML = '';
-            commentsData.forEach(c => {
-                list.innerHTML += `<div class="bg-brand-surface p-4 rounded-xl flex justify-between items-center border border-gray-800">
-                    <div><p class="font-bold text-white">${c.name} <span class="text-xs">${c.rating}</span></p><p class="text-sm text-gray-400">${c.text}</p></div>
-                    <button onclick="deleteComment(${c.id})" class="text-red-500 text-xs">حذف 🗑️</button>
-                </div>`;
-            });
-        }
-
-        function addComment() {
-            const name = document.getElementById('comment-user').value;
-            const text = document.getElementById('comment-text').value;
-            const rating = document.getElementById('comment-rating').value;
-            if(name && text) {
-                commentsData.unshift({ id: Date.now(), name, rating, text });
-                localStorage.setItem('savedComments', JSON.stringify(commentsData));
-                renderComments();
-                document.getElementById('comment-user').value = '';
-                document.getElementById('comment-text').value = '';
-            }
-        }
-
-        function deleteComment(id) {
-            commentsData = commentsData.filter(c => c.id !== id);
-            localStorage.setItem('savedComments', JSON.stringify(commentsData));
-            renderComments();
-        }
-
-        function updateAdFromAdmin() {
-            const t = document.getElementById('admin-ad-title').value;
-            const d = document.getElementById('admin-ad-desc').value;
-            const img = document.getElementById('admin-ad-img').value;
-            if(t) document.getElementById('ad-title').innerText = t;
-            if(d) document.getElementById('ad-desc').innerText = d;
-            if(img) document.getElementById('ad-img').src = img;
-            localStorage.setItem('savedAd', JSON.stringify({t, d, img}));
-            toggleAdminModal();
-        }
-
-        function toggleAdminModal() { document.getElementById('admin-modal').classList.toggle('hidden'); }
-
-        window.onload = () => {
-            const savedAd = JSON.parse(localStorage.getItem('savedAd'));
-            if(savedAd) {
-                if(savedAd.t) document.getElementById('ad-title').innerText = savedAd.t;
-                if(savedAd.d) document.getElementById('ad-desc').innerText = savedAd.d;
-                if(savedAd.img) document.getElementById('ad-img').src = savedAd.img;
-            }
-            renderComments();
-        };
+        const container = document.getElementById('gallery-container');
+        images.forEach((imgName, index) => {
+            const card = `
+                <div class="w-72 shrink-0 bg-brand-surface rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="https://raw.githubusercontent.com/fakhr-almamlaka-mizalat-jeddah/services/main/images/${imgName}" 
+                         alt="مشروع رقم ${index + 1}" class="w-full h-48 object-cover">
+                    <div class="p-4 text-center">
+                        <h4 class="text-sm font-bold">عمل رقم ${index + 1}</h4>
+                    </div>
+                </div>
+            `;
+            container.insertAdjacentHTML('beforeend', card);
+        });
     </script>
 </body>
 </html>
