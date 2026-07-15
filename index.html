@@ -23,6 +23,11 @@
             --light-color: #f7fafc;
             --white: #ffffff;
             --transition: all 0.3s ease;
+            
+            /* ألوان جديدة ومريحة مضافة بطلبك */
+            --soft-beige: #fbf7f0;  /* لون بيج خافت مريح جداً للعين */
+            --soft-pink: #fdf2f2;   /* لون وردي خافت هادئ ولطيف */
+            --soft-blue: #f0f4f8;   /* لون أزرق خافت هادئ للأقسام التقنية */
         }
 
         * {
@@ -123,7 +128,7 @@
             border: 1px dashed var(--secondary-color);
         }
 
-        /* صورة المقدمة الإضافية المخصصة من طلبك - معدلة لتعرض كاملة بشكل جذاب */
+        /* صورة المقدمة الإضافية المخصصة */
         .hero-banner-container {
             max-width: 1000px;
             margin: 30px auto 40px;
@@ -137,26 +142,33 @@
             max-height: 520px;
             border-radius: 12px;
             box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-            object-fit: contain; /* تم تعديلها لضمان بقاء الصورة مكتملة دون أي قص للأطراف */
+            object-fit: contain;
             background-color: #ffffff;
             border: 4px solid var(--white);
         }
 
-        /* قسم نبذة عن مؤسسة فخر المملكة الجديد */
+        /* قسم نبذة عن مؤسسة فخر المملكة الجديد - ملون بالبيج الخافت والمريح جداً للعين */
         .about-section {
+            background-color: var(--soft-beige);
+            padding: 60px 20px;
+            border-top: 1px solid rgba(214, 158, 46, 0.15);
+            border-bottom: 1px solid rgba(214, 158, 46, 0.15);
+        }
+
+        .about-container-wrapper {
             max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
+            margin: 0 auto;
         }
 
         .about-card {
             background: var(--white);
             border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
             display: flex;
             flex-direction: row;
             overflow: hidden;
             align-items: center;
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
         .about-content {
@@ -253,13 +265,18 @@
             color: #f7fafc;
         }
 
-        /* قسم الحماية المثالية والديكور العصري + بيانات الاتصال ومواعيد العمل */
+        /* قسم الحماية المثالية والديكور العصري - ملون بالوردي الخافت والناعم جداً */
+        .contact-info-section-outer {
+            background-color: var(--soft-pink);
+            padding: 60px 20px;
+            border-bottom: 1px solid rgba(214, 158, 46, 0.1);
+        }
+
         .contact-info-section {
             max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1fr;
             gap: 30px;
         }
 
@@ -267,7 +284,7 @@
             background: var(--white);
             border-radius: 15px;
             padding: 40px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
             border-right: 6px solid var(--secondary-color);
         }
 
@@ -316,73 +333,75 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
-        /* التنسيق الجديد لقسم مواعيد العمل داخل المعرض */
-        .schedule-gallery-container {
-            max-width: 1160px;
-            margin: 40px auto 10px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px dashed var(--secondary-color);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            backdrop-filter: blur(10px);
+        /* قسم ساعات العمل المنفصل والمستقل تماماً أسفل فقرة المعرض */
+        .schedule-standalone-section {
+            background-color: var(--soft-beige);
+            padding: 60px 20px;
+            border-top: 1px solid rgba(214, 158, 46, 0.15);
+            border-bottom: 1px solid rgba(214, 158, 46, 0.15);
         }
 
-        .schedule-gallery-container h3 {
-            font-size: 1.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-            border-bottom: 2px solid rgba(255,255,255,0.15);
+        .schedule-standalone-container {
+            max-width: 1160px;
+            margin: 0 auto;
+            background: var(--white);
+            border: 2px dashed var(--secondary-color);
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .schedule-standalone-container h3 {
+            font-size: 1.7rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--soft-beige);
             padding-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
-        .schedule-gallery-grid {
+        .schedule-standalone-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
-        .schedule-gallery-item {
+        .schedule-standalone-item {
             display: flex;
             justify-content: space-between;
-            font-size: 1.15rem;
-            border-bottom: 1px dashed rgba(255,255,255,0.1);
-            padding-bottom: 10px;
-            color: #ffffff;
+            font-size: 1.2rem;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+            padding-bottom: 12px;
+            color: var(--dark-color);
         }
 
-        .schedule-gallery-item span:last-child {
+        .schedule-standalone-item span:last-child {
             color: var(--secondary-color);
             font-weight: bold;
         }
 
-        .schedule-gallery-email {
-            grid-column: 1 / -1;
+        .schedule-standalone-email {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 25px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding-top: 20px;
         }
 
-        .schedule-gallery-email a {
-            color: #ffffff;
+        .schedule-standalone-email a {
+            color: var(--primary-color);
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             transition: var(--transition);
             display: inline-flex;
             align-items: center;
             gap: 8px;
         }
 
-        .schedule-gallery-email a:hover {
+        .schedule-standalone-email a:hover {
             color: var(--secondary-color);
-        }
-
-        /* الكارد الاحتياطي لعدم إحداث خلل في أي تصميم مستقبلي */
-        .schedule-card {
-            display: none; /* مخفي لأننا نقلناه بالكامل أسفل المعرض بالشكل المطلوب */
         }
 
         /* قسم الإعلانات والعروض بعد المقدمة */
@@ -417,16 +436,20 @@
             object-fit: cover;
         }
 
-        /* الخدمات الرئيسية */
+        /* الخدمات الرئيسية - ملونة بالوردي الخافت المريح جداً للعين */
+        .services-section-outer {
+            background-color: var(--soft-pink);
+            padding: 60px 20px;
+        }
+
         .services-section {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
             color: var(--primary-color);
             position: relative;
         }
@@ -450,6 +473,7 @@
             display: flex;
             flex-direction: row;
             transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
         .service-card:nth-child(even) { flex-direction: row-reverse; }
@@ -477,7 +501,7 @@
         .service-info h4 { font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 15px; }
         .service-info p { color: #555; margin-bottom: 10px; text-align: justify; }
 
-        /* المعارض الدائرية المزدوجة (السلايدر التمريري لـ 100 صورة) */
+        /* المعارض الدائرية المزدوجة */
         .gallery-section {
             background: var(--primary-color);
             color: var(--white);
@@ -551,14 +575,20 @@
             font-weight: bold;
         }
 
-        /* لوحة تحكم المشرف */
+        /* لوحة تحكم المشرف - ملونة بالأزرق الهادئ المريح */
+        .admin-panel-section-outer {
+            background-color: var(--soft-blue);
+            padding: 50px 20px;
+        }
+
         .admin-panel-section {
             max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #edf2f7;
-            border-radius: 8px;
+            margin: 0 auto;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 12px;
             border: 1px dashed var(--primary-color);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
 
         .admin-btn {
@@ -576,11 +606,15 @@
             width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #cbd5e0; border-radius: 5px;
         }
 
-        /* نظام التقييمات والتعليقات SEO */
+        /* نظام التقييمات والتعليقات SEO - ملون بالبيج الخافت والمريح جداً */
+        .reviews-section-outer {
+            background-color: var(--soft-beige);
+            padding: 60px 20px;
+        }
+
         .reviews-section {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 0 auto;
         }
 
         .review-form-container {
@@ -589,6 +623,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             margin-bottom: 30px;
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
         .stars-rating { display: flex; gap: 5px; font-size: 1.5rem; margin-bottom: 15px; cursor: pointer; color: #ccc; }
@@ -604,7 +639,7 @@
             background: var(--white);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             border-top: 3px solid var(--primary-color);
         }
 
@@ -664,7 +699,7 @@
             color: var(--white);
         }
 
-        /* ألوان الخلفية المخصصة لكل منصة عند مرور الماوس عليها */
+        /* ألوان الخلفية المخصصة لكل منصة */
         .social-icon-btn.pinterest:hover { background-color: #bd081c; border-color: #bd081c; }
         .social-icon-btn.snapchat:hover { background-color: #fffc00; color: #000; border-color: #fffc00; }
         .social-icon-btn.tiktok:hover { background-color: #010101; border-color: #010101; }
@@ -673,7 +708,7 @@
         .social-icon-btn.telegram:hover { background-color: #0088cc; border-color: #0088cc; }
         .social-icon-btn.youtube:hover { background-color: #ff0000; border-color: #ff0000; }
 
-        /* الأزرار العائمة التفاعلية أسفل اليسار */
+        /* الأزرار العائمة التفاعلية */
         .floating-contact-container {
             position: fixed;
             bottom: 25px;
@@ -709,7 +744,6 @@
             animation-delay: 0.5s;
         }
 
-        /* حركات التفاعل المزدوجة للأزرار العائمة */
         @keyframes pulseShake {
             0%, 100% {
                 transform: scale(1) rotate(0deg);
@@ -737,7 +771,6 @@
             .about-card { flex-direction: column; }
             .about-img-wrapper { width: 100%; min-height: 300px; }
             .about-img-wrapper img { min-height: 300px; }
-            .contact-info-section { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -804,29 +837,31 @@
         <h5>للاستشارة الفورية والدعم الفني تواصل معنا مباشرة</h5>
     </section>
 
-    <!-- صورة الإعلان بعد المقدمة النصية للمؤسسة مباشرة من طلبك -->
+    <!-- صورة الإعلان بعد المقدمة النصية للمؤسسة مباشرة -->
     <div class="hero-banner-container">
         <img src="images/ads-fakhr-almamlaka-sawater-mizalat-white-fakhr-almamlaka-jeddah2.webp" 
              alt="عروض وتصاميم فخر المملكة للمظلات والسواتر بجدة"
              onerror="this.onerror=null; this.src='https://placehold.co/1000x480/1a365d/ffffff?text=Fakhr+Almamlaka+Banner';">
     </div>
 
-    <!-- قسم نبذة عن مؤسسة فخر المملكة بجدة بجانب الصورة المحددة -->
+    <!-- قسم نبذة عن مؤسسة فخر المملكة بجدة بجانب الصورة المحددة - ملون بالبيج الخافت الهادئ -->
     <section class="about-section" id="about">
-        <div class="about-card">
-            <div class="about-content">
-                <h2>نبذة عن مؤسسة فخر المملكة بجدة</h2>
-                <p>تتميز مؤسسة فخر المملكة لإنشاء المظلات والسواتر بجدة بريادتها الممتدة في تنفيذ كبرى المشاريع الإنشائية ساندويتش بانل، المظلات السكنية والتجارية، الهناجر والبرجولات في السعودية. نلتزم بتقديم حلول هندسية متطورة باستخدام أجود الخامات العالمية المعتمدة لضمان أقصى درجات الحماية ومقاومة تقلبات الطقس والمناخ بأطول فترات الضمان وبأعلى معايير الدقة الفنية.</p>
-            </div>
-            <div class="about-img-wrapper">
-                <img src="images/assets/ads-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah3.webp" 
-                     alt="مشاريع وأعمال مؤسسة فخر المملكة"
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a365d/ffffff?text=Fakhr+Almamlaka+About';">
+        <div class="about-container-wrapper">
+            <div class="about-card">
+                <div class="about-content">
+                    <h2>نبذة عن مؤسسة فخر المملكة بجدة</h2>
+                    <p>تتميز مؤسسة فخر المملكة لإنشاء المظلات والسواتر بجدة بريادتها الممتدة في تنفيذ كبرى المشاريع الإنشائية ساندويتش بانل، المظلات السكنية والتجارية، الهناجر والبرجولات في السعودية. نلتزم بتقديم حلول هندسية متطورة باستخدام أجود الخامات العالمية المعتمدة لضمان أقصى درجات الحماية ومقاومة تقلبات الطقس والمناخ بأطول فترات الضمان وبأعلى معايير الدقة الفنية.</p>
+                </div>
+                <div class="about-img-wrapper">
+                    <img src="images/assets/ads-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah3.webp" 
+                         alt="مشاريع وأعمال مؤسسة فخر المملكة"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a365d/ffffff?text=Fakhr+Almamlaka+About';">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم الإحصائيات والخبرات والعدادات الإبداعية الجديد -->
+    <!-- قسم إحصائيات الأرقام المبتكر -->
     <section class="stats-section">
         <div class="stats-intro-text">
             نمتلك خبرة واسعة في مجال المظلات والسواتر والمقاولات بجدة، مما يضمن لك الحصول على أفضل الخدمات، كما نستخدم أجود أنواع المواد الخام المعتمدة في السعودية ونعتمد على أحدث التقنيات لضمان منتجاتنا وخدماتنا بضمان رسمي ممتد.
@@ -847,29 +882,27 @@
         </div>
     </section>
 
-    <!-- قسم الحماية المثالية + بيانات الاتصال ومواعيد العمل -->
-    <section class="contact-info-section">
-        <div class="info-card">
-            <h2>مظلات وسواتر جدة للمقاولات الحديثة</h2>
-            <p>نوفر لسيارتك ومنزلك الحماية المثالية والديكور العصري المبتكر ضد أشعة الشمس الحارقة ورطوبة جدة العالية، بضمان حقيقي معتمد يصل إلى 10 سنوات.</p>
-            
-            <h4 style="margin-bottom: 15px; color: var(--primary-color);"><i class="fa-solid fa-address-book"></i> بيانات الاتصال الرسمي:</h4>
-            <div class="contact-direct-buttons">
-                <!-- زر اتصال هاتفي فوري -->
-                <a href="tel:0553511013" class="contact-direct-btn phone-blue">
-                    <i class="fa-solid fa-phone"></i> اتصل بنا: 0553511013
-                </a>
-                <!-- زر راسلني واتساب فوري -->
-                <a href="https://wa.me/966553511013?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%8Status%20%D8%B5%D8%A7%D8%AD%D8%A8%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D2%A7%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA%D8%B1." 
-                   target="_blank" 
-                   class="contact-direct-btn whatsapp-green">
-                    <i class="fa-brands fa-whatsapp"></i> راسلنا عبر الواتساب
-                </a>
+    <!-- قسم الحماية المثالية + بيانات الاتصال - ملون بالوردي الخافت اللطيف -->
+    <section class="contact-info-section-outer">
+        <div class="contact-info-section">
+            <div class="info-card">
+                <h2>مظلات وسواتر جدة للمقاولات الحديثة</h2>
+                <p>نوفر لسيارتك ومنزلك الحماية المثالية والديكور العصري المبتكر ضد أشعة الشمس الحارقة ورطوبة جدة العالية، بضمان حقيقي معتمد يصل إلى 10 سنوات.</p>
+                
+                <h4 style="margin-bottom: 15px; color: var(--primary-color);"><i class="fa-solid fa-address-book"></i> بيانات الاتصال الرسمي:</h4>
+                <div class="contact-direct-buttons">
+                    <!-- زر اتصال هاتفي فوري -->
+                    <a href="tel:0553511013" class="contact-direct-btn phone-blue">
+                        <i class="fa-solid fa-phone"></i> اتصل بنا: 0553511013
+                    </a>
+                    <!-- زر راسلني واتساب فوري -->
+                    <a href="https://wa.me/966553511013?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%8Status%20%D8%B5%D8%A7%D8%AD%D8%A8%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D2%A7%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA%D8%B1." 
+                       target="_blank" 
+                       class="contact-direct-btn whatsapp-green">
+                        <i class="fa-brands fa-whatsapp"></i> راسلنا عبر الواتساب
+                    </a>
+                </div>
             </div>
-        </div>
-
-        <div class="schedule-card">
-            <!-- تم إخفاء هذا الكارد من الهيكل البرمجي هنا، ونُقل بالكامل إلى مكانه الجديد أسفل مسار السواتر والإنشاءات في قسم المعرض كما طلبت -->
         </div>
     </section>
 
@@ -888,77 +921,79 @@
         </div>
     </div>
 
-    <!-- قسم الخدمات الرئيسية -->
-    <section class="services-section">
-        <div class="section-title">
-            <h2>خدماتنا الاحترافية في المظلات والسواتر بجدة</h2>
-        </div>
+    <!-- قسم الخدمات الرئيسية - ملون بالوردي الخافت لراحة العين والنعومة البصرية -->
+    <section class="services-section-outer">
+        <div class="services-section">
+            <div class="section-title">
+                <h2>خدماتنا الاحترافية في المظلات والسواتر بجدة</h2>
+            </div>
 
-        <!-- 1. المظلات -->
-        <div class="service-card" id="mizalat">
-            <div class="service-img-wrapper">
-                <img src="images/assets/mizalats-best-modern-fakhr-almamlaka-jeddah2.webp" 
-                     alt="تركيب مظلات بجدة"
-                     loading="lazy"
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a365d/ffffff?text=Mizalat+Jeddah';">
+            <!-- 1. المظلات -->
+            <div class="service-card" id="mizalat">
+                <div class="service-img-wrapper">
+                    <img src="images/assets/mizalats-best-modern-fakhr-almamlaka-jeddah2.webp" 
+                         alt="تركيب مظلات بجدة"
+                         loading="lazy"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a365d/ffffff?text=Mizalat+Jeddah';">
+                </div>
+                <div class="service-info">
+                    <h3>تركيب مظلات متطورة وحديثة</h3>
+                    <h4>أهميتها، أنواعها، وجودتها الاستثنائية</h4>
+                    <p>تعتبر المظلات عنصراً أساسياً لحماية الممتلكات والسيارات من درجات الحرارة المرتفعة والأشعة فوق البنفسجية في جدة.</p>
+                    <p><strong>أهم الأنواع المتوفرة لدينا:</strong> مظلات PVC كوري وألماني عالي الكثافة، مظلات بولي إيثيلين الاسترالي، مظلات شد إنشائي، ومظلات خشبية وبلاستيكية معالجة.</p>
+                    <p><strong>الجودة:</strong> نضمن لك هيكلية حديدية متينة ومقاومة للصدأ والتآكل مع دهانات نارية ومقاومة للحرائق والرطوبة بنسبة 100%.</p>
+                </div>
             </div>
-            <div class="service-info">
-                <h3>تركيب مظلات متطورة وحديثة</h3>
-                <h4>أهميتها، أنواعها، وجودتها الاستثنائية</h4>
-                <p>تعتبر المظلات عنصراً أساسياً لحماية الممتلكات والسيارات من درجات الحرارة المرتفعة والأشعة فوق البنفسجية في جدة.</p>
-                <p><strong>أهم الأنواع المتوفرة لدينا:</strong> مظلات PVC كوري وألماني عالي الكثافة، مظلات بولي إيثيلين الاسترالي، مظلات شد إنشائي، ومظلات خشبية وبلاستيكية معالجة.</p>
-                <p><strong>الجودة:</strong> نضمن لك هيكلية حديدية متينة ومقاومة للصدأ والتآكل مع دهانات نارية ومقاومة للحرائق والرطوبة بنسبة 100%.</p>
-            </div>
-        </div>
 
-        <!-- 2. البرجولات -->
-        <div class="service-card" id="pergolas">
-            <div class="service-img-wrapper">
-                <img src="images/assets/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp" 
-                     alt="تركيب برجولات حدائق بجدة"
-                     loading="lazy"
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a365d/ffffff?text=Pergola+Jeddah';">
+            <!-- 2. البرجولات -->
+            <div class="service-card" id="pergolas">
+                <div class="service-img-wrapper">
+                    <img src="images/assets/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp" 
+                         alt="تركيب برجولات حدائق بجدة"
+                         loading="lazy"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a365d/ffffff?text=Pergola+Jeddah';">
+                </div>
+                <div class="service-info">
+                    <h3>تصميم وتركيب برجولات حدائق وجلسات</h3>
+                    <h4>أهميتها، أنواعها، وجودتها الفاخرة</h4>
+                    <p>تضفي البرجولات لمسة ديكورية ساحرة وجمالية فريدة على الحدائق والأسطح، حيث توفر مساحات تظليل مثالية ومريحة للتجمعات العائلية والاسترخاء في الهواء الطلق.</p>
+                    <p><strong>أهم الأنواع المتوفرة لدينا:</strong> برجولات خشبية طبيعية (سويدي ومارنتي)، برجولات حديد شكل خشب (مودرن)، وبرجولات قماشية ومتحركة تناسب كافة الديكورات.</p>
+                    <p><strong>الجودة:</strong> نستخدم مواد معالجة ضد التسوس والرطوبة والفطريات، مما يمنح البرجولات عمراً افتراضياً طويلاً يتحدى كافة الظروف البيئية.</p>
+                </div>
             </div>
-            <div class="service-info">
-                <h3>تصميم وتركيب برجولات حدائق وجلسات</h3>
-                <h4>أهميتها، أنواعها، وجودتها الفاخرة</h4>
-                <p>تضفي البرجولات لمسة ديكورية ساحرة وجمالية فريدة على الحدائق والأسطح، حيث توفر مساحات تظليل مثالية ومريحة للتجمعات العائلية والاسترخاء في الهواء الطلق.</p>
-                <p><strong>أهم الأنواع المتوفرة لدينا:</strong> برجولات خشبية طبيعية (سويدي ومارنتي)، برجولات حديد شكل خشب (مودرن)، وبرجولات قماشية ومتحركة تناسب كافة الديكورات.</p>
-                <p><strong>الجودة:</strong> نستخدم مواد معالجة ضد التسوس والرطوبة والفطريات، مما يمنح البرجولات عمراً افتراضياً طويلاً يتحدى كافة الظروف البيئية.</p>
-            </div>
-        </div>
 
-        <!-- 3. السواتر -->
-        <div class="service-card" id="sawaters">
-            <div class="service-img-wrapper">
-                <img src="images/assets/sawaters-building-wall-fakhr-almamlaka-jeddah.webp" 
-                     alt="تركيب سواتر جدران بجدة"
-                     loading="lazy"
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a365d/ffffff?text=Sawaters+Jeddah';">
+            <!-- 3. السواتر -->
+            <div class="service-card" id="sawaters">
+                <div class="service-img-wrapper">
+                    <img src="images/assets/sawaters-building-wall-fakhr-almamlaka-jeddah.webp" 
+                         alt="تركيب سواتر جدران بجدة"
+                         loading="lazy"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a365d/ffffff?text=Sawaters+Jeddah';">
+                </div>
+                <div class="service-info">
+                    <h3>تركيب سواتر منزلية وجدارية لتأمين الخصوصية</h3>
+                    <h4>أهميتها، أنواعها، ومستوى حمايتها وعزلها</h4>
+                    <p>تكمن أهمية السواتر في توفير الخصوصية التامة والحجب الكامل للرؤية عن منزلك أو فيلتك، بالإضافة إلى دورها الفعال كحاجز أمان مرتفع لأسوار المنازل والمنشآت.</p>
+                    <p><strong>أهم الأنواع المتوفرة لدينا:</strong> سواتر حديد (مجدول وشرايح), سواتر خشب بلاستيكي معالج، سواتر قماشية قوية، وسواتر لكسان زجاجية شفافة وحديثة.</p>
+                    <p><strong>الجودة:</strong> تتميز سواترنا بثباتها العالي وقدرتها على مقاومة الرياح الشديدة والحرارة بدون أي تغيير في الألوان أو الهيكل الإنشائي.</p>
+                </div>
             </div>
-            <div class="service-info">
-                <h3>تركيب سواتر منزلية وجدارية لتأمين الخصوصية</h3>
-                <h4>أهميتها، أنواعها، ومستوى حمايتها وعزلها</h4>
-                <p>تكمن أهمية السواتر في توفير الخصوصية التامة والحجب الكامل للرؤية عن منزلك أو فيلتك، بالإضافة إلى دورها الفعال كحاجز أمان مرتفع لأسوار المنازل والمنشآت.</p>
-                <p><strong>أهم الأنواع المتوفرة لدينا:</strong> سواتر حديد (مجدول وشرايح), سواتر خشب بلاستيكي معالج، سواتر قماشية قوية، وسواتر لكسان زجاجية شفافة وحديثة.</p>
-                <p><strong>الجودة:</strong> تتميز سواترنا بثباتها العالي وقدرتها على مقاومة الرياح الشديدة والحرارة بدون أي تغيير في الألوان أو الهيكل الإنشائي.</p>
-            </div>
-        </div>
 
-        <!-- 4. الهناجر والمستودعات -->
-        <div class="service-card" id="hangars">
-            <div class="service-img-wrapper">
-                <img src="images/assets/hangar-mostawdaat-fakhr-almamlaka-jeddah1.webp" 
-                     alt="بناء هناجر ومستودعات بجدة"
-                     loading="lazy"
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a365d/ffffff?text=Hangars+Jeddah';">
-            </div>
-            <div class="service-info">
-                <h3>بناء وتشييد هناجر ومستودعات ومخازن</h3>
-                <h4>أهميتها الإستراتيجية، أنواعها، ومعايير أمانها</h4>
-                <p>توفر الهناجر والمستودعات حلولاً سريعة واقتصادية للمساحات التخزينية والتجارية والصناعية الكبرى، وتعمل كمأمن ممتاز ومحمي للبضائع والمعدات من شتى تقلبات الطقس.</p>
-                <p><strong>أهم الأنواع المتوفرة لدينا:</strong> هناجر شركات ومصانع، مستودعات تخزين تجارية، هناجر مزارع، وهياكل جاهزة شاهقة الارتفاع.</p>
-                <p><strong>الجودة والسلامة:</strong> يتم التصميم بناءً على دراسات هندسية دقيقة لتتحمل الأوزان والرياح، مع تدعيمها بأنظمة عزل حراري ومائي متطورة ومقاومة تامة للحرائق وفقاً للمواصفات العالمية.</p>
+            <!-- 4. الهناجر والمستودعات -->
+            <div class="service-card" id="hangars">
+                <div class="service-img-wrapper">
+                    <img src="images/assets/hangar-mostawdaat-fakhr-almamlaka-jeddah1.webp" 
+                         alt="بناء هناجر ومستودعات بجدة"
+                         loading="lazy"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a365d/ffffff?text=Hangars+Jeddah';">
+                </div>
+                <div class="service-info">
+                    <h3>بناء وتشييد هناجر ومستودعات ومخازن</h3>
+                    <h4>أهميتها الإستراتيجية، أنواعها، ومعايير أمانها</h4>
+                    <p>توفر الهناجر والمستودعات حلولاً سريعة واقتصادية للمساحات التخزينية والتجارية والصناعية الكبرى، وتعمل كمأمن ممتاز ومحمي للبضائع والمعدات من شتى تقلبات الطقس.</p>
+                    <p><strong>أهم الأنواع المتوفرة لدينا:</strong> هناجر شركات ومصانع، مستودعات تخزين تجارية، هناجر مزارع، وهياكل جاهزة شاهقة الارتفاع.</p>
+                    <p><strong>الجودة والسلامة:</strong> يتم التصميم بناءً على دراسات هندسية دقيقة لتتحمل الأوزان والرياح، مع تدعيمها بأنظمة عزل حراري ومائي متطورة ومقاومة تامة للحرائق وفقاً للمواصفات العالمية.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -985,23 +1020,25 @@
                 <!-- سيتم توليد الـ 45 صورة الأخرى برمجياً من المجلد الرئيسي -->
             </div>
         </div>
+    </section>
 
-        <!-- قسم ساعات ومواعيد العمل المدمج والمحدث في المعرض (هنا مكانه المخصص الجديد تماماً) -->
-        <div class="schedule-gallery-container">
-            <h3><i class="fa-solid fa-clock"></i> ساعات العمل الرسمية لأقسام التركيب الإنشائي</h3>
-            <div class="schedule-gallery-grid">
-                <div class="schedule-gallery-item">
-                    <span>من السبت إلى الخميس:</span>
-                    <span>من 7 صباحاً إلى 11 مساءً</span>
+    <!-- قسم ساعات ومواعيد العمل المستقل والمنفصل تماماً (بعد فقرة المعرض وليس بداخلها) - ملون بالبيج الخافت الهادئ -->
+    <section class="schedule-standalone-section">
+        <div class="schedule-standalone-container">
+            <h3><i class="fa-solid fa-clock" style="color: var(--secondary-color);"></i> ساعات العمل الرسمية لأقسام التركيب الإنشائي بمؤسسة فخر المملكة</h3>
+            <div class="schedule-standalone-grid">
+                <div class="schedule-standalone-item">
+                    <span>من يوم السبت إلى الخميس:</span>
+                    <span>من الساعة 7:00 صباحاً إلى 11:00 مساءً</span>
                 </div>
-                <div class="schedule-gallery-item">
-                    <span>يوم الجمعة العطلة الأسبوعية:</span>
-                    <span>من 1 مساءً إلى 11 مساءً</span>
+                <div class="schedule-standalone-item">
+                    <span>يوم الجمعة (العطلة الأسبوعية):</span>
+                    <span>من الساعة 1:00 مساءً إلى 11:00 مساءً</span>
                 </div>
             </div>
-            <div class="schedule-gallery-email">
+            <div class="schedule-standalone-email">
                 <a href="mailto:fakhralmamlakamizalatservicesj@gmail.com">
-                    <i class="fa-solid fa-envelope" style="color: var(--secondary-color);"></i>
+                    <i class="fa-solid fa-envelope" style="color: var(--secondary-color); font-size: 1.3rem;"></i>
                     fakhralmamlakamizalatservicesj@gmail.com
                 </a>
             </div>
@@ -1014,50 +1051,54 @@
         <img class="lightbox-content" id="lightboxImg" src="" alt="صورة مكبرة">
     </div>
 
-    <!-- لوحة تحكم إعلانات وعروض المشرف البسيطة والفورية -->
-    <section class="admin-panel-section">
-        <h3><i class="fa-solid fa-lock"></i> لوحة تحكم المشرف (تحديث الإعلانات والباقات)</h3>
-        <p style="font-size: 0.9rem; margin-bottom: 10px; color: #4a5568;">خاص بمدير الموقع لتغيير العروض والصور متى يشاء بشكل فوري.</p>
-        <button class="admin-btn" onclick="toggleAdminForm()">تعديل الإعلان الحالي</button>
-        
-        <div class="admin-form" id="adminForm">
-            <input type="text" id="input-ad-title" placeholder="عنوان الإعلان أو الباقة الجديدة...">
-            <textarea id="input-ad-desc" rows="3" placeholder="تفاصيل العرض، الخصومات ومميزات الباقة الحالية..."></textarea>
-            <input type="text" id="input-ad-img" placeholder="رابط صورة الإعلان الجديد (مثال: images/assets/ads-fakhr-almamlaka-sawater-mizalat-fakhr-almamlaka-jeddah1.webp)">
-            <button class="admin-btn" style="background: var(--secondary-color);" onclick="updateAdvertisement()">حفظ ونشر الإعلان فوراً</button>
+    <!-- لوحة تحكم إعلانات وعروض المشرف - ملونة بالأزرق الهادئ الفاخر والمريح -->
+    <section class="admin-panel-section-outer">
+        <div class="admin-panel-section">
+            <h3><i class="fa-solid fa-lock" style="color: var(--primary-color);"></i> لوحة تحكم المشرف (تحديث الإعلانات والباقات)</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 15px; color: #4a5568;">خاص بمدير الموقع لتغيير العروض والصور متى يشاء بشكل فوري.</p>
+            <button class="admin-btn" onclick="toggleAdminForm()">تعديل الإعلان الحالي</button>
+            
+            <div class="admin-form" id="adminForm">
+                <input type="text" id="input-ad-title" placeholder="عنوان الإعلان أو الباقة الجديدة...">
+                <textarea id="input-ad-desc" rows="3" placeholder="تفاصيل العرض، الخصومات ومميزات الباقة الحالية..."></textarea>
+                <input type="text" id="input-ad-img" placeholder="رابط صورة الإعلان الجديد (مثال: images/assets/ads-fakhr-almamlaka-sawater-mizalat-fakhr-almamlaka-jeddah1.webp)">
+                <button class="admin-btn" style="background: var(--secondary-color);" onclick="updateAdvertisement()">حفظ ونشر الإعلان فوراً</button>
+            </div>
         </div>
     </section>
 
-    <!-- قسم تقييمات العملاء -->
-    <section class="reviews-section">
-        <div class="section-title">
-            <h2>تقييمات وآراء عملائنا في جدة</h2>
-        </div>
-
-        <div class="review-form-container">
-            <h4 style="margin-bottom: 15px;">أضف تقييمك وتجربتك معنا:</h4>
-            <div class="stars-rating" id="stars-selector">
-                <i class="fa-solid fa-star" data-value="1"></i>
-                <i class="fa-solid fa-star" data-value="2"></i>
-                <i class="fa-solid fa-star" data-value="3"></i>
-                <i class="fa-solid fa-star" data-value="4"></i>
-                <i class="fa-solid fa-star" data-value="5"></i>
+    <!-- قسم تقييمات العملاء - ملون بالبيج الخافت والمريح للعين -->
+    <section class="reviews-section-outer">
+        <div class="reviews-section">
+            <div class="section-title">
+                <h2>تقييمات وآراء عملائنا في جدة</h2>
             </div>
-            <input type="text" id="reviewer-name" placeholder="اسمك الكريم..." style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #cbd5e0; border-radius: 5px;">
-            <textarea id="reviewer-comment" rows="3" placeholder="اكتب تعليقك هنا حول جودة التركيب والالتزام بالمواعيد..." style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #cbd5e0; border-radius: 5px;"></textarea>
-            <button class="admin-btn" style="background: #2b6cb0;" onclick="submitNewReview()">إرسال التقييم ونشره</button>
-        </div>
 
-        <div class="reviews-display-list" id="reviews-list">
-            <div class="review-card">
-                <div style="color: var(--secondary-color); margin-bottom: 5px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <strong>أبو فهد الزهراني</strong>
-                <p>مؤسسة ممتازة جداً، ركبت عندهم مظلة سيارات ومظلة حديقة مودرن، شغل سريع دقيق في المواعيد والمهندس متعاون جداً.</p>
+            <div class="review-form-container">
+                <h4 style="margin-bottom: 15px;">أضف تقييمك وتجربتك معنا:</h4>
+                <div class="stars-rating" id="stars-selector">
+                    <i class="fa-solid fa-star" data-value="1"></i>
+                    <i class="fa-solid fa-star" data-value="2"></i>
+                    <i class="fa-solid fa-star" data-value="3"></i>
+                    <i class="fa-solid fa-star" data-value="4"></i>
+                    <i class="fa-solid fa-star" data-value="5"></i>
+                </div>
+                <input type="text" id="reviewer-name" placeholder="اسمك الكريم..." style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #cbd5e0; border-radius: 5px;">
+                <textarea id="reviewer-comment" rows="3" placeholder="اكتب تعليقك هنا حول جودة التركيب والالتزام بالمواعيد..." style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #cbd5e0; border-radius: 5px;"></textarea>
+                <button class="admin-btn" style="background: #2b6cb0;" onclick="submitNewReview()">إرسال التقييم ونشره</button>
             </div>
-            <div class="review-card">
-                <div style="color: var(--secondary-color); margin-bottom: 5px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <strong>خالد الحربي - جدة</strong>
-                <p>سعر منافس جداً مقارنة بالسوق وجودة الحديد ممتازة، تم تركيب السواتر للجدران وطلعت بالشكل المطلوب وأفضل، شكراً جزيلاً.</p>
+
+            <div class="reviews-display-list" id="reviews-list">
+                <div class="review-card">
+                    <div style="color: var(--secondary-color); margin-bottom: 5px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <strong>أبو فهد الزهراني</strong>
+                    <p>مؤسسة ممتازة جداً، ركبت عندهم مظلة سيارات ومظلة حديقة مودرن، شغل سريع دقيق في المواعيد والمهندس متعاون جداً.</p>
+                </div>
+                <div class="review-card">
+                    <div style="color: var(--secondary-color); margin-bottom: 5px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <strong>خالد الحربي - جدة</strong>
+                    <p>سعر منافس جداً مقارنة بالسوق وجودة الحديد ممتازة، تم تركيب السواتر للجدران وطلعت بالشكل المطلوب وأفضل، شكراً جزيلاً.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1086,7 +1127,7 @@
 
         <div class="contact-buttons">
             <a href="tel:0553511013" class="btn-call"><i class="fa-solid fa-phone"></i> اتصال بصاحب المؤسسة</a>
-            <a href="https://wa.me/966553511013?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%8A%D8%A7%20%D8%B5%D8%A7%D8%AD%D8%A8%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA%D8%B1." target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب الفوري</a>
+            <a href="https://wa.me/966553511013?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8a%D9%83%D9%85%20%D9%8a%D8%A7%20%D8%B5%D8%A7%D8%AD%D8%A8%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA%D8%B1." target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب الفوري</a>
         </div>
 
         <!-- معلومات المصمم والمهندس المحدثة بتصميم إبداعي جذاب مع تنبيه الواتساب -->
@@ -1096,7 +1137,7 @@
             </p>
             <p style="color: #cbd5e0; display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;">
                 تواصل مع مهندس الموقع الفني والتقني: 
-                <a href="https://wa.me/966552263681?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8a%D9%83%D9%85%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%D9%86%D8%A7%20%D8%A7%D9%84%D9%83%D8%B1%D9%8a%D9%85%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%B9%D8%B6%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8a%D9%84%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%20%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A7." 
+                <a href="https://wa.me/966552263681?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8a%D9%83%D9%85%20%D9%85%D9%85%D9%87%D9%86%D8%AF%D8%B3%D9%86%D8%A7%20%D8%A7%D9%84%D9%83%D8%B1%D9%8a%D9%85%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%B9%D8%B6%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8a%D9%84%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%20%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8a%D8%A7." 
                    target="_blank" 
                    style="color: #25d366; text-decoration: none; font-weight: 900; background: rgba(37, 211, 102, 0.15); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(37, 211, 102, 0.3); transition: var(--transition);"
                    onmouseover="this.style.background='#25d366'; this.style.color='#fff';"
@@ -1118,7 +1159,7 @@
         <a href="tel:0553511013" class="floating-btn btn-call-float" title="اتصل الآن">
             <i class="fa-solid fa-phone"></i>
         </a>
-        <!-- زر واتساب تفاعلي مباشر بصاحب المؤسسة مع رسالة ترحيب مخصصة -->
+        <!-- زر واتساب تفاعلي مباشر بصاحب المؤسسة -->
         <a href="https://wa.me/966553511013?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8a%D9%83%D9%85%20%D9%8a%D8%A7%20%D8%B5%D8%A7%D8%AD%D8%A8%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA%D8%B1." 
            target="_blank" 
            class="floating-btn btn-whatsapp-float" 
@@ -1238,7 +1279,7 @@
         // تصفية الـ 90 صورة الفخرية للمعرض
         const galleryImages = imagesDatabase.filter(img => img.isAsset === false);
 
-        // تقسيم الـ 90 صورة الفخرية بالتساوي (45 صورة لكل مسار) لضمان التوازن المثالي وسرعة التمرير
+        // تقسيم الـ 90 صورة الفخرية بالتساوي (45 صورة لكل مسار)
         const halfLength = Math.ceil(galleryImages.length / 2);
         const group1 = galleryImages.slice(0, halfLength);
         const group2 = galleryImages.slice(halfLength);
@@ -1251,7 +1292,6 @@
             imagesList.forEach(img => {
                 const slide = document.createElement('div');
                 slide.className = 'slide-item';
-                // تعديل المسار ليكون مباشر من مجلد images دون تراجع للخلف
                 const imagePath = `images/${img.src}`;
                 slide.innerHTML = `<img src="${imagePath}" alt="${img.title}" onclick="openLightbox('${imagePath}')" onerror="this.onerror=null; this.src='https://placehold.co/280x200/1a365d/ffffff?text=Fakhr+Almamlaka';" loading="lazy">`;
                 trackElement.appendChild(slide);
