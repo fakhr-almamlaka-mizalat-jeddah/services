@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة fخر المملكة للمظلات والسواتر بجدة | تركيب مظلات وسواتر وبرجولات</title>
+    <title>مؤسسة فخر المملكة للمظلات والسواتر بجدة | تركيب مظلات وسواتر وبرجولات</title>
     
     <!-- وسم الكلمات المفتاحية والأوصاف لتحسين محركات البحث SEO -->
     <meta name="description" content="مؤسسة فخر المملكة للمظلات والسواتر بجدة - متخصصون في تصميم وتثبيت مظلات سيارات، سواتر خشبية وحديدية، برجولات حدائق، هناجر ومستودعات بأعلى جودة وأفضل أسعار في جدة.">
@@ -24,10 +24,11 @@
             --white: #ffffff;
             --transition: all 0.3s ease;
             
-            /* درجات الألوان الهادئة والمريحة جداً للعين بطلبك */
+            /* درجات الألوان الهادئة والمريحة جداً للعين */
             --soft-beige: #fbf7f0;  
             --soft-pink: #fdf2f2;   
             --soft-blue: #f0f4f8;   
+            --harmony-bg: #f5f0e6; /* لون بيج هادئ متناسق وبصري ممتاز للقسم بعد الإحصائيات */
         }
 
         /* تصفير الهوامش لضمان عدم حدوث أي فراغ جانبي على الإطلاق */
@@ -418,11 +419,11 @@
             color: #f7fafc;
         }
 
-        /* قسم الحماية المثالية والديكور العصري - ملون بالوردي الخافت (تم نقله أسفل قسم الإحصائيات) */
+        /* قسم الحماية المثالية والديكور العصري - تم تعديل لونه ليتناسق بشكل فخم للغاية ومريح مع فقرة الخبرة */
         .contact-info-section-outer {
-            background-color: var(--soft-pink);
+            background-color: var(--harmony-bg);
             padding: 60px 20px;
-            border-bottom: 1px solid rgba(214, 158, 46, 0.1);
+            border-bottom: 1px solid rgba(214, 158, 46, 0.15);
         }
 
         .contact-info-section {
@@ -437,8 +438,11 @@
             background: var(--white);
             border-radius: 15px;
             padding: 40px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            box-shadow: 0 10px 30px rgba(26, 54, 93, 0.08);
             border-right: 6px solid var(--secondary-color);
+            border-left: 1px solid rgba(26, 54, 93, 0.05);
+            border-top: 1px solid rgba(26, 54, 93, 0.05);
+            border-bottom: 1px solid rgba(26, 54, 93, 0.05);
         }
 
         .info-card h2 {
@@ -592,10 +596,11 @@
             font-weight: bold;
         }
 
-        /* لوحة تحكم المشرف */
+        /* لوحة تحكم المشرف - مخفية تماماً عن الزوار افتراضياً ومحمية */
         .admin-panel-section-outer {
             background-color: var(--soft-blue);
             padding: 50px 20px;
+            display: none; /* مخفية حتى يتم فك قفلها برمجياً */
         }
 
         .admin-panel-section {
@@ -621,6 +626,29 @@
         .admin-form { display: none; margin-top: 15px; }
         .admin-form input, .admin-form textarea {
             width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #cbd5e0; border-radius: 5px;
+        }
+
+        /* زر فك قفل لوحة التحكم السري */
+        .secret-admin-trigger {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 25px;
+            height: 25px;
+            background: rgba(26, 54, 93, 0.15);
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 10px;
+            transition: var(--transition);
+        }
+        .secret-admin-trigger:hover {
+            background: var(--primary-color);
+            color: var(--white);
         }
 
         /* نظام التقييمات والتعليقات */
@@ -865,6 +893,11 @@
 </head>
 <body>
 
+    <!-- زر سري غير مرئي للزوار العاديين في أسفل يمين الصفحة لفك قفل لوحة التحكم -->
+    <div class="secret-admin-trigger" onclick="unlockAdminPanel()" title="لوحة التحكم">
+        <i class="fa-solid fa-key"></i>
+    </div>
+
     <!-- الهيدر والشعار العلوي -->
     <header>
         <div class="header-container">
@@ -1055,7 +1088,7 @@
         </div>
     </section>
 
-    <!-- قسم الحماية المثالية + بيانات الاتصال (تم نقله بعد قسم الإحصائيات مباشرة) - ملون بالوردي الخافت اللطيف -->
+    <!-- قسم الحماية المثالية + بيانات الاتصال (ملون بلون متناسق مريح وجذاب بصرياً) -->
     <section class="contact-info-section-outer">
         <div class="contact-info-section">
             <div class="info-card">
@@ -1068,8 +1101,8 @@
                     <a href="tel:0553511013" class="contact-direct-btn phone-blue">
                         <i class="fa-solid fa-phone"></i> اتصل بنا: 0553511013
                     </a>
-                    <!-- زر راسلني واتساب فوري -->
-                    <a href="https://wa.me/966553511013?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%82%D9%85%20%D9%8Status%20%D8%B5%D8%A7%D8%AD%D8%A8%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D2%A7%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA%D8%B1." 
+                    <!-- زر راسلني واتساب فوري مع الرسالة الترحيبية المصححة إملائياً بالكامل -->
+                    <a href="https://wa.me/966553511013?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%B5%D8%A7%D8%AD%D8%A8%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA%D8%B1." 
                        target="_blank" 
                        class="contact-direct-btn whatsapp-green">
                         <i class="fa-brands fa-whatsapp"></i> راسلنا عبر الواتساب
@@ -1108,8 +1141,8 @@
         <img class="lightbox-content" id="lightboxImg" src="" alt="صورة مكبرة">
     </div>
 
-    <!-- لوحة تحكم إعلانات وعروض المشرف - ملونة بالأزرق الهادئ الفاخر والمريح -->
-    <section class="admin-panel-section-outer">
+    <!-- لوحة تحكم إعلانات وعروض المشرف - ملونة بالأزرق الهادئ الفاخر والمريح (تظهر فقط بعد إدخال الرمز بنجاح) -->
+    <section class="admin-panel-section-outer" id="admin-panel-outer">
         <div class="admin-panel-section">
             <h3><i class="fa-solid fa-lock" style="color: var(--primary-color);"></i> لوحة تحكم المشرف (تحديث الإعلانات والباقات)</h3>
             <p style="font-size: 0.9rem; margin-bottom: 15px; color: #4a5568;">خاص بمدير الموقع لتغيير العروض والصور متى يشاء بشكل فوري.</p>
@@ -1364,7 +1397,21 @@
             lightbox.classList.remove('active');
         }
 
-        // 3. تفعيل وإظهار لوحة تحكم المشرف
+        // 3. تفعيل وحماية لوحة تحكم المشرف بكلمة سر
+        function unlockAdminPanel() {
+            const password = prompt("الرجاء إدخال كلمة مرور المشرف لفتح لوحة التحكم:");
+            if (password === "1234") { // يمكنك تغيير كلمة المرور 1234 لأي كلمة أخرى تفضلها
+                document.getElementById('admin-panel-outer').style.display = "block";
+                alert("تم التحقق بنجاح! تم إظهار لوحة التحكم أسفل الصفحة.");
+                window.scrollTo({
+                    top: document.getElementById('admin-panel-outer').offsetTop,
+                    behavior: 'smooth'
+                });
+            } else {
+                alert("كلمة المرور خاطئة! يرجى المحاولة مرة أخرى.");
+            }
+        }
+
         function toggleAdminForm() {
             const form = document.getElementById('adminForm');
             form.style.display = form.style.display === 'block' ? 'none' : 'block';
