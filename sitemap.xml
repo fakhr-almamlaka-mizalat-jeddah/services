@@ -1,11 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- الصفحة الرئيسية -->
-    <url>
-        <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/</loc>
-        <lastmod>2026-07-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <!-- يمكنك إضافة روابط الصفحات الأخرى إذا كانت موجودة -->
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<!--  الصفحة الرئيسية  -->
+<url>
+<loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/</loc>
+<lastmod>2026-07-16</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+<!--  صور المشروع الرئيسية لتحسين ظهورها في بحث الصور بجوجل  -->
+<image:image>
+<image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/logo-best-fakhr-almamlaka-sawater-gray-mizalat-fakhr-almamlaka-jeddah1.webp</image:loc>
+<image:title>شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة</image:title>
+</image:image>
+<image:image>
+<image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/ads-fakhr-almamlaka-sawater-mizalat-white-fakhr-almamlaka-jeddah2.webp</image:loc>
+<image:title>مشروع مظلات وسواتر منفذ من مؤسسة فخر المملكة بجدة</image:title>
+</image:image>
+<image:image>
+<image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/mizalats-best-modern-fakhr-almamlaka-jeddah2.webp</image:loc>
+<image:title>تركيب مظلات سيارات حديثة بجدة</image:title>
+</image:image>
+<image:image>
+<image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp</image:loc>
+<image:title>تصميم برجولات حدائق خشبية وحديد بجدة</image:title>
+</image:image>
+<image:image>
+<image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/sawaters-building-wall-fakhr-almamlaka-jeddah.webp</image:loc>
+<image:title>تركيب سواتر حديد وخشب لحماية الخصوصية بجدة</image:title>
+</image:image>
+<image:image>
+<image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/hangar-mostawdaat-fakhr-almamlaka-jeddah1.webp</image:loc>
+<image:title>بناء هناجر ومستودعات ساندوتش بانل بجدة</image:title>
+</image:image>
+<image:image>
+<image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/ads-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah3.webp</image:loc>
+<image:title>مشروع متكامل لمؤسسة فخر المملكة بجدة</image:title>
+</image:image>
+</url>
+<!-- 
+      ملاحظة: الموقع حالياً صفحة واحدة (single page) بأقسام داخلية (#about, #services...).
+      خرائط المواقع لا تفهرس روابط الأقسام (#) كصفحات منفصلة في جوجل، لذلك تُركت خارج
+      الملف عمداً لتفادي محتوى مكرر. إذا قررتم مستقبلاً فصل الخدمات إلى صفحات مستقلة
+      (مثال: /mizalat.html، /sawater.html، /barjolat.html، /hangars.html) لتحسين الفهرسة
+      بشكل أعمق لكل خدمة على حدة، إضافة <url> منفصل لكل صفحة هنا سيرفع فرصة ظهورها في
+      نتائج بحث أكثر تحديداً.
+     -->
 </urlset>
