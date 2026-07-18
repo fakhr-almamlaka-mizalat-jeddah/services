@@ -2,51 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-    <!-- الصفحة الرئيسية -->
     <url>
         <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/</loc>
-        <lastmod>2026-07-16</lastmod>
+        <lastmod>2026-07-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-
-        <!-- صور المشروع الرئيسية لتحسين ظهورها في بحث الصور بجوجل -->
         <image:image>
-            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/logo-best-fakhr-almamlaka-sawater-gray-mizalat-fakhr-almamlaka-jeddah1.webp</image:loc>
+            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp</image:loc>
             <image:title>شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة</image:title>
         </image:image>
         <image:image>
-            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/ads-fakhr-almamlaka-sawater-mizalat-white-fakhr-almamlaka-jeddah2.webp</image:loc>
-            <image:title>مشروع مظلات وسواتر منفذ من مؤسسة فخر المملكة بجدة</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/mizalats-best-modern-fakhr-almamlaka-jeddah2.webp</image:loc>
-            <image:title>تركيب مظلات سيارات حديثة بجدة</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp</image:loc>
-            <image:title>تصميم برجولات حدائق خشبية وحديد بجدة</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/sawaters-building-wall-fakhr-almamlaka-jeddah.webp</image:loc>
-            <image:title>تركيب سواتر حديد وخشب لحماية الخصوصية بجدة</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/hangar-mostawdaat-fakhr-almamlaka-jeddah1.webp</image:loc>
-            <image:title>بناء هناجر ومستودعات ساندوتش بانل بجدة</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/ads-fakhr-almamlaka-sawater-white-mizalat-fakhr-almamlaka-jeddah3.webp</image:loc>
-            <image:title>مشروع متكامل لمؤسسة فخر المملكة بجدة</image:title>
+            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah1.webp</image:loc>
+            <image:title>مشاريع مظلات وسواتر فخر المملكة بجدة</image:title>
         </image:image>
     </url>
 
-    <!--
-      ملاحظة: الموقع حالياً صفحة واحدة (single page) بأقسام داخلية (#about, #services...).
-      خرائط المواقع لا تفهرس روابط الأقسام (#) كصفحات منفصلة في جوجل، لذلك تُركت خارج
-      الملف عمداً لتفادي محتوى مكرر. إذا قررتم مستقبلاً فصل الخدمات إلى صفحات مستقلة
-      (مثال: /mizalat.html، /sawater.html، /barjolat.html، /hangars.html) لتحسين الفهرسة
-      بشكل أعمق لكل خدمة على حدة، إضافة <url> منفصل لكل صفحة هنا سيرفع فرصة ظهورها في
-      نتائج بحث أكثر تحديداً.
-    -->
+    <url>
+        <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/mizalat.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/mizalats-best-modern-fakhr-almamlaka-jeddah2.webp</image:loc>
+            <image:title>تركيب مظلات سيارات وحدائق ومسابح بجدة</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/sawater.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/sawaters-building-wall-fakhr-almamlaka-jeddah.webp</image:loc>
+            <image:title>تركيب سواتر حديد وخشب بجدة</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/pergolat.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp</image:loc>
+            <image:title>برجولات خشبية وحديد بجدة</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/hanajir.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/images/assets/hangars-warehouses-jeddah-steel-buildings-fakhr-almamlaka.webp</image:loc>
+            <image:title>هناجر ومستودعات حديد بجدة</image:title>
+        </image:image>
+    </url>
 
 </urlset>
