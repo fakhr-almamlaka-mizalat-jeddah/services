@@ -1,28 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>مظلات جدة - مؤسسة فخر المملكة</title>
+    <title>خدمات المظلات - مؤسسة فخر المملكة بجدة</title>
     <style>
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
-        .item img { width: 100%; border-radius: 8px; }
-        .maint { background: #003366; color: white; padding: 40px; text-align: center; }
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #fdfbf7; color: #333; }
+        .nav { background: #003366; padding: 20px; text-align: center; }
+        .nav a { color: #d4af37; margin: 0 10px; text-decoration: none; font-weight: bold; }
+        .header { text-align: center; padding: 50px 20px; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
+        .item { border: 1px solid #ddd; padding: 15px; border-radius: 10px; background: white; text-align: center; }
+        .item img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+        .maint { background: #003366; color: white; padding: 40px; text-align: center; margin-top: 40px; }
     </style>
 </head>
 <body>
-    <div style="text-align:center; padding:10px;"><a href="index.html">العودة للرئيسية</a></div>
-    <div class="grid">
-        <!-- ابدأ هنا بنسخ الصور -->
-        <div class="item">
-            <img src="https://github.com/fakhr-almamlaka-mizalat-jeddah/services/blob/main/images/mizalats/mizalat-sayarat-kabooli-arc-fakhr-almamlaka-jeddah1.webp?raw=true" alt="مظلات سيارات كابولي جدة">
-            <p>مظلة سيارات كابولي احترافية</p>
-        </div>
-        <!-- كرر هذا القسم لجميع الـ 200 صورة مع تغيير الرابط والرقم -->
+    <div class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="mizalats.html">المظلات</a>
+        <a href="sawaters.html">السواتر</a>
+        <a href="pergolas.html">البرجولات</a>
+        <a href="others.html">خدمات أخرى</a>
     </div>
+
+    <header class="header">
+        <h1>خدمات تركيب المظلات في جدة</h1>
+        <p>مؤسسة فخر المملكة توفر أفضل أنواع المظلات بضمان 10 سنوات.</p>
+    </header>
+
+    <div class="gallery">
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/fakhr-almamlaka-mizalat-jeddah/services/main/images/mizalats/mizalat-sayarat-kabooli-arc-fakhr-almamlaka-jeddah19.webp" alt="مظلات سيارات كابولي جدة">
+            <h3>مظلات سيارات كابولي</h3>
+            <p>تتميز بقوة التحمل وتصاميم عصرية تناسب مواقف السيارات في جدة.</p>
+        </div>
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/fakhr-almamlaka-mizalat-jeddah/services/main/images/mizalats/mizalat-swimming-pool-shade-fakhr-almamlaka-jeddah.webp" alt="مظلات مسابح">
+            <h3>مظلات مسابح</h3>
+            <p>حلول تظليل للمسابح توفر الخصوصية والحماية من أشعة الشمس.</p>
+        </div>
+    </div>
+
     <section class="maint">
         <h2>خدمات الصيانة والترميم</h2>
-        <p>فريقنا يضمن استدامة المظلات بجدة مع ضمان حقيقي 10 سنوات.</p>
+        <p>نحن نوفر صيانة دورية شاملة للمظلات، بما في ذلك فحص الهياكل وتغيير الأقمشة بضمان معتمد.</p>
     </section>
 </body>
 </html>
