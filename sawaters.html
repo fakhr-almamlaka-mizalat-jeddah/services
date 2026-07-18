@@ -2,29 +2,48 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>سواتر جدة - مؤسسة فخر المملكة</title>
+    <title>خدمات السواتر - مؤسسة فخر المملكة بجدة</title>
     <style>
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
-        .item { border: 1px solid #ddd; padding: 15px; text-align: center; border-radius: 10px; }
-        .item img { width: 100%; border-radius: 8px; }
-        .maint { background: #003366; color: white; padding: 40px; text-align: center; }
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #fdfbf7; color: #333; }
+        .nav { background: #003366; padding: 20px; text-align: center; }
+        .nav a { color: #d4af37; margin: 0 10px; text-decoration: none; font-weight: bold; }
+        .header { text-align: center; padding: 50px 20px; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
+        .item { border: 1px solid #ddd; padding: 15px; border-radius: 10px; background: white; text-align: center; }
+        .item img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+        .maint { background: #003366; color: white; padding: 40px; text-align: center; margin-top: 40px; }
     </style>
 </head>
 <body>
-    <div style="text-align:center; padding:10px;"><a href="index.html">العودة للرئيسية</a></div>
-    <main>
-        <h1 style="text-align:center;">سواتر جدة - الخصوصية والأمان</h1>
-        <div class="grid">
-            <div class="item">
-                <img src="https://github.com/fakhr-almamlaka-mizalat-jeddah/services/blob/main/images/sawaters/sawater-hadid-fakhr-almamlaka-jeddah1.webp?raw=true" alt="سواتر حديد فخر المملكة بجدة">
-                <p>سواتر حديد مشغولة بأحدث تصاميم الليزر والشرائح لضمان الخصوصية التامة.</p>
-            </div>
-            <!-- كرر هذا القسم لكل صور السواتر -->
+    <div class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="mizalats.html">المظلات</a>
+        <a href="sawaters.html">السواتر</a>
+        <a href="pergolas.html">البرجولات</a>
+        <a href="others.html">خدمات أخرى</a>
+    </div>
+
+    <header class="header">
+        <h1>خدمات تركيب السواتر في جدة</h1>
+        <p>مؤسسة فخر المملكة توفر أفضل أنواع السواتر بضمان حقيقي وجودة عالية.</p>
+    </header>
+
+    <div class="gallery">
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/fakhr-almamlaka-mizalat-jeddah/services/main/images/sawaters/sawater-hadid-fakhr-almamlaka-jeddah1.webp" alt="سواتر حديد فخر المملكة بجدة">
+            <h3>سواتر حديد</h3>
+            <p>سواتر حديد مشغولة بأحدث تصاميم الليزر والشرائح لضمان الخصوصية التامة.</p>
         </div>
-        <section class="maint">
-            <h2>خدمات الصيانة والترميم</h2>
-            <p>نقدم خدمات ترميم ودهان السواتر الحديدية بجدة مع ضمان حقيقي ضد الصدأ والظروف الجوية القاسية.</p>
-        </section>
-    </main>
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/fakhr-almamlaka-mizalat-jeddah/services/main/images/sawaters/sawater-qimash-fakhr-almamlaka-jeddah.webp" alt="سواتر قماش جدة">
+            <h3>سواتر قماش</h3>
+            <p>سواتر قماش PVC عالية الجودة توفر عزلًا ممتازًا ومقاومة للعوامل الجوية.</p>
+        </div>
+    </div>
+
+    <section class="maint">
+        <h2>خدمات الصيانة والترميم</h2>
+        <p>نحن نوفر صيانة دورية شاملة للسواتر، بما في ذلك دهانات الحديد ومعالجة الصدأ بضمان معتمد.</p>
+    </section>
 </body>
 </html>
