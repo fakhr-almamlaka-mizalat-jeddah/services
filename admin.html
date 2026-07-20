@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة تحكم فخر المملكة — الإعلانات والباقات</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body style="background:var(--sand)">
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span>فخر المملكة — لوحة التحكم</span>
+    </a>
+  </div>
+</header>
+
+<div class="admin-wrap">
+
+  <!-- ===== شاشة الدخول ===== -->
+  <div class="admin-card" id="loginCard">
+    <h2>تسجيل الدخول</h2>
+    <label>البريد الإلكتروني</label>
+    <input type="email" id="loginEmail" placeholder="admin@example.com">
+    <label>كلمة المرور</label>
+    <input type="password" id="loginPassword" placeholder="••••••••">
+    <button class="btn btn-primary" onclick="doLogin()">دخول</button>
+    <p class="admin-status" id="loginStatus"></p>
+  </div>
+
+  <!-- ===== لوحة التحرير (تظهر بعد الدخول فقط) ===== -->
+  <div class="admin-card" id="editorCard" style="display:none">
+    <h2>إدارة الإعلانات والباقات</h2>
+    <p style="font-size:.85rem;color:#57524a">أضف أو عدّل أو احذف أي بطاقة إعلان/باقة، ثم اضغط "حفظ الكل" — التغييرات تظهر لكل زوار الموقع فوراً.</p>
+
+    <div id="itemsContainer"></div>
+    <button class="btn btn-ghost" style="border-color:var(--brass);color:var(--clay)" onclick="addItem()">+ إضافة بطاقة جديدة</button>
+    <br><br>
+    <button class="btn btn-primary" onclick="saveItems()">حفظ الكل</button>
+    <button class="btn btn-ghost" onclick="doLogout()" style="margin-inline-start:10px">تسجيل الخروج</button>
+    <p class="admin-status" id="saveStatus"></p>
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+<script src="assets/firebase-config.js"></script>
+
+<script>
+var loginCard = document.getElementById('loginCard');
+var editorCard = document.getElementById('editorCard');
+var itemsContainer = document.getElementById('itemsContainer');
+var currentItems = [];
+
+function requireFirebase(){
+  if (typeof firebase === 'undefined' || !firebase.apps.length) {
+    document.getElementById('loginStatus').textContent = 'لم تُضبط إعدادات Firebase بعد في assets/firebase-config.js';
+    document.getElementById('loginStatus').className = 'admin-status err';
+    return false;
+  }
+  return true;
+}
+
+function doLogin(){
+  if(!requireFirebase()) return;
+  var email = document.getElementById('loginEmail').value.trim();
+  var pass = document.getElementById('loginPassword').value;
+  var status = document.getElementById('loginStatus');
+  status.textContent = 'جارٍ تسجيل الدخول...';
+  status.className = 'admin-status';
+  firebase.auth().signInWithEmailAndPassword(email, pass)
+    .catch(function(err){
+      status.textContent = 'بيانات الدخول غير صحيحة.';
+      status.className = 'admin-status err';
+    });
+}
+
+function doLogout(){
+  firebase.auth().signOut();
+}
+
+if (typeof firebase !== 'undefined' && firebase.apps.length) {
+  firebase.auth().onAuthStateChanged(function(user){
+    if(user){
+      loginCard.style.display = 'none';
+      editorCard.style.display = '';
+      loadItems();
+    } else {
+      loginCard.style.display = '';
+      editorCard.style.display = 'none';
+    }
+  });
+}
+
+function loadItems(){
+  firebase.firestore().collection('content').doc('ads').get().then(function(doc){
+    currentItems = (doc.exists && doc.data().items) ? doc.data().items : [];
+    renderEditor();
+  });
+}
+
+function renderEditor(){
+  itemsContainer.innerHTML = '';
+  currentItems.forEach(function(item, idx){
+    var div = document.createElement('div');
+    div.className = 'admin-item';
+    div.innerHTML =
+      '<button class="remove-item" onclick="removeItem(' + idx + ')">حذف البطاقة ×</button>' +
+      '<label>شارة صغيرة (اختياري، مثال: عرض محدود)</label>' +
+      '<input data-idx="' + idx + '" data-field="badge" value="' + escAttr(item.badge) + '">' +
+      '<label>العنوان</label>' +
+      '<input data-idx="' + idx + '" data-field="title" value="' + escAttr(item.title) + '">' +
+      '<label>الوصف</label>' +
+      '<textarea data-idx="' + idx + '" data-field="desc" rows="2">' + escText(item.desc) + '</textarea>' +
+      '<label>السعر / التفاصيل (اختياري)</label>' +
+      '<input data-idx="' + idx + '" data-field="price" value="' + escAttr(item.price) + '">' +
+      '<div class="admin-toggle"><input type="checkbox" data-idx="' + idx + '" data-field="active" ' + (item.active !== false ? 'checked' : '') + '> <span>مفعّل (يظهر للزوار)</span></div>';
+    itemsContainer.appendChild(div);
+  });
+  itemsContainer.querySelectorAll('input,textarea').forEach(function(el){
+    el.addEventListener('input', function(){
+      var idx = parseInt(el.dataset.idx, 10);
+      var field = el.dataset.field;
+      if(field === 'active'){
+        currentItems[idx][field] = el.checked;
+      } else {
+        currentItems[idx][field] = el.value;
+      }
+    });
+  });
+}
+
+function escAttr(v){ return (v || '').replace(/"/g,'&quot;'); }
+function escText(v){ return (v || ''); }
+
+function addItem(){
+  currentItems.push({ badge:'', title:'', desc:'', price:'', active:true });
+  renderEditor();
+}
+function removeItem(idx){
+  currentItems.splice(idx, 1);
+  renderEditor();
+}
+
+function saveItems(){
+  var status = document.getElementById('saveStatus');
+  status.textContent = 'جارٍ الحفظ...';
+  status.className = 'admin-status';
+  firebase.firestore().collection('content').doc('ads').set({ items: currentItems, updatedAt: Date.now() })
+    .then(function(){
+      status.textContent = 'تم الحفظ بنجاح — التغييرات ظاهرة الآن لكل الزوار.';
+      status.className = 'admin-status ok';
+    })
+    .catch(function(err){
+      status.textContent = 'حدث خطأ أثناء الحفظ: ' + err.message;
+      status.className = 'admin-status err';
+    });
+}
+</script>
+
+</body>
+</html>
