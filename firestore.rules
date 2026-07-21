@@ -1,0 +1,43 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ============================================================
+    // لوحة الإعلانات والباقات (assets/ads-board.js + admin.html)
+    // يقرأها كل الزوار — يكتب/يعدّل فيها المشرف فقط بعد تسجيل الدخول
+    // ============================================================
+    match /content/{docId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // ============================================================
+    // تقييمات الزوار (قسم آراء العملاء بالصفحة الرئيسية)
+    // يقرأها ويضيف إليها أي زائر — الحذف حصراً للمشرف المسجّل دخوله
+    // + تحقق أساسي من شكل البيانات لمنع تعليقات فارغة أو تلاعب مباشر
+    // ============================================================
+    match /reviews/{reviewId} {
+      allow read: if true;
+
+      allow create: if
+        request.resource.data.rating is int &&
+        request.resource.data.rating >= 1 &&
+        request.resource.data.rating <= 5 &&
+        request.resource.data.text is string &&
+        request.resource.data.text.size() > 0 &&
+        request.resource.data.text.size() <= 300 &&
+        request.resource.data.name is string &&
+        request.resource.data.name.size() <= 40 &&
+        request.resource.data.ts is number;
+
+      allow update: if false;
+      allow delete: if request.auth != null;
+    }
+
+    // أي مسار آخر غير مذكور أعلاه: مرفوض تماماً افتراضياً
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+  }
+}
