@@ -36,15 +36,21 @@ document.addEventListener('click', function(e){
   }
 });
 
-/* ===== lightbox ===== */
+/* ===== lightbox (zoom + save/download) ===== */
 document.addEventListener('click', function(e){
-  var img = e.target.closest('.carousel-track img, .gallery-grid img');
+  var img = e.target.closest('.carousel-track img, .gallery-grid img, .portfolio-item img');
   if(img){
     var lb = document.getElementById('lightbox');
     var lbImg = document.getElementById('lightboxImg');
+    var lbDl = document.getElementById('lightboxDownload');
     if(lb && lbImg){
       lbImg.src = img.src;
       lbImg.alt = img.alt;
+      if(lbDl){
+        lbDl.href = img.src;
+        var fname = img.src.split('/').pop().split('?')[0] || 'fakhr-almamlaka.webp';
+        lbDl.setAttribute('download', fname);
+      }
       lb.classList.add('open');
     }
   }
@@ -54,6 +60,35 @@ function closeLightbox(e){
     document.getElementById('lightbox').classList.remove('open');
   }
 }
+function downloadLightboxImage(e){
+  e.preventDefault();
+  var lbImg = document.getElementById('lightboxImg');
+  var lbDl = document.getElementById('lightboxDownload');
+  if(!lbImg || !lbImg.src) return;
+  var fname = lbImg.src.split('/').pop().split('?')[0] || 'fakhr-almamlaka.webp';
+  fetch(lbImg.src)
+    .then(function(res){ return res.blob(); })
+    .then(function(blob){
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = fname;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    })
+    .catch(function(){
+      // fallback: open the image directly if fetch/CORS fails
+      window.open(lbImg.src, '_blank');
+    });
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    var lb = document.getElementById('lightbox');
+    if(lb) lb.classList.remove('open');
+  }
+});
 
 /* ===== reviews (shared, real — stored in Firebase Firestore) =====
    Collection: reviews/{autoId}  { rating, name, text, ts }
