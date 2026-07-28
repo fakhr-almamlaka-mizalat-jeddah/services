@@ -4,41 +4,94 @@
 
     <url>
         <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/</loc>
-        <lastmod>2026-07-20</lastmod>
+        <lastmod>2026-07-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/assets/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp</image:loc>
-            <image:title>شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة</image:title>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp</image:loc>
+            <image:title>شعار مؤسسة فخر المملكة للمظلات والسواتر والبرجولات والهناجر في جدة</image:title>
         </image:image>
     </url>
 
     <url>
         <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/mizalats.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <lastmod>2026-07-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/mizalats-best-modern-car-parking-and-swimming-pool-shades-fakhr-almamlaka-jeddah.webp</image:loc>
+            <image:title>تركيب مظلات سيارات وحدائق ومسابح بجدة</image:title>
+            <image:caption>تنفيذ مظلات سيارات وحدائق ومسابح في جميع أحياء جدة</image:caption>
+        </image:image>
     </url>
 
     <url>
         <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/sawaters.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <lastmod>2026-07-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sawaters/sawater-artificial-grass-wall-fence-fakhr-almamlaka-jeddah.webp</image:loc>
+            <image:title>تركيب سواتر حديد وخشب وعشب صناعي بجدة</image:title>
+            <image:caption>تنفيذ سواتر خصوصية لجميع أحياء جدة</image:caption>
+        </image:image>
     </url>
 
     <url>
         <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/pergolas.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <lastmod>2026-07-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah4.webp</image:loc>
+            <image:title>تركيب برجولات خشبية وحديد ولوفر بجدة</image:title>
+            <image:caption>تركيب برجولات خشبية وحديد في جدة</image:caption>
+        </image:image>
     </url>
 
     <url>
-        <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/others.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/hangars.html</loc>
+        <lastmod>2026-07-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/hangars-warehouses-jeddah-steel-buildings-fakhr-almamlaka.webp</image:loc>
+            <image:title>تركيب هناجر ومستودعات صناعية بجدة</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/byout-shaar.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/bait-shaar-royal-arabic-tents-jeddah-fakhr-almamlaka.webp</image:loc>
+            <image:title>تنفيذ بيوت شعر ملكية وعصرية في جدة</image:title>
+            <image:caption>تنفيذ بيوت شعر ملكية وعصرية في جدة</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/qarmids.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/qarmids/qarmid-tarkib-red-clay-roof-clay-merracotta-tiles-install-fakhr-almamlaka-jeddah.webp</image:loc>
+            <image:title>تركيب قرميد أسقف فلل ومنازل بجدة</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://fakhr-almamlaka-mizalat-jeddah.github.io/services/sandwich-panel.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-modern-glass-lounge-fakhr-almamlaka-jeddah.webp</image:loc>
+            <image:title>تركيب ساندوتش بانل وغرف جاهزة بجدة</image:title>
+        </image:image>
     </url>
 
 </urlset>
