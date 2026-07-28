@@ -16,8 +16,9 @@ function scrollCarousel(trackId, dirRTL){
   // dirRTL: 1 means "السابق" (previous, moves right-to-left content backward -> scrollLeft decreases in RTL... )
   const track = document.getElementById(trackId);
   if(!track) return;
-  const amount = track.clientWidth * 0.7;
-  // In RTL, browsers differ on scrollLeft sign; detect direction based on current scrollLeft behavior
+  const firstCard = track.querySelector('img');
+  const gap = 14; // matches .carousel-track { gap:14px } in style.css
+  const amount = firstCard ? (firstCard.getBoundingClientRect().width + gap) : track.clientWidth * 0.7;
   const delta = dirRTL === 1 ? -amount : amount;
   track.scrollBy({left: delta, behavior: 'smooth'});
 }
@@ -27,12 +28,27 @@ function toggleMobileMenu(){
   document.getElementById('navLinks').classList.toggle('open');
   document.getElementById('menuToggle').classList.toggle('open');
 }
-// close mobile menu after tapping a link
+function toggleServicesMenu(e){
+  e.stopPropagation();
+  document.getElementById('servicesMenu').classList.toggle('open');
+}
 document.addEventListener('click', function(e){
-  if(e.target.matches('nav.links a')){
-    var nav = document.getElementById('navLinks');
-    var btn = document.getElementById('menuToggle');
-    if(nav && nav.classList.contains('open')){ nav.classList.remove('open'); btn.classList.remove('open'); }
+  var menu = document.getElementById('servicesMenu');
+  if(menu && menu.classList.contains('open') && !menu.contains(e.target) && !e.target.classList.contains('nav-drop-btn')){
+    menu.classList.remove('open');
+  }
+});
+// close mobile menu after tapping a link, OR tapping anywhere outside it
+document.addEventListener('click', function(e){
+  var nav = document.getElementById('navLinks');
+  var btn = document.getElementById('menuToggle');
+  if(!nav || !nav.classList.contains('open')) return;
+  var tappedLink = e.target.matches('nav.links a');
+  var tappedInsideMenu = nav.contains(e.target);
+  var tappedToggleBtn = btn.contains(e.target);
+  if(tappedLink || (!tappedInsideMenu && !tappedToggleBtn)){
+    nav.classList.remove('open');
+    btn.classList.remove('open');
   }
 });
 
@@ -99,16 +115,40 @@ document.addEventListener('keydown', function(e){
 
 var BANNED_WORDS = ["كلب","حيوان","غبي","حقير","نصاب","سيء جدا نصب"];
 
+// يزيل المسافات والتشكيل والرموز بين الأحرف حتى لا يسهل تجاوز الفلتر
+// بكتابة الكلمة مع مسافات أو رموز بينها (مثال: "غ.ب.ي" أو "غ ب ي").
+// تنبيه صريح: هذا يبقى فلتراً من جهة المتصفح فقط ويمكن تجاوزه من مستخدم
+// متمرّس عبر إرسال الطلب مباشرة لـ Firestore بدون المرور بهذا الكود.
+// الحماية الحقيقية الوحيدة هي منتظمة الحذف اليدوي عبر admin.html، أو
+// إضافة Cloud Function للتحقق من جهة الخادم (خطوة لاحقة تحتاج خطة Firebase Blaze).
+function normalizeArabic(text){
+  return (text || "")
+    .replace(/[\u064B-\u0652\u0640]/g, "")   // إزالة التشكيل والتطويل
+    .replace(/[\s._\-*]/g, "")               // إزالة المسافات والرموز الفاصلة
+    .toLowerCase();
+}
 function containsBannedWord(text){
-  var low = (text || "").toLowerCase();
-  return BANNED_WORDS.some(function(w){ return low.indexOf(w) !== -1; });
+  var norm = normalizeArabic(text);
+  return BANNED_WORDS.some(function(w){ return norm.indexOf(normalizeArabic(w)) !== -1; });
+}
+
+// تحديد بسيط: تعليق واحد كل دقيقتين لكل متصفح (وليس حماية خادمية حقيقية،
+// أي شخص يقدر يتجاوزه بمسح بيانات المتصفح — لكنه يمنع السبام العشوائي العادي).
+var REVIEW_COOLDOWN_MS = 2 * 60 * 1000;
+function canSubmitReviewNow(){
+  var last = parseInt(localStorage.getItem('lastReviewTs') || '0', 10);
+  return (Date.now() - last) >= REVIEW_COOLDOWN_MS;
+}
+function markReviewSubmitted(){
+  try{ localStorage.setItem('lastReviewTs', String(Date.now())); }catch(e){}
 }
 
 var currentRating = 0;
 var reviewsAdminMode = false;
 
 function firestoreReady(){
-  return typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length;
+  return typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length
+    && typeof firebase.firestore === 'function' && typeof firebase.auth === 'function';
 }
 
 function initReviews(key, seed){
@@ -199,7 +239,9 @@ function submitReview(key){
   var name = nameEl.value.trim();
 
   if(!firestoreReady()){ note.textContent = 'التقييمات غير متاحة حالياً.'; return; }
+  if(!canSubmitReviewNow()){ note.textContent = 'يمكنك نشر تقييم واحد كل دقيقتين تقريباً — حاول بعد قليل.'; return; }
   if(currentRating === 0){ note.textContent = 'الرجاء اختيار عدد النجوم أولاً.'; return; }
+  if(name.length > 40){ note.textContent = 'الاسم طويل جداً (40 حرفاً كحد أقصى).'; return; }
   if(text.length < 3){ note.textContent = 'الرجاء كتابة تعليق أوضح.'; return; }
   if(containsBannedWord(text) || containsBannedWord(name)){
     note.textContent = 'تعذر نشر التعليق لاحتوائه على كلمات غير لائقة.';
@@ -212,6 +254,7 @@ function submitReview(key){
   firebase.firestore().collection('reviews').add({
     rating: currentRating, name: name || 'زائر', text: text, ts: Date.now()
   }).then(function(){
+    markReviewSubmitted();
     textEl.value = '';
     nameEl.value = '';
     currentRating = 0;
