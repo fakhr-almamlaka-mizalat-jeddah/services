@@ -48,7 +48,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
-<script src="assets/firebase-config.js"></script>
+<script src="firebase-config.js"></script>
 
 <script>
 var loginCard = document.getElementById('loginCard');
@@ -58,7 +58,7 @@ var currentItems = [];
 
 function requireFirebase(){
   if (typeof firebase === 'undefined' || !firebase.apps.length) {
-    document.getElementById('loginStatus').textContent = 'لم تُضبط إعدادات Firebase بعد في assets/firebase-config.js';
+    document.getElementById('loginStatus').textContent = 'لم تُضبط إعدادات Firebase بعد في firebase-config.js';
     document.getElementById('loginStatus').className = 'admin-status err';
     return false;
   }
@@ -83,12 +83,25 @@ function doLogout(){
   firebase.auth().signOut();
 }
 
+// حماية إضافية: حتى لو أنشأت لاحقاً أكثر من حساب دخول في Firebase
+// Authentication (مثلاً لموظف آخر)، لوحة التحكم هذه تبقى مقصورة فقط
+// على الإيميلات المذكورة هنا صراحة. عدّل القائمة حسب حاجتك.
+var ADMIN_EMAILS = [
+  "fakhralmamlakamizalatservicesj@gmail.com"
+  // "email2@example.com",  // أضف إيميلاً إضافياً هكذا عند الحاجة
+];
+
 if (typeof firebase !== 'undefined' && firebase.apps.length) {
   firebase.auth().onAuthStateChanged(function(user){
-    if(user){
+    if(user && ADMIN_EMAILS.indexOf(user.email) !== -1){
       loginCard.style.display = 'none';
       editorCard.style.display = '';
       loadItems();
+    } else if (user) {
+      // مسجّل دخول لكن ليس من القائمة المسموح بها — إخراج فوري
+      document.getElementById('loginStatus').textContent = 'هذا الحساب غير مصرّح له بالدخول للوحة التحكم.';
+      document.getElementById('loginStatus').className = 'admin-status err';
+      firebase.auth().signOut();
     } else {
       loginCard.style.display = '';
       editorCard.style.display = 'none';
@@ -111,13 +124,13 @@ function renderEditor(){
     div.innerHTML =
       '<button class="remove-item" onclick="removeItem(' + idx + ')">حذف البطاقة ×</button>' +
       '<label>شارة صغيرة (اختياري، مثال: عرض محدود)</label>' +
-      '<input data-idx="' + idx + '" data-field="badge" value="' + escAttr(item.badge) + '">' +
+      '<input data-idx="' + idx + '" data-field="badge" value="' + escapeHTML(item.badge) + '">' +
       '<label>العنوان</label>' +
-      '<input data-idx="' + idx + '" data-field="title" value="' + escAttr(item.title) + '">' +
+      '<input data-idx="' + idx + '" data-field="title" value="' + escapeHTML(item.title) + '">' +
       '<label>الوصف</label>' +
-      '<textarea data-idx="' + idx + '" data-field="desc" rows="2">' + escText(item.desc) + '</textarea>' +
+      '<textarea data-idx="' + idx + '" data-field="desc" rows="2">' + escapeHTML(item.desc) + '</textarea>' +
       '<label>السعر / التفاصيل (اختياري)</label>' +
-      '<input data-idx="' + idx + '" data-field="price" value="' + escAttr(item.price) + '">' +
+      '<input data-idx="' + idx + '" data-field="price" value="' + escapeHTML(item.price) + '">' +
       '<div class="admin-toggle"><input type="checkbox" data-idx="' + idx + '" data-field="active" ' + (item.active !== false ? 'checked' : '') + '> <span>مفعّل (يظهر للزوار)</span></div>';
     itemsContainer.appendChild(div);
   });
@@ -134,8 +147,14 @@ function renderEditor(){
   });
 }
 
-function escAttr(v){ return (v || '').replace(/"/g,'&quot;'); }
-function escText(v){ return (v || ''); }
+function escapeHTML(v){
+  return String(v || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
 
 function addItem(){
   currentItems.push({ badge:'', title:'', desc:'', price:'', active:true });
@@ -148,6 +167,24 @@ function removeItem(idx){
 
 function saveItems(){
   var status = document.getElementById('saveStatus');
+
+  currentItems = currentItems.map(function(item){
+    return {
+      badge: (item.badge || '').trim(),
+      title: (item.title || '').trim(),
+      desc: (item.desc || '').trim(),
+      price: (item.price || '').trim(),
+      active: item.active !== false
+    };
+  });
+
+  var missingTitle = currentItems.some(function(item){ return !item.title; });
+  if(missingTitle){
+    status.textContent = 'كل بطاقة لازم يكون لها عنوان قبل الحفظ.';
+    status.className = 'admin-status err';
+    return;
+  }
+
   status.textContent = 'جارٍ الحفظ...';
   status.className = 'admin-status';
   firebase.firestore().collection('content').doc('ads').set({ items: currentItems, updatedAt: Date.now() })
