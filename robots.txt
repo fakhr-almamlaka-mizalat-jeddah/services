@@ -1,14 +1,6 @@
-# منع الزحف إلى المجلدات غير الضرورية (مثل المجلدات البرمجية أو ملفات النظام)
 User-agent: *
-Disallow: /assets/
-Disallow: /images/
-
-# السماح بالوصول إلى الصفحات الأساسية
 Allow: /
-Allow: /mizalats.html
-Allow: /sawaters.html
-Allow: /pergolas.html
-Allow: /others.html
 
-# تحديد مسار خريطة الموقع (Sitemap) بشكل صريح ودقيق
+Disallow: /admin.html
+
 Sitemap: https://fakhr-almamlaka-mizalat-jeddah.github.io/services/sitemap.xml
