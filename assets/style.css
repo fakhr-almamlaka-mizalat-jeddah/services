@@ -156,7 +156,6 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
   .why-grid{grid-template-columns:1fr 1fr}
   .gallery-grid{grid-template-columns:1fr 1fr}
   .testi-grid{grid-template-columns:1fr}
-  nav.links{display:none}
   .pillars{grid-template-columns:1fr}
   .service-grid.cols-2{grid-template-columns:1fr}
 }
@@ -199,10 +198,10 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
 @media(max-width:900px){
   .menu-toggle{display:flex}
   nav.links{
-    display:none;position:fixed;inset:0;top:73px;background:#1c1b19;flex-direction:column;
-    padding:24px;gap:0;z-index:55;overflow-y:auto;
+    display:none;position:fixed;inset:0;top:73px;bottom:0;width:100%;
+    background:#1c1b19;flex-direction:column;padding:24px;gap:0;z-index:999;overflow-y:auto;
   }
-  nav.links.open{display:flex}
+  nav.links.open{display:flex !important}
   nav.links a{padding:16px 4px;border-bottom:1px solid rgba(255,255,255,.08);font-size:1.05rem}
 }
 
@@ -373,3 +372,7 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
   .nav-dropdown-menu{position:static;box-shadow:none;border:none;background:rgba(255,255,255,.03);width:100%}
   .nav-drop-btn{width:100%;padding:16px 4px;border-bottom:1px solid rgba(255,255,255,.08);justify-content:space-between}
 }
+
+/* share-website button (footer) */
+.share-site-btn{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;align-self:center}
+@media(max-width:900px){.foot-top{flex-direction:column;align-items:flex-start}}
