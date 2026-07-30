@@ -156,13 +156,15 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
   .why-grid{grid-template-columns:1fr 1fr}
   .gallery-grid{grid-template-columns:1fr 1fr}
   .testi-grid{grid-template-columns:1fr}
-  nav.links{display:none}
   .pillars{grid-template-columns:1fr}
   .service-grid.cols-2{grid-template-columns:1fr}
 }
 
 /* ===== category carousels ===== */
 .gallery-section{background:var(--sand)}
+/* المتصفح يتخطى حساب تخطيط/رسم أقسام المعرض الطويلة قبل دخولها نطاق
+   الرؤية فعلياً — يسرّع العرض الأول خصوصاً بالصفحات ذات مئات الصور. */
+.carousel{content-visibility:auto;contain-intrinsic-size:auto 260px}
 .carousel{margin-bottom:38px}
 .carousel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .carousel-head h3{margin:0;font-size:1.05rem}
@@ -196,10 +198,10 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
 @media(max-width:900px){
   .menu-toggle{display:flex}
   nav.links{
-    display:none;position:fixed;inset:0;top:73px;background:#1c1b19;flex-direction:column;
-    padding:24px;gap:0;z-index:55;overflow-y:auto;
+    display:none;position:fixed;inset:0;top:73px;bottom:0;width:100%;
+    background:#1c1b19;flex-direction:column;padding:24px;gap:0;z-index:999;overflow-y:auto;
   }
-  nav.links.open{display:flex}
+  nav.links.open{display:flex !important}
   nav.links a{padding:16px 4px;border-bottom:1px solid rgba(255,255,255,.08);font-size:1.05rem}
 }
 
@@ -350,3 +352,27 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
   background:var(--sand);border:1px solid var(--line);border-radius:20px;padding:8px 18px;
   font-size:.85rem;color:#4a453c;
 }
+
+/* ===== services dropdown in nav ===== */
+.nav-dropdown{position:relative}
+.nav-drop-btn{
+  background:none;border:none;color:#e8dfc9;font-family:var(--sans);font-size:.9rem;
+  cursor:pointer;padding:0;display:flex;align-items:center;gap:4px;
+}
+.nav-drop-btn:hover,.nav-drop-btn.active{color:var(--brass-light)}
+.nav-dropdown-menu{
+  display:none;position:absolute;top:calc(100% + 14px);right:0;background:#1c1b19;
+  border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);min-width:220px;
+  padding:8px 0;box-shadow:0 20px 40px rgba(0,0,0,.4);z-index:60;
+}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{display:block;padding:11px 18px;font-size:.87rem;color:#e8dfc9;text-decoration:none;white-space:nowrap}
+.nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{background:rgba(184,134,61,.12);color:var(--brass-light)}
+@media(max-width:900px){
+  .nav-dropdown-menu{position:static;box-shadow:none;border:none;background:rgba(255,255,255,.03);width:100%}
+  .nav-drop-btn{width:100%;padding:16px 4px;border-bottom:1px solid rgba(255,255,255,.08);justify-content:space-between}
+}
+
+/* share-website button (footer) */
+.share-site-btn{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;align-self:center}
+@media(max-width:900px){.foot-top{flex-direction:column;align-items:flex-start}}

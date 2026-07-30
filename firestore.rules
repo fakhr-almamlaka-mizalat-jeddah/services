@@ -4,16 +4,17 @@ service cloud.firestore {
 
     // ============================================================
     // لوحة الإعلانات والباقات (assets/ads-board.js + admin.html)
-    // يقرأها كل الزوار — يكتب/يعدّل فيها المشرف فقط بعد تسجيل الدخول
+    // يقرأها كل الزوار — يكتب/يعدّل فيها المشرف فقط (بريد محدد صراحة)
     // ============================================================
     match /content/{docId} {
       allow read: if true;
-      allow write: if request.auth != null;
+      allow write: if request.auth != null &&
+                     request.auth.token.email == 'fakhralmamlakamizalatservicesj@gmail.com';
     }
 
     // ============================================================
     // تقييمات الزوار (قسم آراء العملاء بالصفحة الرئيسية)
-    // يقرأها ويضيف إليها أي زائر — الحذف حصراً للمشرف المسجّل دخوله
+    // يقرأها ويضيف إليها أي زائر — الحذف حصراً للمشرف بالبريد أعلاه
     // + تحقق أساسي من شكل البيانات لمنع تعليقات فارغة أو تلاعب مباشر
     // ============================================================
     match /reviews/{reviewId} {
@@ -31,7 +32,8 @@ service cloud.firestore {
         request.resource.data.ts is number;
 
       allow update: if false;
-      allow delete: if request.auth != null;
+      allow delete: if request.auth != null &&
+                      request.auth.token.email == 'fakhralmamlakamizalatservicesj@gmail.com';
     }
 
     // أي مسار آخر غير مذكور أعلاه: مرفوض تماماً افتراضياً

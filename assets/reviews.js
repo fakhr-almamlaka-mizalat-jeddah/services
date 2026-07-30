@@ -1,95 +1,3 @@
-function toggleMore(btn){
-  const extra = btn.previousElementSibling;
-  extra.classList.toggle('open');
-  btn.textContent = extra.classList.contains('open') ? 'عرض أقل ↑' : 'اقرأ المزيد ←';
-}
-function toggleFaq(item){
-  item.classList.toggle('open');
-}
-function toggleRead(btn){
-  const box = document.getElementById(btn.dataset.target);
-  box.classList.toggle('open');
-  btn.textContent = box.classList.contains('open') ? 'إخفاء ↑' : (btn.dataset.label || 'قراءة المزيد ←');
-}
-
-function scrollCarousel(trackId, dirRTL){
-  // dirRTL: 1 means "السابق" (previous, moves right-to-left content backward -> scrollLeft decreases in RTL... )
-  const track = document.getElementById(trackId);
-  if(!track) return;
-  const amount = track.clientWidth * 0.7;
-  // In RTL, browsers differ on scrollLeft sign; detect direction based on current scrollLeft behavior
-  const delta = dirRTL === 1 ? -amount : amount;
-  track.scrollBy({left: delta, behavior: 'smooth'});
-}
-
-/* ===== mobile menu ===== */
-function toggleMobileMenu(){
-  document.getElementById('navLinks').classList.toggle('open');
-  document.getElementById('menuToggle').classList.toggle('open');
-}
-// close mobile menu after tapping a link
-document.addEventListener('click', function(e){
-  if(e.target.matches('nav.links a')){
-    var nav = document.getElementById('navLinks');
-    var btn = document.getElementById('menuToggle');
-    if(nav && nav.classList.contains('open')){ nav.classList.remove('open'); btn.classList.remove('open'); }
-  }
-});
-
-/* ===== lightbox (zoom + save/download) ===== */
-document.addEventListener('click', function(e){
-  var img = e.target.closest('.carousel-track img, .gallery-grid img, .portfolio-item img');
-  if(img){
-    var lb = document.getElementById('lightbox');
-    var lbImg = document.getElementById('lightboxImg');
-    var lbDl = document.getElementById('lightboxDownload');
-    if(lb && lbImg){
-      lbImg.src = img.src;
-      lbImg.alt = img.alt;
-      if(lbDl){
-        lbDl.href = img.src;
-        var fname = img.src.split('/').pop().split('?')[0] || 'fakhr-almamlaka.webp';
-        lbDl.setAttribute('download', fname);
-      }
-      lb.classList.add('open');
-    }
-  }
-});
-function closeLightbox(e){
-  if(e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')){
-    document.getElementById('lightbox').classList.remove('open');
-  }
-}
-function downloadLightboxImage(e){
-  e.preventDefault();
-  var lbImg = document.getElementById('lightboxImg');
-  var lbDl = document.getElementById('lightboxDownload');
-  if(!lbImg || !lbImg.src) return;
-  var fname = lbImg.src.split('/').pop().split('?')[0] || 'fakhr-almamlaka.webp';
-  fetch(lbImg.src)
-    .then(function(res){ return res.blob(); })
-    .then(function(blob){
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = fname;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    })
-    .catch(function(){
-      // fallback: open the image directly if fetch/CORS fails
-      window.open(lbImg.src, '_blank');
-    });
-}
-document.addEventListener('keydown', function(e){
-  if(e.key === 'Escape'){
-    var lb = document.getElementById('lightbox');
-    if(lb) lb.classList.remove('open');
-  }
-});
-
 /* ===== reviews (shared, real — stored in Firebase Firestore) =====
    Collection: reviews/{autoId}  { rating, name, text, ts }
    Anyone can read + create a review. Only the logged-in admin
@@ -99,16 +7,40 @@ document.addEventListener('keydown', function(e){
 
 var BANNED_WORDS = ["كلب","حيوان","غبي","حقير","نصاب","سيء جدا نصب"];
 
+// يزيل المسافات والتشكيل والرموز بين الأحرف حتى لا يسهل تجاوز الفلتر
+// بكتابة الكلمة مع مسافات أو رموز بينها (مثال: "غ.ب.ي" أو "غ ب ي").
+// تنبيه صريح: هذا يبقى فلتراً من جهة المتصفح فقط ويمكن تجاوزه من مستخدم
+// متمرّس عبر إرسال الطلب مباشرة لـ Firestore بدون المرور بهذا الكود.
+// الحماية الحقيقية الوحيدة هي منتظمة الحذف اليدوي عبر admin.html، أو
+// إضافة Cloud Function للتحقق من جهة الخادم (خطوة لاحقة تحتاج خطة Firebase Blaze).
+function normalizeArabic(text){
+  return (text || "")
+    .replace(/[\u064B-\u0652\u0640]/g, "")   // إزالة التشكيل والتطويل
+    .replace(/[\s._\-*]/g, "")               // إزالة المسافات والرموز الفاصلة
+    .toLowerCase();
+}
 function containsBannedWord(text){
-  var low = (text || "").toLowerCase();
-  return BANNED_WORDS.some(function(w){ return low.indexOf(w) !== -1; });
+  var norm = normalizeArabic(text);
+  return BANNED_WORDS.some(function(w){ return norm.indexOf(normalizeArabic(w)) !== -1; });
+}
+
+// تحديد بسيط: تعليق واحد كل دقيقتين لكل متصفح (وليس حماية خادمية حقيقية،
+// أي شخص يقدر يتجاوزه بمسح بيانات المتصفح — لكنه يمنع السبام العشوائي العادي).
+var REVIEW_COOLDOWN_MS = 2 * 60 * 1000;
+function canSubmitReviewNow(){
+  var last = parseInt(localStorage.getItem('lastReviewTs') || '0', 10);
+  return (Date.now() - last) >= REVIEW_COOLDOWN_MS;
+}
+function markReviewSubmitted(){
+  try{ localStorage.setItem('lastReviewTs', String(Date.now())); }catch(e){}
 }
 
 var currentRating = 0;
 var reviewsAdminMode = false;
 
 function firestoreReady(){
-  return typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length;
+  return typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length
+    && typeof firebase.firestore === 'function' && typeof firebase.auth === 'function';
 }
 
 function initReviews(key, seed){
@@ -134,7 +66,7 @@ function initReviews(key, seed){
     if(snap.empty && seed && seed.length){
       seed.forEach(function(r){
         db.collection('reviews').add({
-          rating: r.rating, name: r.name, text: r.text, ts: Date.now() + (r.ts || 0)
+          rating: r.rating, name: r.name, text: r.text, ts: Date.now() + (r.ts || 0), seeded: true
         });
       });
     }
@@ -155,7 +87,7 @@ function snapToList(snap){
   var list = [];
   snap.forEach(function(doc){
     var d = doc.data();
-    list.push({ id: doc.id, rating: d.rating, name: d.name, text: d.text, ts: d.ts });
+    list.push({ id: doc.id, rating: d.rating, name: d.name, text: d.text, ts: d.ts, seeded: !!d.seeded });
   });
   return list;
 }
@@ -172,6 +104,7 @@ function renderReviews(key, list){
       ? '<b>' + avg + '</b> / 5 — بناءً على ' + total + ' تقييم من زوار الموقع'
       : 'كن أول من يقيّم خدماتنا';
   }
+  updateAggregateRatingSchema(total, avg, list);
   list.forEach(function(r){
     var stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
     var div = document.createElement('div');
@@ -191,6 +124,35 @@ function escapeHtml(str){
   return d.innerHTML;
 }
 
+// حقن Schema.org AggregateRating حقيقي محسوب من بيانات Firestore الفعلية
+// فقط — لا أرقام وهمية إطلاقاً. نمتنع عن نشره قبل 5 تقييمات حقيقية على
+// الأقل حتى لا يكون المعدل مضللاً من عيّنة صغيرة جداً (نجمة واحدة من
+// تقييم واحد تعطي "5/5" وهذا غير موثوق فعلياً حتى لو كان صحيحاً حسابياً).
+var MIN_REVIEWS_FOR_SCHEMA = 5;
+function updateAggregateRatingSchema(displayTotal, displayAvg, fullList){
+  var el = document.getElementById('aggregateRatingSchema');
+  if(!el) return;
+  var real = (fullList || []).filter(function(r){ return !r.seeded; });
+  if(real.length < MIN_REVIEWS_FOR_SCHEMA){
+    el.textContent = '';
+    return;
+  }
+  var realAvg = (real.reduce(function(a,r){return a+r.rating;},0) / real.length).toFixed(1);
+  var schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "مؤسسة فخر المملكة للمظلات والسواتر",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": String(realAvg),
+      "reviewCount": String(real.length),
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+  el.textContent = JSON.stringify(schema);
+}
+
 function submitReview(key){
   var note = document.getElementById('reviewNote');
   var textEl = document.getElementById('reviewText');
@@ -199,7 +161,9 @@ function submitReview(key){
   var name = nameEl.value.trim();
 
   if(!firestoreReady()){ note.textContent = 'التقييمات غير متاحة حالياً.'; return; }
+  if(!canSubmitReviewNow()){ note.textContent = 'يمكنك نشر تقييم واحد كل دقيقتين تقريباً — حاول بعد قليل.'; return; }
   if(currentRating === 0){ note.textContent = 'الرجاء اختيار عدد النجوم أولاً.'; return; }
+  if(name.length > 40){ note.textContent = 'الاسم طويل جداً (40 حرفاً كحد أقصى).'; return; }
   if(text.length < 3){ note.textContent = 'الرجاء كتابة تعليق أوضح.'; return; }
   if(containsBannedWord(text) || containsBannedWord(name)){
     note.textContent = 'تعذر نشر التعليق لاحتوائه على كلمات غير لائقة.';
@@ -212,6 +176,7 @@ function submitReview(key){
   firebase.firestore().collection('reviews').add({
     rating: currentRating, name: name || 'زائر', text: text, ts: Date.now()
   }).then(function(){
+    markReviewSubmitted();
     textEl.value = '';
     nameEl.value = '';
     currentRating = 0;
