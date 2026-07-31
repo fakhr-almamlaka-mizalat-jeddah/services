@@ -127,10 +127,25 @@ function shareMyLocation(e){
     window.open('https://wa.me/966553511013?text=' + encodeURIComponent(msg), '_blank');
     btn.disabled = false;
     btn.innerHTML = original;
-  }, function(){
+  }, function(err){
     btn.disabled = false;
     btn.innerHTML = original;
-    alert('تعذر تحديد موقعك — تأكد من تفعيل خدمة الموقع (GPS) بالمتصفح، أو أرسل العنوان نصياً عبر واتساب مباشرة.');
+    var message;
+    // err.code distinguishes the REAL cause — a generic "enable GPS" message
+    // is often wrong and misleads someone whose system GPS is already on.
+    if (err.code === 1) {
+      // PERMISSION_DENIED — blocked specifically for this site, not a system GPS issue
+      message = 'الموقع الجغرافي محظور لهذا الموقع تحديداً في متصفحك (هذا غير مرتبط بتفعيل GPS في الجهاز). '
+        + 'افتح إعدادات الموقع (اضغط على أيقونة القفل 🔒 أو (i) بجانب الرابط بالأعلى) → الأذونات → الموقع → اسمح، ثم أعد المحاولة. '
+        + 'أو أرسل العنوان نصياً عبر واتساب مباشرة.';
+    } else if (err.code === 2) {
+      message = 'تعذّر تحديد موقعك الدقيق حالياً (إشارة ضعيفة). جرّب بمكان مفتوح أو أرسل العنوان نصياً عبر واتساب مباشرة.';
+    } else if (err.code === 3) {
+      message = 'استغرق تحديد الموقع وقتاً أطول من اللازم. حاول مرة أخرى، أو أرسل العنوان نصياً عبر واتساب مباشرة.';
+    } else {
+      message = 'تعذر تحديد موقعك. أرسل العنوان نصياً عبر واتساب مباشرة.';
+    }
+    alert(message);
   }, { timeout: 10000 });
 }
 
