@@ -23,7 +23,7 @@ h2{font-size:clamp(1.6rem,3vw,2.3rem)}
 h3{font-size:1.25rem}
 .eyebrow{font-size:.8rem;letter-spacing:.14em;color:var(--brass);font-weight:700;margin-bottom:.6em;display:block}
 
-header{position:sticky;top:0;z-index:40;background:rgba(28,27,25,.94);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,.08)}
+header{position:sticky;top:0;z-index:40;background:rgba(28,27,25,.94);border-bottom:1px solid rgba(255,255,255,.08)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{display:flex;align-items:center;gap:12px;color:#f3ead6;text-decoration:none}
 .brand img{width:44px;height:44px;object-fit:contain;border-radius:50%;background:#fff}
