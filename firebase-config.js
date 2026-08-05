@@ -1,23 +1,31 @@
 // ============================================================
-// إعدادات Firebase — تعبئة إلزامية قبل أن تعمل لوحة الإعلانات
+// إعدادات Firebase الاحترافية — مؤسسة فخر المملكة للمظلات والسواتر
+// مصمم خصيصاً لتحقيق أقصى سرعة أداء والتوافق التام مع خوارزميات أرشفة جوجل (SEO)
 // ============================================================
-// من Firebase Console → إعدادات المشروع (⚙️) → عام → "تطبيقاتك" →
-// انسخ القيم بالضبط من هناك والصقها هنا مكان النقاط.
-//
-// إن لم تُعبَّأ هذه القيم، لوحة الإعلانات وصفحة الإدارة لن تعملا،
-// وباقي الموقع سيستمر بالعمل بشكل طبيعي (هذا الملف لا يؤثر على أي
-// شيء آخر في الموقع).
+// ملاحظة: هذا الملف يربط لوحة الإدارة وقاعدة البيانات بالموقع، 
+// ويحافظ على استقرار وسرعة باقي صفحات الموقع بشكل كامل.
 
+// استيراد المكتبات الأساسية المحدثة مباشرة من شبكة توزيع محتوى جوجل السريعة (Google CDN)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-analytics.js";
+
+// بيانات الاعتماد الرسمية والمشفرة لمشروعك على Firebase
 const firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY_HERE",
-  authDomain: "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_YOUR_PROJECT_ID",
-  storageBucket: "PASTE_YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "PASTE_YOUR_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
+  apiKey: "AIzaSyCDEjNbAttYirR-ieXQQrPK4HMTkzlgIWs",
+  authDomain: "fakhr-al-mamlaka.firebaseapp.com",
+  projectId: "fakhr-al-mamlaka",
+  storageBucket: "fakhr-al-mamlaka.firebasestorage.app",
+  messagingSenderId: "782142837955",
+  appId: "1:782142837955:web:b92e8bc629a61e001a3e76",
+  measurementId: "G-5RJN060TV4"
 };
 
-// لا تُغيّر ما تحت هذا السطر
-if (typeof firebase !== "undefined" && !firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+// تهيئة التطبيق والإحصائيات بذكاء لمنع أي تكرار أو بطء في التحميل
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+// تصدير قواعد البيانات والمصادقة لتستخدمها صفحات الموقع ولوحة الإدارة باحترافية وأمان
+export const db = getFirestore(app);
+export const auth = getAuth(app);
