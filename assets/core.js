@@ -130,23 +130,17 @@ function shareMyLocation(e){
   }, function(err){
     btn.disabled = false;
     btn.innerHTML = original;
-    var message;
-    // err.code distinguishes the REAL cause — a generic "enable GPS" message
-    // is often wrong and misleads someone whose system GPS is already on.
-    if (err.code === 1) {
-      // PERMISSION_DENIED — blocked specifically for this site, not a system GPS issue
-      message = 'الموقع الجغرافي محظور لهذا الموقع تحديداً في متصفحك (هذا غير مرتبط بتفعيل GPS في الجهاز). '
-        + 'افتح إعدادات الموقع (اضغط على أيقونة القفل 🔒 أو (i) بجانب الرابط بالأعلى) → الأذونات → الموقع → اسمح، ثم أعد المحاولة. '
-        + 'أو أرسل العنوان نصياً عبر واتساب مباشرة.';
-    } else if (err.code === 2) {
-      message = 'تعذّر تحديد موقعك الدقيق حالياً (إشارة ضعيفة). جرّب بمكان مفتوح أو أرسل العنوان نصياً عبر واتساب مباشرة.';
-    } else if (err.code === 3) {
-      message = 'استغرق تحديد الموقع وقتاً أطول من اللازم. حاول مرة أخرى، أو أرسل العنوان نصياً عبر واتساب مباشرة.';
-    } else {
-      message = 'تعذر تحديد موقعك. أرسل العنوان نصياً عبر واتساب مباشرة.';
-    }
-    alert(message);
-  }, { timeout: 10000 });
+    // GEOLOCATION_POSITION_ERROR codes: 1=PERMISSION_DENIED, 2=POSITION_UNAVAILABLE, 3=TIMEOUT
+    // Blaming "GPS disabled" for all three was misleading — most real-world
+    // failures on a first request are actually code 3 (took too long to get
+    // a fix, especially indoors), not code 1.
+    var messages = {
+      1: 'تم رفض إذن الوصول للموقع من إعدادات المتصفح. من إعدادات الموقع بالمتصفح فعّل صلاحية "الموقع الجغرافي" لهذا الموقع، أو أرسل العنوان نصياً عبر واتساب مباشرة.',
+      2: 'تعذر الحصول على إحداثيات دقيقة حالياً (قد يكون بسبب ضعف الإشارة داخل مبنى). حاول قرب نافذة أو بمكان مفتوح، أو أرسل العنوان نصياً عبر واتساب مباشرة.',
+      3: 'استغرق تحديد الموقع وقتاً أطول من المتوقع. حاول مرة أخرى، أو أرسل العنوان نصياً عبر واتساب مباشرة.'
+    };
+    alert(messages[err && err.code] || 'تعذر تحديد موقعك. أرسل العنوان نصياً عبر واتساب مباشرة.');
+  }, { timeout: 20000, maximumAge: 60000, enableHighAccuracy: false });
 }
 
 /* ===== share the website itself (distinct from shareMyLocation above) =====
