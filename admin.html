@@ -33,7 +33,7 @@
   <!-- ===== لوحة التحرير (تظهر بعد الدخول فقط) ===== -->
   <div class="admin-card" id="editorCard" style="display:none">
     <h2>إدارة الإعلانات والباقات</h2>
-    <p style="font-size:.85rem;color:#57524a">أضف أو عدّل أو احذف أي بطاقة إعلان/باقة، ثم اضغط "حفظ الكل" — التغييرات تظهر لكل زوار الموقع فوراً.</p>
+    <p style="font-size:.85rem;color:#57524a">أضف أو عدّل أو احذف أي بطاقة إعلان/باقة، مع إمكانية إضافة صورة، ثم اضغط "حفظ الكل".</p>
 
     <div id="itemsContainer"></div>
     <button class="btn btn-ghost" style="border-color:var(--brass);color:var(--clay)" onclick="addItem()">+ إضافة بطاقة جديدة</button>
@@ -108,6 +108,8 @@
         '<button class="remove-item" onclick="removeItem(' + idx + ')">حذف البطاقة ×</button>' +
         '<label>شارة صغيرة (اختياري، مثال: عرض محدود)</label>' +
         '<input data-idx="' + idx + '" data-field="badge" value="' + escapeHTML(item.badge) + '">' +
+        '<label>رابط الصورة (اختياري، مثال: صور/shades1.jpg)</label>' +
+        '<input data-idx="' + idx + '" data-field="image" value="' + escapeHTML(item.image) + '">' +
         '<label>العنوان</label>' +
         '<input data-idx="' + idx + '" data-field="title" value="' + escapeHTML(item.title) + '">' +
         '<label>الوصف</label>' +
@@ -140,7 +142,7 @@
   }
 
   window.addItem = function(){
-    currentItems.push({ badge:'', title:'', desc:'', price:'', active:true });
+    currentItems.push({ badge:'', image:'', title:'', desc:'', price:'', active:true });
     renderEditor();
   };
   
@@ -155,6 +157,7 @@
     currentItems = currentItems.map(function(item){
       return {
         badge: (item.badge || '').trim(),
+        image: (item.image || '').trim(),
         title: (item.title || '').trim(),
         desc: (item.desc || '').trim(),
         price: (item.price || '').trim(),
