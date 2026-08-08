@@ -70,6 +70,11 @@ function initReviews(key, seed){
         });
       });
     }
+  }, function(err){
+    // بدون هذا، أي فشل بقراءة التقييمات (صلاحيات أو شبكة) كان يحصل
+    // بصمت تامة والزائر يشوف قائمة فارغة بدون أي تفسير.
+    if(note) note.textContent = 'تعذر تحميل التقييمات حالياً (' + (err.code || 'خطأ اتصال') + ').';
+    console.warn('reviews onSnapshot error:', err);
   });
 
   var starEls = document.querySelectorAll('#starInput span');
@@ -186,7 +191,15 @@ function submitReview(key){
     setTimeout(function(){ note.textContent = ''; note.style.color = ''; }, 3000);
   }).catch(function(err){
     note.style.color = '#b04a3a';
-    note.textContent = 'تعذر النشر: ' + err.message;
+    // رسائل مخصصة حسب نوع الخطأ الفعلي بدل رسالة عامة غامضة —
+    // يساعدنا هذا نكتشف السبب الحقيقي بسرعة إذا تكرر العطل.
+    if (err.code === 'permission-denied') {
+      note.textContent = 'تعذر النشر: قواعد الحماية بقاعدة البيانات لم تُنشر بعد (Publish) — راجع Firebase Console.';
+    } else if (err.code === 'unavailable' || err.code === 'network-request-failed') {
+      note.textContent = 'تعذر النشر: مشكلة اتصال بالإنترنت. جرّب فتح الرابط من متصفح مباشر (Chrome/Safari) بدل متصفح واتساب/انستقرام الداخلي، ثم أعد المحاولة.';
+    } else {
+      note.textContent = 'تعذر النشر: ' + err.message;
+    }
   });
 }
 
