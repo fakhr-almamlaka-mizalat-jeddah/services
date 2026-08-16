@@ -39,11 +39,23 @@ function renderAdsBoard(items){
   if(!active.length){ section.style.display = 'none'; return; }
   section.style.display = '';
   wrap.innerHTML = active.map(function(i){
-    return '<div class="ad-card">' +
+    var imgHtml = '';
+    if (i.image && i.image.trim()) {
+      // onerror يخفي الصورة تلقائياً لو الرابط خطأ أو الملف مو موجود،
+      // بدل ما تظهر أيقونة "صورة مكسورة" غير احترافية للزوار.
+      imgHtml = '<div class="ad-card-img">' +
+        '<img src="' + escapeAdAttr(i.image) + '" alt="' + escapeAdAttr(i.title || 'إعلان فخر المملكة') + '" ' +
+        'loading="lazy" onerror="this.parentElement.style.display=\'none\'">' +
+        '</div>';
+    }
+    return '<div class="ad-card' + (imgHtml ? ' has-img' : '') + '">' +
+      imgHtml +
+      '<div class="ad-card-body">' +
       (i.badge ? '<span class="ad-badge">' + escapeAdText(i.badge) + '</span>' : '') +
       '<h3>' + escapeAdText(i.title || '') + '</h3>' +
       '<p>' + escapeAdText(i.desc || '') + '</p>' +
       (i.price ? '<div class="ad-price">' + escapeAdText(i.price) + '</div>' : '') +
+      '</div>' +
       '</div>';
   }).join('');
 }
@@ -54,8 +66,16 @@ function escapeAdText(str){
   return d.innerHTML;
 }
 
+// نفس التنظيف لكن آمن للاستخدام داخل خاصية HTML (attribute) أيضاً
+function escapeAdAttr(str){
+  return escapeAdText(str).replace(/"/g, '&quot;');
+}
+
 document.addEventListener('DOMContentLoaded', function(){
-  if (typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) return;
+  if (typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) {
+    console.warn('لوحة الإعلانات: Firebase غير مهيّأ — تأكد من تعبئة firebase-config.js بالقيم الحقيقية.');
+    return;
+  }
   try{
     var db = firebase.firestore();
     db.collection('content').doc('ads').onSnapshot(function(doc){
@@ -63,9 +83,9 @@ document.addEventListener('DOMContentLoaded', function(){
         renderAdsBoard(doc.data().items || []);
       }
     }, function(err){
-      console.warn('ads board read failed', err);
+      console.warn('لوحة الإعلانات: فشل القراءة من Firestore —', err.message);
     });
   }catch(e){
-    console.warn('firebase not ready', e);
+    console.warn('لوحة الإعلانات: خطأ غير متوقع —', e);
   }
 });
