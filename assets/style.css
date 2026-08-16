@@ -306,8 +306,12 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
 .ads-board-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .ad-card{
   position:relative;border:1px solid rgba(240,235,224,.18);border-radius:var(--radius);
-  padding:26px 22px;background:rgba(240,235,224,.03);
+  background:rgba(240,235,224,.03);overflow:hidden;display:flex;flex-direction:column;
 }
+.ad-card:not(.has-img){padding:26px 22px}
+.ad-card-img{width:100%;aspect-ratio:16/9;overflow:hidden;background:#111}
+.ad-card-img img{width:100%;height:100%;object-fit:cover;display:block}
+.ad-card-body{padding:22px 22px 26px;position:relative}
 .ad-card h3{color:var(--brass-light);margin-bottom:8px;font-size:1.1rem}
 .ad-card p{color:#c9bd9d;font-size:.88rem;margin:0 0 12px}
 .ad-price{font-family:var(--serif);font-size:1.3rem;color:#fff;font-weight:700}
@@ -315,6 +319,7 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
   position:absolute;top:-10px;right:16px;background:var(--brass);color:#1c1b19;
   font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:20px;
 }
+.ad-card.has-img .ad-badge{top:12px}
 
 /* ===== admin page ===== */
 .admin-wrap{max-width:640px;margin:0 auto;padding:60px 20px}
