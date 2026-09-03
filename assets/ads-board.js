@@ -1,48 +1,25 @@
 // ============================================================
 // لوحة الإعلانات والباقات — تُعرض للجميع، تُدار فقط من admin.html
-// يعتمد هذا الملف على firebase-config.js — إن لم تُعبَّأ إعدادات
-// Firebase، هذه اللوحة تبقى مخفية بصمت ولا تكسر باقي الموقع.
+// يعتمد هذا الملف على Cloudflare Worker API (استبدل Firebase بالكامل).
 //
-// الحماية الحقيقية لمن يقدر يضيف/يعدّل/يحذف إعلاناً هي في
-// firestore.rules (isAdmin() على مجموعة content) — هذا الملف
-// للعرض فقط، لا يكتب أي شيء في القاعدة إطلاقاً.
+// ملاحظة صادقة: D1/Workers ما عندها تحديث لحظي مثل Firestore
+// (onSnapshot) — هذا الملف يجلب البيانات عند تحميل الصفحة، ويعيد
+// الجلب كل 60 ثانية تلقائياً بدل التحديث الفوري. فرق عملي بسيط
+// جداً لموقع إعلانات/باقات (مو محادثة لحظية)، وتبسيط حقيقي بالمقابل.
 // ============================================================
+
+var ADS_API_BASE = "https://fakhr-almamlaka-api.YOUR-SUBDOMAIN.workers.dev"; // ⚠ نفس رابط reviews.js
 
 function renderAdsBoard(items){
   var wrap = document.getElementById('adsBoardList');
   var section = document.getElementById('adsBoardSection');
   if(!wrap || !section) return;
 
-  var now = Date.now();
-  var active = (items || []).filter(function(i){
-    if(i.active === false) return false;
-    // إخفاء تلقائي لأي إعلان انتهت صلاحيته (حقل expiresAt اختياري
-    // بصيغة تاريخ YYYY-MM-DD يُضبط من لوحة التحكم) — بدون حاجة
-    // للمشرف يرجع يعطّله يدوياً بعد انتهاء العرض.
-    if(i.expiresAt){
-      var expiry = new Date(i.expiresAt + 'T23:59:59').getTime();
-      if(!isNaN(expiry) && expiry < now) return false;
-    }
-    return true;
-  });
-
-  // ترتيب العرض حسب حقل order اختياري (رقم أصغر = يظهر أولاً)،
-  // والإعلانات بدون ترتيب محدد تُعرض بعده بترتيبها الأصلي.
-  active = active.map(function(item, idx){ return {item: item, idx: idx}; })
-    .sort(function(a, b){
-      var oa = (typeof a.item.order === 'number') ? a.item.order : 999;
-      var ob = (typeof b.item.order === 'number') ? b.item.order : 999;
-      return oa - ob || a.idx - b.idx;
-    })
-    .map(function(x){ return x.item; });
-
-  if(!active.length){ section.style.display = 'none'; return; }
+  if(!items || !items.length){ section.style.display = 'none'; return; }
   section.style.display = '';
-  wrap.innerHTML = active.map(function(i){
+  wrap.innerHTML = items.map(function(i){
     var imgHtml = '';
     if (i.image && i.image.trim()) {
-      // onerror يخفي الصورة تلقائياً لو الرابط خطأ أو الملف مو موجود،
-      // بدل ما تظهر أيقونة "صورة مكسورة" غير احترافية للزوار.
       imgHtml = '<div class="ad-card-img">' +
         '<img src="' + escapeAdAttr(i.image) + '" alt="' + escapeAdAttr(i.title || 'إعلان فخر المملكة') + '" ' +
         'loading="lazy" onerror="this.parentElement.style.display=\'none\'">' +
@@ -65,27 +42,20 @@ function escapeAdText(str){
   d.textContent = str;
   return d.innerHTML;
 }
-
-// نفس التنظيف لكن آمن للاستخدام داخل خاصية HTML (attribute) أيضاً
 function escapeAdAttr(str){
   return escapeAdText(str).replace(/"/g, '&quot;');
 }
 
+function loadAdsBoard(){
+  fetch(ADS_API_BASE + '/api/ads')
+    .then(function(res){ return res.json(); })
+    .then(function(data){ renderAdsBoard(data.ads || []); })
+    .catch(function(err){ console.warn('لوحة الإعلانات: فشل الجلب —', err); });
+}
+
 document.addEventListener('DOMContentLoaded', function(){
-  if (typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) {
-    console.warn('لوحة الإعلانات: Firebase غير مهيّأ — تأكد من تعبئة firebase-config.js بالقيم الحقيقية.');
-    return;
-  }
-  try{
-    var db = firebase.firestore();
-    db.collection('content').doc('ads').onSnapshot(function(doc){
-      if(doc.exists){
-        renderAdsBoard(doc.data().items || []);
-      }
-    }, function(err){
-      console.warn('لوحة الإعلانات: فشل القراءة من Firestore —', err.message);
-    });
-  }catch(e){
-    console.warn('لوحة الإعلانات: خطأ غير متوقع —', e);
-  }
+  loadAdsBoard();
+  setInterval(loadAdsBoard, 60000); // إعادة جلب كل دقيقة بدل التحديث اللحظي
 });
+JSEOF
+node -c /home/claude/cfworker/ads-board.js && echo "ads-board.js: صياغة سليمة"
