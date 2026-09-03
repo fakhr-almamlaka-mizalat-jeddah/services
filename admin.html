@@ -235,10 +235,3 @@ function saveItems(){
 
 </body>
 </html>
-HTMLEOF
-python3 -c "
-from html.parser import HTMLParser
-class C(HTMLParser):
-    def error(self,m): print('ERR',m)
-p=C(); p.feed(open('/home/claude/cfworker/admin.html',encoding='utf-8').read()); print('admin.html: بنية HTML سليمة')
-"
