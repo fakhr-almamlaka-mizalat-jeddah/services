@@ -57,5 +57,3 @@ document.addEventListener('DOMContentLoaded', function(){
   loadAdsBoard();
   setInterval(loadAdsBoard, 60000); // إعادة جلب كل دقيقة بدل التحديث اللحظي
 });
-JSEOF
-node -c /home/claude/cfworker/ads-board.js && echo "ads-board.js: صياغة سليمة"
