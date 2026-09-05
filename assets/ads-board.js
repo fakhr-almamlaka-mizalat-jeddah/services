@@ -7,12 +7,11 @@
 // الجلب كل 60 ثانية تلقائياً بدل التحديث الفوري. فرق عملي بسيط
 // جداً لموقع إعلانات/باقات (مو محادثة لحظية)، وتبسيط حقيقي بالمقابل.
 // ============================================================
-
-var ADS_API_BASE = "https://fakhr-almamlaka-api.YOUR-SUBDOMAIN.workers.dev"; // ⚠ نفس رابط reviews.js
+var ADS_API_BASE = "https://mizalat-fakhr-almamlaka-jeddah-services-api.alsiyadamazallatjeddah.workers.dev";
 
 function renderAdsBoard(items){
-  var wrap = document.getElementById('adsBoardList');
-  var section = document.getElementById('adsBoardSection');
+    var wrap = document.getElementById('adsBoardList');
+    var section = document.getElementById('adsBoardSection');
   if(!wrap || !section) return;
 
   if(!items || !items.length){ section.style.display = 'none'; return; }
