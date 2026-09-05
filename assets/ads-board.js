@@ -10,8 +10,8 @@
 var ADS_API_BASE = "https://mizalat-fakhr-almamlaka-jeddah-services-api.alsiyadamazallatjeddah.workers.dev";
 
 function renderAdsBoard(items){
-    var wrap = document.getElementById('adsBoardList');
-    var section = document.getElementById('adsBoardSection');
+  var wrap = document.getElementById('adsBoardList');
+  var section = document.getElementById('adsBoardSection');
   if(!wrap || !section) return;
 
   if(!items || !items.length){ section.style.display = 'none'; return; }
@@ -38,15 +38,16 @@ function renderAdsBoard(items){
 
 function escapeAdText(str){
   var d = document.createElement('div');
-  d.textContent = str;
+  d.textContent = str || '';
   return d.innerHTML;
 }
+
 function escapeAdAttr(str){
   return escapeAdText(str).replace(/"/g, '&quot;');
 }
 
 function loadAdsBoard(){
-fetch(API_BASE + '/api/ads')
+  fetch(ADS_API_BASE + '/api/ads')
     .then(function(res){ return res.json(); })
     .then(function(data){ renderAdsBoard(data.ads || []); })
     .catch(function(err){ console.warn('لوحة الإعلانات: فشل الجلب —', err); });
