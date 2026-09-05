@@ -46,7 +46,7 @@ function escapeAdAttr(str){
 }
 
 function loadAdsBoard(){
-  fetch(ADS_API_BASE + '/api/ads')
+fetch(API_BASE + '/api/ads')
     .then(function(res){ return res.json(); })
     .then(function(data){ renderAdsBoard(data.ads || []); })
     .catch(function(err){ console.warn('لوحة الإعلانات: فشل الجلب —', err); });
