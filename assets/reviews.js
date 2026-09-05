@@ -4,7 +4,7 @@
 
 // ⚠ عدّل هذا السطر بعد نشر الـ Worker فعلياً (خطوة 5 بدليل النشر) —
 // ضع رابط الـ Worker الحقيقي اللي يعطيك إياه Cloudflare بعد "wrangler deploy".
-var API_BASE = "https://fakhr-almamlaka-api.YOUR-SUBDOMAIN.workers.dev";
+var API_BASE = "https://mizalat-fakhr-almamlaka-jeddah-services-api.alsiyadamazallatjeddah.workers.dev";
 
 var currentRating = 0;
 var reviewsAdminMode = false;
