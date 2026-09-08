@@ -148,12 +148,21 @@
   ]
 }
 </script>
+<!-- Google Analytics (GA4) — محمّل بشكل مؤجل (async) بلا تأثير على سرعة الصفحة -->
+<!-- ⚠️ استبدل G-XXXXXXXXXX برقم القياس الحقيقي من حساب Google Analytics عندك -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة" decoding="async">
       <span>فخر المملكة</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" onclick="toggleMobileMenu()">
@@ -183,9 +192,9 @@
 </header>
 <section class="hero">
   <div class="hero-bg-layer">
-    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-modern-glass-lounge-fakhr-almamlaka-jeddah.webp" alt="صالة زجاجية ساندوتش بانل بجدة" fetchpriority="high">
-    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah.webp" alt="كابينة معزولة بجدة" loading="lazy">
-    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-prefab-house-fakhr-almamlaka-jeddah.webp" alt="غرفة جاهزة ساندوتش بانل بجدة" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-modern-glass-lounge-fakhr-almamlaka-jeddah.webp" alt="صالة زجاجية ساندوتش بانل بجدة" fetchpriority="high" decoding="async">
+    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah.webp" alt="كابينة معزولة بجدة" loading="lazy" decoding="async">
+    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-prefab-house-fakhr-almamlaka-jeddah.webp" alt="غرفة جاهزة ساندوتش بانل بجدة" loading="lazy" decoding="async">
   </div>
   <div class="wrap">
     <div class="breadcrumb"><a href="index.html">الرئيسية</a> ← تركيب الساندوتش بانل</div>
@@ -257,14 +266,14 @@
     </div>
   </div>
   <div class="carousel-track" id="sp-0">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-fakhr-almamlaka-jeddah-cabin.webp" alt="ساندوتش بانل كابينة معزولة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل كابينة معزولة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-modern-prefabricated-cabin-fakhr-almamlaka-jeddah10.webp" alt="ساندوتش بانل بتصميم عصري قماش كابينة معزولة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-portable-cabin-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل كابينة معزولة غرفة جاهزة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-prefab-house-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل غرفة جاهزة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-prefabricated-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل قماش غرفة جاهزة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-prefabricated-roof-room-fakhr-almamlaka-jeddah9.webp" alt="ساندوتش بانل قماش غرفة جاهزة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-ready-rooms-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل غرف جاهزة — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-fakhr-almamlaka-jeddah-cabin.webp" alt="ساندوتش بانل كابينة معزولة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل كابينة معزولة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-modern-prefabricated-cabin-fakhr-almamlaka-jeddah10.webp" alt="ساندوتش بانل بتصميم عصري قماش كابينة معزولة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-portable-cabin-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل كابينة معزولة غرفة جاهزة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-prefab-house-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل غرفة جاهزة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-prefabricated-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل قماش غرفة جاهزة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-prefabricated-roof-room-fakhr-almamlaka-jeddah9.webp" alt="ساندوتش بانل قماش غرفة جاهزة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-ready-rooms-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل غرف جاهزة — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -277,12 +286,12 @@
     </div>
   </div>
   <div class="carousel-track" id="sp-1">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-glass-room-extension-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بواجهة زجاجية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-luxury-glass-room-design-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بواجهة زجاجية تصميم غرفة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-modern-glass-lounge-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بتصميم عصري صالة خارجية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-modern-glass-room-extension-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بتصميم عصري بواجهة زجاجية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-outdoor-lounge-glass-sliding-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل صالة خارجية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-room-with-sliding-glass-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بواجهة زجاجية تصميم غرفة — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-glass-room-extension-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بواجهة زجاجية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-luxury-glass-room-design-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بواجهة زجاجية تصميم غرفة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-modern-glass-lounge-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بتصميم عصري صالة خارجية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-modern-glass-room-extension-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بتصميم عصري بواجهة زجاجية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-outdoor-lounge-glass-sliding-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل صالة خارجية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-room-with-sliding-glass-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بواجهة زجاجية تصميم غرفة — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -295,9 +304,9 @@
     </div>
   </div>
   <div class="carousel-track" id="sp-2">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-colorful-walls-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل متعددة الألوان بجدران ملونة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-roof-sheets-fakhr-almamlaka-jeddah5.webp" alt="ساندوتش بانل — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-rooftop-installation-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل لتركيب سطح — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-colorful-walls-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل متعددة الألوان بجدران ملونة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-roof-sheets-fakhr-almamlaka-jeddah5.webp" alt="ساندوتش بانل — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-rooftop-installation-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل لتركيب سطح — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -310,9 +319,9 @@
     </div>
   </div>
   <div class="carousel-track" id="sp-3">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-fakhr-almamlaka-jeddah8.webp" alt="ساندوتش بانل — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-room-design-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل تصميم غرفة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-worker-installing-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل أثناء التركيب — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-fakhr-almamlaka-jeddah8.webp" alt="ساندوتش بانل — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-room-design-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل تصميم غرفة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-worker-installing-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل أثناء التركيب — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
   </div>
@@ -436,13 +445,13 @@
     <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17l-4.7-5.3 1.4-1.4 3.3 3.3V3h2ZM5 19h14v2H5v-2Z"/></svg>
     حفظ الصورة
   </a>
-  <img id="lightboxImg" src="" alt="">
+  <img id="lightboxImg" src="" alt="" decoding="async">
 </div>
 <footer>
   <div class="wrap">
 
     <div class="foot-top">
-      <img class="foot-logo" src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة">
+      <img class="foot-logo" src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة" decoding="async">
       <div class="foot-hours">
         <h3>مواعيد وساعات العمل الرسمية</h3>
         <p>من السبت إلى الخميس: من الساعة 7 صباحاً وحتى 11 مساءً<br>يوم الجمعة: من الساعة 1 مساءً وحتى الساعة 11 مساءً</p>
@@ -477,26 +486,32 @@
 
     <div class="foot-social">
       <span>تابعونا:</span>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+      <a class="social-ico" href="https://www.instagram.com/fakhralmamlaka_mizalat" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2c2.7 0 3 .01 4.1.06 1.1.05 1.84.22 2.5.47.67.26 1.24.6 1.8 1.16.56.56.9 1.13 1.16 1.8.25.66.42 1.4.47 2.5.05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.1-.22 1.84-.47 2.5a5 5 0 0 1-1.16 1.8 5 5 0 0 1-1.8 1.16c-.66.25-1.4.42-2.5.47-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.1-.05-1.84-.22-2.5-.47a5 5 0 0 1-1.8-1.16 5 5 0 0 1-1.16-1.8c-.25-.66-.42-1.4-.47-2.5C2 15 2 14.7 2 12s.01-3 .06-4.1c.05-1.1.22-1.84.47-2.5.26-.67.6-1.24 1.16-1.8A5 5 0 0 1 5.5 2.44c.66-.25 1.4-.42 2.5-.47C9 2.02 9.3 2 12 2Zm0 2c-2.66 0-2.97 0-4.02.06-.87.04-1.34.18-1.65.3-.42.16-.72.36-1.03.67-.31.31-.5.61-.67 1.03-.12.31-.26.78-.3 1.65C4.28 9.03 4.28 9.34 4.28 12s0 2.97.06 4.02c.04.87.18 1.34.3 1.65.16.42.36.72.67 1.03.31.31.61.5 1.03.67.31.12.78.26 1.65.3C9.03 19.72 9.34 19.72 12 19.72s2.97 0 4.02-.06c.87-.04 1.34-.18 1.65-.3.42-.16.72-.36 1.03-.67.31-.31.5-.61.67-1.03.12-.31.26-.78.3-1.65.06-1.05.06-1.36.06-4.02s0-2.97-.06-4.02c-.04-.87-.18-1.34-.3-1.65a2.7 2.7 0 0 0-.67-1.03 2.7 2.7 0 0 0-1.03-.67c-.31-.12-.78-.26-1.65-.3C14.97 4.28 14.66 4.28 12 4.28Zm0 3.4a4.32 4.32 0 1 1 0 8.64 4.32 4.32 0 0 1 0-8.64Zm0 2a2.32 2.32 0 1 0 0 4.64 2.32 2.32 0 0 0 0-4.64Zm4.5-3.62a1.01 1.01 0 1 1 0 2.02 1.01 1.01 0 0 1 0-2.02Z"/></svg>
       </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M14.5 2h2.9c.16 1.5 1.02 2.9 2.4 3.7.9.5 1.9.8 3 .8v3c-1.6 0-3.1-.4-4.4-1.2v6.9c0 3.6-2.9 6.5-6.5 6.5S5.4 18.8 5.4 15.2c0-3.4 2.6-6.2 5.9-6.5v3.1a3.4 3.4 0 0 0-2.9 3.4 3.4 3.4 0 0 0 6.8 0V2Z"/></svg>
-      </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="Snapchat" title="Snapchat">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.5c2.9 0 4.7 2.3 4.6 4.8-.03.9-.08 1.7 0 2.2.1.1.6.2 1 .1.5-.1 1-.5 1.4-.3.3.1.4.4.4.7 0 .5-.7.8-1.3 1.1-.3.1-.7.3-.7.5 0 .3.5 1.4 1.9 2.2.3.2.9.4.8.9-.1.6-1.2.7-1.9.9-.2 0-.3.2-.4.5-.1.4-.2.9-.6 1-.4.1-.9-.1-1.5-.1-.7-.1-1.4.1-2 .5-.7.5-1.4 1-2.7 1s-2-.5-2.7-1c-.6-.4-1.3-.6-2-.5-.6 0-1.1.2-1.5.1-.4-.1-.5-.6-.6-1-.1-.3-.2-.5-.4-.5-.7-.2-1.8-.3-1.9-.9-.1-.5.5-.7.8-.9 1.4-.8 1.9-1.9 1.9-2.2 0-.2-.4-.4-.7-.5-.6-.3-1.3-.6-1.3-1.1 0-.3.1-.6.4-.7.4-.2.9.2 1.4.3.4.1.9 0 1-.1.08-.5.03-1.3 0-2.2-.1-2.5 1.7-4.8 4.6-4.8Z"/></svg>
-      </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+      <a class="social-ico" href="https://www.facebook.com/share/1BmTTtRFxx/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M13.5 21v-7.9h2.6l.4-3.1h-3V8c0-.9.3-1.5 1.6-1.5H16.6V3.7c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.4H8v3.1h2.4V21h3.1Z"/></svg>
       </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+      <a class="social-ico" href="https://www.facebook.com/share/18rcNreh8p/" target="_blank" rel="noopener" aria-label="Facebook (الصفحة الثانية)" title="Facebook - صفحة ثانية">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M13.5 21v-7.9h2.6l.4-3.1h-3V8c0-.9.3-1.5 1.6-1.5H16.6V3.7c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.4H8v3.1h2.4V21h3.1Z"/></svg>
+      </a>
+      <a class="social-ico" href="https://x.com/Mizalats_fakhr" target="_blank" rel="noopener" aria-label="X" title="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a class="social-ico" href="https://www.threads.net/@fakhralmamlaka_mizalat" target="_blank" rel="noopener" aria-label="Threads" title="Threads">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.63 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.088-4.79-.313-.71-.884-1.3-1.62-1.756-.19 1.354-.617 2.44-1.28 3.234-.877 1.05-2.117 1.63-3.687 1.72-1.176.07-2.31-.202-3.19-.766-1.043-.667-1.658-1.7-1.732-2.907-.145-2.352 1.746-4.045 4.6-4.212.98-.057 1.9-.014 2.75.128-.114-.688-.347-1.234-.696-1.63-.484-.55-1.234-.83-2.23-.837h-.028c-.802 0-1.877.222-2.567 1.28l-1.734-1.19c.925-1.406 2.418-2.18 4.294-2.18h.038c3.08.02 4.913 1.9 5.098 5.183.106.045.21.09.313.14 1.44.7 2.494 1.767 3.05 3.084.773 1.831.843 4.81-1.618 7.152-1.856 1.766-4.107 2.567-7.293 2.588z"/></svg>
+      </a>
+      <a class="social-ico" href="https://www.tiktok.com/@fakhralmamlakamiz8" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M14.5 2h2.9c.16 1.5 1.02 2.9 2.4 3.7.9.5 1.9.8 3 .8v3c-1.6 0-3.1-.4-4.4-1.2v6.9c0 3.6-2.9 6.5-6.5 6.5S5.4 18.8 5.4 15.2c0-3.4 2.6-6.2 5.9-6.5v3.1a3.4 3.4 0 0 0-2.9 3.4 3.4 3.4 0 0 0 6.8 0V2Z"/></svg>
+      </a>
+      <a class="social-ico" href="https://youtube.com/@fakhralmamlaka-mizalatservices" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22 12s0-3.2-.4-4.7c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.5c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.7c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.5c.9-.2 1.6-.9 1.8-1.8.4-1.5.4-4.7.4-4.7ZM10 15V9l5.2 3-5.2 3Z"/></svg>
       </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2 0-2.9l1.4-5.9s-.4-.7-.4-1.8c0-1.7 1-3 2.2-3 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.2 1.8 2.2 2.2 0 3.7-2.8 3.7-6.1 0-2.5-1.7-4.4-4.8-4.4-3.5 0-5.7 2.6-5.7 5.5 0 1 .3 1.7.8 2.3.2.3.3.4.2.7-.1.2-.2.8-.3 1-.1.3-.3.4-.6.3-1.7-.7-2.5-2.6-2.5-4.7 0-3.5 3-7.7 8.8-7.7 4.7 0 7.8 3.4 7.8 7 0 4.8-2.7 8.4-6.6 8.4-1.3 0-2.6-.7-3-1.5l-.9 3.4c-.3 1.1-.9 2.2-1.4 3 1 .3 2.1.5 3.2.5 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
+      <a class="social-ico" href="https://www.snapchat.com/add/fakhralmamlaka" target="_blank" rel="noopener" aria-label="Snapchat" title="Snapchat">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.5c2.9 0 4.7 2.3 4.6 4.8-.03.9-.08 1.7 0 2.2.1.1.6.2 1 .1.5-.1 1-.5 1.4-.3.3.1.4.4.4.7 0 .5-.7.8-1.3 1.1-.3.1-.7.3-.7.5 0 .3.5 1.4 1.9 2.2.3.2.9.4.8.9-.1.6-1.2.7-1.9.9-.2 0-.3.2-.4.5-.1.4-.2.9-.6 1-.4.1-.9-.1-1.5-.1-.7-.1-1.4.1-2 .5-.7.5-1.4 1-2.7 1s-2-.5-2.7-1c-.6-.4-1.3-.6-2-.5-.6 0-1.1.2-1.5.1-.4-.1-.5-.6-.6-1-.1-.3-.2-.5-.4-.5-.7-.2-1.8-.3-1.9-.9-.1-.5.5-.7.8-.9 1.4-.8 1.9-1.9 1.9-2.2 0-.2-.4-.4-.7-.5-.6-.3-1.3-.6-1.3-1.1 0-.3.1-.6.4-.7.4-.2.9.2 1.4.3.4.1.9 0 1-.1.08-.5.03-1.3 0-2.2-.1-2.5 1.7-4.8 4.6-4.8Z"/></svg>
       </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9L18 8.1c.4-.4-.1-.6-.6-.2L7.3 14.4l-4.7-1.5c-1-.3-1-1 .2-1.5L20.6 3.6c.8-.3 1.6.2 1.3 1.7Z"/></svg>
+      <a class="social-ico" href="https://www.pinterest.com/fakhralmamlakamizalat" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2 0-2.9l1.4-5.9s-.4-.7-.4-1.8c0-1.7 1-3 2.2-3 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.2 1.8 2.2 2.2 0 3.7-2.8 3.7-6.1 0-2.5-1.7-4.4-4.8-4.4-3.5 0-5.7 2.6-5.7 5.5 0 1 .3 1.7.8 2.3.2.3.3.4.2.7-.1.2-.2.8-.3 1-.1.3-.3.4-.6.3-1.7-.7-2.5-2.6-2.5-4.7 0-3.5 3-7.7 8.8-7.7 4.7 0 7.8 3.4 7.8 7 0 4.8-2.7 8.4-6.6 8.4-1.3 0-2.6-.7-3-1.5l-.9 3.4c-.3 1.1-.9 2.2-1.4 3 1 .3 2.1.5 3.2.5 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
       </a>
     </div>
 
