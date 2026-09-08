@@ -140,12 +140,21 @@
   ]
 }
 </script>
+<!-- Google Analytics (GA4) — محمّل بشكل مؤجل (async) بلا تأثير على سرعة الصفحة -->
+<!-- ⚠️ استبدل G-XXXXXXXXXX برقم القياس الحقيقي من حساب Google Analytics عندك -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة" decoding="async">
       <span>فخر المملكة</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" onclick="toggleMobileMenu()">
@@ -175,9 +184,9 @@
 </header>
 <section class="hero">
   <div class="hero-bg-layer">
-    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-fakhr-almamlaka-jeddah15.webp" alt="مظلة سيارات كبولي بجدة" fetchpriority="high">
-    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-swimming-pool-shade.webp" alt="مظلة مسبح بجدة" loading="lazy">
-    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/mizalat-background-structure-fakhr-almamlaka-jeddah1.webp" alt="هيكل مظلة إنشائي بجدة" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-fakhr-almamlaka-jeddah15.webp" alt="مظلة سيارات كبولي بجدة" fetchpriority="high" decoding="async">
+    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-swimming-pool-shade.webp" alt="مظلة مسبح بجدة" loading="lazy" decoding="async">
+    <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/mizalat-background-structure-fakhr-almamlaka-jeddah1.webp" alt="هيكل مظلة إنشائي بجدة" loading="lazy" decoding="async">
   </div>
   <div class="wrap">
     <div class="breadcrumb"><a href="index.html">الرئيسية</a> ← المظلات</div>
@@ -271,19 +280,19 @@
     </div>
   </div>
   <div class="carousel-track" id="mz-0">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-colorful-pool-shade.webp" alt="مظلة مسبح متعددة الألوان — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-green-pool-shade.webp" alt="مظلة مسبح بلون أخضر — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-lexan-pool-cover.webp" alt="مظلة مسبح لكسان — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-pool-canopy.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-pool-cover.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-pool-shade.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-pool-shade116.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-swimming-pool-shade.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-tensile-structure-pool.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-triangle-pool-shade.webp" alt="مظلة مسبح بتصميم مثلثي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shadd-inshai-piscine-fakhr-almamlaka-jeddah28.webp" alt="مظلة مسبح مظلة شد إنشائي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-swimming-pool-shade-fakhr-almamlaka-jeddah.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-swimming-pool-awning-modern-fakhr-almamlaka-jeddah.webp" alt="مظلة مسبح بتصميم عصري — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-colorful-pool-shade.webp" alt="مظلة مسبح متعددة الألوان — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-green-pool-shade.webp" alt="مظلة مسبح بلون أخضر — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-lexan-pool-cover.webp" alt="مظلة مسبح لكسان — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-pool-canopy.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-pool-cover.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-pool-shade.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-pool-shade116.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-swimming-pool-shade.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-tensile-structure-pool.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-triangle-pool-shade.webp" alt="مظلة مسبح بتصميم مثلثي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shadd-inshai-piscine-fakhr-almamlaka-jeddah28.webp" alt="مظلة مسبح مظلة شد إنشائي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-swimming-pool-shade-fakhr-almamlaka-jeddah.webp" alt="مظلة مسبح — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-swimming-pool-awning-modern-fakhr-almamlaka-jeddah.webp" alt="مظلة مسبح بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -296,17 +305,17 @@
     </div>
   </div>
   <div class="carousel-track" id="mz-1">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-commercial-shade.webp" alt="مظلة تجارية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-school-shade.webp" alt="مظلة مدرسة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-sports-field-shade.webp" alt="مظلة ملعب رياضي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-madrasah-pvc-colors-fakhr-almamlaka-jeddah6.webp" alt="مظلة مدرسة متعددة الألوان PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-masajed-qmash-pvc-fakhr-almamlaka-jeddah104.webp" alt="مظلة مسجد PVC قماش — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-masjid-pvc-fakhr-almamlaka-jeddah36.webp" alt="مظلة سيارات مظلة مسجد PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-swning-red-retractable-commercial-fakhr-almamlaka-jeddah1.webp" alt="مظلة تجارية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-commercial-parking-shades-installation-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات تجارية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-commercial-parking-shades-arched-multi-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بتصميم مقوّس تجارية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-commercial-parking-lot-shades-installation-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات تجارية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-commercial-fabric-shade-installation-fakhr-almamlaka-jeddah.webp" alt="مظلة تجارية قماش — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-commercial-shade.webp" alt="مظلة تجارية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-school-shade.webp" alt="مظلة مدرسة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-sports-field-shade.webp" alt="مظلة ملعب رياضي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-madrasah-pvc-colors-fakhr-almamlaka-jeddah6.webp" alt="مظلة مدرسة متعددة الألوان PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-masajed-qmash-pvc-fakhr-almamlaka-jeddah104.webp" alt="مظلة مسجد PVC قماش — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-masjid-pvc-fakhr-almamlaka-jeddah36.webp" alt="مظلة سيارات مظلة مسجد PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-swning-red-retractable-commercial-fakhr-almamlaka-jeddah1.webp" alt="مظلة تجارية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-commercial-parking-shades-installation-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات تجارية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-commercial-parking-shades-arched-multi-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بتصميم مقوّس تجارية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-commercial-parking-lot-shades-installation-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات تجارية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-commercial-fabric-shade-installation-fakhr-almamlaka-jeddah.webp" alt="مظلة تجارية قماش — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -319,97 +328,97 @@
     </div>
   </div>
   <div class="carousel-track" id="mz-2">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-bawabat-garage-fakhr-almamlaka-jeddah97.webp" alt="مظلة سيارات بوابات جراج — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-car-parking-shed-modern-design-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بتصميم عصري — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-car-parking-shades.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-conical-carport.webp" alt="مظلة سيارات بتصميم مخروطي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-curved-carport.webp" alt="مظلة سيارات منحنية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-long-carport.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-modern-carport-design.webp" alt="مظلة سيارات بتصميم عصري — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-parking-shades.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hush-sayarat-fakhr-almamlaka-jeddah13.webp" alt="مظلة سيارات مظلة حوش — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-kaboli-mawaqif-fakhr-almamlaka-jeddah95.webp" alt="مظلة سيارات كبولي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-kraj-arc-black-fakhr-almamlaka-jeddah45.webp" alt="مظلة سيارات بتصميم مقوّس بلون أسود — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-madakhil-villa-fakhr-almamlaka-jeddah88.webp" alt="مظلة مدخل مظلة فلل ومنازل — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-madkhal-kraj-fakhr-almamlaka-jeddah41.webp" alt="مظلة سيارات مظلة مدخل — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-madkhal-villa-laser-fakhr-almamlaka-jeddah56.webp" alt="مظلة مدخل مظلة فلل ومنازل بتصميم ليزر كت — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-kaboli-fakhr-almamlaka-jeddah66.webp" alt="مظلة سيارات كبولي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-sayarat-fakhr-almamlaka-jeddah-78.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-sayarat-projects-fakhr-almamlaka-jeddah111.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-sayarat-pvc-fakhr-almamlaka-jeddah11.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-sharikate-fakhr-almamlaka-jeddah86.webp" alt="مظلة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-tayer-laser-fakhr-almamlaka-jeddah58.webp" alt="مظلة بتصميم ليزر كت — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-parking-shades-fakhr-almamlaka-jeddah102.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-pvc-garage-shutter-fakhr-almamlaka-jeddah108.webp" alt="مظلة سيارات PVC بوابات جراج — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayara-qaws-fakhr-almamlaka-jeddah87.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-accent-fakhr-almamlaka-jeddah80.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-black-fakhr-almamlaka-jeddah39.webp" alt="مظلة سيارات بتصميم مقوّس بلون أسود — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-fakhr-almamlaka-jeddah35.webp" alt="مظلة سيارات بتصميم مقوّس — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-fakhr-almamlaka-jeddah40.webp" alt="مظلة سيارات بتصميم مقوّس — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-fakhr-almamlaka-jeddah50.webp" alt="مظلة سيارات بتصميم مقوّس — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-laser-fakhr-almamlaka-jeddah29.webp" alt="مظلة سيارات بتصميم ليزر كت بتصميم مقوّس — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-pvc-fakhr-almamlaka-jeddah30.webp" alt="مظلة سيارات بتصميم مقوّس PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-box-closed-fakhr-almamlaka-jeddah57.webp" alt="مظلة سيارات مغلقة الجوانب — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-box-sides-fakhr-almamlaka-jeddah51.webp" alt="مظلة سيارات مغلقة الجوانب — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-double-fakhr-almamlaka-jeddah44.webp" alt="مظلة سيارات مزدوجة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-double-pvc-fakhr-almamlaka-jeddah38.webp" alt="مظلة سيارات مزدوجة PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-fakhr-almamlaka-jeddah105.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-fakhr-almamlaka-jeddah83.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-fakhr-almamlaka-jeddah84.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-genesis-fakhr-almamlaka-jeddah32.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-haramiah-beig-fakhr-almamlaka-jeddah8.webp" alt="مظلة سيارات بلون بيج — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-haramya-mawaqif-fakhr-almamlaka-jeddah94.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-hramiah-fakhr-almamlaka-jeddah53.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-hramiah-inside-fakhr-almamlaka-jeddah43.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kaboli-fakhr-almamlaka-jeddah90.webp" alt="مظلة سيارات كبولي مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabolli-decor-fakhr-almamlaka-jeddah62.webp" alt="مظلة سيارات كبولي مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-arc-fakhr-almamlaka-jeddah19.webp" alt="مظلة سيارات كبولي مظلة سيارات بتصميم مقوّس — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-arc-fakhr-almamlaka-jeddah9.webp" alt="مظلة سيارات كبولي مظلة سيارات بتصميم مقوّس — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-black-fakhr-almamlaka-jeddah37.webp" alt="مظلة سيارات كبولي مظلة سيارات بلون أسود — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-double-fakhr-almamlaka-jeddah14.webp" alt="مظلة سيارات كبولي مظلة سيارات مزدوجة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-fakhr-almamlaka-jeddah15.webp" alt="مظلة سيارات كبولي مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-fakhr-almamlaka-jeddah33.webp" alt="مظلة سيارات كبولي مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-fakhr-almamlaka-jeddah42.webp" alt="مظلة سيارات كبولي مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-laser-fakhr-almamlaka-jeddah10.webp" alt="مظلة سيارات كبولي مظلة سيارات بتصميم ليزر كت — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-laser-fakhr-almamlaka-jeddah2.webp" alt="مظلة سيارات كبولي مظلة سيارات بتصميم ليزر كت — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-modern-fakhr-almamlaka-jeddah4.webp" alt="مظلة سيارات كبولي مظلة سيارات بتصميم عصري — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-pvc-fakhr-almamlaka-jeddah23.webp" alt="مظلة سيارات كبولي مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-pvc26-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات كبولي مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-laser-fakhr-almamlaka-jeddah79.webp" alt="مظلة سيارات بتصميم ليزر كت — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-makhrooti-fakhr-almamlaka-jeddah73.webp" alt="مظلة سيارات بتصميم مخروطي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-makhrotia-fakhr-almamlaka-jeddah99.webp" alt="مظلة سيارات بتصميم مخروطي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-makhrouti-pvc-fakhr-almamlaka-jeddah109.webp" alt="مظلة سيارات بتصميم مخروطي PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-manzilia-fakhr-almamlaka-jeddah81.webp" alt="مظلة سيارات مظلة فلل ومنازل — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-maqsasi-fakhr-almamlaka-jeddah74.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-modern-khashab-fakhr-almamlaka-jeddah22.webp" alt="مظلة سيارات بتصميم عصري خشبية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-modern-pvc-fakhr-almamlaka-jeddah24.webp" alt="مظلة سيارات بتصميم عصري PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-momtada-fakhr-almamlaka-jeddah85.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-mualaqa-fakhr-almamlaka-jeddah72.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-mutaharikah-fakhr-almamlaka-jeddah1.webp" alt="مظلة سيارات متحركة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-arc-fakhr-almamlaka-jeddah18.webp" alt="مظلة سيارات بتصميم مقوّس PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-beige-fakhr-almamlaka-jeddah106.webp" alt="مظلة سيارات بلون بيج PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-fakhr-almamlaka-jeddah25.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-fakhr-almamlaka-jeddah46.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-fakhr-almamlaka-jeddah48.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-fakhr-almamlaka-jeddah7.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-haws-fakhr-almamlaka-jeddah17.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-hemaya-fakhr-almamlaka-jeddah77.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-koko-fakhr-almamlaka-jeddah16.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-koko-fakhr-almamlaka-jeddah27.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-mutahrika-fakhr-almamlaka-jeddah20.webp" alt="مظلة سيارات متحركة PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-qmash-abyad-fakhr-almamlaka-jeddah65.webp" alt="مظلة سيارات قماش — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-qmash-fakhr-almamlaka-jeddah89.webp" alt="مظلة سيارات قماش — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-shari-fakhr-almamlaka-jeddah59.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-shari-laser-fakhr-almamlaka-jeddah54.webp" alt="مظلة سيارات بتصميم ليزر كت — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-shiraia-fakhr-almamlaka-jeddah92.webp" alt="مظلة سيارات قماش — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-snb-pvc-fakhr-almamlaka-jeddah31.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-villa-fakhr-almamlaka-jeddah47.webp" alt="مظلة سيارات مظلة فلل ومنازل — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarht-fakhr-almamlaka-jeddah112.webp" alt="مظلة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-multi-bay-car-parking-shed-fabric-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات قماش — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-carport-awning-modern-saudi-design-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بتصميم عصري — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-carport-awning-modern-laser-cut-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بتصميم ليزر كت بتصميم عصري — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-car-parking-shed-facade-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بواجهة خارجية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-arched-car-parking-shades-beige-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بتصميم مقوّس بلون بيج — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-bawabat-garage-fakhr-almamlaka-jeddah97.webp" alt="مظلة سيارات بوابات جراج — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-car-parking-shed-modern-design-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-car-parking-shades.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-conical-carport.webp" alt="مظلة سيارات بتصميم مخروطي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-curved-carport.webp" alt="مظلة سيارات منحنية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-long-carport.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-modern-carport-design.webp" alt="مظلة سيارات بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-parking-shades.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hush-sayarat-fakhr-almamlaka-jeddah13.webp" alt="مظلة سيارات مظلة حوش — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-kaboli-mawaqif-fakhr-almamlaka-jeddah95.webp" alt="مظلة سيارات كبولي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-kraj-arc-black-fakhr-almamlaka-jeddah45.webp" alt="مظلة سيارات بتصميم مقوّس بلون أسود — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-madakhil-villa-fakhr-almamlaka-jeddah88.webp" alt="مظلة مدخل مظلة فلل ومنازل — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-madkhal-kraj-fakhr-almamlaka-jeddah41.webp" alt="مظلة سيارات مظلة مدخل — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-madkhal-villa-laser-fakhr-almamlaka-jeddah56.webp" alt="مظلة مدخل مظلة فلل ومنازل بتصميم ليزر كت — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-kaboli-fakhr-almamlaka-jeddah66.webp" alt="مظلة سيارات كبولي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-sayarat-fakhr-almamlaka-jeddah-78.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-sayarat-projects-fakhr-almamlaka-jeddah111.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-sayarat-pvc-fakhr-almamlaka-jeddah11.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-sharikate-fakhr-almamlaka-jeddah86.webp" alt="مظلة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mawaqif-tayer-laser-fakhr-almamlaka-jeddah58.webp" alt="مظلة بتصميم ليزر كت — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-parking-shades-fakhr-almamlaka-jeddah102.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-pvc-garage-shutter-fakhr-almamlaka-jeddah108.webp" alt="مظلة سيارات PVC بوابات جراج — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayara-qaws-fakhr-almamlaka-jeddah87.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-accent-fakhr-almamlaka-jeddah80.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-black-fakhr-almamlaka-jeddah39.webp" alt="مظلة سيارات بتصميم مقوّس بلون أسود — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-fakhr-almamlaka-jeddah35.webp" alt="مظلة سيارات بتصميم مقوّس — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-fakhr-almamlaka-jeddah40.webp" alt="مظلة سيارات بتصميم مقوّس — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-fakhr-almamlaka-jeddah50.webp" alt="مظلة سيارات بتصميم مقوّس — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-laser-fakhr-almamlaka-jeddah29.webp" alt="مظلة سيارات بتصميم ليزر كت بتصميم مقوّس — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-arc-pvc-fakhr-almamlaka-jeddah30.webp" alt="مظلة سيارات بتصميم مقوّس PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-box-closed-fakhr-almamlaka-jeddah57.webp" alt="مظلة سيارات مغلقة الجوانب — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-box-sides-fakhr-almamlaka-jeddah51.webp" alt="مظلة سيارات مغلقة الجوانب — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-double-fakhr-almamlaka-jeddah44.webp" alt="مظلة سيارات مزدوجة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-double-pvc-fakhr-almamlaka-jeddah38.webp" alt="مظلة سيارات مزدوجة PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-fakhr-almamlaka-jeddah105.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-fakhr-almamlaka-jeddah83.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-fakhr-almamlaka-jeddah84.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-genesis-fakhr-almamlaka-jeddah32.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-haramiah-beig-fakhr-almamlaka-jeddah8.webp" alt="مظلة سيارات بلون بيج — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-haramya-mawaqif-fakhr-almamlaka-jeddah94.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-hramiah-fakhr-almamlaka-jeddah53.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-hramiah-inside-fakhr-almamlaka-jeddah43.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kaboli-fakhr-almamlaka-jeddah90.webp" alt="مظلة سيارات كبولي مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabolli-decor-fakhr-almamlaka-jeddah62.webp" alt="مظلة سيارات كبولي مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-arc-fakhr-almamlaka-jeddah19.webp" alt="مظلة سيارات كبولي مظلة سيارات بتصميم مقوّس — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-arc-fakhr-almamlaka-jeddah9.webp" alt="مظلة سيارات كبولي مظلة سيارات بتصميم مقوّس — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-black-fakhr-almamlaka-jeddah37.webp" alt="مظلة سيارات كبولي مظلة سيارات بلون أسود — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-double-fakhr-almamlaka-jeddah14.webp" alt="مظلة سيارات كبولي مظلة سيارات مزدوجة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-fakhr-almamlaka-jeddah15.webp" alt="مظلة سيارات كبولي مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-fakhr-almamlaka-jeddah33.webp" alt="مظلة سيارات كبولي مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-fakhr-almamlaka-jeddah42.webp" alt="مظلة سيارات كبولي مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-laser-fakhr-almamlaka-jeddah10.webp" alt="مظلة سيارات كبولي مظلة سيارات بتصميم ليزر كت — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-laser-fakhr-almamlaka-jeddah2.webp" alt="مظلة سيارات كبولي مظلة سيارات بتصميم ليزر كت — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-modern-fakhr-almamlaka-jeddah4.webp" alt="مظلة سيارات كبولي مظلة سيارات بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-pvc-fakhr-almamlaka-jeddah23.webp" alt="مظلة سيارات كبولي مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-kabooli-pvc26-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات كبولي مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-laser-fakhr-almamlaka-jeddah79.webp" alt="مظلة سيارات بتصميم ليزر كت — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-makhrooti-fakhr-almamlaka-jeddah73.webp" alt="مظلة سيارات بتصميم مخروطي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-makhrotia-fakhr-almamlaka-jeddah99.webp" alt="مظلة سيارات بتصميم مخروطي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-makhrouti-pvc-fakhr-almamlaka-jeddah109.webp" alt="مظلة سيارات بتصميم مخروطي PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-manzilia-fakhr-almamlaka-jeddah81.webp" alt="مظلة سيارات مظلة فلل ومنازل — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-maqsasi-fakhr-almamlaka-jeddah74.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-modern-khashab-fakhr-almamlaka-jeddah22.webp" alt="مظلة سيارات بتصميم عصري خشبية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-modern-pvc-fakhr-almamlaka-jeddah24.webp" alt="مظلة سيارات بتصميم عصري PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-momtada-fakhr-almamlaka-jeddah85.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-mualaqa-fakhr-almamlaka-jeddah72.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-mutaharikah-fakhr-almamlaka-jeddah1.webp" alt="مظلة سيارات متحركة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-arc-fakhr-almamlaka-jeddah18.webp" alt="مظلة سيارات بتصميم مقوّس PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-beige-fakhr-almamlaka-jeddah106.webp" alt="مظلة سيارات بلون بيج PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-fakhr-almamlaka-jeddah25.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-fakhr-almamlaka-jeddah46.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-fakhr-almamlaka-jeddah48.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-fakhr-almamlaka-jeddah7.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-haws-fakhr-almamlaka-jeddah17.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-hemaya-fakhr-almamlaka-jeddah77.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-koko-fakhr-almamlaka-jeddah16.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-koko-fakhr-almamlaka-jeddah27.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-pvc-mutahrika-fakhr-almamlaka-jeddah20.webp" alt="مظلة سيارات متحركة PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-qmash-abyad-fakhr-almamlaka-jeddah65.webp" alt="مظلة سيارات قماش — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-qmash-fakhr-almamlaka-jeddah89.webp" alt="مظلة سيارات قماش — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-shari-fakhr-almamlaka-jeddah59.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-shari-laser-fakhr-almamlaka-jeddah54.webp" alt="مظلة سيارات بتصميم ليزر كت — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-shiraia-fakhr-almamlaka-jeddah92.webp" alt="مظلة سيارات قماش — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-snb-pvc-fakhr-almamlaka-jeddah31.webp" alt="مظلة سيارات PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarat-villa-fakhr-almamlaka-jeddah47.webp" alt="مظلة سيارات مظلة فلل ومنازل — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-sayarht-fakhr-almamlaka-jeddah112.webp" alt="مظلة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-multi-bay-car-parking-shed-fabric-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات قماش — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-carport-awning-modern-saudi-design-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-carport-awning-modern-laser-cut-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بتصميم ليزر كت بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-car-parking-shed-facade-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بواجهة خارجية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-arched-car-parking-shades-beige-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات بتصميم مقوّس بلون بيج — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -422,21 +431,21 @@
     </div>
   </div>
   <div class="carousel-track" id="mz-3">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-corridor-fabric-stripes-shade-fakhr-almamlaka-jeddah14.webp" alt="مظلة ممر قماش — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-corridor-shade-installation.webp" alt="مظلة ممر — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-corridor-shade.webp" alt="مظلة ممر — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-luxury-corridor.webp" alt="مظلة ممر فاخرة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-galsat-pvc-mamar-fakhr-almamlaka-jeddah107.webp" alt="مظلة ممر PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hadaiq-pvc-makhrouti-fakhr-almamlaka-jeddah110.webp" alt="مظلة حديقة بتصميم مخروطي PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hosh-colorful-fakhr-almamlaka-jeddah71.webp" alt="مظلة حوش متعددة الألوان — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hosh-pvc-fakhr-almamlaka-jeddah34.webp" alt="مظلة حوش PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hosh-qmaish-fakhr-almamlaka-jeddah70.webp" alt="مظلة حوش قماش — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hush-pvc-fakhr-almamlaka-jeddah3.webp" alt="مظلة حوش PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-jalsah-hosh-fakhr-almamlaka-jeddah54.webp" alt="مظلة حوش — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-khazanat-meyah-fakhr-almamlaka-jeddah101.webp" alt="مظلة تغطية خزانات مياه — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mamar-hush-fakhr-almamlaka-jeddah5.webp" alt="مظلة حوش مظلة ممر — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-masharie-haramiah-fakhr-almamlaka-jeddah12.webp" alt="مظلة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-nterior-corridor-fabric-awning-beige-fakhr-almamlaka-jeddah.webp" alt="مظلة ممر بلون بيج قماش — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-corridor-fabric-stripes-shade-fakhr-almamlaka-jeddah14.webp" alt="مظلة ممر قماش — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-corridor-shade-installation.webp" alt="مظلة ممر — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-corridor-shade.webp" alt="مظلة ممر — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-luxury-corridor.webp" alt="مظلة ممر فاخرة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-galsat-pvc-mamar-fakhr-almamlaka-jeddah107.webp" alt="مظلة ممر PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hadaiq-pvc-makhrouti-fakhr-almamlaka-jeddah110.webp" alt="مظلة حديقة بتصميم مخروطي PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hosh-colorful-fakhr-almamlaka-jeddah71.webp" alt="مظلة حوش متعددة الألوان — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hosh-pvc-fakhr-almamlaka-jeddah34.webp" alt="مظلة حوش PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hosh-qmaish-fakhr-almamlaka-jeddah70.webp" alt="مظلة حوش قماش — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-hush-pvc-fakhr-almamlaka-jeddah3.webp" alt="مظلة حوش PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-jalsah-hosh-fakhr-almamlaka-jeddah54.webp" alt="مظلة حوش — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-khazanat-meyah-fakhr-almamlaka-jeddah101.webp" alt="مظلة تغطية خزانات مياه — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mamar-hush-fakhr-almamlaka-jeddah5.webp" alt="مظلة حوش مظلة ممر — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-masharie-haramiah-fakhr-almamlaka-jeddah12.webp" alt="مظلة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-nterior-corridor-fabric-awning-beige-fakhr-almamlaka-jeddah.webp" alt="مظلة ممر بلون بيج قماش — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -449,24 +458,24 @@
     </div>
   </div>
   <div class="carousel-track" id="mz-4">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-arch-design.webp" alt="مظلة بتصميم مقوّس — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-islamic-pattern.webp" alt="مظلة بنقشة إسلامية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-luxury-tent.webp" alt="مظلة فاخرة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-tensile-shade.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-tent-structure.webp" alt="مظلة فاخرة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-laser-square-fakhr-almamlaka-jeddah69.webp" alt="مظلة بتصميم ليزر كت — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-makhrotia-pvc-fakhr-almamlaka-jeddah98.webp" alt="مظلة بتصميم مخروطي PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mkhrotiah-decor-laser-fakhr-almamlaka-jeddah55.webp" alt="مظلة بتصميم ليزر كت — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-modern-luxury-tent-glass-fakhr-almamlaka-jeddah115.webp" alt="مظلة فاخرة بتصميم عصري — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shad-inshai-fakhr-almamlaka-jeddah82.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shad-inshai-sahat-fakhr-almamlaka-jeddah100.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shadd-inshai-fakhr-almamlaka-jeddah61.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shadd-inshai-muthalathat-fakhr-almamlaka-jeddah21.webp" alt="مظلة شد إنشائي بتصميم مثلثي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shadd-resort-fakhr-almamlaka-jeddah63.webp" alt="مظلة لمنتجع — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-tensile-membrane-structure-fakhr-almamlaka-jeddah114.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-decorative-lattice-panel-installation-fakhr-almamlaka-jeddah.webp" alt="مظلة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-conical-rooftop-shade-fakhr-almamlaka-jeddah.webp" alt="مظلة بتصميم مخروطي — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-conical-garden-tent-fakhr-almamlaka-jeddah.webp" alt="مظلة حديقة بتصميم مخروطي بتصميم حديقة — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-arch-design.webp" alt="مظلة بتصميم مقوّس — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-islamic-pattern.webp" alt="مظلة بنقشة إسلامية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-luxury-tent.webp" alt="مظلة فاخرة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-tensile-shade.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-tent-structure.webp" alt="مظلة فاخرة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-laser-square-fakhr-almamlaka-jeddah69.webp" alt="مظلة بتصميم ليزر كت — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-makhrotia-pvc-fakhr-almamlaka-jeddah98.webp" alt="مظلة بتصميم مخروطي PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mkhrotiah-decor-laser-fakhr-almamlaka-jeddah55.webp" alt="مظلة بتصميم ليزر كت — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-modern-luxury-tent-glass-fakhr-almamlaka-jeddah115.webp" alt="مظلة فاخرة بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shad-inshai-fakhr-almamlaka-jeddah82.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shad-inshai-sahat-fakhr-almamlaka-jeddah100.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shadd-inshai-fakhr-almamlaka-jeddah61.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shadd-inshai-muthalathat-fakhr-almamlaka-jeddah21.webp" alt="مظلة شد إنشائي بتصميم مثلثي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shadd-resort-fakhr-almamlaka-jeddah63.webp" alt="مظلة لمنتجع — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-tensile-membrane-structure-fakhr-almamlaka-jeddah114.webp" alt="مظلة شد إنشائي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-decorative-lattice-panel-installation-fakhr-almamlaka-jeddah.webp" alt="مظلة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-conical-rooftop-shade-fakhr-almamlaka-jeddah.webp" alt="مظلة بتصميم مخروطي — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-conical-garden-tent-fakhr-almamlaka-jeddah.webp" alt="مظلة حديقة بتصميم مخروطي بتصميم حديقة — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -479,9 +488,9 @@
     </div>
   </div>
   <div class="carousel-track" id="mz-5">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-roof-shade.webp" alt="مظلة أسقف معلقة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-rooftop-shed-structure-metal-beams-fakhr-almamlaka-jeddah1.webp" alt="مظلة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-rooftop-shed-structure-metal-beams-fakhr-almamlaka-jeddah.webp" alt="مظلة — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-roof-shade.webp" alt="مظلة أسقف معلقة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-rooftop-shed-structure-metal-beams-fakhr-almamlaka-jeddah1.webp" alt="مظلة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-rooftop-shed-structure-metal-beams-fakhr-almamlaka-jeddah.webp" alt="مظلة — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -494,22 +503,22 @@
     </div>
   </div>
   <div class="carousel-track" id="mz-6">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-ahwash-manazil-fakhr-almamlaka-jeddah76.webp" alt="مظلة حوش مظلة فلل ومنازل — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-asateh-mualaqa-fakhr-almamlaka-jeddah91.webp" alt="مظلة أسقف معلقة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-curved.webp" alt="مظلة منحنية — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-fixed-shade-canopy.webp" alt="مظلة ثابتة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-large.webp" alt="مظلة بمساحة كبيرة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah.webp" alt="مظلة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah75.webp" alt="مظلة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-kawafe-double-fakhr-almamlaka-jeddah67.webp" alt="مظلة مزدوجة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-masabih-shirai-fakhr-almamlaka-jeddah96.webp" alt="مظلة قماش — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mftoohah-pvc-fakhr-almamlaka-jeddah60.webp" alt="مظلة PVC — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mshby-khariji-fakhr-almamlaka-jeddah52.webp" alt="مظلة — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shade-structure-car-park-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalats-best-modern-fakhr-almamlaka-jeddah.webp" alt="مظلة بتصميم عصري — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalats-modern-fakhr-almamlaka-jeddah.webp" alt="مظلة بتصميم عصري — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalats-modern-fakhr-almamlaka-jeddah1.webp" alt="مظلة بتصميم عصري — فخر المملكة جدة" loading="lazy">
-      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-modern-garden-shade-structure-fakhr-almamlaka-jeddah.webp" alt="مظلة حديقة بتصميم عصري — فخر المملكة جدة" loading="lazy">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-ahwash-manazil-fakhr-almamlaka-jeddah76.webp" alt="مظلة حوش مظلة فلل ومنازل — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-asateh-mualaqa-fakhr-almamlaka-jeddah91.webp" alt="مظلة أسقف معلقة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-curved.webp" alt="مظلة منحنية — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-fixed-shade-canopy.webp" alt="مظلة ثابتة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah-large.webp" alt="مظلة بمساحة كبيرة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah.webp" alt="مظلة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-fakhr-almamlaka-jeddah75.webp" alt="مظلة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-kawafe-double-fakhr-almamlaka-jeddah67.webp" alt="مظلة مزدوجة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-masabih-shirai-fakhr-almamlaka-jeddah96.webp" alt="مظلة قماش — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mftoohah-pvc-fakhr-almamlaka-jeddah60.webp" alt="مظلة PVC — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-mshby-khariji-fakhr-almamlaka-jeddah52.webp" alt="مظلة — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-shade-structure-car-park-fakhr-almamlaka-jeddah.webp" alt="مظلة سيارات — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalats-best-modern-fakhr-almamlaka-jeddah.webp" alt="مظلة بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalats-modern-fakhr-almamlaka-jeddah.webp" alt="مظلة بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalats-modern-fakhr-almamlaka-jeddah1.webp" alt="مظلة بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
+      <img src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/mizalats/mizalat-modern-garden-shade-structure-fakhr-almamlaka-jeddah.webp" alt="مظلة حديقة بتصميم عصري — فخر المملكة جدة" loading="lazy" decoding="async">
   </div>
 </div>
   </div>
@@ -623,13 +632,13 @@
     <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17l-4.7-5.3 1.4-1.4 3.3 3.3V3h2ZM5 19h14v2H5v-2Z"/></svg>
     حفظ الصورة
   </a>
-  <img id="lightboxImg" src="" alt="">
+  <img id="lightboxImg" src="" alt="" decoding="async">
 </div>
 <footer>
   <div class="wrap">
 
     <div class="foot-top">
-      <img class="foot-logo" src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة">
+      <img class="foot-logo" src="https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة" decoding="async">
       <div class="foot-hours">
         <h3>مواعيد وساعات العمل الرسمية</h3>
         <p>من السبت إلى الخميس: من الساعة 7 صباحاً وحتى 11 مساءً<br>يوم الجمعة: من الساعة 1 مساءً وحتى الساعة 11 مساءً</p>
@@ -664,26 +673,32 @@
 
     <div class="foot-social">
       <span>تابعونا:</span>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+      <a class="social-ico" href="https://www.instagram.com/fakhralmamlaka_mizalat" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2c2.7 0 3 .01 4.1.06 1.1.05 1.84.22 2.5.47.67.26 1.24.6 1.8 1.16.56.56.9 1.13 1.16 1.8.25.66.42 1.4.47 2.5.05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.1-.22 1.84-.47 2.5a5 5 0 0 1-1.16 1.8 5 5 0 0 1-1.8 1.16c-.66.25-1.4.42-2.5.47-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.1-.05-1.84-.22-2.5-.47a5 5 0 0 1-1.8-1.16 5 5 0 0 1-1.16-1.8c-.25-.66-.42-1.4-.47-2.5C2 15 2 14.7 2 12s.01-3 .06-4.1c.05-1.1.22-1.84.47-2.5.26-.67.6-1.24 1.16-1.8A5 5 0 0 1 5.5 2.44c.66-.25 1.4-.42 2.5-.47C9 2.02 9.3 2 12 2Zm0 2c-2.66 0-2.97 0-4.02.06-.87.04-1.34.18-1.65.3-.42.16-.72.36-1.03.67-.31.31-.5.61-.67 1.03-.12.31-.26.78-.3 1.65C4.28 9.03 4.28 9.34 4.28 12s0 2.97.06 4.02c.04.87.18 1.34.3 1.65.16.42.36.72.67 1.03.31.31.61.5 1.03.67.31.12.78.26 1.65.3C9.03 19.72 9.34 19.72 12 19.72s2.97 0 4.02-.06c.87-.04 1.34-.18 1.65-.3.42-.16.72-.36 1.03-.67.31-.31.5-.61.67-1.03.12-.31.26-.78.3-1.65.06-1.05.06-1.36.06-4.02s0-2.97-.06-4.02c-.04-.87-.18-1.34-.3-1.65a2.7 2.7 0 0 0-.67-1.03 2.7 2.7 0 0 0-1.03-.67c-.31-.12-.78-.26-1.65-.3C14.97 4.28 14.66 4.28 12 4.28Zm0 3.4a4.32 4.32 0 1 1 0 8.64 4.32 4.32 0 0 1 0-8.64Zm0 2a2.32 2.32 0 1 0 0 4.64 2.32 2.32 0 0 0 0-4.64Zm4.5-3.62a1.01 1.01 0 1 1 0 2.02 1.01 1.01 0 0 1 0-2.02Z"/></svg>
       </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M14.5 2h2.9c.16 1.5 1.02 2.9 2.4 3.7.9.5 1.9.8 3 .8v3c-1.6 0-3.1-.4-4.4-1.2v6.9c0 3.6-2.9 6.5-6.5 6.5S5.4 18.8 5.4 15.2c0-3.4 2.6-6.2 5.9-6.5v3.1a3.4 3.4 0 0 0-2.9 3.4 3.4 3.4 0 0 0 6.8 0V2Z"/></svg>
-      </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="Snapchat" title="Snapchat">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.5c2.9 0 4.7 2.3 4.6 4.8-.03.9-.08 1.7 0 2.2.1.1.6.2 1 .1.5-.1 1-.5 1.4-.3.3.1.4.4.4.7 0 .5-.7.8-1.3 1.1-.3.1-.7.3-.7.5 0 .3.5 1.4 1.9 2.2.3.2.9.4.8.9-.1.6-1.2.7-1.9.9-.2 0-.3.2-.4.5-.1.4-.2.9-.6 1-.4.1-.9-.1-1.5-.1-.7-.1-1.4.1-2 .5-.7.5-1.4 1-2.7 1s-2-.5-2.7-1c-.6-.4-1.3-.6-2-.5-.6 0-1.1.2-1.5.1-.4-.1-.5-.6-.6-1-.1-.3-.2-.5-.4-.5-.7-.2-1.8-.3-1.9-.9-.1-.5.5-.7.8-.9 1.4-.8 1.9-1.9 1.9-2.2 0-.2-.4-.4-.7-.5-.6-.3-1.3-.6-1.3-1.1 0-.3.1-.6.4-.7.4-.2.9.2 1.4.3.4.1.9 0 1-.1.08-.5.03-1.3 0-2.2-.1-2.5 1.7-4.8 4.6-4.8Z"/></svg>
-      </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+      <a class="social-ico" href="https://www.facebook.com/share/1BmTTtRFxx/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M13.5 21v-7.9h2.6l.4-3.1h-3V8c0-.9.3-1.5 1.6-1.5H16.6V3.7c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.4H8v3.1h2.4V21h3.1Z"/></svg>
       </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+      <a class="social-ico" href="https://www.facebook.com/share/18rcNreh8p/" target="_blank" rel="noopener" aria-label="Facebook (الصفحة الثانية)" title="Facebook - صفحة ثانية">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M13.5 21v-7.9h2.6l.4-3.1h-3V8c0-.9.3-1.5 1.6-1.5H16.6V3.7c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.4H8v3.1h2.4V21h3.1Z"/></svg>
+      </a>
+      <a class="social-ico" href="https://x.com/Mizalats_fakhr" target="_blank" rel="noopener" aria-label="X" title="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a class="social-ico" href="https://www.threads.net/@fakhralmamlaka_mizalat" target="_blank" rel="noopener" aria-label="Threads" title="Threads">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.63 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.088-4.79-.313-.71-.884-1.3-1.62-1.756-.19 1.354-.617 2.44-1.28 3.234-.877 1.05-2.117 1.63-3.687 1.72-1.176.07-2.31-.202-3.19-.766-1.043-.667-1.658-1.7-1.732-2.907-.145-2.352 1.746-4.045 4.6-4.212.98-.057 1.9-.014 2.75.128-.114-.688-.347-1.234-.696-1.63-.484-.55-1.234-.83-2.23-.837h-.028c-.802 0-1.877.222-2.567 1.28l-1.734-1.19c.925-1.406 2.418-2.18 4.294-2.18h.038c3.08.02 4.913 1.9 5.098 5.183.106.045.21.09.313.14 1.44.7 2.494 1.767 3.05 3.084.773 1.831.843 4.81-1.618 7.152-1.856 1.766-4.107 2.567-7.293 2.588z"/></svg>
+      </a>
+      <a class="social-ico" href="https://www.tiktok.com/@fakhralmamlakamiz8" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M14.5 2h2.9c.16 1.5 1.02 2.9 2.4 3.7.9.5 1.9.8 3 .8v3c-1.6 0-3.1-.4-4.4-1.2v6.9c0 3.6-2.9 6.5-6.5 6.5S5.4 18.8 5.4 15.2c0-3.4 2.6-6.2 5.9-6.5v3.1a3.4 3.4 0 0 0-2.9 3.4 3.4 3.4 0 0 0 6.8 0V2Z"/></svg>
+      </a>
+      <a class="social-ico" href="https://youtube.com/@fakhralmamlaka-mizalatservices" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22 12s0-3.2-.4-4.7c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.5c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.7c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.5c.9-.2 1.6-.9 1.8-1.8.4-1.5.4-4.7.4-4.7ZM10 15V9l5.2 3-5.2 3Z"/></svg>
       </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2 0-2.9l1.4-5.9s-.4-.7-.4-1.8c0-1.7 1-3 2.2-3 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.2 1.8 2.2 2.2 0 3.7-2.8 3.7-6.1 0-2.5-1.7-4.4-4.8-4.4-3.5 0-5.7 2.6-5.7 5.5 0 1 .3 1.7.8 2.3.2.3.3.4.2.7-.1.2-.2.8-.3 1-.1.3-.3.4-.6.3-1.7-.7-2.5-2.6-2.5-4.7 0-3.5 3-7.7 8.8-7.7 4.7 0 7.8 3.4 7.8 7 0 4.8-2.7 8.4-6.6 8.4-1.3 0-2.6-.7-3-1.5l-.9 3.4c-.3 1.1-.9 2.2-1.4 3 1 .3 2.1.5 3.2.5 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
+      <a class="social-ico" href="https://www.snapchat.com/add/fakhralmamlaka" target="_blank" rel="noopener" aria-label="Snapchat" title="Snapchat">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.5c2.9 0 4.7 2.3 4.6 4.8-.03.9-.08 1.7 0 2.2.1.1.6.2 1 .1.5-.1 1-.5 1.4-.3.3.1.4.4.4.7 0 .5-.7.8-1.3 1.1-.3.1-.7.3-.7.5 0 .3.5 1.4 1.9 2.2.3.2.9.4.8.9-.1.6-1.2.7-1.9.9-.2 0-.3.2-.4.5-.1.4-.2.9-.6 1-.4.1-.9-.1-1.5-.1-.7-.1-1.4.1-2 .5-.7.5-1.4 1-2.7 1s-2-.5-2.7-1c-.6-.4-1.3-.6-2-.5-.6 0-1.1.2-1.5.1-.4-.1-.5-.6-.6-1-.1-.3-.2-.5-.4-.5-.7-.2-1.8-.3-1.9-.9-.1-.5.5-.7.8-.9 1.4-.8 1.9-1.9 1.9-2.2 0-.2-.4-.4-.7-.5-.6-.3-1.3-.6-1.3-1.1 0-.3.1-.6.4-.7.4-.2.9.2 1.4.3.4.1.9 0 1-.1.08-.5.03-1.3 0-2.2-.1-2.5 1.7-4.8 4.6-4.8Z"/></svg>
       </a>
-      <a class="social-ico" href="#" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9L18 8.1c.4-.4-.1-.6-.6-.2L7.3 14.4l-4.7-1.5c-1-.3-1-1 .2-1.5L20.6 3.6c.8-.3 1.6.2 1.3 1.7Z"/></svg>
+      <a class="social-ico" href="https://www.pinterest.com/fakhralmamlakamizalat" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2 0-2.9l1.4-5.9s-.4-.7-.4-1.8c0-1.7 1-3 2.2-3 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.2 1.8 2.2 2.2 0 3.7-2.8 3.7-6.1 0-2.5-1.7-4.4-4.8-4.4-3.5 0-5.7 2.6-5.7 5.5 0 1 .3 1.7.8 2.3.2.3.3.4.2.7-.1.2-.2.8-.3 1-.1.3-.3.4-.6.3-1.7-.7-2.5-2.6-2.5-4.7 0-3.5 3-7.7 8.8-7.7 4.7 0 7.8 3.4 7.8 7 0 4.8-2.7 8.4-6.6 8.4-1.3 0-2.6-.7-3-1.5l-.9 3.4c-.3 1.1-.9 2.2-1.4 3 1 .3 2.1.5 3.2.5 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
       </a>
     </div>
 
