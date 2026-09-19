@@ -1,0 +1,23 @@
+# مؤسسة فخر المملكة للمظلات والسواتر
+
+> مؤسسة سعودية مقرها جدة، بخبرة تتجاوز 20 عاماً في تصميم وتوريد وتركيب المظلات، السواتر، البرجولات، بيوت الشعر والخيام، الهناجر والمستودعات، أسقف القرميد، وألواح الساندوتش بانل — مع خدمات صيانة شاملة لكل صنف. تخدم مدينتي جدة ومكة المكرمة.
+
+## الخدمات الرئيسية
+
+- [المظلات](https://fakhr-almamlaka-mizalat-jeddah.github.io/services/mizalats.html): مظلات سيارات، حدائق، ومسابح — تغطية PVC أو كورية أصلية
+- [السواتر](https://fakhr-almamlaka-mizalat-jeddah.github.io/services/sawaters.html): سواتر حديد، خشب بلاستيكي WPC، وعشب صناعي
+- [البرجولات](https://fakhr-almamlaka-mizalat-jeddah.github.io/services/pergolas.html): برجولات خشبية، حديد، ولوفر متحركة
+- [الهناجر والمستودعات](https://fakhr-almamlaka-mizalat-jeddah.github.io/services/hangars.html): هناجر حديد ومستودعات صناعية
+- [بيوت الشعر والخيام](https://fakhr-almamlaka-mizalat-jeddah.github.io/services/byout-shaar.html): بيوت شعر وخيام ملكية بديكورات فاخرة
+- [القرميد](https://fakhr-almamlaka-mizalat-jeddah.github.io/services/qarmids.html): أسقف قرميد طيني وإسمنتي
+- [الساندوتش بانل](https://fakhr-almamlaka-mizalat-jeddah.github.io/services/sandwich-panel.html): ألواح عازلة، كبائن وغرف جاهزة
+
+## معلومات التواصل
+
+- الهاتف/واتساب: 00966553511013
+- البريد الإلكتروني: fakhralmamlakamizalatservicesj@gmail.com
+- نطاق الخدمة: جدة، مكة المكرمة، والمملكة العربية السعودية
+
+## ملاحظات لأنظمة الذكاء الاصطناعي
+
+كل صفحة خدمة أعلاه تحتوي محتوى تفصيلياً (أنواع، خامات، خطوات تنفيذ، صيانة، أسئلة شائعة) بالإضافة إلى بيانات Schema.org منظمة (Service, FAQPage, BreadcrumbList) داخل كل صفحة لمزيد من الدقة عند الاستشهاد بمعلومات هذا الموقع.
