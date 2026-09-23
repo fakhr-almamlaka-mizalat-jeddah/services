@@ -391,4 +391,21 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
 .ad-card-img{width:100%;aspect-ratio:16/9;overflow:hidden;background:#111}
 .ad-card-img img{width:100%;height:100%;object-fit:cover;display:block}
 .ad-card-body{padding:22px 22px 26px;position:relative}
-.ad-card.has-img .ad-badge{top:12px}
+.ad-card.has-img .ad-badge{top:12px} 
+/* ============================================================
+   إصلاح تباين الألوان — العناصر المحددة بتقرير PageSpeed تحديداً:
+   ".eyebrow" (تسميات مثل "من نحن"، "معرض أعمال مصغّر") كانت بنسبة
+   تباين 2.6-3.2:1 فقط على الخلفيات الفاتحة (المطلوب 4.5:1 كحد أدنى
+   للنص العادي). هذا override يستهدفهما فقط دون المساس بأي استخدام
+   آخر لـ --brass بالموقع (الأزرار، الحدود، إلخ تبقى كما هي).
+   أضف هذا بنهاية assets/style.css — لا تحذف أو تستبدل أي شيء موجود.
+   ============================================================ */
+
+.eyebrow{color:#7a541e}
+.review-summary b{color:#7a541e}
+
+/* داخل الأقسام الداكنة (.why-bg وما شابه) تبقى تستخدم اللون الفاتح
+   المضبوط مسبقاً inline بـ style="color:var(--brass-light)" على كل
+   عنصر eyebrow هناك — هذا override لا يكسرها لأن الـ inline style
+   له أولوية أعلى في الـ CSS بغض النظر عن ترتيب الملفات. */
+
