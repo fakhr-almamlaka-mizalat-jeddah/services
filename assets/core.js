@@ -13,11 +13,10 @@ function toggleRead(btn){
 }
 
 function scrollCarousel(trackId, dirRTL){
-  // dirRTL: 1 means "السابق" (previous, moves right-to-left content backward -> scrollLeft decreases in RTL... )
   const track = document.getElementById(trackId);
   if(!track) return;
   const firstCard = track.querySelector('img');
-  const gap = 14; // matches .carousel-track { gap:14px } in style.css
+  const gap = 14;
   const amount = firstCard ? (firstCard.getBoundingClientRect().width + gap) : track.clientWidth * 0.7;
   const delta = dirRTL === 1 ? -amount : amount;
   track.scrollBy({left: delta, behavior: 'smooth'});
@@ -38,7 +37,6 @@ document.addEventListener('click', function(e){
     menu.classList.remove('open');
   }
 });
-// close mobile menu after tapping a link, OR tapping anywhere outside it
 document.addEventListener('click', function(e){
   var nav = document.getElementById('navLinks');
   var btn = document.getElementById('menuToggle');
@@ -52,36 +50,108 @@ document.addEventListener('click', function(e){
   }
 });
 
-/* ===== lightbox (zoom + save/download) ===== */
+/* ============================================================
+   ===== lightbox (تكبير + تنقّل سابق/تالي + عدّاد + سحب) =====
+   ============================================================
+   - يبني قائمة الصور من نفس الحاوية (carousel-track / gallery-grid /
+     portfolio-item) عند الفتح، ويتنقّل بينها فقط — لا يخلط بين معارض
+     مختلفة بنفس الصفحة.
+   - يحمّل نسخة أكبر مخصصة للعرض الكبير فقط عند الفتح (مو مسبقاً
+     لكل الصور) — حتى لا يؤثر على سرعة التحميل الأول للصفحة.
+   - يقفل تمرير الخلفية أثناء الفتح، ويدعم أسهم لوحة المفاتيح
+     والسحب باللمس على الجوال، ويعرض عداد "3 / 20".
+   ============================================================ */
+
+var lbGalleryImgs = [];
+var lbIndex = -1;
+
+function lbBuildHiResUrl(thumbSrc){
+  // كل صورة مصغّرة مصدرها الأصلي محفوظ داخل معامل url= لرابط wsrv.nl
+  // نفسه — نستخرجه ونطلب نسخة أكبر مخصصة للعرض الكبير فقط.
+  try{
+    var m = thumbSrc.match(/[?&]url=([^&]+)/);
+    if(!m) return thumbSrc;
+    var orig = decodeURIComponent(m[1]);
+    return 'https://wsrv.nl/?url=' + encodeURIComponent(orig) + '&w=1400&h=1050&fit=inside&output=webp&q=85';
+  }catch(e){
+    return thumbSrc;
+  }
+}
+
+function lbFindGallery(clickedImg){
+  var container = clickedImg.closest('.carousel-track, .gallery-grid, .portfolio-grid');
+  if(container){
+    return Array.prototype.slice.call(container.querySelectorAll('img'));
+  }
+  return [clickedImg];
+}
+
+function lbOpen(clickedImg){
+  lbGalleryImgs = lbFindGallery(clickedImg);
+  lbIndex = lbGalleryImgs.indexOf(clickedImg);
+  if(lbIndex === -1) lbIndex = 0;
+  lbRender();
+
+  var lb = document.getElementById('lightbox');
+  if(lb){
+    lb.classList.add('open');
+    document.body.classList.add('lb-scroll-lock');
+  }
+}
+
+function lbRender(){
+  var img = lbGalleryImgs[lbIndex];
+  if(!img) return;
+  var lbImg = document.getElementById('lightboxImg');
+  var lbDl = document.getElementById('lightboxDownload');
+  var counter = document.getElementById('lightboxCounter');
+  var prevBtn = document.getElementById('lightboxPrev');
+  var nextBtn = document.getElementById('lightboxNext');
+
+  if(lbImg){
+    lbImg.src = lbBuildHiResUrl(img.src);
+    lbImg.alt = img.alt;
+  }
+  if(lbDl){
+    lbDl.href = img.src;
+    var fname = (img.alt || 'fakhr-almamlaka').replace(/[^a-zA-Z0-9\u0600-\u06FF]+/g,'-') + '.webp';
+    lbDl.setAttribute('download', fname);
+  }
+  if(counter){
+    var multi = lbGalleryImgs.length > 1;
+    counter.textContent = multi ? (lbIndex+1) + ' / ' + lbGalleryImgs.length : '';
+    counter.style.display = multi ? '' : 'none';
+  }
+  var showNav = lbGalleryImgs.length > 1;
+  if(prevBtn) prevBtn.style.display = showNav ? '' : 'none';
+  if(nextBtn) nextBtn.style.display = showNav ? '' : 'none';
+}
+
+function lightboxStep(e, dir){
+  if(e) e.stopPropagation();
+  if(!lbGalleryImgs.length) return;
+  lbIndex = (lbIndex + dir + lbGalleryImgs.length) % lbGalleryImgs.length;
+  lbRender();
+}
+
 document.addEventListener('click', function(e){
   var img = e.target.closest('.carousel-track img, .gallery-grid img, .portfolio-item img');
-  if(img){
-    var lb = document.getElementById('lightbox');
-    var lbImg = document.getElementById('lightboxImg');
-    var lbDl = document.getElementById('lightboxDownload');
-    if(lb && lbImg){
-      lbImg.src = img.src;
-      lbImg.alt = img.alt;
-      if(lbDl){
-        lbDl.href = img.src;
-        var fname = img.src.split('/').pop().split('?')[0] || 'fakhr-almamlaka.webp';
-        lbDl.setAttribute('download', fname);
-      }
-      lb.classList.add('open');
-    }
-  }
+  if(img) lbOpen(img);
 });
+
 function closeLightbox(e){
   if(e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')){
     document.getElementById('lightbox').classList.remove('open');
+    document.body.classList.remove('lb-scroll-lock');
   }
 }
+
 function downloadLightboxImage(e){
   e.preventDefault();
   var lbImg = document.getElementById('lightboxImg');
   var lbDl = document.getElementById('lightboxDownload');
   if(!lbImg || !lbImg.src) return;
-  var fname = lbImg.src.split('/').pop().split('?')[0] || 'fakhr-almamlaka.webp';
+  var fname = (lbDl && lbDl.getAttribute('download')) || 'fakhr-almamlaka.webp';
   fetch(lbImg.src)
     .then(function(res){ return res.blob(); })
     .then(function(blob){
@@ -95,20 +165,47 @@ function downloadLightboxImage(e){
       URL.revokeObjectURL(url);
     })
     .catch(function(){
-      // fallback: open the image directly if fetch/CORS fails
       window.open(lbImg.src, '_blank');
     });
 }
+
 document.addEventListener('keydown', function(e){
+  var lb = document.getElementById('lightbox');
+  if(!lb || !lb.classList.contains('open')) return;
   if(e.key === 'Escape'){
-    var lb = document.getElementById('lightbox');
-    if(lb) lb.classList.remove('open');
+    lb.classList.remove('open');
+    document.body.classList.remove('lb-scroll-lock');
+  } else if(e.key === 'ArrowLeft'){
+    // بصفحة RTL: يسار = العنصر التالي بترتيب العرض المرئي
+    lightboxStep(null, 1);
+  } else if(e.key === 'ArrowRight'){
+    lightboxStep(null, -1);
   }
 });
 
-/* ===== share customer location (service-area business — no fixed
-   office to "share", so this works the more useful direction: let
-   the visitor share THEIR location so we can plan a site visit) ===== */
+/* سحب باللمس للتنقل بين الصور بالجوال */
+(function(){
+  var touchStartX = null;
+  var lbEl = null;
+  document.addEventListener('touchstart', function(e){
+    var lb = document.getElementById('lightbox');
+    if(!lb || !lb.classList.contains('open')) return;
+    lbEl = lb;
+    touchStartX = e.touches[0].clientX;
+  }, {passive:true});
+  document.addEventListener('touchend', function(e){
+    if(touchStartX === null || !lbEl) return;
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if(Math.abs(dx) > 40){
+      // سحب لليمين = صورة سابقة، لليسار = تالية (متوافق مع اتجاه RTL)
+      lightboxStep(null, dx > 0 ? -1 : 1);
+    }
+    touchStartX = null;
+    lbEl = null;
+  }, {passive:true});
+})();
+
+/* ===== share customer location ===== */
 function shareMyLocation(e){
   var btn = e.currentTarget || e.target.closest('button');
   if(!navigator.geolocation){
@@ -130,10 +227,6 @@ function shareMyLocation(e){
   }, function(err){
     btn.disabled = false;
     btn.innerHTML = original;
-    // GEOLOCATION_POSITION_ERROR codes: 1=PERMISSION_DENIED, 2=POSITION_UNAVAILABLE, 3=TIMEOUT
-    // Blaming "GPS disabled" for all three was misleading — most real-world
-    // failures on a first request are actually code 3 (took too long to get
-    // a fix, especially indoors), not code 1.
     var messages = {
       1: 'تم رفض إذن الوصول للموقع من إعدادات المتصفح. من إعدادات الموقع بالمتصفح فعّل صلاحية "الموقع الجغرافي" لهذا الموقع، أو أرسل العنوان نصياً عبر واتساب مباشرة.',
       2: 'تعذر الحصول على إحداثيات دقيقة حالياً (قد يكون بسبب ضعف الإشارة داخل مبنى). حاول قرب نافذة أو بمكان مفتوح، أو أرسل العنوان نصياً عبر واتساب مباشرة.',
@@ -143,10 +236,7 @@ function shareMyLocation(e){
   }, { timeout: 20000, maximumAge: 60000, enableHighAccuracy: false });
 }
 
-/* ===== share the website itself (distinct from shareMyLocation above) =====
-   Uses the native Web Share API where available (most mobile browsers),
-   with a copy-link + WhatsApp fallback for desktop browsers that don't
-   support navigator.share. */
+/* ===== share the website itself ===== */
 function shareWebsite(e){
   var btn = e.currentTarget || e.target.closest('button');
   var url = window.location.href;
@@ -154,11 +244,10 @@ function shareWebsite(e){
   var text = 'أفضل مؤسسة لتركيب المظلات والسواتر بجدة — فخر المملكة';
 
   if (navigator.share) {
-    navigator.share({ title: title, text: text, url: url }).catch(function(){ /* user cancelled — no-op */ });
+    navigator.share({ title: title, text: text, url: url }).catch(function(){});
     return;
   }
 
-  // fallback: copy link, then offer a WhatsApp share as a bonus
   var original = btn.innerHTML;
   var restore = function(){ setTimeout(function(){ btn.innerHTML = original; }, 2000); };
 
