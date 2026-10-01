@@ -1,0 +1,34 @@
+/* ============================================================
+   إضافات دفعة تحسين الأداء — أضف هذا بنهاية assets/style.css
+   بدون حذف أي شيء موجود.
+   ============================================================ */
+
+/* --- إصلاح CLS (كان 0.184): قفزة .hero-stats عند تبديل الخط --- */
+.hero-stats .stat b{min-height:2.6rem;display:block;line-height:1.1}
+
+/* --- أزرار التنقل داخل الـ Lightbox (سابق/تالي) --- */
+.lightbox-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:52px;height:52px;border-radius:50%;border:none;
+  background:rgba(255,255,255,.12);color:#f0ebe0;font-size:1.6rem;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .15s ease;z-index:5;
+}
+.lightbox-nav:hover{background:rgba(255,255,255,.25)}
+.lightbox-prev{right:16px}
+.lightbox-next{left:16px}
+@media(max-width:640px){
+  .lightbox-nav{width:44px;height:44px;font-size:1.3rem}
+  .lightbox-prev{right:8px}
+  .lightbox-next{left:8px}
+}
+
+/* --- عدّاد "٣ / ٢٠" أعلى المنتصف --- */
+.lightbox-counter{
+  position:absolute;top:18px;left:50%;transform:translateX(-50%);
+  background:rgba(0,0,0,.5);color:#f0ebe0;font-size:.82rem;
+  padding:5px 14px;border-radius:20px;z-index:5;
+}
+
+/* --- منع تمرير الخلفية أثناء فتح الصورة المكبّرة --- */
+body.lb-scroll-lock{overflow:hidden}
