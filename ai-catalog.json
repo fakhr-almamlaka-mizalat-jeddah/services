@@ -1,0 +1,16 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "مؤسسة فخر المملكة للمظلات والسواتر",
+    "identifier": "mizalat-jeddah-fakhr-almamlaka.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:ai:mizalat-jeddah-fakhr-almamlaka.com:knowledge:llms",
+      "displayName": "دليل موقع فخر المملكة (llms.txt)",
+      "type": "text/markdown",
+      "url": "https://mizalat-jeddah-fakhr-almamlaka.com/llms.txt",
+      "description": "فهرس موجز بخدمات مؤسسة فخر المملكة للمظلات والسواتر السبع، بيانات التواصل، ونطاق الخدمة في جدة ومكة المكرمة."
+    }
+  ]
+}
