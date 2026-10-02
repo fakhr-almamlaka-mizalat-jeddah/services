@@ -44,8 +44,8 @@
 </div>
 
 <script>
-// ⚠ نفس رابط reviews.js و ads-board.js بالضبط — عدّله بعد نشر الـ Worker
-var API_BASE = "https://mizalat-fakhr-almamlaka-jeddah-services-api.alsiyadamazallatjeddah.workers.dev";
+// تم تحديث رابط النطاق الجديد هنا
+var API_BASE = "https://mizalat-jeddah-fakhr-almamlaka.com";
 
 var loginCard = document.getElementById('loginCard');
 var editorCard = document.getElementById('editorCard');
@@ -226,7 +226,7 @@ function saveItems(){
     loadItems();
   })
   .catch(function(err){
-    status.textContent = 'تعذر الاتصال بالخادم أثناء الحفظ.';
+    status.textContent = 'تعذر الاتصال الخادم أثناء الحفظ.';
     status.className = 'admin-status err';
     console.warn(err);
   });
