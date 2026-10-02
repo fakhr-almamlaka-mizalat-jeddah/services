@@ -7,7 +7,7 @@
 // الجلب كل 60 ثانية تلقائياً بدل التحديث الفوري. فرق عملي بسيط
 // جداً لموقع إعلانات/باقات (مو محادثة لحظية)، وتبسيط حقيقي بالمقابل.
 // ============================================================
-var ADS_API_BASE = "https://mizalat-fakhr-almamlaka-jeddah-services-api.alsiyadamazallatjeddah.workers.dev";
+var ADS_API_BASE = "https://fakhr-almamlaka-api.alsiyadamazallatjeddah.workers.dev";
 
 function renderAdsBoard(items){
     var wrap = document.getElementById('adsBoardList');
