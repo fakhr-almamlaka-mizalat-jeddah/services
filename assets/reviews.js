@@ -2,9 +2,8 @@
    يستبدل Firebase بالكامل. كل زائر يقدر يقرأ وينشر تعليقاً؛ الحذف حصراً
    لمن يملك جلسة دخول صالحة (توكن من admin.html محفوظ بـ localStorage). */
 
-// ⚠ عدّل هذا السطر بعد نشر الـ Worker فعلياً (خطوة 5 بدليل النشر) —
-// ضع رابط الـ Worker الحقيقي اللي يعطيك إياه Cloudflare بعد "wrangler deploy".
-var API_BASE = "https://mizalat-fakhr-almamlaka-jeddah-services-api.alsiyadamazallatjeddah.workers.dev";
+// تم تحديث الرابط بالرابط الصحيح والنهائي للـ Worker الخاص بك
+var API_BASE = "https://fakhr-almlaka-api.alsiyadamazallatjeddah.workers.dev";
 
 var currentRating = 0;
 var reviewsAdminMode = false;
