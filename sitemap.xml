@@ -99,3 +99,93 @@
     </url>
 
 </urlset>
+
+
+
+
+        
+    <!-- المظلات -->
+    <url>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/mizalats</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/mizalats-best-modern-fakhr-almamlaka-jeddah2.webp</image:loc>
+            <image:title>توريد وتركيب وصيانة مظلات سيارات وحدائق ومسابح وجلسات خارجية بجدة ومكة</image:title>
+        </image:image>
+    </url>
+
+    <!-- السواتر -->
+    <url>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/sawaters</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/sawaters-building-wall-fakhr-almamlaka-jeddah.webp</image:loc>
+            <image:title>توريد وتركيب وصيانة سواتر حديد وخشب وقماش وجدران بجدة ومكة</image:title>
+        </image:image>
+    </url>
+
+    <!-- البرجولات -->
+    <url>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/pergolas</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp</image:loc>
+            <image:title>توريد وتركيب وصيانة برجولات خشبية وحديد للحدائق والأسطح بجدة</image:title>
+        </image:image>
+    </url>
+
+    <!-- الهناجر والمستودعات -->
+    <url>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/hangars</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/hangars-warehouses-jeddah-steel-buildings-fakhr-almamlaka.webp</image:loc>
+            <image:title>توريد وبناء وتركيب وصيانة هناجر ومستودعات حديد وشبوك بجدة ومكة</image:title>
+        </image:image>
+    </url>
+
+    <!-- بيوت الشعر -->
+    <url>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/byout-shaar</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/main/bait-shaar-royal-arabic-tents-jeddah-fakhr-almamlaka.webp</image:loc>
+            <image:title>توريد وتجهيز وتركيب وصيانة بيوت شعر وخيام ملكية بجدة ومكة</image:title>
+        </image:image>
+    </url>
+
+    <!-- القرميد -->
+    <url>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/qarmids</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/qarmids/qarmid-tarkib-red-clay-roof-clay-merracotta-tiles-install-fakhr-almamlaka-jeddah.webp</image:loc>
+            <image:title>توريد وتركيب وصيانة قرميد أسقف الفلل والواجهات بجدة ومكة</image:title>
+        </image:image>
+    </url>
+
+    <!-- الساندوتش بانل -->
+    <url>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/sandwich-panel</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+        <image:image>
+            <image:loc>https://cdn.jsdelivr.net/gh/fakhr-almamlaka-mizalat-jeddah/services@main/images/sandwich-panel/sandwich-panel-modern-glass-lounge-fakhr-almamlaka-jeddah.webp</image:loc>
+            <image:title>توريد وتركيب وصيانة غرف ساندوتش بانل وملاحق جاهزة بجدة ومكة</image:title>
+        </image:image>
+    </url>
+
+</urlset>
