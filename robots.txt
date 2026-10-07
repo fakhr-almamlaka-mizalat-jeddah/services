@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /admin.html
 
-Sitemap: https://www.mizalat-jeddah-fakhr-almamlaka.com/sitemap.xml
+Sitemap: https://mizalat-jeddah-fakhr-almamlaka.com/sitemap.xml
