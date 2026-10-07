@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-    <!-- الصفحة الرئيسية - توريد وتركيب وصيانة كافة الخدمات بجدة ومكة -->
+    <!-- الصفحة الرئيسية -->
     <url>
-        <loc>https://www.mizalat-jeddah-fakhr-almamlaka.com/</loc>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -14,9 +14,9 @@
         </image:image>
     </url>
 
-    <!-- توريد وتركيب وصيانة المظلات -->
+    <!-- المظلات -->
     <url>
-        <loc>https://www.mizalat-jeddah-fakhr-almamlaka.com/mizalats.html</loc>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/mizalats</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
@@ -26,9 +26,9 @@
         </image:image>
     </url>
 
-    <!-- توريد وتركيب وصيانة السواتر -->
+    <!-- السواتر -->
     <url>
-        <loc>https://www.mizalat-jeddah-fakhr-almamlaka.com/sawaters.html</loc>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/sawaters</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
@@ -38,9 +38,9 @@
         </image:image>
     </url>
 
-    <!-- توريد وتركيب وصيانة البرجولات -->
+    <!-- البرجولات -->
     <url>
-        <loc>https://www.mizalat-jeddah-fakhr-almamlaka.com/pergolas.html</loc>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/pergolas</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -50,9 +50,9 @@
         </image:image>
     </url>
 
-    <!-- توريد وبناء وتركيب وصيانة الهناجر والمستودعات -->
+    <!-- الهناجر والمستودعات -->
     <url>
-        <loc>https://www.mizalat-jeddah-fakhr-almamlaka.com/hangars.html</loc>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/hangars</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -62,9 +62,9 @@
         </image:image>
     </url>
 
-    <!-- توريد وتجهيز وتركيب وصيانة بيوت الشعر -->
+    <!-- بيوت الشعر -->
     <url>
-        <loc>https://www.mizalat-jeddah-fakhr-almamlaka.com/byout-shaar.html</loc>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/byout-shaar</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -74,9 +74,9 @@
         </image:image>
     </url>
 
-    <!-- توريد وتركيب وصيانة القرميد -->
+    <!-- القرميد -->
     <url>
-        <loc>https://www.mizalat-jeddah-fakhr-almamlaka.com/qarmids.html</loc>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/qarmids</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -86,9 +86,9 @@
         </image:image>
     </url>
 
-    <!-- توريد وتركيب وصيانة الساندوتش بانل -->
+    <!-- الساندوتش بانل -->
     <url>
-        <loc>https://www.mizalat-jeddah-fakhr-almamlaka.com/sandwich-panel.html</loc>
+        <loc>https://mizalat-jeddah-fakhr-almamlaka.com/sandwich-panel</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
