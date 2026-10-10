@@ -1,34 +1,29 @@
 /* ============================================================
-   إضافات دفعة تحسين الأداء — أضف هذا بنهاية assets/style.css
-   بدون حذف أي شيء موجود.
+   أضف هذا بنهاية assets/style.css — دفعة إضافية (نص الإعلان المتحرك)
    ============================================================ */
 
-/* --- إصلاح CLS (كان 0.184): قفزة .hero-stats عند تبديل الخط --- */
-.hero-stats .stat b{min-height:2.6rem;display:block;line-height:1.1}
-
-/* --- أزرار التنقل داخل الـ Lightbox (سابق/تالي) --- */
-.lightbox-nav{
-  position:absolute;top:50%;transform:translateY(-50%);
-  width:52px;height:52px;border-radius:50%;border:none;
-  background:rgba(255,255,255,.12);color:#f0ebe0;font-size:1.6rem;
-  cursor:pointer;display:flex;align-items:center;justify-content:center;
-  transition:background .15s ease;z-index:5;
+/* --- نص الإعلان المتحرك أفقياً (الصورة إن وُجدت تبقى ثابتة أعلى البطاقة) --- */
+.ad-marquee{
+  overflow:hidden;white-space:nowrap;width:100%;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
 }
-.lightbox-nav:hover{background:rgba(255,255,255,.25)}
-.lightbox-prev{right:16px}
-.lightbox-next{left:16px}
-@media(max-width:640px){
-  .lightbox-nav{width:44px;height:44px;font-size:1.3rem}
-  .lightbox-prev{right:8px}
-  .lightbox-next{left:8px}
+.ad-marquee-track{
+  display:inline-flex;gap:60px;animation:adMarquee 14s linear infinite;
 }
-
-/* --- عدّاد "٣ / ٢٠" أعلى المنتصف --- */
-.lightbox-counter{
-  position:absolute;top:18px;left:50%;transform:translateX(-50%);
-  background:rgba(0,0,0,.5);color:#f0ebe0;font-size:.82rem;
-  padding:5px 14px;border-radius:20px;z-index:5;
+.ad-marquee-track span{
+  display:inline-block;font-family:var(--serif);font-weight:700;font-size:1.15rem;
+  color:var(--brass-light);white-space:nowrap;
 }
-
-/* --- منع تمرير الخلفية أثناء فتح الصورة المكبّرة --- */
-body.lb-scroll-lock{overflow:hidden}
+@keyframes adMarquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+/* السحب/التمرير باليد على الجوال يوقف الحركة مؤقتاً لراحة القراءة */
+.ad-marquee:hover .ad-marquee-track,
+.ad-marquee:active .ad-marquee-track{
+  animation-play-state:paused;
+}
+@media(prefers-reduced-motion:reduce){
+  .ad-marquee-track{animation:none}
+}
