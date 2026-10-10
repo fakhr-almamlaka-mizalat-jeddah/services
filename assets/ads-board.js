@@ -1,17 +1,14 @@
 // ============================================================
 // لوحة الإعلانات والباقات — تُعرض للجميع، تُدار فقط من admin.html
-// يعتمد هذا الملف على Cloudflare Worker API (استبدل Firebase بالكامل).
-//
-// ملاحظة صادقة: D1/Workers ما عندها تحديث لحظي مثل Firestore
-// (onSnapshot) — هذا الملف يجلب البيانات عند تحميل الصفحة، ويعيد
-// الجلب كل 60 ثانية تلقائياً بدل التحديث الفوري. فرق عملي بسيط
-// جداً لموقع إعلانات/باقات (مو محادثة لحظية)، وتبسيط حقيقي بالمقابل.
+// النص يتحرك أفقياً تلقائياً (ماركيه احترافي)، والصورة (إن وُجدت)
+// تبقى ثابتة بأعلى البطاقة.
 // ============================================================
+
 var ADS_API_BASE = "https://fakhr-almamlaka-api.alsiyadamazallatjeddah.workers.dev";
 
 function renderAdsBoard(items){
-    var wrap = document.getElementById('adsBoardList');
-    var section = document.getElementById('adsBoardSection');
+  var wrap = document.getElementById('adsBoardList');
+  var section = document.getElementById('adsBoardSection');
   if(!wrap || !section) return;
 
   if(!items || !items.length){ section.style.display = 'none'; return; }
@@ -24,13 +21,15 @@ function renderAdsBoard(items){
         'loading="lazy" onerror="this.parentElement.style.display=\'none\'">' +
         '</div>';
     }
+    var marqueeText = [i.title, i.desc, i.price].filter(Boolean).join('  •  ');
     return '<div class="ad-card' + (imgHtml ? ' has-img' : '') + '">' +
       imgHtml +
       '<div class="ad-card-body">' +
       (i.badge ? '<span class="ad-badge">' + escapeAdText(i.badge) + '</span>' : '') +
-      '<h3>' + escapeAdText(i.title || '') + '</h3>' +
-      '<p>' + escapeAdText(i.desc || '') + '</p>' +
-      (i.price ? '<div class="ad-price">' + escapeAdText(i.price) + '</div>' : '') +
+      '<div class="ad-marquee"><div class="ad-marquee-track">' +
+        '<span>' + escapeAdText(marqueeText) + '</span>' +
+        '<span>' + escapeAdText(marqueeText) + '</span>' +
+      '</div></div>' +
       '</div>' +
       '</div>';
   }).join('');
@@ -46,7 +45,7 @@ function escapeAdAttr(str){
 }
 
 function loadAdsBoard(){
-fetch(ADS_API_BASE + '/api/ads')
+  fetch(ADS_API_BASE + '/api/ads')
     .then(function(res){ return res.json(); })
     .then(function(data){ renderAdsBoard(data.ads || []); })
     .catch(function(err){ console.warn('لوحة الإعلانات: فشل الجلب —', err); });
@@ -54,5 +53,5 @@ fetch(ADS_API_BASE + '/api/ads')
 
 document.addEventListener('DOMContentLoaded', function(){
   loadAdsBoard();
-  setInterval(loadAdsBoard, 60000); // إعادة جلب كل دقيقة بدل التحديث اللحظي
+  setInterval(loadAdsBoard, 60000); // إعادة جلب تلقائي كل دقيقة
 });
