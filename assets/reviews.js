@@ -3,7 +3,7 @@
    لمن يملك جلسة دخول صالحة (توكن من admin.html محفوظ بـ localStorage). */
 
 // تم تحديث الرابط بالرابط الصحيح والنهائي للـ Worker الخاص بك
-var API_BASE = "https://fakhr-almlaka-api.alsiyadamazallatjeddah.workers.dev";
+var API_BASE = "https://fakhr-almamlaka-api.alsiyadamazallatjeddah.workers.dev";
 
 var currentRating = 0;
 var reviewsAdminMode = false;
