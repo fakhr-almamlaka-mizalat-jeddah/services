@@ -447,13 +447,15 @@
 </section>
 <script type="application/ld+json" id="aggregateRatingSchema"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function(){
+(function tryInitReviews(attemptsLeft){
   if (typeof initReviews === 'function') {
     initReviews('home', []);
+  } else if (attemptsLeft > 0) {
+    setTimeout(function(){ tryInitReviews(attemptsLeft - 1); }, 100);
   } else {
-    console.warn('initReviews غير معرّفة — تأكد أن assets/reviews.js تم تحميله بنجاح (تحقق من المسار إذا كنت تعاين الملف محلياً بدون مجلد assets بجانبه).');
+    console.warn('initReviews غير معرّفة بعد 5 ثوانٍ — تأكد أن assets/reviews.js تم تحميله بنجاح.');
   }
-});
+})(50);
 </script>
 
 <section id="faq">
