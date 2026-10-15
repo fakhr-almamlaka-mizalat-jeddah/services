@@ -13,10 +13,27 @@
 
 var ADS_API_BASE = "https://fakhr-almamlaka-api.alsiyadamazallatjeddah.workers.dev";
 
+// الـ API يرجع اسم الملف فقط (مثل bait-shaar-....webp) — نحوّله لمسار محلي نسبي
+// داخل images/main/ ليخدمه Cloudflare Pages مباشرة. أي رابط كامل أو مسار فيه / يُترك كما هو.
+function resolveAdImage(src){
+  src = String(src || '').trim();
+  if(!src) return '';
+  if(/^(https?:)?\/\//i.test(src) || src.charAt(0) === '/' || /^data:/i.test(src)) return src;
+  if(src.indexOf('/') !== -1) return src;
+  return 'images/main/' + encodeURIComponent(src).replace(/%2F/g, '/');
+}
+
+var lastAdsSignature = '';
+
 function renderAdsBoard(items){
   var wrap = document.getElementById('adsBoardList');
   var section = document.getElementById('adsBoardSection');
   if(!wrap || !section) return;
+
+  // لا نعيد بناء الـ DOM إذا لم تتغير البيانات (يمنع وميض الصور وإعادة تشغيل الماركيه كل دقيقة)
+  var signature = JSON.stringify(items || []);
+  if(signature === lastAdsSignature) return;
+  lastAdsSignature = signature;
 
   if(!items || !items.length){ section.style.display = 'none'; return; }
   section.style.display = '';
@@ -24,7 +41,7 @@ function renderAdsBoard(items){
     var imgHtml = '';
     if (i.image && i.image.trim()) {
       imgHtml = '<div class="ad-card-img">' +
-        '<img src="' + escapeAdAttr(i.image) + '" alt="' + escapeAdAttr(i.title || 'إعلان فخر المملكة') + '" ' +
+        '<img src="' + escapeAdAttr(resolveAdImage(i.image)) + '" alt="' + escapeAdAttr(i.title || 'إعلان فخر المملكة') + '" ' +
         'loading="lazy" onerror="this.parentElement.style.display=\'none\'">' +
         '</div>';
     }
@@ -53,7 +70,10 @@ function escapeAdAttr(str){
 
 function loadAdsBoard(){
   fetch(ADS_API_BASE + '/api/ads')
-    .then(function(res){ return res.json(); })
+    .then(function(res){
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
     .then(function(data){ renderAdsBoard(data.ads || []); })
     .catch(function(err){ console.warn('لوحة الإعلانات: فشل الجلب —', err); });
 }
