@@ -66,16 +66,8 @@ var lbGalleryImgs = [];
 var lbIndex = -1;
 
 function lbBuildHiResUrl(thumbSrc){
-  // كل صورة مصغّرة مصدرها الأصلي محفوظ داخل معامل url= لرابط wsrv.nl
-  // نفسه — نستخرجه ونطلب نسخة أكبر مخصصة للعرض الكبير فقط.
-  try{
-    var m = thumbSrc.match(/[?&]url=([^&]+)/);
-    if(!m) return thumbSrc;
-    var orig = decodeURIComponent(m[1]);
-    return 'https://wsrv.nl/?url=' + encodeURIComponent(orig) + '&w=1400&h=1050&fit=inside&output=webp&q=85';
-  }catch(e){
-    return thumbSrc;
-  }
+  // الصور محلية الآن (يخدمها Cloudflare Pages CDN) فنعرض نفس الملف مباشرة
+  return thumbSrc;
 }
 
 function lbFindGallery(clickedImg){
