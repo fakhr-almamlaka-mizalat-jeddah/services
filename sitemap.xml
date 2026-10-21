@@ -5,7 +5,7 @@
     <!-- الصفحة الرئيسية -->
     <url>
         <loc>https://mizalat-jeddah-fakhr-almamlaka.com/</loc>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
@@ -37,7 +37,7 @@
     <!-- المظلات -->
     <url>
         <loc>https://mizalat-jeddah-fakhr-almamlaka.com/mizalats</loc>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
         <image:image>
@@ -57,7 +57,7 @@
     <!-- السواتر -->
     <url>
         <loc>https://mizalat-jeddah-fakhr-almamlaka.com/sawaters</loc>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
         <image:image>
@@ -77,7 +77,7 @@
     <!-- البرجولات -->
     <url>
         <loc>https://mizalat-jeddah-fakhr-almamlaka.com/pergolas</loc>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
         <image:image>
@@ -97,7 +97,7 @@
     <!-- الهناجر والمستودعات -->
     <url>
         <loc>https://mizalat-jeddah-fakhr-almamlaka.com/hangars</loc>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
         <image:image>
@@ -113,7 +113,7 @@
     <!-- بيوت الشعر -->
     <url>
         <loc>https://mizalat-jeddah-fakhr-almamlaka.com/byout-shaar</loc>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
         <image:image>
@@ -129,7 +129,7 @@
     <!-- القرميد -->
     <url>
         <loc>https://mizalat-jeddah-fakhr-almamlaka.com/qarmids</loc>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
         <image:image>
@@ -141,7 +141,7 @@
     <!-- الساندوتش بانل -->
     <url>
         <loc>https://mizalat-jeddah-fakhr-almamlaka.com/sandwich-panel</loc>
-        <lastmod>2026-10-15</lastmod>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
         <image:image>

@@ -21,9 +21,8 @@
 <link rel="preconnect" href="https://fakhr-almamlaka-api.alsiyadamazallatjeddah.workers.dev" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;700&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;700&display=optional"></noscript>
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp">
 <script type="application/ld+json">
@@ -135,19 +134,19 @@
 </script>
 <!-- Google Analytics (GA4) — محمّل بشكل مؤجل (async) بلا تأثير على سرعة الصفحة -->
 <!-- ⚠️ استبدل G-W6XRHFTNC2 برقم القياس الحقيقي من حساب Google Analytics عندك -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W6XRHFTNC2"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W6XRHFTNC2');
+/* Google Analytics: يُحمَّل بعد أول تفاعل للزائر أو بعد 4 ثوانٍ — لا يزاحم تحميل الصفحة */
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-W6XRHFTNC2');
+(function(){var d=0;function l(){if(d)return;d=1;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-W6XRHFTNC2';document.head.appendChild(s)}
+['pointerdown','keydown','scroll','touchstart'].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});setTimeout(l,4000)})();
 </script>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <img src="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر في جدة والمنطقة الغربية" decoding="async" width="500" height="375">
+      <img src="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" srcset="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1-200.webp 200w, images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp 1536w" sizes="100px" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر في جدة والمنطقة الغربية" decoding="async" width="500" height="375">
       <span>فخر المملكة</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" onclick="toggleMobileMenu()">
@@ -177,7 +176,7 @@
 </header>
 <section class="hero">
   <div class="hero-bg-layer">
-    <img src="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp" alt="برجولة بتصميم عصري خشبية بمدينة جدة" fetchpriority="high" decoding="async" width="1600" height="900">
+    <img src="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp" srcset="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1-828.webp 828w, images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp 1057w" sizes="100vw" alt="برجولة بتصميم عصري خشبية بمدينة جدة" fetchpriority="high" decoding="async" width="1600" height="900">
     <img src="images/pergolas/pergola-modern-louvered-fakhr-almamlaka-jeddah49.webp" alt="برجولة بلون أحمر بتصميم عصري لوفر في جدة" loading="lazy" decoding="async" width="1600" height="900">
     <img src="images/main/pergola-khashabia-fakhr-almamlaka-jeddah4.webp" alt="برجولة خشبية فخر المملكة بمدينة جدة" loading="lazy" decoding="async" width="1600" height="900">
   </div>
@@ -254,20 +253,20 @@
     </div>
   </div>
   <div class="carousel-track" id="pg-0">
-      <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-indoor-pool.webp" alt="برجولة فخر المملكة في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-galsat-hadaiq-tents-fakhr-almamlaka-jeddah14.webp" alt="برجولة حديقة بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-indoor-pool.webp" srcset="images/pergolas/pergola-fakhr-almamlaka-jeddah-indoor-pool-560.webp 560w, images/pergolas/pergola-fakhr-almamlaka-jeddah-indoor-pool.webp 1024w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فخر المملكة في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-galsat-hadaiq-tents-fakhr-almamlaka-jeddah14.webp" srcset="images/pergolas/pergola-galsat-hadaiq-tents-fakhr-almamlaka-jeddah14-560.webp 560w, images/pergolas/pergola-galsat-hadaiq-tents-fakhr-almamlaka-jeddah14.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حديقة بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-hadaeq-fakhr-almamlaka-jeddah18.webp" alt="برجولة حديقة بمدينة جدة - 2" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-hadaeq-modern-fakhr-almamlaka-jeddah13.webp" alt="برجولة حديقة بتصميم عصري في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-hadid-garden-fakhr-almamlaka-jeddah34.webp" alt="برجولة حديقة حديد بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-hadid-garden-fakhr-almamlaka-jeddah34.webp" srcset="images/pergolas/pergola-hadid-garden-fakhr-almamlaka-jeddah34-560.webp 560w, images/pergolas/pergola-hadid-garden-fakhr-almamlaka-jeddah34.webp 720w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حديقة حديد بجدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-iron-garden-structure-fakhr-almamlaka-jeddah21.webp" alt="برجولة حديقة حديد هيكل إنشائي في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-jalsat-hadaeq-fakhr-almamlaka-jeddah8.webp" alt="برجولة حديقة في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-luxury-garden-fakhr-almamlaka-jeddah-sofa27.webp" alt="برجولة حديقة فاخرة بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-luxury-modern-fakhr-almamlaka-jeddah24.webp" alt="برجولة فاخرة بتصميم عصري بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-luxury-outdoor-seating-shade-fakhr-almamlaka-jeddah.webp" alt="برجولة فاخرة في جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-luxury-villa-fakhr-almamlaka-jeddah39.webp" alt="برجولة فلل ومنازل فاخرة في جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-modern-iron-garden-fakhr-almamlaka-jeddah44.webp" alt="برجولة حديقة بتصميم عصري حديد بجدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-modern-pool-shade-fakhr-almamlaka-jeddah40.webp" alt="برجولة مسبح بتصميم عصري في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-swimming-pool-shade-fakhr-almamlaka-jeddah47.webp" alt="برجولة مسبح في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-luxury-garden-fakhr-almamlaka-jeddah-sofa27.webp" srcset="images/pergolas/pergola-luxury-garden-fakhr-almamlaka-jeddah-sofa27-560.webp 560w, images/pergolas/pergola-luxury-garden-fakhr-almamlaka-jeddah-sofa27.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حديقة فاخرة بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-luxury-modern-fakhr-almamlaka-jeddah24.webp" srcset="images/pergolas/pergola-luxury-modern-fakhr-almamlaka-jeddah24-560.webp 560w, images/pergolas/pergola-luxury-modern-fakhr-almamlaka-jeddah24.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فاخرة بتصميم عصري بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-luxury-outdoor-seating-shade-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergola-luxury-outdoor-seating-shade-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergola-luxury-outdoor-seating-shade-fakhr-almamlaka-jeddah.webp 735w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فاخرة في جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-luxury-villa-fakhr-almamlaka-jeddah39.webp" srcset="images/pergolas/pergola-luxury-villa-fakhr-almamlaka-jeddah39-560.webp 560w, images/pergolas/pergola-luxury-villa-fakhr-almamlaka-jeddah39.webp 780w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فلل ومنازل فاخرة في جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-modern-iron-garden-fakhr-almamlaka-jeddah44.webp" srcset="images/pergolas/pergola-modern-iron-garden-fakhr-almamlaka-jeddah44-560.webp 560w, images/pergolas/pergola-modern-iron-garden-fakhr-almamlaka-jeddah44.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حديقة بتصميم عصري حديد بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-modern-pool-shade-fakhr-almamlaka-jeddah40.webp" srcset="images/pergolas/pergola-modern-pool-shade-fakhr-almamlaka-jeddah40-560.webp 560w, images/pergolas/pergola-modern-pool-shade-fakhr-almamlaka-jeddah40.webp 2400w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة مسبح بتصميم عصري في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-swimming-pool-shade-fakhr-almamlaka-jeddah47.webp" srcset="images/pergolas/pergola-swimming-pool-shade-fakhr-almamlaka-jeddah47-560.webp 560w, images/pergolas/pergola-swimming-pool-shade-fakhr-almamlaka-jeddah47.webp 756w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة مسبح في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
 
@@ -280,19 +279,19 @@
     </div>
   </div>
   <div class="carousel-track" id="pg-1">
-      <img src="images/pergolas/pergola-corrugated-lexan-carport-shade-fakhr-almamlaka-jeddah52.webp" alt="برجولة سيارات لكسان بجدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-decorative-metal-fakhr-almamlaka-jeddah.webp" alt="برجولة حديد ديكورية بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-hadid-laser-fakhr-almamlaka-jeddah32.webp" alt="برجولة ليزر كت حديد بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-hadid-lexan-mamar-fakhr-almamlaka-jeddah33.webp" alt="برجولة ممر لكسان حديد بجدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-hadid-lexan-roof-fakhr-almamlaka-jeddah35.webp" alt="برجولة لكسان حديد بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-corrugated-lexan-carport-shade-fakhr-almamlaka-jeddah52.webp" srcset="images/pergolas/pergola-corrugated-lexan-carport-shade-fakhr-almamlaka-jeddah52-560.webp 560w, images/pergolas/pergola-corrugated-lexan-carport-shade-fakhr-almamlaka-jeddah52.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة سيارات لكسان بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-decorative-metal-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergola-decorative-metal-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergola-decorative-metal-fakhr-almamlaka-jeddah.webp 720w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حديد ديكورية بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-hadid-laser-fakhr-almamlaka-jeddah32.webp" srcset="images/pergolas/pergola-hadid-laser-fakhr-almamlaka-jeddah32-560.webp 560w, images/pergolas/pergola-hadid-laser-fakhr-almamlaka-jeddah32.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة ليزر كت حديد بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-hadid-lexan-mamar-fakhr-almamlaka-jeddah33.webp" srcset="images/pergolas/pergola-hadid-lexan-mamar-fakhr-almamlaka-jeddah33-560.webp 560w, images/pergolas/pergola-hadid-lexan-mamar-fakhr-almamlaka-jeddah33.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة ممر لكسان حديد بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-hadid-lexan-roof-fakhr-almamlaka-jeddah35.webp" srcset="images/pergolas/pergola-hadid-lexan-roof-fakhr-almamlaka-jeddah35-560.webp 560w, images/pergolas/pergola-hadid-lexan-roof-fakhr-almamlaka-jeddah35.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة لكسان حديد بجدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-hadid-satayer-fakhr-almamlaka-jeddah12.webp" alt="برجولة حديد بجدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-laser-cut-iron-screens-fakhr-almamlaka-jeddah48.webp" alt="برجولة ليزر كت حديد بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-laser-cut-iron-screens-fakhr-almamlaka-jeddah48.webp" srcset="images/pergolas/pergola-laser-cut-iron-screens-fakhr-almamlaka-jeddah48-560.webp 560w, images/pergolas/pergola-laser-cut-iron-screens-fakhr-almamlaka-jeddah48.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة ليزر كت حديد بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-laser-cut-lexan-fakhr-almamlaka-jeddah15.webp" alt="برجولة ليزر كت لكسان في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-lexan-fakhr-almamlaka-jeddah41.webp" alt="برجولة لكسان بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-lexan-fakhr-almamlaka-jeddah43.webp" alt="برجولة لكسان في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-under-construction-iron-fakhr-almamlaka-jeddah46.webp" alt="برجولة حديد تركيب بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-wood-pergola-polycarbonate-roof-fakhralmamlaka-jeddah.webp" alt="برجولة خشبية بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-rooftop-shed-structure-metal-beams-fakhr-almamlaka-jeddah.webp" alt="برجولة حديد أسقف هيكل إنشائي في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-lexan-fakhr-almamlaka-jeddah41.webp" srcset="images/pergolas/pergola-lexan-fakhr-almamlaka-jeddah41-560.webp 560w, images/pergolas/pergola-lexan-fakhr-almamlaka-jeddah41.webp 2000w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة لكسان بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-lexan-fakhr-almamlaka-jeddah43.webp" srcset="images/pergolas/pergola-lexan-fakhr-almamlaka-jeddah43-560.webp 560w, images/pergolas/pergola-lexan-fakhr-almamlaka-jeddah43.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة لكسان في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-under-construction-iron-fakhr-almamlaka-jeddah46.webp" srcset="images/pergolas/pergola-under-construction-iron-fakhr-almamlaka-jeddah46-560.webp 560w, images/pergolas/pergola-under-construction-iron-fakhr-almamlaka-jeddah46.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حديد تركيب بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-wood-pergola-polycarbonate-roof-fakhralmamlaka-jeddah.webp" srcset="images/pergolas/pergola-wood-pergola-polycarbonate-roof-fakhralmamlaka-jeddah-560.webp 560w, images/pergolas/pergola-wood-pergola-polycarbonate-roof-fakhralmamlaka-jeddah.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة خشبية بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-rooftop-shed-structure-metal-beams-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergola-rooftop-shed-structure-metal-beams-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergola-rooftop-shed-structure-metal-beams-fakhr-almamlaka-jeddah.webp 1600w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حديد أسقف هيكل إنشائي في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
 
@@ -305,11 +304,11 @@
     </div>
   </div>
   <div class="carousel-track" id="pg-2">
-      <img src="images/pergolas/pergola-louvers-fakhr-almamlaka-jeddah56.webp" alt="برجولة لوفر بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-modern-led-lighting-fakhr-almamlaka-jeddah20.webp" alt="برجولة بتصميم عصري بإضاءة بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-modern-louvered-fakhr-almamlaka-jeddah49.webp" alt="برجولة بلون أحمر بتصميم عصري لوفر في جدة - 2" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-modern-louvered-led-fakhr-almamlaka-jeddah38.webp" alt="برجولة بلون أحمر بتصميم عصري بإضاءة في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-shade-lighting-fakhralmamlaka-jeddah.webp" alt="برجولة بإضاءة في جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-louvers-fakhr-almamlaka-jeddah56.webp" srcset="images/pergolas/pergola-louvers-fakhr-almamlaka-jeddah56-560.webp 560w, images/pergolas/pergola-louvers-fakhr-almamlaka-jeddah56.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة لوفر بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-modern-led-lighting-fakhr-almamlaka-jeddah20.webp" srcset="images/pergolas/pergola-modern-led-lighting-fakhr-almamlaka-jeddah20-560.webp 560w, images/pergolas/pergola-modern-led-lighting-fakhr-almamlaka-jeddah20.webp 800w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري بإضاءة بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-modern-louvered-fakhr-almamlaka-jeddah49.webp" srcset="images/pergolas/pergola-modern-louvered-fakhr-almamlaka-jeddah49-560.webp 560w, images/pergolas/pergola-modern-louvered-fakhr-almamlaka-jeddah49.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بلون أحمر بتصميم عصري لوفر في جدة - 2" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-modern-louvered-led-fakhr-almamlaka-jeddah38.webp" srcset="images/pergolas/pergola-modern-louvered-led-fakhr-almamlaka-jeddah38-560.webp 560w, images/pergolas/pergola-modern-louvered-led-fakhr-almamlaka-jeddah38.webp 800w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بلون أحمر بتصميم عصري بإضاءة في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-shade-lighting-fakhralmamlaka-jeddah.webp" srcset="images/pergolas/pergola-shade-lighting-fakhralmamlaka-jeddah-560.webp 560w, images/pergolas/pergola-shade-lighting-fakhralmamlaka-jeddah.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بإضاءة في جدة" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
 
@@ -322,19 +321,19 @@
     </div>
   </div>
   <div class="carousel-track" id="pg-3">
-      <img src="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp" alt="برجولة بتصميم عصري خشبية بمدينة جدة - 2" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-khashabi-galsa-fakhr-almamlaka-jeddah36.webp" alt="برجولة خشبية في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah4.webp" alt="برجولة خشبية بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah6.webp" alt="برجولة خشبية بجدة ومكة المكرمة - 2" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp" srcset="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1-560.webp 560w, images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp 1057w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري خشبية بمدينة جدة - 2" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-khashabi-galsa-fakhr-almamlaka-jeddah36.webp" srcset="images/pergolas/pergola-khashabi-galsa-fakhr-almamlaka-jeddah36-560.webp 560w, images/pergolas/pergola-khashabi-galsa-fakhr-almamlaka-jeddah36.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة خشبية في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah4.webp" srcset="images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah4-560.webp 560w, images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah4.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة خشبية بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah6.webp" srcset="images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah6-560.webp 560w, images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah6.webp 715w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة خشبية بجدة ومكة المكرمة - 2" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-khashabia-shalal-fakhr-almamlaka-jeddah28.webp" alt="برجولة خشبية في جدة والمنطقة الغربية - 2" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-modern-wood-fakhr-almamlaka-jeddah22.webp" alt="برجولة بتصميم عصري خشبية بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-rooftop-balcony-wooden-fakhr-almamlaka-jeddah30.webp" alt="برجولة خشبية أسقف بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-rooftop-balcony-wooden-fakhr-almamlaka-jeddah30.webp" srcset="images/pergolas/pergola-rooftop-balcony-wooden-fakhr-almamlaka-jeddah30-560.webp 560w, images/pergolas/pergola-rooftop-balcony-wooden-fakhr-almamlaka-jeddah30.webp 1280w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة خشبية أسقف بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-with-swing-modern-wooden-fakhr-almamlaka-jeddah.webp" alt="برجولة بتصميم عصري خشبية بجدة ومكة المكرمة - 2" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-wooden-fakhr-almamlaka-jeddah25.webp" alt="برجولة خشبية في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-wpc-wooden-roof-fakhr-almamlaka-jeddah16.webp" alt="برجولة خشبية خشب بلاستيكي WPC بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-wpc-wooden-wall-cladding-fakhr-almamlaka-jeddah50.webp" alt="برجولة خشبية خشب بلاستيكي WPC في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp" alt="برجولة بتصميم عصري خشبية في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergolas-modern-wood-seating-fakhr-almamlaka-jeddah.webp" alt="برجولة بتصميم عصري خشبية في جدة والمنطقة الغربية - 2" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-wpc-wooden-wall-cladding-fakhr-almamlaka-jeddah50.webp" srcset="images/pergolas/pergola-wpc-wooden-wall-cladding-fakhr-almamlaka-jeddah50-560.webp 560w, images/pergolas/pergola-wpc-wooden-wall-cladding-fakhr-almamlaka-jeddah50.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة خشبية خشب بلاستيكي WPC في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergolas-modern-wood-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp 1536w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري خشبية في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergolas-modern-wood-seating-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergolas-modern-wood-seating-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergolas-modern-wood-seating-fakhr-almamlaka-jeddah.webp 1536w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري خشبية في جدة والمنطقة الغربية - 2" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
 
@@ -347,15 +346,15 @@
     </div>
   </div>
   <div class="carousel-track" id="pg-4">
-      <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-elegant-seating.webp" alt="برجولة فخر المملكة في جدة ومكة - 2" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-carport.webp" alt="برجولة سيارات بتصميم عصري بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-elegant-seating.webp" srcset="images/pergolas/pergola-fakhr-almamlaka-jeddah-elegant-seating-560.webp 560w, images/pergolas/pergola-fakhr-almamlaka-jeddah-elegant-seating.webp 1280w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فخر المملكة في جدة ومكة - 2" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-carport.webp" srcset="images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-carport-560.webp 560w, images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-carport.webp 735w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة سيارات بتصميم عصري بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-jeddah-modern-carport-fakhr-almamlaka.webp" alt="برجولة سيارات بتصميم عصري في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-pvc-car-parking-fakhr-almamlaka-jeddah29.webp" alt="برجولة سيارات PVC بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-pvc-car-parking-fakhr-almamlaka-jeddah29.webp" srcset="images/pergolas/pergola-pvc-car-parking-fakhr-almamlaka-jeddah29-560.webp 560w, images/pergolas/pergola-pvc-car-parking-fakhr-almamlaka-jeddah29.webp 1600w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة سيارات PVC بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-seating-fakhr-almamlaka-jeddah53.webp" alt="برجولة فخر المملكة بجدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-tasmim-jalsat-fakhr-almamlaka-jeddah7.webp" alt="برجولة فخر المملكة بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-traditional-seating-fakhr-almamlaka-jeddah23.webp" alt="برجولة بطابع تراثي في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-white-sofa-fakhr-almamlaka-jeddah31.webp" alt="برجولة بلون أبيض بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-modern-car-parking-shades-fakhr-almamlaka-jeddah.webp" alt="برجولة سيارات بتصميم عصري بجدة ومكة المكرمة - 2" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-traditional-seating-fakhr-almamlaka-jeddah23.webp" srcset="images/pergolas/pergola-traditional-seating-fakhr-almamlaka-jeddah23-560.webp 560w, images/pergolas/pergola-traditional-seating-fakhr-almamlaka-jeddah23.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بطابع تراثي في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-white-sofa-fakhr-almamlaka-jeddah31.webp" srcset="images/pergolas/pergola-white-sofa-fakhr-almamlaka-jeddah31-560.webp 560w, images/pergolas/pergola-white-sofa-fakhr-almamlaka-jeddah31.webp 720w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بلون أبيض بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-modern-car-parking-shades-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergola-modern-car-parking-shades-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergola-modern-car-parking-shades-fakhr-almamlaka-jeddah.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة سيارات بتصميم عصري بجدة ومكة المكرمة - 2" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
 
@@ -368,31 +367,31 @@
     </div>
   </div>
   <div class="carousel-track" id="pg-5">
-      <img src="images/pergolas/pergola-backyard-string-lights-fakhr-almamlaka-jeddah54.webp" alt="برجولة حوش بإضاءة بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-backyard-string-lights-fakhr-almamlaka-jeddah54.webp" srcset="images/pergolas/pergola-backyard-string-lights-fakhr-almamlaka-jeddah54-560.webp 560w, images/pergolas/pergola-backyard-string-lights-fakhr-almamlaka-jeddah54.webp 735w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حوش بإضاءة بجدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-decor-barjolat-fakhr-almamlaka-jeddah58.webp" alt="برجولة ديكورية في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-decor-fakhr-almamlaka-jeddah57.webp" alt="برجولة ديكورية في جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-fabric-fakhr-almamlaka-jeddah42.webp" alt="برجولة قماش بجدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-pergola-design.webp" alt="برجولة بتصميم عصري بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-fabric-fakhr-almamlaka-jeddah42.webp" srcset="images/pergolas/pergola-fabric-fakhr-almamlaka-jeddah42-560.webp 560w, images/pergolas/pergola-fabric-fakhr-almamlaka-jeddah42.webp 1600w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة قماش بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-pergola-design.webp" srcset="images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-pergola-design-560.webp 560w, images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-pergola-design.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري بجدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-sliding-glass.webp" alt="برجولة زجاجية في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-transparent-roof.webp" alt="برجولة فخر المملكة في جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-galsat-roof-fakhr-almamlaka-jeddah55.webp" alt="برجولة فخر المملكة في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-galsat-satah-fakhr-almamlaka-jeddah19.webp" alt="برجولة فخر المملكة بجدة - 2" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-glass-room-aluminum-fakhr-almamlaka-jeddah45.webp" alt="برجولة زجاجية بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-hadeed-sharayeh-fakhr-almamlaka-jeddah2.webp" alt="برجولة فخر المملكة بجدة - 3" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-glass-room-aluminum-fakhr-almamlaka-jeddah45.webp" srcset="images/pergolas/pergola-glass-room-aluminum-fakhr-almamlaka-jeddah45-560.webp 560w, images/pergolas/pergola-glass-room-aluminum-fakhr-almamlaka-jeddah45.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة زجاجية بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-hadeed-sharayeh-fakhr-almamlaka-jeddah2.webp" srcset="images/pergolas/pergola-hadeed-sharayeh-fakhr-almamlaka-jeddah2-560.webp 560w, images/pergolas/pergola-hadeed-sharayeh-fakhr-almamlaka-jeddah2.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فخر المملكة بجدة - 3" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-laser-fakhr-almamlaka-jeddah17.webp" alt="برجولة ليزر كت بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-modern-fabric-interlocking-fakhr-almamlaka-jeddah26.webp" alt="برجولة بتصميم عصري قماش بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-modern-fabric-interlocking-fakhr-almamlaka-jeddah26.webp" srcset="images/pergolas/pergola-modern-fabric-interlocking-fakhr-almamlaka-jeddah26-560.webp 560w, images/pergolas/pergola-modern-fabric-interlocking-fakhr-almamlaka-jeddah26.webp 1600w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري قماش بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-modern-fakhr-almamlaka-jeddah10.webp" alt="برجولة بتصميم عصري في جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-modern-fakhr-almamlaka-jeddah5.webp" alt="برجولة بتصميم عصري في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-modern-fakhr-almamlaka-jeddah59.webp" alt="برجولة بتصميم عصري في جدة - 2" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-qmash-galsa-fakhr-almamlaka-jeddah51.webp" alt="برجولة قماش في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-roof-fakhr-almamlaka-jeddah.webp" alt="برجولة فخر المملكة في جدة - 2" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-modern-fakhr-almamlaka-jeddah5.webp" srcset="images/pergolas/pergola-modern-fakhr-almamlaka-jeddah5-560.webp 560w, images/pergolas/pergola-modern-fakhr-almamlaka-jeddah5.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-modern-fakhr-almamlaka-jeddah59.webp" srcset="images/pergolas/pergola-modern-fakhr-almamlaka-jeddah59-560.webp 560w, images/pergolas/pergola-modern-fakhr-almamlaka-jeddah59.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري في جدة - 2" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-qmash-galsa-fakhr-almamlaka-jeddah51.webp" srcset="images/pergolas/pergola-qmash-galsa-fakhr-almamlaka-jeddah51-560.webp 560w, images/pergolas/pergola-qmash-galsa-fakhr-almamlaka-jeddah51.webp 720w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة قماش في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-roof-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergola-roof-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergola-roof-fakhr-almamlaka-jeddah.webp 1280w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فخر المملكة في جدة - 2" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-sayarat-qawsiah-double-fakhr-almamlaka-jeddah9.webp" alt="برجولة سيارات مزدوجة في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-sharayeh-pvc-fakhr-almamlaka-jeddah3.webp" alt="برجولة PVC في جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-sharayeh-pvc-fakhr-almamlaka-jeddah3.webp" srcset="images/pergolas/pergola-sharayeh-pvc-fakhr-almamlaka-jeddah3-560.webp 560w, images/pergolas/pergola-sharayeh-pvc-fakhr-almamlaka-jeddah3.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة PVC في جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-tasmim-asateh-fakhr-almamlaka-jeddah11.webp" alt="برجولة أسقف في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-with-sail-shade-fakhr-almamlaka-jeddah37.webp" alt="برجولة فخر المملكة في جدة والمنطقة الغربية - 2" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergolas-modern-backyard-designs-fakhr-almamlaka-jeddah.webp" alt="برجولة حوش بتصميم عصري في جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah.webp" alt="برجولة فخر المملكة بجدة - 4" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/pergolas/pergola-modern-shade-roof-fabric-fakhr-almamlaka-jeddah.webp" alt="برجولة بتصميم عصري قماش بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-with-sail-shade-fakhr-almamlaka-jeddah37.webp" srcset="images/pergolas/pergola-with-sail-shade-fakhr-almamlaka-jeddah37-560.webp 560w, images/pergolas/pergola-with-sail-shade-fakhr-almamlaka-jeddah37.webp 1840w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فخر المملكة في جدة والمنطقة الغربية - 2" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergolas-modern-backyard-designs-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergolas-modern-backyard-designs-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergolas-modern-backyard-designs-fakhr-almamlaka-jeddah.webp 1331w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حوش بتصميم عصري في جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah.webp 1195w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فخر المملكة بجدة - 4" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/pergolas/pergola-modern-shade-roof-fabric-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergola-modern-shade-roof-fabric-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergola-modern-shade-roof-fabric-fakhr-almamlaka-jeddah.webp 1600w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري قماش بجدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-anging-fabric-sunshade-fakhr-almamlaka-jeddah.webp" alt="برجولة قماش بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
@@ -512,7 +511,7 @@
   <div class="wrap">
 
     <div class="foot-top">
-      <img class="foot-logo" src="images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة ومكة المكرمة" decoding="async" width="500" height="375">
+      <img loading="lazy" class="foot-logo" src="images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp" srcset="images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2-200.webp 200w, images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp 1536w" sizes="100px" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة ومكة المكرمة" decoding="async" width="500" height="375">
       <div class="foot-hours">
         <h3>مواعيد وساعات العمل الرسمية</h3>
         <p>من السبت إلى الخميس: من الساعة 7 صباحاً وحتى 11 مساءً<br>يوم الجمعة: من الساعة 1 مساءً وحتى الساعة 11 مساءً</p>

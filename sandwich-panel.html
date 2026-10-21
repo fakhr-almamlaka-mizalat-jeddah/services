@@ -21,9 +21,8 @@
 <link rel="preconnect" href="https://fakhr-almamlaka-api.alsiyadamazallatjeddah.workers.dev" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;700&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;700&display=optional"></noscript>
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp">
 <script type="application/ld+json">
@@ -151,19 +150,19 @@
 </script>
 <!-- Google Analytics (GA4) — محمّل بشكل مؤجل (async) بلا تأثير على سرعة الصفحة -->
 <!-- ⚠️ استبدل G-W6XRHFTNC2 برقم القياس الحقيقي من حساب Google Analytics عندك -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W6XRHFTNC2"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W6XRHFTNC2');
+/* Google Analytics: يُحمَّل بعد أول تفاعل للزائر أو بعد 4 ثوانٍ — لا يزاحم تحميل الصفحة */
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-W6XRHFTNC2');
+(function(){var d=0;function l(){if(d)return;d=1;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-W6XRHFTNC2';document.head.appendChild(s)}
+['pointerdown','keydown','scroll','touchstart'].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});setTimeout(l,4000)})();
 </script>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <img src="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر في جدة والمنطقة الغربية" decoding="async" width="500" height="375">
+      <img src="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" srcset="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1-200.webp 200w, images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp 1536w" sizes="100px" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر في جدة والمنطقة الغربية" decoding="async" width="500" height="375">
       <span>فخر المملكة</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" onclick="toggleMobileMenu()">
@@ -194,7 +193,7 @@
 <section class="hero">
   <div class="hero-bg-layer">
     <img src="images/sandwich-panel/sandwich-panel-modern-glass-lounge-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل بتصميم عصري زجاجية بجدة" fetchpriority="high" decoding="async" width="1600" height="900">
-    <img src="images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل كبائن جاهزة بمدينة جدة" loading="lazy" decoding="async" width="1600" height="900">
+    <img src="images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah.webp" srcset="images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah-828.webp 828w, images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah.webp 1440w" sizes="100vw" alt="ساندوتش بانل كبائن جاهزة بمدينة جدة" loading="lazy" decoding="async" width="1600" height="900">
     <img src="images/sandwich-panel/sandwich-panel-prefab-house-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل كبائن جاهزة بمدينة جدة - 2" loading="lazy" decoding="async" width="1600" height="900">
   </div>
   <div class="wrap">
@@ -268,13 +267,13 @@
   </div>
   <div class="carousel-track" id="sp-0">
       <img src="images/sandwich-panel/sandwich-panel-fakhr-almamlaka-jeddah-cabin.webp" alt="ساندوتش بانل كبائن جاهزة في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل كبائن جاهزة بمدينة جدة - 3" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah.webp" srcset="images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah-560.webp 560w, images/sandwich-panel/sandwich-panel-insulated-cabin-fakhr-almamlaka-jeddah.webp 1440w" sizes="(max-width:900px) 50vw, 250px" alt="ساندوتش بانل كبائن جاهزة بمدينة جدة - 3" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/sandwich-panel/sandwich-panel-modern-prefabricated-cabin-fakhr-almamlaka-jeddah10.webp" alt="ساندوتش بانل بتصميم عصري قماش كبائن جاهزة بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/sandwich-panel/sandwich-panel-portable-cabin-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل متنقلة كبائن جاهزة في جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/sandwich-panel/sandwich-panel-prefab-house-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل كبائن جاهزة بمدينة جدة - 4" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/sandwich-panel/sandwich-panel-prefab-house-fakhr-almamlaka-jeddah.webp" srcset="images/sandwich-panel/sandwich-panel-prefab-house-fakhr-almamlaka-jeddah-560.webp 560w, images/sandwich-panel/sandwich-panel-prefab-house-fakhr-almamlaka-jeddah.webp 678w" sizes="(max-width:900px) 50vw, 250px" alt="ساندوتش بانل كبائن جاهزة بمدينة جدة - 4" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/sandwich-panel/sandwich-panel-prefabricated-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل قماش كبائن جاهزة بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/sandwich-panel/sandwich-panel-prefabricated-roof-room-fakhr-almamlaka-jeddah9.webp" alt="ساندوتش بانل قماش كبائن جاهزة بجدة ومكة المكرمة - 2" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/sandwich-panel/sandwich-panel-ready-rooms-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل كبائن جاهزة بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/sandwich-panel/sandwich-panel-prefabricated-roof-room-fakhr-almamlaka-jeddah9.webp" srcset="images/sandwich-panel/sandwich-panel-prefabricated-roof-room-fakhr-almamlaka-jeddah9-560.webp 560w, images/sandwich-panel/sandwich-panel-prefabricated-roof-room-fakhr-almamlaka-jeddah9.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="ساندوتش بانل قماش كبائن جاهزة بجدة ومكة المكرمة - 2" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/sandwich-panel/sandwich-panel-ready-rooms-fakhr-almamlaka-jeddah.webp" srcset="images/sandwich-panel/sandwich-panel-ready-rooms-fakhr-almamlaka-jeddah-560.webp 560w, images/sandwich-panel/sandwich-panel-ready-rooms-fakhr-almamlaka-jeddah.webp 689w" sizes="(max-width:900px) 50vw, 250px" alt="ساندوتش بانل كبائن جاهزة بجدة" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
 
@@ -306,7 +305,7 @@
   </div>
   <div class="carousel-track" id="sp-2">
       <img src="images/sandwich-panel/sandwich-panel-colorful-walls-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل متعددة الألوان في جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/sandwich-panel/sandwich-panel-roof-sheets-fakhr-almamlaka-jeddah5.webp" alt="ساندوتش بانل فخر المملكة بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/sandwich-panel/sandwich-panel-roof-sheets-fakhr-almamlaka-jeddah5.webp" srcset="images/sandwich-panel/sandwich-panel-roof-sheets-fakhr-almamlaka-jeddah5-560.webp 560w, images/sandwich-panel/sandwich-panel-roof-sheets-fakhr-almamlaka-jeddah5.webp 1069w" sizes="(max-width:900px) 50vw, 250px" alt="ساندوتش بانل فخر المملكة بجدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/sandwich-panel/sandwich-panel-rooftop-installation-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل أسقف تركيب في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
@@ -320,7 +319,7 @@
     </div>
   </div>
   <div class="carousel-track" id="sp-3">
-      <img src="images/sandwich-panel/sandwich-panel-fakhr-almamlaka-jeddah8.webp" alt="ساندوتش بانل فخر المملكة في جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/sandwich-panel/sandwich-panel-fakhr-almamlaka-jeddah8.webp" srcset="images/sandwich-panel/sandwich-panel-fakhr-almamlaka-jeddah8-560.webp 560w, images/sandwich-panel/sandwich-panel-fakhr-almamlaka-jeddah8.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="ساندوتش بانل فخر المملكة في جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/sandwich-panel/sandwich-panel-room-design-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل فخر المملكة في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/sandwich-panel/sandwich-panel-worker-installing-fakhr-almamlaka-jeddah.webp" alt="ساندوتش بانل تركيب بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
   </div>
@@ -455,7 +454,7 @@
   <div class="wrap">
 
     <div class="foot-top">
-      <img class="foot-logo" src="images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة ومكة المكرمة" decoding="async" width="500" height="375">
+      <img loading="lazy" class="foot-logo" src="images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp" srcset="images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2-200.webp 200w, images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp 1536w" sizes="100px" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة ومكة المكرمة" decoding="async" width="500" height="375">
       <div class="foot-hours">
         <h3>مواعيد وساعات العمل الرسمية</h3>
         <p>من السبت إلى الخميس: من الساعة 7 صباحاً وحتى 11 مساءً<br>يوم الجمعة: من الساعة 1 مساءً وحتى الساعة 11 مساءً</p>

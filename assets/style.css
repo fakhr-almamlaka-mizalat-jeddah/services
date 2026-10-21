@@ -10,8 +10,8 @@
   --paper:#faf7f0;
   --line:rgba(28,27,25,.12);
   --radius:2px;
-  --serif:"Amiri","Noto Naskh Arabic",serif;
-  --sans:"IBM Plex Sans Arabic","Tajawal",sans-serif;
+  --serif:"Amiri","Noto Naskh Arabic","Traditional Arabic","Times New Roman",serif;
+  --sans:"IBM Plex Sans Arabic","Noto Sans Arabic","Segoe UI",Tahoma,system-ui,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -412,3 +412,28 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
    عنصر eyebrow هناك — هذا override لا يكسرها لأن الـ inline style
    له أولوية أعلى في الـ CSS بغض النظر عن ترتيب الملفات. */
 
+/* --- نص الإعلان المتحرك أفقياً (الصورة إن وُجدت تبقى ثابتة أعلى البطاقة) --- */
+.ad-marquee{
+  overflow:hidden;white-space:nowrap;width:100%;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+}
+.ad-marquee-track{
+  display:inline-flex;gap:60px;animation:adMarquee 14s linear infinite;
+}
+.ad-marquee-track span{
+  display:inline-block;font-family:var(--serif);font-weight:700;font-size:1.15rem;
+  color:var(--brass-light);white-space:nowrap;
+}
+@keyframes adMarquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+/* السحب/التمرير باليد على الجوال يوقف الحركة مؤقتاً لراحة القراءة */
+.ad-marquee:hover .ad-marquee-track,
+.ad-marquee:active .ad-marquee-track{
+  animation-play-state:paused;
+}
+@media(prefers-reduced-motion:reduce){
+  .ad-marquee-track{animation:none}
+}
