@@ -21,9 +21,8 @@
 <link rel="preconnect" href="https://fakhr-almamlaka-api.alsiyadamazallatjeddah.workers.dev" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;700&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;700&display=optional"></noscript>
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp">
 <script type="application/ld+json">
@@ -151,19 +150,19 @@
 </script>
 <!-- Google Analytics (GA4) — محمّل بشكل مؤجل (async) بلا تأثير على سرعة الصفحة -->
 <!-- ⚠️ استبدل G-W6XRHFTNC2 برقم القياس الحقيقي من حساب Google Analytics عندك -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W6XRHFTNC2"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W6XRHFTNC2');
+/* Google Analytics: يُحمَّل بعد أول تفاعل للزائر أو بعد 4 ثوانٍ — لا يزاحم تحميل الصفحة */
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-W6XRHFTNC2');
+(function(){var d=0;function l(){if(d)return;d=1;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-W6XRHFTNC2';document.head.appendChild(s)}
+['pointerdown','keydown','scroll','touchstart'].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});setTimeout(l,4000)})();
 </script>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <img src="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر في جدة والمنطقة الغربية" decoding="async" width="500" height="375">
+      <img src="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" srcset="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1-200.webp 200w, images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp 1536w" sizes="100px" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر في جدة والمنطقة الغربية" decoding="async" width="500" height="375">
       <span>فخر المملكة</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" onclick="toggleMobileMenu()">
@@ -273,10 +272,10 @@
     </div>
   </div>
   <div class="carousel-track" id="hg-0">
-      <img src="images/hangars/hangar--fakhr-almamlaka-jeddah-construction-work.webp" alt="هنجر تركيب بجدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/hangars/hangar--fakhr-almamlaka-jeddah-roof-installation.webp" alt="هنجر أسقف تركيب بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/hangars/hangar--fakhr-almamlaka-jeddah-construction-work.webp" srcset="images/hangars/hangar--fakhr-almamlaka-jeddah-construction-work-560.webp 560w, images/hangars/hangar--fakhr-almamlaka-jeddah-construction-work.webp 1200w" sizes="(max-width:900px) 50vw, 250px" alt="هنجر تركيب بجدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/hangars/hangar--fakhr-almamlaka-jeddah-roof-installation.webp" srcset="images/hangars/hangar--fakhr-almamlaka-jeddah-roof-installation-560.webp 560w, images/hangars/hangar--fakhr-almamlaka-jeddah-roof-installation.webp 1200w" sizes="(max-width:900px) 50vw, 250px" alt="هنجر أسقف تركيب بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/hangars/hangar--fakhr-almamlaka-jeddah-warehouse-frame.webp" alt="هنجر مستودعات صناعية في جدة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/hangars/hangar-fakhr-almamlaka-jeddah-steel-structure.webp" alt="هنجر حديد هيكل إنشائي بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/hangars/hangar-fakhr-almamlaka-jeddah-steel-structure.webp" srcset="images/hangars/hangar-fakhr-almamlaka-jeddah-steel-structure-560.webp 560w, images/hangars/hangar-fakhr-almamlaka-jeddah-steel-structure.webp 1600w" sizes="(max-width:900px) 50vw, 250px" alt="هنجر حديد هيكل إنشائي بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/hangars/hangar-metal-warehouse-structure-installation-fakhr-almamlaka-jeddah.webp" alt="هنجر حديد مستودعات صناعية تركيب في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/hangars/hangar-steel-shed-construction-team-fakhr-almamlaka-jeddah.webp" alt="هنجر حديد تركيب في جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/hangars/hangar-steel-structure-framework-fakhr-almamlaka-jeddah.webp" alt="هنجر حديد هيكل إنشائي في جدة - 2" loading="lazy" decoding="async" width="250" height="180">
@@ -311,7 +310,7 @@
     </div>
   </div>
   <div class="carousel-track" id="hg-2">
-      <img src="images/hangars/hangar-roofing-sports-court-fakhr-almamlaka-jeddah6.webp" alt="هنجر ملعب رياضي في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/hangars/hangar-roofing-sports-court-fakhr-almamlaka-jeddah6.webp" srcset="images/hangars/hangar-roofing-sports-court-fakhr-almamlaka-jeddah6-560.webp 560w, images/hangars/hangar-roofing-sports-court-fakhr-almamlaka-jeddah6.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="هنجر ملعب رياضي في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
 
@@ -324,7 +323,7 @@
     </div>
   </div>
   <div class="carousel-track" id="hg-3">
-      <img src="images/hangars/hangar-laser-cut-metal-fence-design-fakhr-almamlaka-jeddah.webp" alt="هنجر ليزر كت حديد بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/hangars/hangar-laser-cut-metal-fence-design-fakhr-almamlaka-jeddah.webp" srcset="images/hangars/hangar-laser-cut-metal-fence-design-fakhr-almamlaka-jeddah-560.webp 560w, images/hangars/hangar-laser-cut-metal-fence-design-fakhr-almamlaka-jeddah.webp 1600w" sizes="(max-width:900px) 50vw, 250px" alt="هنجر ليزر كت حديد بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
 
@@ -337,8 +336,8 @@
     </div>
   </div>
   <div class="carousel-track" id="hg-4">
-      <img src="images/hangars/hangar-fakhr-almamlaka-jeddah.webp" alt="هنجر فخر المملكة في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
-      <img src="images/hangars/sandwich-qarmid-tarkib-asateh-modern-fakhr-almamlaka-jeddah.webp" alt="هنجر بتصميم عصري أسقف تركيب بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/hangars/hangar-fakhr-almamlaka-jeddah.webp" srcset="images/hangars/hangar-fakhr-almamlaka-jeddah-560.webp 560w, images/hangars/hangar-fakhr-almamlaka-jeddah.webp 1920w" sizes="(max-width:900px) 50vw, 250px" alt="هنجر فخر المملكة في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
+      <img src="images/hangars/sandwich-qarmid-tarkib-asateh-modern-fakhr-almamlaka-jeddah.webp" srcset="images/hangars/sandwich-qarmid-tarkib-asateh-modern-fakhr-almamlaka-jeddah-560.webp 560w, images/hangars/sandwich-qarmid-tarkib-asateh-modern-fakhr-almamlaka-jeddah.webp 1402w" sizes="(max-width:900px) 50vw, 250px" alt="هنجر بتصميم عصري أسقف تركيب بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
   </div>
 </div>
   </div>
@@ -466,7 +465,7 @@
   <div class="wrap">
 
     <div class="foot-top">
-      <img class="foot-logo" src="images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة ومكة المكرمة" decoding="async" width="500" height="375">
+      <img loading="lazy" class="foot-logo" src="images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp" srcset="images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2-200.webp 200w, images/main/logo-fakhr-almamlaka-sawater-white-mizalat-jeddah2.webp 1536w" sizes="100px" alt="شعار مؤسسة فخر المملكة للمظلات والسواتر بجدة ومكة المكرمة" decoding="async" width="500" height="375">
       <div class="foot-hours">
         <h3>مواعيد وساعات العمل الرسمية</h3>
         <p>من السبت إلى الخميس: من الساعة 7 صباحاً وحتى 11 مساءً<br>يوم الجمعة: من الساعة 1 مساءً وحتى الساعة 11 مساءً</p>
