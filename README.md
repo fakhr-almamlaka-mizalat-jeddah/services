@@ -35,17 +35,27 @@
 
 # 📸 معرض أعمالنا المميز
 
-| الشعار الرسمي | أبرز المشاريع المنفذة |
-| :---: | :---: |
-| ![الشعار](images/assets/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp) | ![نموذج](images/pergolas/pergola-modern-pool-shade-jeddah40.webp) <br> ![نموذج](images/pergolas/pergolas-modern-wood-jeddah.webp) <br> ![نموذج](images/mizalats/mizalats-modern-jeddah.webp) |
+<img src="images/main/ads-fakhr-almamlaka-sawater-mizalat-jeddah1.webp" width="800" alt="فخر المملكة للمظلات والسواتر - جدة">
+
+<img src="images/main/logo-fakhr-almamlaka-sawater-gray-mizalat-jeddah1.webp" width="260" alt="الشعار الرسمي لمؤسسة فخر المملكة">
+
+| القسم | نموذج 1 | نموذج 2 |
+| :---: | :---: | :---: |
+| **🚗 المظلات** | <img src="images/mizalats/mizalat-carport-awning-modern-saudi-design-fakhr-almamlaka-jeddah.webp" width="330" alt="مظلات فخر المملكة بجدة"> | <img src="images/mizalats/mizalat-fakhr-almamlaka-jeddah-colorful-pool-shade.webp" width="330" alt="مظلات فخر المملكة بجدة"> |
+| **🌿 البرجولات** | <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-pergola-design.webp" width="330" alt="برجولات فخر المملكة بجدة"> | <img src="images/pergolas/pergola-backyard-string-lights-fakhr-almamlaka-jeddah54.webp" width="330" alt="برجولات فخر المملكة بجدة"> |
+| **🏡 السواتر** | <img src="images/sawaters/sawater-chocolate-iron-fakhr-almamlaka-jeddah25.webp" width="330" alt="سواتر فخر المملكة بجدة"> | <img src="images/sawaters/sawater-fakhr-almamlaka-jeddah-laser-cut.webp" width="330" alt="سواتر فخر المملكة بجدة"> |
+| **🏕 بيوت الشعر** | <img src="images/byout-shaar/byout-shaar-majlis-tenda-interior-luxurious-fakhr-almamlaka-jeddah.webp" width="330" alt="بيوت شعر فخر المملكة بجدة"> | <img src="images/byout-shaar/byout-shaar-modern-roof-royal-design-tent-and-luxury-fakhr-almamlaka-jeddah.webp" width="330" alt="بيوت شعر فخر المملكة بجدة"> |
+| **🏢 الهناجر** | <img src="images/hangars/hangar--fakhr-almamlaka-jeddah-warehouse-frame.webp" width="330" alt="هناجر فخر المملكة بجدة"> | <img src="images/hangars/hangar-mostawdaat-fakhr-almamlaka-jeddah1.webp" width="330" alt="هناجر فخر المملكة بجدة"> |
+| **🏠 ساندوتش بانل** | <img src="images/sandwich-panel/sandwich-panel-prefab-house-fakhr-almamlaka-jeddah.webp" width="330" alt="ساندوتش بانل فخر المملكة بجدة"> | <img src="images/sandwich-panel/sandwich-panel-modern-glass-room-extension-fakhr-almamlaka-jeddah.webp" width="330" alt="ساندوتش بانل فخر المملكة بجدة"> |
+| **🧱 القرميد** | <img src="images/qarmids/qarmid-tarkib-asateh-fakhr-almamlaka-jeddah.webp" width="330" alt="قرميد فخر المملكة بجدة"> | <img src="images/qarmids/qarmid-tarkib-jeddah-hadid-italy-fakhr-almamlaka15.webp" width="330" alt="قرميد فخر المملكة بجدة"> |
 
 ### استعراض إضافي للمشاريع:
-![نموذج](images/assets/ads-fakhr-almamlaka-sawater-mizalat-jeddah1.webp)
-![نموذج](images/pergolas/pergolas-sawater-mizalat-hanger-privacy-fences-jeddah.webp)
-![نموذج](images/pergolas/pergolas-modern-backyard-designs-jeddah.webp)
-![نموذج](images/pergolas/pergolas-modern-wood-seating-jeddah.webp)
-![نموذج](images/sawaters/sawaters-building-wall-jeddah.webp)
-![نموذج](images/others/hangars-industrial-warehouse-jeddah11.webp)
+
+<img src="images/main/mizalats-best-modern-car-parking-and-swimming-pool-shades-fakhr-almamlaka-jeddah%20%281%29.webp" width="700" alt="أفضل مظلات السيارات والمسابح في جدة">
+
+<img src="images/main/pergolas-modern-wood-fakhr-almamlaka-jeddah.webp" width="700" alt="برجولات خشبية عصرية في جدة">
+
+<img src="images/main/pool-shades-jeddah-tensile-membrane-fakhr-almamlaka.webp" width="700" alt="مظلات مسابح شد إنشائي في جدة">
 
 ---
 
