@@ -38,33 +38,12 @@ nav.links a:hover,nav.links a.active{color:var(--brass-light)}
 .hero{position:relative;overflow:hidden;color:#f5efe0;padding:28px 0 64px;min-height:0;display:flex;align-items:flex-start;background:var(--navy)}
 @media(max-width:640px){.hero{padding:18px 0 48px}}
 .hero-bg-layer{position:absolute;inset:0;z-index:0;background:var(--navy)}
-.hero-bg-layer::before{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(15,35,66,.90) 0%,rgba(15,35,66,.80) 45%,rgba(15,35,66,.58) 100%);z-index:2}
-.hero-bg-layer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:heroFade 18s infinite;filter:saturate(1.05)}
-.hero-bg-layer img:nth-child(1){animation-delay:0s}
-.hero-bg-layer img:nth-child(2){animation-delay:6s}
-.hero-bg-layer img:nth-child(3){animation-delay:12s}
-@keyframes heroFade{
-  0%{opacity:0;transform:scale(.92)}
-  6%{opacity:1;transform:scale(1)}
-  28%{opacity:1;transform:scale(1.03)}
-  34%{opacity:0;transform:scale(1.05)}
-  100%{opacity:0}
-}
+.hero-bg-layer::before{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(15,35,66,.80) 0%,rgba(15,35,66,.64) 50%,rgba(15,35,66,.52) 100%);z-index:2}
 /* on phones: show the FULL photo, nothing cropped off any edge */
 @media(max-width:640px){
-  .hero-bg-layer img{object-fit:contain}
-  @keyframes heroFade{
-    0%{opacity:0;transform:scale(.9)}
-    6%{opacity:1;transform:scale(1)}
-    28%{opacity:1;transform:scale(1)}
-    34%{opacity:0;transform:scale(1)}
-    100%{opacity:0}
-  }
-}
+    }
 @media(prefers-reduced-motion:reduce){
-  .hero-bg-layer img{animation:none;opacity:1;transform:none}
-  .hero-bg-layer img:not(:first-child){display:none}
-
+    
 }
 .hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1fr;gap:20px;max-width:720px}
 .hero .lede{font-size:1.1rem;color:#e3d9c1;max-width:52ch;margin:16px 0 28px}
@@ -437,3 +416,159 @@ footer{background:#151412;color:#a99f89;padding:46px 0 26px;font-size:.85rem}
 @media(prefers-reduced-motion:reduce){
   .ad-marquee-track{animation:none}
 }
+
+/* ============================================================
+   الإطار الموحّد (برواز متدرج الألوان) + الهيرو + المسارات المتحركة
+   + شاشة العرض + الفيديو + شريط العروض + عارض الصور
+   ============================================================ */
+:root{--frame-grad:linear-gradient(135deg,#f08a3c 0%,#fbd9bd 38%,#ffffff 52%,#8b95e6 78%,#4d5fd0 100%)}
+.frame{position:relative;border-radius:26px;padding:6px;box-shadow:0 14px 34px rgba(10,24,48,.35)}
+.frame::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:6px;background:var(--frame-grad);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);pointer-events:none;z-index:3}
+.frame>img{display:block;width:100%;border-radius:20px;border:3px solid var(--navy)}
+/* إطار مباشر على وسوم الصور (بدون عنصر إضافي) */
+.carousel .carousel-track img,.card>img,.fimg{
+  border:5px solid transparent;padding:3px;border-radius:20px;
+  background:linear-gradient(var(--navy),var(--navy)) padding-box,var(--frame-grad) border-box;
+  box-shadow:0 6px 16px rgba(10,24,48,.22)}
+.card>img{align-self:center;width:calc(100% - 20px);margin-top:10px}
+
+/* ---- الهيرو: كل صورة كاملة ومتوسطة داخل برواز فوق خلفية ضبابية ---- */
+.hero-bg-layer{overflow:hidden}
+.hero-slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity 1.1s ease,visibility 0s 1.1s;z-index:1}
+.hero-slide.is-active{opacity:1;visibility:visible;transition:opacity 1.1s ease}
+.hs-blur{position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:blur(24px) saturate(1.15);transform:translateZ(0)}
+.hero-frame{position:absolute;inset:12px}
+.hero-frame>img{height:100%;object-fit:contain;background:rgba(10,24,48,.35)}
+.hero h1,.hero .lede,.hero .eyebrow,.hero-stats{text-shadow:0 2px 14px rgba(0,0,0,.65)}
+
+/* ---- المسارات المتحركة (معارض الصور) ---- */
+.mq-track{display:flex;gap:14px;overflow-x:auto;direction:ltr;scroll-snap-type:none!important;scroll-behavior:auto!important;
+  overflow-anchor:none;scrollbar-width:none;touch-action:pan-x pan-y;padding:8px 4px 14px;cursor:grab;-webkit-user-select:none;user-select:none}
+.mq-track::-webkit-scrollbar{display:none}
+.mq-track.dragging{cursor:grabbing}
+.mq-track img{-webkit-user-drag:none;user-drag:none}
+.carousel .carousel-track img{width:220px;height:165px;object-fit:cover;flex:0 0 auto}
+.mq-track img.is-logo{object-fit:contain;background:#fff}
+.portfolio-wrap{display:grid;gap:6px}
+.portfolio-track .portfolio-item{flex:0 0 230px;height:172px;aspect-ratio:auto;padding:5px;border-radius:22px;background:var(--frame-grad);box-shadow:0 6px 16px rgba(10,24,48,.22)}
+.portfolio-track .portfolio-item img{border-radius:17px;border:2px solid var(--navy)}
+.portfolio-track .portfolio-caption{inset:auto 5px 5px 5px;border-radius:0 0 17px 17px}
+
+/* ---- شريط العروض التسويقي (يتحرك من اليمين إلى اليسار) ---- */
+.promo-ticker{display:block;overflow:hidden;direction:ltr;text-decoration:none;color:#fff;
+  background:linear-gradient(90deg,#7a2f22,#b8863d 50%,#7a2f22);border-block:2px solid rgba(255,255,255,.28)}
+.pt-track{display:inline-flex;white-space:nowrap;animation:ptMove 46s linear infinite;will-change:transform}
+.pt-track span{direction:rtl;padding:13px 28px;font-weight:700;font-size:.98rem;font-family:var(--sans);letter-spacing:.2px}
+.pt-track span::after{content:"✦";margin-inline-start:28px;color:#ffe9b0}
+.promo-ticker:hover .pt-track{animation-play-state:paused}
+@keyframes ptMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---- شاشة عرض أفضل الصور ---- */
+.screen-section{background:var(--navy-deep);color:#fff}
+.screen-section .eyebrow,.video-section .eyebrow{color:var(--brass-light)}
+.screen-section h2,.video-section h2{color:#fff}
+.tv{max-width:900px;margin:0 auto}
+.tv-frame{border-radius:34px}
+.tv-bezel{position:relative;padding:14px 14px 30px;border-radius:26px;background:linear-gradient(145deg,#2b313d,#07090e);box-shadow:inset 0 0 0 2px #434c5e}
+.tv-led{position:absolute;bottom:11px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#38e07b;box-shadow:0 0 10px #38e07b}
+.tv-screen{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;box-shadow:inset 0 0 30px rgba(0,0,0,.8)}
+.tv-slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .9s ease,transform 1.3s ease,visibility 0s .9s}
+.tv-slide.fx-zoom{transform:scale(1.18)}
+.tv-slide.fx-slide{transform:translateX(-9%)}
+.tv-slide.is-active{opacity:1;visibility:visible;transform:none;transition:opacity .9s ease,transform 1.3s ease}
+.tv-blur{position:absolute;inset:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;filter:blur(18px) brightness(.6)}
+.tv-fg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.tv-cap{position:absolute;inset:auto 0 0 0;padding:34px 16px 12px;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent);font-weight:700;font-size:.95rem}
+.tv-dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
+.tv-dots button{width:11px;height:11px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.35);cursor:pointer;transition:all .25s}
+.tv-dots button.on{background:var(--brass-light);width:30px;border-radius:8px}
+.tv-stand{width:34%;height:16px;margin:0 auto;background:linear-gradient(#4a5160,#12151c);border-radius:0 0 14px 14px}
+.tv-stand::after{content:"";display:block;width:140%;margin:0 -20%;height:7px;border-radius:8px;background:#0b0e14}
+
+/* ---- الفيديو داخل البرواز ---- */
+.video-section{background:var(--navy);color:#fff}
+.vid-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;align-items:start}
+.vid-grid.one{grid-template-columns:1fr;max-width:780px;margin:0 auto}
+.vid{margin:0}
+.vid figcaption{margin-top:12px;font-weight:700;text-align:center;font-size:.95rem;color:#f4e9d2}
+.vid-box{position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;border:3px solid var(--navy);
+  background:linear-gradient(135deg,#0f2342,#1d3a6b)}
+.vid-box.portrait{max-width:420px;margin:0 auto}
+.vid-box video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;cursor:pointer}
+.vid-box:not(.ready)::after{content:"▶";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2.4rem;color:rgba(255,255,255,.55)}
+.vid-sound{position:absolute;bottom:14px;inset-inline-start:14px;width:42px;height:42px;border-radius:50%;border:2px solid rgba(255,255,255,.7);
+  background:rgba(10,24,48,.65);color:#fff;font-size:1.15rem;cursor:pointer;backdrop-filter:blur(4px);z-index:2}
+
+/* ---- عارض الصور: تكبير/تصغير/نقر مزدوج/سحب ---- */
+.lightbox img{touch-action:none;cursor:grab;will-change:transform;transform-origin:center center;user-select:none;-webkit-user-drag:none}
+.lb-tools{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:3}
+.lb-tools button{width:46px;height:46px;border-radius:50%;border:2px solid rgba(255,255,255,.6);background:rgba(15,35,66,.78);color:#fff;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-tools button:active{background:var(--brass)}
+.lightbox-counter{z-index:3}
+
+@media(max-width:700px){
+  .vid-grid{grid-template-columns:1fr}
+  .tv-bezel{padding:8px 8px 24px}
+  .pt-track span{padding:11px 20px;font-size:.9rem}
+  .frame{border-radius:22px;padding:5px}
+  .frame::before{padding:5px}
+}
+@media(prefers-reduced-motion:reduce){
+  .pt-track{animation:none}
+  .promo-ticker{overflow-x:auto}
+  .hero-slide,.tv-slide{transition:none}
+}
+
+/* ============================================================
+   نموذج طلب عرض السعر (نافذة احترافية على خطوتين → واتساب)
+   ============================================================ */
+.btn-quote{background:linear-gradient(135deg,#f08a3c,#d9ac5e);color:#1c1b19;border:0;cursor:pointer;font-family:var(--sans);box-shadow:0 8px 22px rgba(240,138,60,.38)}
+.btn-quote:hover{filter:brightness(1.06)}
+.qm{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;padding:14px;background:rgba(6,14,30,.78);backdrop-filter:blur(5px)}
+.qm.open{display:flex;animation:qmIn .25s ease}
+@keyframes qmIn{from{opacity:0}to{opacity:1}}
+.qm-card{position:relative;width:100%;max-width:560px;max-height:94vh;display:flex;flex-direction:column;border-radius:26px;padding:6px;background:var(--navy);box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.qm-card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:6px;background:var(--frame-grad);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);pointer-events:none}
+.qm-in{display:flex;flex-direction:column;min-height:0;border-radius:20px;overflow:hidden;background:var(--paper)}
+.qm-head{position:relative;padding:20px 22px 16px;color:#fff;background:linear-gradient(135deg,#0a1830,#17376a)}
+.qm-head h3{margin:0 0 4px;font-size:1.3rem;color:#fff;font-family:var(--serif)}
+.qm-head p{margin:0;font-size:.86rem;color:#d9e2f5}
+.qm-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.qm-badges span{font-size:.74rem;font-weight:700;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22)}
+.qm-x{position:absolute;top:12px;inset-inline-start:12px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer}
+.qm-steps{display:flex;gap:8px;padding:14px 22px 0}
+.qm-steps i{flex:1;height:5px;border-radius:5px;background:var(--sand-deep);transition:background .3s}
+.qm-steps i.on{background:linear-gradient(90deg,#f08a3c,#d9ac5e)}
+.qm-body{padding:16px 22px 6px;overflow-y:auto;min-height:0}
+.qm-body h4{margin:0 0 12px;font-size:1rem;color:var(--navy)}
+.qm-chips{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.qm-chip{display:flex;align-items:center;gap:8px;padding:11px 10px;border-radius:14px;border:2px solid var(--line);background:#fff;font-family:var(--sans);font-size:.88rem;font-weight:700;color:var(--ink);cursor:pointer;text-align:start;transition:all .18s}
+.qm-chip b{font-size:1.2rem;font-weight:400}
+.qm-chip.on{border-color:#f08a3c;background:linear-gradient(135deg,#fff4ea,#fff);box-shadow:0 4px 14px rgba(240,138,60,.25)}
+.qm-chip.on::after{content:"✓";margin-inline-start:auto;color:#d9731f}
+.qm-f{display:grid;gap:12px}
+.qm-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qm-f label{display:grid;gap:5px;font-size:.82rem;font-weight:700;color:#3b3a36}
+.qm-f input,.qm-f select,.qm-f textarea{width:100%;padding:12px 13px;border-radius:12px;border:2px solid var(--line);background:#fff;font:inherit;font-weight:400;font-size:.95rem;color:var(--ink)}
+.qm-f textarea{min-height:76px;resize:vertical}
+.qm-f input:focus,.qm-f select:focus,.qm-f textarea:focus{outline:none;border-color:#f08a3c;box-shadow:0 0 0 3px rgba(240,138,60,.2)}
+.qm-f .bad{border-color:#c0392b}
+.qm-err{color:#c0392b;font-size:.8rem;font-weight:700;min-height:1.1em;margin:8px 0 0}
+.qm-loc{display:flex;align-items:center;gap:8px;width:100%;justify-content:center;padding:11px;border-radius:12px;border:2px dashed #b8863d;background:#fffaf0;font-family:var(--sans);font-weight:700;font-size:.88rem;color:#7a541e;cursor:pointer}
+.qm-loc.ok{border-style:solid;background:#eefaf1;border-color:#2e9e57;color:#1f7a41}
+.qm-foot{display:flex;gap:10px;padding:14px 22px 20px}
+.qm-foot button{flex:1;padding:14px;border-radius:14px;border:0;font-family:var(--sans);font-weight:800;font-size:.98rem;cursor:pointer}
+.qm-back{flex:0 0 32%!important;background:var(--sand);color:var(--ink)}
+.qm-next{background:linear-gradient(135deg,#f08a3c,#d9ac5e);color:#1c1b19;box-shadow:0 8px 20px rgba(240,138,60,.35)}
+.qm-send{background:linear-gradient(135deg,#1fa855,#25d366);color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.35)}
+.qm-ok{padding:34px 24px 26px;text-align:center}
+.qm-ok .big{font-size:3.2rem}
+.qm-ok h4{font-size:1.2rem;margin:8px 0}
+.qm-ok p{color:#5a554c;margin:0 0 16px;font-size:.92rem}
+.qm-ok a{display:inline-block;padding:12px 22px;border-radius:14px;background:#25d366;color:#fff;font-weight:800;text-decoration:none}
+@media(max-width:480px){.qm-row{grid-template-columns:1fr}.qm-chips{gap:7px}.qm-head h3{font-size:1.15rem}}
+.qm [hidden]{display:none!important}
