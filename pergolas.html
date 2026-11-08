@@ -174,14 +174,23 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
           <a href="index.html#faq">الأسئلة الشائعة</a>
           <a href="index.html#contact">تواصل معنا</a>
     </nav>
-    <a class="nav-cta" href="https://wa.me/966553511013?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D9%81%D8%AE%D8%B1%20%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85" target="_blank" rel="noopener">اطلب عرض سعر</a>
+    <a class="nav-cta" data-quote href="https://wa.me/966553511013?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D9%81%D8%AE%D8%B1%20%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85" target="_blank" rel="noopener">اطلب عرض سعر</a>
   </div>
 </header>
 <section class="hero">
-  <div class="hero-bg-layer">
-    <img src="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp" srcset="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1-828.webp 828w, images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp 1057w" sizes="100vw" alt="برجولة بتصميم عصري خشبية بمدينة جدة" fetchpriority="high" decoding="async" width="1600" height="900">
-    <img src="images/pergolas/pergola-modern-louvered-fakhr-almamlaka-jeddah49.webp" alt="برجولة بلون أحمر بتصميم عصري لوفر في جدة" loading="lazy" decoding="async" width="1600" height="900">
-    <img src="images/main/pergola-khashabia-fakhr-almamlaka-jeddah4.webp" alt="برجولة خشبية فخر المملكة بمدينة جدة" loading="lazy" decoding="async" width="1600" height="900">
+  <div class="hero-bg-layer" id="heroBg">
+    <figure class="hero-slide is-active">
+      <img class="hs-blur" src="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp" srcset="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1-828.webp 828w, images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp 1057w" sizes="100vw" alt="" aria-hidden="true" decoding="async" fetchpriority="high">
+      <div class="frame hero-frame"><img src="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp" srcset="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1-828.webp 828w, images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp 1057w" sizes="100vw" alt="برجولة بتصميم عصري خشبية بمدينة جدة" width="1600" height="900" decoding="async" fetchpriority="high"></div>
+    </figure>
+    <figure class="hero-slide">
+      <img class="hs-blur" src="images/main/pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah4.webp" alt="" aria-hidden="true" decoding="async" loading="lazy">
+      <div class="frame hero-frame"><img src="images/main/pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah4.webp" alt="برجولات فخر المملكة بجدة" decoding="async" loading="lazy"></div>
+    </figure>
+    <figure class="hero-slide">
+      <img class="hs-blur" src="images/main/pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah6.webp" alt="" aria-hidden="true" decoding="async" loading="lazy">
+      <div class="frame hero-frame"><img src="images/main/pergolas-sawater-mizalat-hanger-privacy-fences-fakhr-almamlaka-jeddah6.webp" alt="برجولات فخر المملكة بجدة" decoding="async" loading="lazy"></div>
+    </figure>
   </div>
   <div class="wrap">
     <div class="breadcrumb"><a href="index.html">الرئيسية</a> ← البرجولات</div>
@@ -191,11 +200,16 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p class="lede">تصميم وتنفيذ برجولات خشب، حديد، ولكسان لحدائق المنازل والمسابح والمطاعم، مع خيارات لوفر متحركة وإضاءة LED مدمجة لأجواء مسائية مميزة.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="https://wa.me/966553511013?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D9%81%D8%AE%D8%B1%20%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85" target="_blank" rel="noopener">تواصل عبر واتساب</a>
+        <a class="btn btn-quote" href="#contact" data-quote>📝 اطلب عرض سعر</a>
         <a class="btn btn-ghost" href="tel:00966553511013">اتصال مباشر</a>
       </div>
     </div>
   </div>
 </section>
+<a class="promo-ticker" href="https://wa.me/966553511013?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D9%81%D8%AE%D8%B1%20%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D8%A9%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D8%A9" target="_blank" rel="noopener" aria-label="عروض مؤسسة فخر المملكة — اضغط للتواصل عبر واتساب">
+  <div class="pt-track"><span>🔥 عروض مغرية لفترة محدودة — خصم خاص على الطلبات هذا الأسبوع ✨</span><span>📞 اتصل الآن واحجز معاينة واستشارة مجانية في جدة ومكة 🚀</span><span>🛡️ ضمان شامل يصل إلى 10 سنوات على التركيب والخامات ✅</span><span>⏳ مواعيد التنفيذ محدودة — احجز موعدك قبل اكتمال الجدول ⚡</span><span>🏆 +600 مشروع مكتمل و+300 عميل دائم يثقون بفخر المملكة 💎</span><span>💬 أرسل صورة مكانك على واتساب واحصل على تصميم وعرض سعر سريع 📲</span><span>🌞 خامات معتمدة تتحمل شمس جدة ورطوبتها — جودة تدوم 🌴</span><span>🔥 عروض مغرية لفترة محدودة — خصم خاص على الطلبات هذا الأسبوع ✨</span><span>📞 اتصل الآن واحجز معاينة واستشارة مجانية في جدة ومكة 🚀</span><span>🛡️ ضمان شامل يصل إلى 10 سنوات على التركيب والخامات ✅</span><span>⏳ مواعيد التنفيذ محدودة — احجز موعدك قبل اكتمال الجدول ⚡</span><span>🏆 +600 مشروع مكتمل و+300 عميل دائم يثقون بفخر المملكة 💎</span><span>💬 أرسل صورة مكانك على واتساب واحصل على تصميم وعرض سعر سريع 📲</span><span>🌞 خامات معتمدة تتحمل شمس جدة ورطوبتها — جودة تدوم 🌴</span></div>
+</a>
+
 <section id="services">
   <div class="wrap">
     <div class="section-head center">
@@ -241,6 +255,24 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
+<section class="video-section" id="videos">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">🎬 شاهد التنفيذ بالفيديو</span>
+      <h2>مشاريع حقيقية من مواقع العمل في جدة ومكة</h2>
+    </div>
+    <div class="vid-grid one">
+      <figure class="vid">
+        <div class="frame"><div class="vid-box">
+          <video muted loop playsinline preload="none" data-src="videos/%D9%81%D8%AE%D8%B1-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-%D8%AC%D9%84%D8%B3%D8%A7%D8%AA-%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A%D8%A9-%D9%88%D8%A8%D8%B1%D8%AC%D9%88%D9%84%D8%A7%D8%AA-%D8%AD%D8%AF%D8%A7%D8%A6%D9%82-%D8%B1%D8%A7%D9%82%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA.mp4" aria-label="جلسات خارجية وبرجولات حدائق راقية"></video>
+          <button type="button" class="vid-sound" aria-label="تشغيل الصوت">🔇</button>
+        </div></div>
+        <figcaption>🎬 جلسات خارجية وبرجولات حدائق راقية</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <section class="gallery-section" id="gallery">
   <div class="wrap">
     <div class="section-head center">
@@ -255,7 +287,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <button class="c-arrow" aria-label="التالي" onclick="scrollCarousel('pg-0',-1)">‹</button>
     </div>
   </div>
-  <div class="carousel-track" id="pg-0">
+  <div class="carousel-track mq-track" id="pg-0">
       <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-indoor-pool.webp" srcset="images/pergolas/pergola-fakhr-almamlaka-jeddah-indoor-pool-560.webp 560w, images/pergolas/pergola-fakhr-almamlaka-jeddah-indoor-pool.webp 1024w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فخر المملكة في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-galsat-hadaiq-tents-fakhr-almamlaka-jeddah14.webp" srcset="images/pergolas/pergola-galsat-hadaiq-tents-fakhr-almamlaka-jeddah14-560.webp 560w, images/pergolas/pergola-galsat-hadaiq-tents-fakhr-almamlaka-jeddah14.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حديقة بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-hadaeq-fakhr-almamlaka-jeddah18.webp" alt="برجولة حديقة بمدينة جدة - 2" loading="lazy" decoding="async" width="250" height="180">
@@ -281,7 +313,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <button class="c-arrow" aria-label="التالي" onclick="scrollCarousel('pg-1',-1)">‹</button>
     </div>
   </div>
-  <div class="carousel-track" id="pg-1">
+  <div class="carousel-track mq-track" id="pg-1">
       <img src="images/pergolas/pergola-corrugated-lexan-carport-shade-fakhr-almamlaka-jeddah52.webp" srcset="images/pergolas/pergola-corrugated-lexan-carport-shade-fakhr-almamlaka-jeddah52-560.webp 560w, images/pergolas/pergola-corrugated-lexan-carport-shade-fakhr-almamlaka-jeddah52.webp 1080w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة سيارات لكسان بجدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-decorative-metal-fakhr-almamlaka-jeddah.webp" srcset="images/pergolas/pergola-decorative-metal-fakhr-almamlaka-jeddah-560.webp 560w, images/pergolas/pergola-decorative-metal-fakhr-almamlaka-jeddah.webp 720w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حديد ديكورية بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-hadid-laser-fakhr-almamlaka-jeddah32.webp" srcset="images/pergolas/pergola-hadid-laser-fakhr-almamlaka-jeddah32-560.webp 560w, images/pergolas/pergola-hadid-laser-fakhr-almamlaka-jeddah32.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة ليزر كت حديد بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
@@ -306,7 +338,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <button class="c-arrow" aria-label="التالي" onclick="scrollCarousel('pg-2',-1)">‹</button>
     </div>
   </div>
-  <div class="carousel-track" id="pg-2">
+  <div class="carousel-track mq-track" id="pg-2">
       <img src="images/pergolas/pergola-louvers-fakhr-almamlaka-jeddah56.webp" srcset="images/pergolas/pergola-louvers-fakhr-almamlaka-jeddah56-560.webp 560w, images/pergolas/pergola-louvers-fakhr-almamlaka-jeddah56.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة لوفر بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-modern-led-lighting-fakhr-almamlaka-jeddah20.webp" srcset="images/pergolas/pergola-modern-led-lighting-fakhr-almamlaka-jeddah20-560.webp 560w, images/pergolas/pergola-modern-led-lighting-fakhr-almamlaka-jeddah20.webp 800w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري بإضاءة بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-modern-louvered-fakhr-almamlaka-jeddah49.webp" srcset="images/pergolas/pergola-modern-louvered-fakhr-almamlaka-jeddah49-560.webp 560w, images/pergolas/pergola-modern-louvered-fakhr-almamlaka-jeddah49.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بلون أحمر بتصميم عصري لوفر في جدة - 2" loading="lazy" decoding="async" width="250" height="180">
@@ -323,7 +355,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <button class="c-arrow" aria-label="التالي" onclick="scrollCarousel('pg-3',-1)">‹</button>
     </div>
   </div>
-  <div class="carousel-track" id="pg-3">
+  <div class="carousel-track mq-track" id="pg-3">
       <img src="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp" srcset="images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1-560.webp 560w, images/pergolas/pergola-khashab-modern-fakhr-almamlaka-jeddah1.webp 1057w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة بتصميم عصري خشبية بمدينة جدة - 2" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-khashabi-galsa-fakhr-almamlaka-jeddah36.webp" srcset="images/pergolas/pergola-khashabi-galsa-fakhr-almamlaka-jeddah36-560.webp 560w, images/pergolas/pergola-khashabi-galsa-fakhr-almamlaka-jeddah36.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة خشبية في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah4.webp" srcset="images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah4-560.webp 560w, images/pergolas/pergola-khashabia-fakhr-almamlaka-jeddah4.webp 736w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة خشبية بمدينة جدة" loading="lazy" decoding="async" width="250" height="180">
@@ -348,7 +380,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <button class="c-arrow" aria-label="التالي" onclick="scrollCarousel('pg-4',-1)">‹</button>
     </div>
   </div>
-  <div class="carousel-track" id="pg-4">
+  <div class="carousel-track mq-track" id="pg-4">
       <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-elegant-seating.webp" srcset="images/pergolas/pergola-fakhr-almamlaka-jeddah-elegant-seating-560.webp 560w, images/pergolas/pergola-fakhr-almamlaka-jeddah-elegant-seating.webp 1280w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة فخر المملكة في جدة ومكة - 2" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-carport.webp" srcset="images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-carport-560.webp 560w, images/pergolas/pergola-fakhr-almamlaka-jeddah-modern-carport.webp 735w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة سيارات بتصميم عصري بجدة ومكة المكرمة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-jeddah-modern-carport-fakhr-almamlaka.webp" alt="برجولة سيارات بتصميم عصري في جدة والمنطقة الغربية" loading="lazy" decoding="async" width="250" height="180">
@@ -369,7 +401,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <button class="c-arrow" aria-label="التالي" onclick="scrollCarousel('pg-5',-1)">‹</button>
     </div>
   </div>
-  <div class="carousel-track" id="pg-5">
+  <div class="carousel-track mq-track" id="pg-5">
       <img src="images/pergolas/pergola-backyard-string-lights-fakhr-almamlaka-jeddah54.webp" srcset="images/pergolas/pergola-backyard-string-lights-fakhr-almamlaka-jeddah54-560.webp 560w, images/pergolas/pergola-backyard-string-lights-fakhr-almamlaka-jeddah54.webp 735w" sizes="(max-width:900px) 50vw, 250px" alt="برجولة حوش بإضاءة بجدة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-decor-barjolat-fakhr-almamlaka-jeddah58.webp" alt="برجولة ديكورية في جدة ومكة" loading="lazy" decoding="async" width="250" height="180">
       <img src="images/pergolas/pergola-decor-fakhr-almamlaka-jeddah57.webp" alt="برجولة ديكورية في جدة" loading="lazy" decoding="async" width="250" height="180">
@@ -478,6 +510,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <h2>جاهزون لتصميم برجولتك القادمة بجدة</h2>
       <p>احصل على استشارة فنية مجانية ومعاينة للموقع، وعرض سعر واضح بلا التزام.</p>
       <div class="hero-actions" style="justify-content:center">
+        <a class="btn btn-quote" href="#contact" data-quote>📝 نموذج طلب عرض السعر</a>
         <a class="btn btn-primary" style="background:#fff;color:var(--clay)" href="https://wa.me/966553511013?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D9%81%D8%AE%D8%B1%20%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85" target="_blank" rel="noopener">تواصل واتساب</a>
         <a class="btn btn-ghost" href="tel:00966553511013">00966553511013</a>
         <button class="btn btn-share" onclick="shareMyLocation(event)" type="button">
