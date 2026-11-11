@@ -598,16 +598,24 @@ document.addEventListener('error', function(e){
     lines.push('⏰ موعد التنفيذ: ' + v('#qmWhen'));
     if(v('#qmNote')) lines.push('📝 ملاحظات: ' + v('#qmNote'));
     if(loc) lines.push('🗺️ موقعي: ' + loc);
+    var leadId = ('L' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6)).toUpperCase();
+    lines.push('🆔 رقم الطلب: ' + leadId);
     lines.push('', '🌐 من صفحة: ' + location.href.split('#')[0]);
     var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n'));
-    try{ if(typeof gtag === 'function') gtag('event', 'conversion', {'send_to': CONV}); }catch(e){}
+    /* التحويل يُسجَّل في thank-you.html فقط (مرة واحدة لكل طلب حقيقي) */
+    try{ sessionStorage.setItem('fk_lead', JSON.stringify({id: leadId, t: Date.now(), svc: svc, city: v('#qmCity')})); }catch(e){}
     var w = window.open(url, '_blank');
     var body = root.querySelector('.qm-body');
     root.querySelector('.qm-foot').hidden = true; root.querySelector('.qm-steps').hidden = true;
     body.innerHTML = '<div class="qm-ok"><div class="big">✅</div><h4>تم تجهيز طلبك بنجاح</h4>' +
       '<p>سيُفتح واتساب لإرسال الطلب لفريقنا. إن لم يُفتح تلقائياً اضغط الزر أدناه.</p>' +
       '<a href="' + url + '" target="_blank" rel="noopener">📲 فتح واتساب وإرسال الطلب</a></div>';
-    if(!w) { /* المتصفح منع النافذة: الزر أعلاه يكفي */ }
+    var thanks = 'thank-you.html?lead_id=' + encodeURIComponent(leadId);
+    if(w){ setTimeout(function(){ location.href = thanks; }, 700); }
+    else {
+      var lk = body.querySelector('.qm-ok a');
+      if(lk) lk.addEventListener('click', function(ev){ ev.stopPropagation(); setTimeout(function(){ location.href = thanks; }, 700); });
+    }
   }
 
   function open(){
@@ -628,3 +636,27 @@ document.addEventListener('error', function(e){
   }, true);
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && root && root.classList.contains('open')) close(); });
 })();
+
+/* ============================================================
+   ===== أحداث Analytics: click_to_call / click_to_whatsapp
+   =====  (مع اسم الصفحة والخدمة) — لمعرفة أي صفحة تجلب الاتصالات
+   ============================================================ */
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('a[href]');
+  if(!a || typeof gtag !== 'function') return;
+  if(a.hasAttribute('data-quote') || a.closest('.designer-credit') || a.closest('.qm')) return;
+  var href = (a.getAttribute('href') || '').toLowerCase();
+  var name = href.indexOf('tel:') === 0 ? 'click_to_call'
+           : (href.indexOf('wa.me/966553511013') > -1) ? 'click_to_whatsapp' : '';
+  if(!name) return;
+  var page = location.pathname.replace(/^\/|\.html$/g, '') || 'home';
+  var where = a.closest('header') ? 'header' : a.closest('footer') ? 'footer' : a.closest('.promo-ticker') ? 'promo_ticker'
+            : a.closest('.hero') ? 'hero' : a.closest('.cta') ? 'cta' : 'content';
+  gtag('event', name, {
+    'event_category': 'contact',
+    'event_label': page + ':' + where,
+    'page_path': location.pathname,
+    'link_location': where,
+    'transport_type': 'beacon'
+  });
+}, true);
