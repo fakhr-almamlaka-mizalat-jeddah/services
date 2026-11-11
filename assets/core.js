@@ -602,7 +602,7 @@ document.addEventListener('error', function(e){
     lines.push('🆔 رقم الطلب: ' + leadId);
     lines.push('', '🌐 من صفحة: ' + location.href.split('#')[0]);
     var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n'));
-    /* التحويل يُسجَّل في thank-you.html فقط (مرة واحدة لكل طلب حقيقي) */
+    /* التحويل يُسجَّل في thank-yoou.html فقط (مرة واحدة لكل طلب حقيقي) */
     try{ sessionStorage.setItem('fk_lead', JSON.stringify({id: leadId, t: Date.now(), svc: svc, city: v('#qmCity')})); }catch(e){}
     var w = window.open(url, '_blank');
     var body = root.querySelector('.qm-body');
@@ -610,7 +610,7 @@ document.addEventListener('error', function(e){
     body.innerHTML = '<div class="qm-ok"><div class="big">✅</div><h4>تم تجهيز طلبك بنجاح</h4>' +
       '<p>سيُفتح واتساب لإرسال الطلب لفريقنا. إن لم يُفتح تلقائياً اضغط الزر أدناه.</p>' +
       '<a href="' + url + '" target="_blank" rel="noopener">📲 فتح واتساب وإرسال الطلب</a></div>';
-    var thanks = 'thank-you.html?lead_id=' + encodeURIComponent(leadId);
+    var thanks = 'thank-yoou.html?lead_id=' + encodeURIComponent(leadId);
     if(w){ setTimeout(function(){ location.href = thanks; }, 700); }
     else {
       var lk = body.querySelector('.qm-ok a');
