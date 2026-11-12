@@ -21,7 +21,10 @@ function gtag(){ dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-W6XRHFTNC2');   /* Analytics 1 */
 gtag('config', 'G-9C6V3PF0WN');   /* Analytics 2 */
-gtag('config', 'AW-18468920778'); /* Google Ads  */
+gtag('config', 'AW-18515125109'); /* Google Ads (الحساب الجديد) */
+
+/* تسمية التحويل (Conversion label) للحساب الجديد: الجزء بعد / في send_to. اتركها فارغة حتى تضيفها. */
+var FK_LABEL = '';
 
 /* ------------------------------------------------------------------
    تسجيل «طلب عرض سعر» كإحالة ناجحة — فقط عند وجود طلب حقيقي:
@@ -39,10 +42,12 @@ var FK_LEAD = null;
   if(!valid) return;
   FK_LEAD = tok;
   if(!tok.done){
-    gtag('event', 'conversion', {
-      'send_to': 'AW-18468920778/wc68COvdw64dEMq71eZE',
-      'transaction_id': tok.id
-    });
+    if(FK_LABEL){
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18515125109/' + FK_LABEL,
+        'transaction_id': tok.id
+      });
+    }
     gtag('event', 'generate_lead', {
       'event_category': 'lead',
       'event_label': 'quote_form',
