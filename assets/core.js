@@ -512,7 +512,7 @@ document.addEventListener('error', function(e){
    ===== نموذج طلب عرض السعر (خطوتان) → رسالة واتساب منسّقة
    ============================================================ */
 (function(){
-  var WA = '966553511013';
+  var WA = '966553511013', CONV = 'AW-18515125109/gGmRCISw_bUdEPXG2fxE';
   var SERVICES = [['🚗','مظلات سيارات'],['🏊','مظلات مسابح وحدائق'],['🏡','سواتر خصوصية'],['🌿','برجولات'],['🏕️','بيوت شعر'],
                   ['🏢','هناجر ومستودعات'],['🧱','قرميد وتركيب أسقف'],['🏠','ساندوتش بانل'],['🔧','صيانة وتغيير أقمشة'],['✨','أخرى / لا أعرف بعد']];
   var PAGE_SVC = {'mizalats':0,'sawaters':2,'pergolas':3,'byout-shaar':4,'hangars':5,'qarmids':6,'sandwich-panel':7};
@@ -602,7 +602,9 @@ document.addEventListener('error', function(e){
     lines.push('🆔 رقم الطلب: ' + leadId);
     lines.push('', '🌐 من صفحة: ' + location.href.split('#')[0]);
     var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n'));
-    /* التحويل يُسجَّل في thank-you.html فقط (مرة واحدة لكل طلب حقيقي) */
+    /* تحويل «طلب عرض سعر»: يُرسل هنا فور الإرسال، وتُعيد صفحة الشكر إرساله بنفس transaction_id
+       فتتجاهل Google التكرار — وهذا يضمن عدم ضياع التحويل لو انتقل الزائر لتطبيق واتساب مباشرة. */
+    try{ if(typeof gtag === 'function') gtag('event', 'conversion', {'send_to': CONV, 'transaction_id': leadId}); }catch(e){}
     try{ sessionStorage.setItem('fk_lead', JSON.stringify({id: leadId, t: Date.now(), svc: svc, city: v('#qmCity')})); }catch(e){}
     var w = window.open(url, '_blank');
     var body = root.querySelector('.qm-body');
@@ -610,7 +612,7 @@ document.addEventListener('error', function(e){
     body.innerHTML = '<div class="qm-ok"><div class="big">✅</div><h4>تم تجهيز طلبك بنجاح</h4>' +
       '<p>سيُفتح واتساب لإرسال الطلب لفريقنا. إن لم يُفتح تلقائياً اضغط الزر أدناه.</p>' +
       '<a href="' + url + '" target="_blank" rel="noopener">📲 فتح واتساب وإرسال الطلب</a></div>';
-    var thanks = 'thank-you.html?lead_id=' + encodeURIComponent(leadId);
+    var thanks = '/thank-you?lead_id=' + encodeURIComponent(leadId);
     if(w){ setTimeout(function(){ location.href = thanks; }, 700); }
     else {
       var lk = body.querySelector('.qm-ok a');
