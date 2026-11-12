@@ -175,9 +175,10 @@
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
 gtag('js',new Date());gtag('config','G-W6XRHFTNC2');
 gtag('config','G-9C6V3PF0WN');
-gtag('config','AW-18468920778');
+gtag('config','AW-18515125109');
+var FK_LABEL='';/* تسمية التحويل للحساب الجديد (الجزء بعد / في send_to) — اتركها فارغة حتى تضيفها */
 /* تتبع الإحالة الناجحة (طلب عرض أسعار): عند الضغط على واتساب المؤسسة أو الاتصال المباشر */
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me/966553511013"],a[href^="tel:"]');if(a&&!a.closest('.designer-credit')){gtag('event','conversion',{'send_to':'AW-18468920778/wc68COvdw64dEMq71eZE'})}},{passive:true});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me/966553511013"],a[href^="tel:"]');if(a&&!a.closest('.designer-credit')){if(FK_LABEL){gtag('event','conversion',{'send_to':'AW-18515125109/'+FK_LABEL})}}},{passive:true});
 (function(){var d=0;function l(){if(d)return;d=1;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-W6XRHFTNC2';document.head.appendChild(s)}
 ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});setTimeout(l,4000)})();
 </script>
@@ -769,3 +770,4 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d8415be4153543bba5a84a953bda4062"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
+          
